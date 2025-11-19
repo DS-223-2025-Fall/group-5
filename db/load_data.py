@@ -1,8 +1,8 @@
 import os
 import pandas as pd
-from sqlalchemy import create_engine, text
+from sqlalchemy import create_engine
 
-# 1. Paths to CSVs (relative to this file)
+# 1. Paths
 BASE_DIR = os.path.dirname(__file__)
 DATA_DIR = os.path.join(BASE_DIR, "data")
 
@@ -19,88 +19,24 @@ sales_df        = pd.read_csv(SALES_CSV)
 timeframe_df    = pd.read_csv(TIMEFRAME_CSV, parse_dates=["date"])
 transactions_df = pd.read_csv(TRANSACTIONS_CSV)
 
-# 🔧 CSV has "transaction_amount", DB column is "amount"
+# Clean column
 transactions_df = transactions_df.rename(columns={"transaction_amount": "amount"})
 
-print(f"Loaded {len(customers_df)} customers from {CUSTOMERS_CSV}")
-print(f"Loaded {len(products_df)} products from {PRODUCTS_CSV}")
-print(f"Loaded {len(sales_df)} sales rows from {SALES_CSV}")
-print(f"Loaded {len(timeframe_df)} timeframe rows from {TIMEFRAME_CSV}")
-print(f"Loaded {len(transactions_df)} transactions from {TRANSACTIONS_CSV}")
+print(f"Loaded {len(customers_df)} customers")
+print(f"Loaded {len(products_df)} products")
+print(f"Loaded {len(sales_df)} sales rows")
+print(f"Loaded {len(timeframe_df)} timeframe rows")
+print(f"Loaded {len(transactions_df)} transactions")
 
 # 3. DB connection
-DB_USER = "admin"
-DB_PASSWORD = "admin123"
-DB_HOST = "localhost"
-DB_PORT = 5432
-DB_NAME = "marketing_db"
+DATABASE_URL = "postgresql+psycopg2://admin:admin123@127.0.0.1:5433/marketing_db"
+engine = create_engine(DATABASE_URL, echo=False)
 
-DB_URL = f"postgresql+psycopg2://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
-engine = create_engine(DB_URL, echo=False)
+# 4. Auto-create and load tables
+customers_df.to_sql("customers", engine, if_exists="replace", index=False)
+products_df.to_sql("products", engine, if_exists="replace", index=False)
+timeframe_df.to_sql("timeframe", engine, if_exists="replace", index=False)
+transactions_df.to_sql("transactions", engine, if_exists="replace", index=False)
+sales_df.to_sql("sales", engine, if_exists="replace", index=False)
 
-# 4. Load data
-with engine.begin() as conn:
-    # clear tables first so we can re-run script safely (respect FK order)
-    conn.execute(text("""
-        TRUNCATE TABLE sales,
-                       transactions,
-                       timeframe,
-                       products,
-                       customers
-        RESTART IDENTITY CASCADE;
-    """))
-
-    # ---- customers ----
-    conn.execute(
-        text("""
-            INSERT INTO customers (customer_id, first_name, last_name, dob, phone, email)
-            VALUES (:customer_id, :first_name, :last_name, :dob, :phone, :email)
-        """),
-        customers_df.to_dict(orient="records")
-    )
-    print("Inserted customers.")
-
-    # ---- products ----
-    conn.execute(
-        text("""
-            INSERT INTO products (product_sku, product_name, category, brand, price)
-            VALUES (:product_sku, :product_name, :category, :brand, :price)
-        """),
-        products_df.to_dict(orient="records")
-    )
-    print("Inserted products.")
-
-    # ---- timeframe ----
-    conn.execute(
-        text("""
-            INSERT INTO timeframe (time_id, date, day, month, year)
-            VALUES (:time_id, :date, :day, :month, :year)
-        """),
-        timeframe_df.to_dict(orient="records")
-    )
-    print("Inserted timeframe.")
-
-    # ---- transactions ----
-    conn.execute(
-        text("""
-            INSERT INTO transactions
-                (transaction_id, customer_id, time_id, amount, channel, payment_type)
-            VALUES
-                (:transaction_id, :customer_id, :time_id, :amount, :channel, :payment_type)
-        """),
-        transactions_df.to_dict(orient="records")
-    )
-    print("Inserted transactions.")
-
-    # ---- sales ----
-    conn.execute(
-        text("""
-            INSERT INTO sales (sale_id, transaction_id, product_sku, quantity, unit_price, line_total)
-            VALUES (:sale_id, :transaction_id, :product_sku,
-                    :quantity, :unit_price, :line_total)
-        """),
-        sales_df.to_dict(orient="records")
-    )
-    print("Inserted sales.")
-
-print("✅ Data load finished.")
+print("✅ Data loaded successfully (tables created or replaced).")

@@ -48,5 +48,5 @@ def performance_screen():
         st.write(f"Comment: {feedback['comment']}")
         st.write("---")
 
-# Call the simplified performance screen
-performance_screen()
+if __name__ == "__main__":
+    performance_screen()

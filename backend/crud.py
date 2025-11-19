@@ -1,37 +1,40 @@
-from typing import List, Optional
-from backend.models import Item
-
-# In-memory "database"
-_items_db: List[Item] = []
+from sqlalchemy.orm import Session
+from . import models, schemas
+from sqlalchemy import func
 
 
-def get_items() -> List[Item]:
-    return _items_db
+def create_product(db: Session, product: schemas.ProductCreate):
+    # works in both Pydantic v1 and v2
+    data = product.dict()   # <— IMPORTANT: use dict(), not model_dump()
+    db_product = models.Product(**data)
+    db.add(db_product)
+    db.commit()
+    db.refresh(db_product)
+    return db_product
 
+def get_products(db: Session):
+    return db.query(models.Product).all()
 
-def get_item(item_id: int) -> Optional[Item]:
-    for item in _items_db:
-        if item.id == item_id:
-            return item
-    return None
+def get_top_products(db: Session, limit: int = 10) -> list[schemas.TopProduct]:
+    # join sales + products, aggregate revenue
+    query = (
+        db.query(
+            models.Sale.product_sku,
+            models.Product.product_name,
+            func.sum(models.Sale.line_total).label("total_revenue"),
+        )
+        .join(models.Product, models.Sale.product_sku == models.Product.product_sku)
+        .group_by(models.Sale.product_sku, models.Product.product_name)
+        .order_by(func.sum(models.Sale.line_total).desc())
+        .limit(limit)
+    )
 
-
-def create_item(item: Item) -> Item:
-    _items_db.append(item)
-    return item
-
-
-def update_item(item_id: int, new_item: Item) -> Optional[Item]:
-    for idx, item in enumerate(_items_db):
-        if item.id == item_id:
-            _items_db[idx] = new_item
-            return new_item
-    return None
-
-
-def delete_item(item_id: int) -> bool:
-    for idx, item in enumerate(_items_db):
-        if item.id == item_id:
-            del _items_db[idx]
-            return True
-    return False
+    rows = query.all()
+    return [
+        schemas.TopProduct(
+            product_sku=row.product_sku,
+            product_name=row.product_name,
+            total_revenue=float(row.total_revenue),
+        )
+        for row in rows
+    ]
