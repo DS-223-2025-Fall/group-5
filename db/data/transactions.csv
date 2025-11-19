@@ -1,0 +1,3001 @@
+transaction_id,customer_id,time_id,transaction_amount,channel,payment_type
+1,310,42,1244.94,Online,Credit Card
+2,11,168,971.78,In-store,Bank Transfer
+3,351,226,1343.53,Online,Bank Transfer
+4,292,320,185.91,In-store,PayPal
+5,229,333,2303.36,In-store,Bank Transfer
+6,366,206,2838.52,Mobile app,Cash
+7,354,336,1242.42,Mobile app,Credit Card
+8,211,333,3339.56,Online,Bank Transfer
+9,246,27,1941.66,Mobile app,PayPal
+10,248,51,761.18,In-store,Credit Card
+11,411,167,195.84,In-store,Bank Transfer
+12,170,315,281.84,In-store,PayPal
+13,80,31,1494.64,Mobile app,PayPal
+14,451,349,899.34,Online,PayPal
+15,470,126,428.76,Mobile app,Bank Transfer
+16,493,297,1333.72,Mobile app,PayPal
+17,260,35,337.68,In-store,Cash
+18,61,162,1996.58,Mobile app,Credit Card
+19,440,272,1706.0,Online,Credit Card
+20,275,193,1974.81,Online,PayPal
+21,352,57,970.75,Online,Credit Card
+22,493,318,855.3,In-store,Bank Transfer
+23,116,247,387.81,Online,Cash
+24,261,236,534.38,In-store,Cash
+25,451,76,1870.72,Mobile app,Cash
+26,6,111,4640.35,Online,Bank Transfer
+27,191,65,5405.67,Mobile app,Credit Card
+28,75,126,696.66,Online,Cash
+29,216,163,3009.65,In-store,Bank Transfer
+30,481,4,3751.35,Online,Cash
+31,365,191,4466.7,In-store,Credit Card
+32,450,299,2515.74,Mobile app,Credit Card
+33,98,85,912.58,In-store,PayPal
+34,456,28,4718.26,Mobile app,Cash
+35,296,192,1678.79,In-store,Bank Transfer
+36,168,94,2840.85,Mobile app,PayPal
+37,236,228,986.48,Mobile app,Bank Transfer
+38,291,12,797.7,Mobile app,PayPal
+39,394,89,2907.28,Online,PayPal
+40,269,194,5709.73,Online,PayPal
+41,380,230,130.56,Mobile app,Bank Transfer
+42,491,147,3997.73,Online,Credit Card
+43,49,320,532.61,Mobile app,Cash
+44,81,194,2429.58,In-store,Cash
+45,166,147,3848.63,Online,Credit Card
+46,41,193,762.2,Mobile app,Bank Transfer
+47,414,57,2660.81,In-store,Cash
+48,455,8,3238.74,Mobile app,Cash
+49,400,45,3459.72,Mobile app,Credit Card
+50,86,138,1486.96,Mobile app,Bank Transfer
+51,78,200,481.32,Mobile app,Cash
+52,407,232,2863.77,In-store,PayPal
+53,417,286,1012.67,In-store,Credit Card
+54,345,52,2345.0,Mobile app,PayPal
+55,270,220,900.94,In-store,PayPal
+56,300,237,2158.06,Online,Cash
+57,108,237,4982.86,Online,Cash
+58,451,83,605.08,In-store,PayPal
+59,189,186,1283.13,Online,PayPal
+60,110,21,2680.65,In-store,Bank Transfer
+61,357,53,3569.46,Online,PayPal
+62,45,286,3446.15,Mobile app,Bank Transfer
+63,276,231,2221.44,Online,Credit Card
+64,331,13,630.26,In-store,Cash
+65,71,363,3285.66,Mobile app,Bank Transfer
+66,147,161,1529.76,In-store,Credit Card
+67,76,267,3521.95,Mobile app,Credit Card
+68,298,159,2975.72,Online,Credit Card
+69,302,244,1636.42,In-store,Bank Transfer
+70,203,31,1674.05,In-store,Credit Card
+71,108,58,1361.28,Online,Cash
+72,471,113,590.97,Mobile app,Credit Card
+73,11,20,4785.14,Mobile app,PayPal
+74,344,252,2565.3,In-store,Cash
+75,240,351,62.73,Mobile app,Bank Transfer
+76,21,50,1580.56,Online,Credit Card
+77,149,69,6446.32,In-store,Cash
+78,38,110,1568.44,Mobile app,Credit Card
+79,477,300,3678.12,Online,PayPal
+80,38,221,1400.52,Online,Cash
+81,439,215,3806.36,Mobile app,Credit Card
+82,171,88,2465.25,In-store,Credit Card
+83,460,64,3393.26,Online,Credit Card
+84,445,86,1073.94,Mobile app,Bank Transfer
+85,375,253,121.83,Online,Credit Card
+86,24,37,434.65,Online,Bank Transfer
+87,429,118,2355.21,In-store,Cash
+88,478,187,2563.11,Mobile app,Cash
+89,349,238,1092.2,Mobile app,Cash
+90,478,236,2818.12,In-store,Credit Card
+91,386,58,4124.75,Online,Cash
+92,191,86,3460.63,In-store,Cash
+93,175,254,2783.63,In-store,Credit Card
+94,498,322,2434.16,In-store,Bank Transfer
+95,412,78,1526.37,In-store,Cash
+96,449,135,1534.68,Mobile app,Credit Card
+97,74,132,1759.1,Mobile app,Credit Card
+98,6,365,2926.35,Mobile app,Credit Card
+99,266,200,3787.99,Mobile app,Cash
+100,250,101,2360.2,In-store,Bank Transfer
+101,352,50,4828.35,Mobile app,PayPal
+102,352,35,2075.6,Online,Credit Card
+103,230,277,3718.6,Mobile app,Bank Transfer
+104,233,105,3782.25,Online,Cash
+105,473,73,107.22,Mobile app,PayPal
+106,369,7,17.07,In-store,Credit Card
+107,463,340,2874.65,In-store,Bank Transfer
+108,317,246,3625.03,Online,Bank Transfer
+109,253,148,518.06,Mobile app,Cash
+110,249,121,3710.71,In-store,Bank Transfer
+111,72,32,4612.46,Online,Cash
+112,340,292,643.46,Mobile app,Credit Card
+113,25,70,2158.69,In-store,PayPal
+114,45,20,386.48,In-store,Credit Card
+115,433,323,1439.93,In-store,Bank Transfer
+116,388,75,3429.05,Online,Bank Transfer
+117,129,81,6090.24,Mobile app,Credit Card
+118,358,179,1683.79,In-store,Credit Card
+119,305,207,5952.06,Mobile app,Bank Transfer
+120,416,162,1702.79,Mobile app,Cash
+121,360,292,2969.96,Mobile app,Cash
+122,477,337,2636.82,Mobile app,Bank Transfer
+123,496,205,2620.23,In-store,Bank Transfer
+124,170,43,823.82,Online,PayPal
+125,94,188,3171.23,Mobile app,Bank Transfer
+126,452,122,3526.22,Mobile app,Bank Transfer
+127,273,327,1775.95,In-store,PayPal
+128,174,14,2535.41,Online,Credit Card
+129,374,2,2022.16,Mobile app,Bank Transfer
+130,143,124,2296.13,Mobile app,PayPal
+131,232,258,1403.43,In-store,PayPal
+132,45,231,3608.77,In-store,Cash
+133,225,220,6949.73,Mobile app,Bank Transfer
+134,424,76,735.68,In-store,Bank Transfer
+135,415,289,773.0,Mobile app,Bank Transfer
+136,459,314,363.1,Online,Cash
+137,405,197,5225.32,In-store,Credit Card
+138,253,271,868.52,Mobile app,Bank Transfer
+139,274,219,1722.19,Mobile app,PayPal
+140,243,204,1392.32,In-store,Credit Card
+141,98,95,4145.61,Online,Credit Card
+142,304,206,311.92,Online,Cash
+143,120,1,560.43,Mobile app,Credit Card
+144,19,249,2335.56,Online,PayPal
+145,463,349,4602.58,Online,PayPal
+146,148,4,393.48,Mobile app,PayPal
+147,493,13,1504.35,Mobile app,Bank Transfer
+148,165,197,2222.72,Mobile app,PayPal
+149,278,121,1396.04,Online,Bank Transfer
+150,260,75,1884.39,In-store,Credit Card
+151,304,347,1935.52,Mobile app,Credit Card
+152,2,322,471.67,Online,Bank Transfer
+153,60,12,4865.59,In-store,Bank Transfer
+154,181,261,2036.13,In-store,Cash
+155,459,145,2831.33,Mobile app,Cash
+156,99,181,3343.1,In-store,Cash
+157,257,32,3928.5,Online,Cash
+158,163,221,2590.08,In-store,Cash
+159,271,362,1950.49,Mobile app,Cash
+160,470,285,1933.74,Mobile app,Cash
+161,220,272,4964.89,In-store,Cash
+162,418,8,977.47,In-store,Cash
+163,446,193,1164.29,Online,Bank Transfer
+164,126,271,1751.72,In-store,Cash
+165,148,358,3925.41,Online,Credit Card
+166,252,332,2473.3,Online,PayPal
+167,471,50,1667.75,Online,Cash
+168,190,144,1123.05,Online,PayPal
+169,198,150,878.06,In-store,PayPal
+170,327,142,2706.97,Online,Cash
+171,238,290,2930.68,Mobile app,Cash
+172,46,72,1334.2,In-store,Cash
+173,43,258,2157.4,In-store,Credit Card
+174,304,145,683.84,Mobile app,Credit Card
+175,93,209,2282.84,Online,Bank Transfer
+176,20,134,2750.52,Online,Bank Transfer
+177,255,365,70.7,Mobile app,Bank Transfer
+178,94,285,3005.43,Mobile app,Cash
+179,191,54,2423.37,In-store,Cash
+180,362,74,1804.76,In-store,Credit Card
+181,111,332,1717.6,Mobile app,Cash
+182,138,272,4748.0,Online,PayPal
+183,181,96,3350.21,Mobile app,Cash
+184,135,224,315.13,Online,Credit Card
+185,85,235,306.24,In-store,Cash
+186,254,351,2829.3,Mobile app,Bank Transfer
+187,102,38,4601.28,In-store,PayPal
+188,477,225,2207.46,Online,Bank Transfer
+189,311,96,1439.61,Mobile app,Cash
+190,391,214,1806.66,Mobile app,PayPal
+191,35,343,2770.33,Online,Bank Transfer
+192,171,351,2759.04,In-store,Credit Card
+193,359,292,3734.62,Online,Credit Card
+194,279,235,1896.92,Online,Bank Transfer
+195,383,224,2255.59,Online,Credit Card
+196,203,47,2312.65,Online,Cash
+197,327,345,308.99,Mobile app,PayPal
+198,119,95,3988.13,In-store,Cash
+199,307,165,3877.32,In-store,Credit Card
+200,292,99,2788.09,In-store,Credit Card
+201,57,336,5001.68,In-store,PayPal
+202,370,91,2582.71,In-store,Bank Transfer
+203,395,46,1225.92,Mobile app,PayPal
+204,113,358,1985.87,Online,PayPal
+205,481,24,641.75,Online,Bank Transfer
+206,255,318,2713.03,Online,Cash
+207,169,66,5173.96,Online,Bank Transfer
+208,46,73,2303.81,Mobile app,PayPal
+209,15,39,1748.0,Mobile app,Bank Transfer
+210,220,169,386.5,Online,Cash
+211,219,75,422.1,Mobile app,Cash
+212,436,260,3647.6,In-store,Cash
+213,378,205,3108.81,Online,Cash
+214,167,172,1432.13,In-store,PayPal
+215,81,304,510.05,In-store,PayPal
+216,243,216,3234.43,Mobile app,Cash
+217,89,124,1666.12,Mobile app,PayPal
+218,469,141,4070.07,Online,Credit Card
+219,354,237,857.95,In-store,Cash
+220,154,52,171.59,Online,Credit Card
+221,57,79,2750.14,In-store,Bank Transfer
+222,390,303,1244.94,Mobile app,Credit Card
+223,360,343,1716.15,In-store,PayPal
+224,370,196,1903.87,Mobile app,PayPal
+225,90,264,792.56,Mobile app,PayPal
+226,424,61,406.28,Online,Credit Card
+227,258,134,263.64,Mobile app,Credit Card
+228,169,62,3573.56,Mobile app,Credit Card
+229,152,128,1964.62,Mobile app,PayPal
+230,197,298,5794.32,Mobile app,PayPal
+231,250,128,1000.66,Online,Credit Card
+232,496,360,4299.23,In-store,Cash
+233,303,361,1093.61,In-store,Cash
+234,287,182,3171.45,Online,Credit Card
+235,301,122,594.42,Mobile app,Cash
+236,139,108,209.75,In-store,Credit Card
+237,315,44,1994.86,Mobile app,Credit Card
+238,467,345,2574.9,In-store,Credit Card
+239,325,153,853.23,Online,Credit Card
+240,113,315,2663.91,Online,Bank Transfer
+241,103,333,2411.83,Online,Credit Card
+242,29,146,5624.31,Online,Bank Transfer
+243,193,264,4507.02,Online,PayPal
+244,284,196,1727.8,In-store,Bank Transfer
+245,101,55,3316.4,Mobile app,Cash
+246,15,106,2546.89,Online,PayPal
+247,365,300,309.61,Mobile app,Bank Transfer
+248,463,363,292.5,Online,Bank Transfer
+249,160,299,1002.17,In-store,Cash
+250,436,127,880.86,Online,Bank Transfer
+251,82,346,2325.21,In-store,PayPal
+252,401,320,369.18,In-store,Bank Transfer
+253,496,363,3776.53,Online,Bank Transfer
+254,390,87,736.2,Mobile app,Bank Transfer
+255,338,205,3414.75,Mobile app,Cash
+256,190,337,1312.64,Mobile app,PayPal
+257,81,227,1087.59,In-store,PayPal
+258,191,255,1577.79,Online,Cash
+259,177,192,2636.52,Mobile app,PayPal
+260,487,197,3677.61,In-store,Cash
+261,60,99,2394.78,In-store,PayPal
+262,263,81,4714.56,Mobile app,PayPal
+263,385,7,1962.42,Online,Cash
+264,341,45,4966.2,In-store,PayPal
+265,225,201,2815.87,Online,Bank Transfer
+266,61,21,1952.57,Online,Credit Card
+267,467,337,1622.7,In-store,Bank Transfer
+268,36,334,2791.99,In-store,PayPal
+269,225,139,596.27,Online,PayPal
+270,431,302,2904.83,Online,Cash
+271,368,321,4567.92,In-store,Credit Card
+272,79,66,358.68,In-store,Bank Transfer
+273,361,307,2586.5,Online,Cash
+274,433,297,209.91,In-store,Credit Card
+275,365,314,2550.46,In-store,Credit Card
+276,98,212,1060.08,Online,Credit Card
+277,267,223,4492.87,In-store,Cash
+278,15,273,2710.53,Mobile app,Bank Transfer
+279,422,249,454.22,In-store,PayPal
+280,181,34,1412.61,In-store,Credit Card
+281,137,198,2166.07,In-store,PayPal
+282,200,95,1642.8,Mobile app,Bank Transfer
+283,477,343,1748.45,Online,Bank Transfer
+284,344,17,5028.25,Mobile app,PayPal
+285,484,100,1960.39,In-store,Cash
+286,127,181,3003.96,In-store,Bank Transfer
+287,99,90,1436.2,Mobile app,Bank Transfer
+288,230,213,678.0,Mobile app,Bank Transfer
+289,480,17,804.45,Online,Credit Card
+290,140,142,3895.33,Mobile app,Credit Card
+291,356,49,328.16,In-store,Bank Transfer
+292,255,341,680.9,Mobile app,Bank Transfer
+293,178,331,510.05,In-store,Cash
+294,361,177,1416.5,Online,Credit Card
+295,482,26,5003.12,Online,Bank Transfer
+296,458,41,4333.28,Mobile app,Cash
+297,471,96,161.9,Online,Cash
+298,228,174,3905.81,In-store,PayPal
+299,273,134,863.64,Mobile app,Cash
+300,481,306,1446.27,Mobile app,Credit Card
+301,204,163,4559.44,Online,Bank Transfer
+302,404,303,450.11,Online,Bank Transfer
+303,490,284,1876.51,Mobile app,Credit Card
+304,343,135,4512.97,In-store,Credit Card
+305,409,108,4098.54,In-store,PayPal
+306,452,180,6204.09,Online,Bank Transfer
+307,77,200,4132.84,Online,PayPal
+308,420,147,904.08,In-store,Bank Transfer
+309,374,174,1874.86,In-store,Cash
+310,462,319,3299.15,Online,Credit Card
+311,118,90,3526.55,Mobile app,PayPal
+312,26,209,2244.59,Mobile app,Cash
+313,364,325,1275.56,In-store,Credit Card
+314,357,315,3429.42,Mobile app,Bank Transfer
+315,382,329,3873.64,Mobile app,Credit Card
+316,385,172,3942.19,In-store,Cash
+317,203,280,248.79,Online,Bank Transfer
+318,97,310,203.14,In-store,Cash
+319,33,251,1455.08,Online,Credit Card
+320,298,83,2812.1,Mobile app,Credit Card
+321,303,110,4028.48,In-store,Cash
+322,90,108,3136.54,Online,Cash
+323,430,157,5146.29,Mobile app,Bank Transfer
+324,428,163,1822.65,Online,Bank Transfer
+325,409,101,3979.14,In-store,PayPal
+326,409,71,906.59,In-store,PayPal
+327,253,102,2180.64,Mobile app,PayPal
+328,276,264,967.81,In-store,Cash
+329,412,300,6810.93,In-store,Cash
+330,495,317,816.81,Online,Credit Card
+331,434,130,151.55,Mobile app,Cash
+332,466,322,2522.53,Online,PayPal
+333,164,44,4695.61,In-store,PayPal
+334,33,249,3406.91,Mobile app,Cash
+335,419,250,2346.52,Mobile app,Bank Transfer
+336,1,306,1472.48,Mobile app,PayPal
+337,331,246,4624.33,In-store,Bank Transfer
+338,146,160,491.64,Mobile app,Cash
+339,134,50,1734.4,Mobile app,Credit Card
+340,388,235,3719.67,In-store,Bank Transfer
+341,406,112,5523.25,In-store,Bank Transfer
+342,73,295,3654.16,In-store,Credit Card
+343,28,227,1611.32,Mobile app,Cash
+344,367,114,2496.16,In-store,PayPal
+345,18,357,2618.1,Mobile app,PayPal
+346,223,131,46.92,Mobile app,Cash
+347,103,180,4060.71,Mobile app,PayPal
+348,256,64,4789.12,In-store,Bank Transfer
+349,155,70,1598.05,Online,PayPal
+350,309,247,2319.24,In-store,Cash
+351,164,71,343.18,Online,Credit Card
+352,217,243,471.67,In-store,Bank Transfer
+353,392,9,1082.25,Mobile app,Cash
+354,303,342,2265.2,Online,Bank Transfer
+355,369,259,5047.56,Mobile app,Cash
+356,401,152,4949.65,Mobile app,Cash
+357,282,68,1987.64,Mobile app,Credit Card
+358,469,21,1048.75,In-store,Credit Card
+359,109,148,5235.81,In-store,Cash
+360,109,288,1004.88,Online,Cash
+361,442,116,1182.46,In-store,Cash
+362,111,285,3119.26,Mobile app,Cash
+363,361,277,1384.3,In-store,Bank Transfer
+364,250,330,1305.64,Mobile app,Credit Card
+365,205,256,5338.62,Online,PayPal
+366,215,268,1282.4,Online,Bank Transfer
+367,110,113,1071.28,In-store,Cash
+368,412,358,1935.52,Online,Bank Transfer
+369,158,127,1257.48,Online,PayPal
+370,107,32,594.57,Mobile app,Cash
+371,346,155,2314.6,Online,Bank Transfer
+372,165,293,2508.07,Online,Credit Card
+373,271,174,69.67,Mobile app,PayPal
+374,319,327,699.11,Mobile app,PayPal
+375,282,243,2290.1,Mobile app,Credit Card
+376,375,31,617.26,Online,PayPal
+377,99,289,3659.34,Mobile app,Cash
+378,331,285,1163.71,Mobile app,Credit Card
+379,381,185,3352.51,Mobile app,Credit Card
+380,425,258,3274.48,Online,PayPal
+381,332,233,2281.98,In-store,PayPal
+382,64,114,756.48,Mobile app,Bank Transfer
+383,76,85,1881.79,Online,Bank Transfer
+384,48,65,3240.66,Mobile app,Cash
+385,97,76,3250.81,Mobile app,Bank Transfer
+386,143,125,1240.87,Mobile app,Cash
+387,275,291,839.0,In-store,Cash
+388,174,41,3402.81,In-store,Cash
+389,285,211,955.4,Mobile app,Bank Transfer
+390,149,272,4598.98,In-store,PayPal
+391,400,177,1349.97,Mobile app,Bank Transfer
+392,101,172,1787.81,In-store,Cash
+393,98,142,4740.12,Online,Bank Transfer
+394,375,208,2839.98,Mobile app,Credit Card
+395,313,272,624.52,Mobile app,Cash
+396,420,50,694.83,Online,Bank Transfer
+397,348,192,2541.96,Mobile app,Cash
+398,276,19,5981.84,Mobile app,Credit Card
+399,186,268,2352.97,Mobile app,Credit Card
+400,149,339,3028.58,In-store,Cash
+401,329,260,5023.4,Online,Bank Transfer
+402,244,28,235.33,Online,Bank Transfer
+403,385,115,2680.08,Online,Bank Transfer
+404,33,39,4102.59,In-store,Cash
+405,355,177,2734.91,In-store,Credit Card
+406,162,34,3575.74,Online,Cash
+407,418,330,1848.33,Online,Credit Card
+408,457,337,1967.06,Mobile app,PayPal
+409,446,286,2983.6,In-store,PayPal
+410,414,69,1098.23,Mobile app,Bank Transfer
+411,157,218,805.26,Online,Cash
+412,82,352,2304.29,Mobile app,Bank Transfer
+413,292,127,1152.72,In-store,Cash
+414,97,189,3176.63,In-store,Cash
+415,374,38,5628.55,In-store,PayPal
+416,33,3,2327.48,Online,Bank Transfer
+417,107,144,1954.83,In-store,Cash
+418,284,27,1604.86,Mobile app,Bank Transfer
+419,315,304,1802.14,In-store,PayPal
+420,12,242,566.69,Online,PayPal
+421,153,346,3680.98,Online,PayPal
+422,279,186,6428.2,Mobile app,Credit Card
+423,321,264,210.24,Mobile app,Bank Transfer
+424,368,263,2693.56,In-store,Credit Card
+425,129,267,1778.12,In-store,Credit Card
+426,279,308,1554.07,Online,Credit Card
+427,469,139,1972.15,Online,Cash
+428,85,213,44.2,Mobile app,Cash
+429,96,101,1745.94,In-store,PayPal
+430,398,196,3049.5,Online,Bank Transfer
+431,110,93,4883.76,In-store,PayPal
+432,428,258,365.49,Online,PayPal
+433,474,116,1498.48,In-store,PayPal
+434,487,182,2407.19,In-store,Bank Transfer
+435,255,47,1199.25,Mobile app,Credit Card
+436,352,208,1524.69,In-store,PayPal
+437,165,88,284.41,In-store,PayPal
+438,97,34,1387.52,Online,Credit Card
+439,204,189,947.94,Online,Credit Card
+440,285,127,24.24,Mobile app,PayPal
+441,200,272,4462.44,In-store,PayPal
+442,401,19,369.18,In-store,Cash
+443,16,37,4484.66,In-store,Bank Transfer
+444,248,33,984.06,Online,Bank Transfer
+445,318,352,1429.62,Online,Cash
+446,145,351,548.84,Online,Cash
+447,380,209,4349.84,In-store,Cash
+448,485,167,2517.35,Mobile app,Cash
+449,71,245,112.9,Mobile app,Cash
+450,287,49,474.32,In-store,Cash
+451,411,150,2309.56,In-store,Cash
+452,160,175,1939.76,Mobile app,Credit Card
+453,479,104,2729.92,Online,Cash
+454,18,195,1378.95,In-store,PayPal
+455,275,364,3340.53,In-store,Credit Card
+456,93,115,3116.17,In-store,Credit Card
+457,174,347,2573.02,In-store,Cash
+458,282,336,3623.12,In-store,Bank Transfer
+459,189,312,2303.39,Online,Bank Transfer
+460,240,183,1004.88,In-store,Cash
+461,135,138,1455.05,Online,Cash
+462,245,125,1565.8,In-store,Credit Card
+463,460,228,580.55,Mobile app,Cash
+464,5,129,2484.39,Online,Cash
+465,132,232,2689.68,In-store,PayPal
+466,362,193,3813.12,In-store,Credit Card
+467,128,347,2170.86,Mobile app,Bank Transfer
+468,356,36,259.32,Online,Credit Card
+469,365,197,945.39,Online,PayPal
+470,51,320,1935.52,Mobile app,PayPal
+471,59,279,3225.68,In-store,Bank Transfer
+472,435,227,1890.77,In-store,PayPal
+473,207,217,1620.27,Online,Credit Card
+474,465,229,5041.25,Mobile app,PayPal
+475,399,203,3913.72,In-store,Bank Transfer
+476,341,37,189.12,Mobile app,PayPal
+477,14,254,5805.82,In-store,Cash
+478,358,315,7341.73,In-store,PayPal
+479,28,342,2906.4,Mobile app,Cash
+480,430,162,278.68,In-store,PayPal
+481,115,155,1170.68,Online,Cash
+482,187,214,328.16,In-store,PayPal
+483,103,4,2593.88,Online,Credit Card
+484,111,304,939.05,Mobile app,Credit Card
+485,287,102,1113.58,Mobile app,Bank Transfer
+486,187,22,2360.08,In-store,PayPal
+487,463,73,3218.29,Online,Credit Card
+488,46,156,2700.79,Online,Cash
+489,82,188,113.79,In-store,PayPal
+490,402,25,922.64,Online,Bank Transfer
+491,250,55,4293.25,In-store,Cash
+492,7,147,1282.39,Mobile app,PayPal
+493,338,309,1260.52,In-store,PayPal
+494,166,189,4290.61,Mobile app,Cash
+495,94,60,2527.79,Mobile app,Cash
+496,141,221,1228.34,In-store,Credit Card
+497,281,291,3060.78,Online,Cash
+498,292,151,432.76,Online,Bank Transfer
+499,453,70,2534.51,In-store,Cash
+500,351,276,1771.5,Online,Credit Card
+501,379,101,3905.67,In-store,Cash
+502,289,92,5542.33,Online,Cash
+503,3,320,2597.3,In-store,PayPal
+504,295,180,1651.62,Mobile app,Cash
+505,426,35,720.46,Online,PayPal
+506,149,288,5032.66,Online,Credit Card
+507,66,269,3598.71,Mobile app,Bank Transfer
+508,464,124,2267.86,Online,PayPal
+509,358,336,887.4,Online,PayPal
+510,498,335,1743.83,In-store,Credit Card
+511,290,223,4787.71,Mobile app,Cash
+512,145,232,1093.84,Mobile app,PayPal
+513,138,61,987.3,Online,Bank Transfer
+514,214,339,948.64,Mobile app,Credit Card
+515,290,215,3702.41,Online,Cash
+516,145,288,1193.02,Online,PayPal
+517,323,17,1644.75,In-store,Cash
+518,402,153,1359.0,Online,PayPal
+519,461,127,2294.09,Online,Cash
+520,359,8,5520.64,Online,Credit Card
+521,252,280,92.83,In-store,Credit Card
+522,281,339,4079.54,In-store,Bank Transfer
+523,334,267,467.88,In-store,Credit Card
+524,203,179,2120.05,Online,Credit Card
+525,424,178,3684.19,In-store,Bank Transfer
+526,481,8,958.76,Mobile app,Bank Transfer
+527,20,82,3090.46,Online,Credit Card
+528,372,188,3375.92,Online,Credit Card
+529,295,146,4497.33,Online,Cash
+530,485,168,1261.65,Online,Cash
+531,367,87,1188.75,In-store,Cash
+532,236,114,1115.04,Online,Cash
+533,106,97,362.26,In-store,PayPal
+534,98,272,752.01,Online,Bank Transfer
+535,58,92,1413.46,Mobile app,PayPal
+536,408,189,2394.43,In-store,Bank Transfer
+537,111,98,3169.37,Mobile app,Credit Card
+538,343,61,1441.25,In-store,Cash
+539,393,238,2962.7,In-store,Bank Transfer
+540,32,112,3307.35,Online,Bank Transfer
+541,459,321,2032.29,In-store,PayPal
+542,377,201,3574.06,Online,Credit Card
+543,420,315,1605.13,In-store,Credit Card
+544,445,273,3815.23,Online,Bank Transfer
+545,435,189,4542.03,In-store,PayPal
+546,267,143,883.72,Mobile app,PayPal
+547,182,4,1274.6,Online,PayPal
+548,275,80,4126.58,In-store,Credit Card
+549,165,256,2180.46,Online,Cash
+550,355,200,1929.2,Online,PayPal
+551,10,223,3820.58,Mobile app,Bank Transfer
+552,181,56,2692.43,Mobile app,Cash
+553,290,99,2533.26,In-store,PayPal
+554,279,75,2870.79,Online,Cash
+555,72,267,1662.76,In-store,Credit Card
+556,12,158,2531.83,In-store,Credit Card
+557,496,339,811.9,Online,Bank Transfer
+558,107,328,2647.62,In-store,PayPal
+559,487,357,893.58,In-store,Bank Transfer
+560,485,128,919.64,In-store,Credit Card
+561,156,267,6333.66,Online,Cash
+562,418,214,1731.72,Mobile app,Cash
+563,281,159,2511.89,In-store,Credit Card
+564,162,138,446.45,Online,Cash
+565,169,187,2552.79,Mobile app,Cash
+566,315,144,342.48,In-store,Bank Transfer
+567,111,24,791.39,Online,Credit Card
+568,182,348,3975.31,Online,Bank Transfer
+569,69,321,3401.03,Mobile app,PayPal
+570,311,250,4011.29,Online,Bank Transfer
+571,187,94,847.15,In-store,PayPal
+572,108,364,452.24,Mobile app,Bank Transfer
+573,314,268,396.25,Online,PayPal
+574,304,365,248.4,Online,Bank Transfer
+575,285,190,2775.9,In-store,Cash
+576,415,181,752.22,In-store,Cash
+577,221,95,3841.31,Online,Cash
+578,165,48,4687.54,Mobile app,Cash
+579,207,247,1000.21,In-store,Cash
+580,77,210,531.99,In-store,Cash
+581,347,309,328.16,Online,PayPal
+582,237,150,3388.81,Mobile app,Bank Transfer
+583,496,247,2362.04,In-store,Credit Card
+584,318,146,3243.96,In-store,Credit Card
+585,356,242,562.56,In-store,Credit Card
+586,74,261,2243.77,Online,PayPal
+587,340,73,582.51,In-store,Credit Card
+588,387,119,4317.72,Mobile app,Bank Transfer
+589,331,277,3846.27,In-store,Cash
+590,116,37,1295.57,Mobile app,PayPal
+591,404,91,3169.12,Mobile app,PayPal
+592,328,225,3438.82,Mobile app,Bank Transfer
+593,411,68,2928.75,Online,PayPal
+594,348,191,1562.88,In-store,Bank Transfer
+595,187,202,2726.39,Mobile app,PayPal
+596,324,134,4337.75,Online,Bank Transfer
+597,252,157,782.06,Mobile app,PayPal
+598,447,34,568.82,Online,Bank Transfer
+599,18,318,1898.55,Mobile app,Cash
+600,285,42,1793.8,Mobile app,Cash
+601,224,348,2932.73,Online,Bank Transfer
+602,425,207,68.84,Mobile app,Cash
+603,383,75,1425.18,Mobile app,Bank Transfer
+604,149,2,2625.59,Mobile app,Credit Card
+605,304,150,4611.54,Mobile app,Bank Transfer
+606,368,132,644.54,Online,Bank Transfer
+607,130,166,1063.29,Mobile app,Bank Transfer
+608,414,295,3498.88,Mobile app,PayPal
+609,424,48,935.5,In-store,Bank Transfer
+610,482,189,454.53,Mobile app,PayPal
+611,469,277,806.51,In-store,Cash
+612,137,296,3582.08,In-store,PayPal
+613,298,331,231.61,Mobile app,Credit Card
+614,161,164,2080.74,Mobile app,PayPal
+615,22,7,328.16,Online,Bank Transfer
+616,140,124,1530.31,Online,Cash
+617,308,155,2112.21,Mobile app,Credit Card
+618,32,107,1233.1,In-store,Cash
+619,109,83,3269.8,Mobile app,PayPal
+620,393,237,2879.79,Mobile app,PayPal
+621,280,139,829.07,In-store,PayPal
+622,228,221,1486.72,Mobile app,Credit Card
+623,107,147,2840.51,Online,PayPal
+624,354,265,3639.09,Mobile app,Bank Transfer
+625,304,133,1485.75,In-store,Cash
+626,186,236,2382.25,In-store,Bank Transfer
+627,230,71,1660.34,In-store,Bank Transfer
+628,296,342,2974.92,Online,Cash
+629,204,281,3214.38,Mobile app,PayPal
+630,244,17,2422.89,Mobile app,Bank Transfer
+631,358,287,1126.69,In-store,PayPal
+632,389,210,3625.99,Mobile app,Bank Transfer
+633,167,179,1835.39,In-store,Credit Card
+634,377,211,3991.02,In-store,PayPal
+635,68,170,259.35,Mobile app,Bank Transfer
+636,338,252,1884.66,Mobile app,PayPal
+637,11,364,4058.32,Mobile app,Credit Card
+638,464,319,872.05,Mobile app,Cash
+639,111,142,1234.36,Online,Bank Transfer
+640,283,85,8367.12,In-store,Credit Card
+641,432,183,1646.28,Mobile app,Cash
+642,38,132,1438.07,In-store,PayPal
+643,36,175,1680.84,In-store,PayPal
+644,2,120,70.46,Online,Credit Card
+645,264,233,886.34,Online,Cash
+646,89,51,2331.36,Mobile app,Cash
+647,108,161,2894.98,Mobile app,Bank Transfer
+648,370,241,3204.92,Mobile app,Credit Card
+649,44,113,4241.94,Online,Bank Transfer
+650,5,84,2282.63,Online,Bank Transfer
+651,62,26,4552.28,In-store,Bank Transfer
+652,102,216,3610.69,Mobile app,Cash
+653,279,266,922.62,Online,PayPal
+654,207,200,932.73,Mobile app,Bank Transfer
+655,243,284,1728.79,Mobile app,Cash
+656,336,59,1173.74,Mobile app,PayPal
+657,108,75,805.16,Online,Cash
+658,474,110,3705.58,In-store,PayPal
+659,329,54,1464.33,Mobile app,Bank Transfer
+660,436,169,4296.35,Online,PayPal
+661,51,272,571.57,Online,Bank Transfer
+662,300,257,4713.82,Online,Credit Card
+663,134,285,640.9,Mobile app,Credit Card
+664,243,66,628.47,In-store,Bank Transfer
+665,272,126,865.68,Online,Bank Transfer
+666,111,261,1500.92,Mobile app,PayPal
+667,217,47,4178.16,Online,Bank Transfer
+668,60,311,1105.74,In-store,Credit Card
+669,35,176,642.34,In-store,Bank Transfer
+670,181,248,1690.59,Mobile app,PayPal
+671,292,178,1043.02,In-store,Credit Card
+672,485,50,1653.11,Online,Bank Transfer
+673,476,142,413.71,Online,Cash
+674,243,299,1295.49,In-store,PayPal
+675,390,20,3366.25,Mobile app,Bank Transfer
+676,114,80,7303.86,Online,Credit Card
+677,164,248,658.83,Mobile app,Cash
+678,393,153,1099.45,Mobile app,Cash
+679,86,36,2749.14,Mobile app,Credit Card
+680,394,249,86.93,Mobile app,PayPal
+681,128,136,2602.41,Mobile app,Bank Transfer
+682,122,147,1666.54,Online,Bank Transfer
+683,39,318,4061.25,In-store,Cash
+684,281,214,2468.93,Online,PayPal
+685,401,85,2786.23,Online,PayPal
+686,152,96,2070.76,Online,Credit Card
+687,364,186,3993.41,In-store,Bank Transfer
+688,293,273,2199.9,In-store,PayPal
+689,244,299,2535.73,Online,PayPal
+690,361,269,3910.36,Mobile app,PayPal
+691,167,287,23.46,Online,Cash
+692,469,255,4509.95,Mobile app,PayPal
+693,310,165,2791.86,In-store,Cash
+694,415,149,474.32,In-store,Cash
+695,92,215,3914.19,Online,Bank Transfer
+696,349,283,3457.03,Mobile app,PayPal
+697,297,216,5118.96,In-store,Credit Card
+698,477,51,829.94,Mobile app,PayPal
+699,235,15,2411.2,Mobile app,Bank Transfer
+700,30,153,5836.07,Mobile app,Bank Transfer
+701,79,102,658.41,In-store,PayPal
+702,54,73,3016.71,In-store,Bank Transfer
+703,358,342,396.25,Online,Cash
+704,443,261,1676.5,Online,Bank Transfer
+705,273,189,1602.55,Online,Bank Transfer
+706,303,334,474.32,Mobile app,Credit Card
+707,350,193,448.12,Online,PayPal
+708,495,302,2814.59,Online,Bank Transfer
+709,184,177,698.51,In-store,Bank Transfer
+710,378,233,1982.81,Online,Credit Card
+711,162,34,3746.24,Online,Bank Transfer
+712,275,218,4782.89,In-store,Credit Card
+713,443,282,5066.63,Mobile app,PayPal
+714,398,172,1002.96,Online,Credit Card
+715,155,135,2293.8,Mobile app,Bank Transfer
+716,228,266,453.04,Mobile app,PayPal
+717,124,141,4762.21,Mobile app,Credit Card
+718,163,199,1937.86,Online,Bank Transfer
+719,42,190,2720.25,Online,Credit Card
+720,296,142,454.09,Mobile app,PayPal
+721,405,164,2996.72,In-store,Cash
+722,85,348,624.7,In-store,Cash
+723,265,221,3476.86,In-store,Cash
+724,51,250,3709.54,Online,PayPal
+725,223,67,2393.24,Mobile app,Bank Transfer
+726,456,281,2789.12,In-store,Credit Card
+727,403,22,3074.46,Online,Cash
+728,218,260,1335.62,In-store,Bank Transfer
+729,113,343,5114.33,In-store,PayPal
+730,33,360,2635.28,In-store,Credit Card
+731,451,137,556.66,Online,Credit Card
+732,168,237,147.08,In-store,Cash
+733,69,332,1114.43,Online,Credit Card
+734,76,238,4267.86,Mobile app,Credit Card
+735,436,224,677.65,Mobile app,Credit Card
+736,64,273,2700.34,Online,Bank Transfer
+737,158,233,1609.05,In-store,PayPal
+738,461,363,511.0,Online,Cash
+739,498,183,3721.1,Online,Credit Card
+740,359,134,5987.71,In-store,Bank Transfer
+741,304,12,1935.52,Mobile app,Cash
+742,138,195,2190.84,In-store,Credit Card
+743,248,322,568.95,Online,Cash
+744,197,198,514.77,Mobile app,Credit Card
+745,233,49,2824.1,Mobile app,Bank Transfer
+746,94,239,434.65,Online,PayPal
+747,491,250,1951.14,Online,Cash
+748,94,127,879.56,Mobile app,PayPal
+749,274,142,2925.12,Online,Cash
+750,480,26,445.44,Mobile app,PayPal
+751,365,191,1865.51,In-store,Cash
+752,469,246,346.88,Online,Credit Card
+753,384,158,176.8,Mobile app,Cash
+754,257,114,942.0,Online,PayPal
+755,163,30,1486.72,Online,Credit Card
+756,466,320,2307.35,In-store,Bank Transfer
+757,78,353,3054.65,Online,Cash
+758,61,218,1139.6,Mobile app,Credit Card
+759,27,1,976.81,Mobile app,Credit Card
+760,53,135,2890.06,Online,PayPal
+761,47,218,2442.65,In-store,PayPal
+762,219,285,5212.75,Mobile app,Credit Card
+763,46,217,3962.7,Mobile app,Bank Transfer
+764,421,36,4474.3,Online,PayPal
+765,500,15,112.9,Mobile app,Bank Transfer
+766,273,361,4668.83,Online,PayPal
+767,147,112,873.76,Online,Credit Card
+768,323,120,2859.13,In-store,Credit Card
+769,155,273,3756.95,Mobile app,Bank Transfer
+770,58,62,4239.86,In-store,Credit Card
+771,137,260,1692.27,In-store,Credit Card
+772,470,224,3244.84,Online,PayPal
+773,410,176,2448.62,In-store,Bank Transfer
+774,464,291,675.1,In-store,PayPal
+775,185,135,1752.0,Online,Credit Card
+776,292,12,1459.08,Online,Cash
+777,78,127,1942.48,Online,Cash
+778,13,188,422.1,In-store,Bank Transfer
+779,341,109,187.52,Mobile app,PayPal
+780,14,321,2016.58,Mobile app,PayPal
+781,76,106,2376.08,In-store,Bank Transfer
+782,172,107,2884.8,Online,PayPal
+783,452,328,2003.75,In-store,Bank Transfer
+784,88,67,3207.36,Online,Bank Transfer
+785,98,285,4732.52,In-store,Cash
+786,280,76,218.68,Mobile app,Bank Transfer
+787,387,130,1155.8,In-store,Credit Card
+788,335,340,129.66,Mobile app,Bank Transfer
+789,302,153,5091.78,In-store,Bank Transfer
+790,16,260,2494.53,Online,Credit Card
+791,153,332,1772.96,Online,PayPal
+792,316,203,3515.94,Online,Bank Transfer
+793,94,183,1334.2,In-store,Credit Card
+794,170,167,1778.99,Mobile app,Bank Transfer
+795,78,142,1446.04,In-store,Credit Card
+796,61,302,3067.91,In-store,PayPal
+797,110,15,4209.77,Online,Cash
+798,291,198,4143.81,In-store,PayPal
+799,390,302,2414.6,Mobile app,PayPal
+800,329,234,1964.2,Online,PayPal
+801,260,162,891.45,Mobile app,Credit Card
+802,474,45,3572.36,Mobile app,PayPal
+803,157,130,136.18,In-store,Bank Transfer
+804,220,236,963.26,Online,PayPal
+805,407,123,997.56,Online,Cash
+806,135,42,134.72,In-store,Credit Card
+807,293,237,6480.87,In-store,PayPal
+808,222,303,3358.12,In-store,PayPal
+809,35,140,3053.05,Online,Bank Transfer
+810,384,155,251.22,Mobile app,Bank Transfer
+811,38,259,4080.9,Mobile app,Credit Card
+812,319,324,985.47,In-store,Bank Transfer
+813,455,232,2957.81,In-store,Credit Card
+814,162,21,125.15,Online,Credit Card
+815,494,110,857.09,Online,PayPal
+816,105,336,3635.23,Online,PayPal
+817,33,341,2961.6,Mobile app,Cash
+818,150,288,4850.15,In-store,Cash
+819,340,302,416.56,Mobile app,Credit Card
+820,351,228,1836.2,In-store,Bank Transfer
+821,338,105,4001.02,In-store,Credit Card
+822,125,246,1499.2,Online,Cash
+823,294,240,2751.81,Online,Credit Card
+824,281,216,1531.51,In-store,Bank Transfer
+825,94,31,1754.68,In-store,Credit Card
+826,258,326,1474.12,In-store,Cash
+827,214,225,396.25,Online,Bank Transfer
+828,116,78,493.42,Mobile app,Cash
+829,281,278,2251.55,Mobile app,Credit Card
+830,139,248,2000.36,In-store,Credit Card
+831,418,331,155.96,Mobile app,PayPal
+832,337,338,886.34,Online,Cash
+833,172,207,107.0,In-store,Bank Transfer
+834,230,35,4042.43,Mobile app,Credit Card
+835,153,310,2374.94,In-store,PayPal
+836,370,165,2503.52,Mobile app,PayPal
+837,400,6,3461.67,In-store,Credit Card
+838,254,93,4757.25,In-store,Credit Card
+839,239,8,2554.48,Online,Cash
+840,477,212,1614.23,In-store,Credit Card
+841,192,242,1546.53,In-store,Bank Transfer
+842,459,26,3411.2,In-store,PayPal
+843,342,107,1974.58,Mobile app,Cash
+844,22,158,4574.61,Mobile app,PayPal
+845,462,38,2767.59,In-store,Bank Transfer
+846,178,240,4648.26,In-store,PayPal
+847,439,323,3129.92,Mobile app,PayPal
+848,490,125,2996.42,In-store,Credit Card
+849,426,278,3289.33,Online,Cash
+850,470,330,2384.22,In-store,Bank Transfer
+851,128,135,246.24,Mobile app,Credit Card
+852,375,47,2188.97,In-store,PayPal
+853,61,342,396.25,In-store,Cash
+854,282,221,1874.96,Mobile app,Cash
+855,236,275,396.28,In-store,Cash
+856,266,239,1240.73,In-store,PayPal
+857,307,16,235.33,Online,PayPal
+858,322,157,3565.8,In-store,Cash
+859,84,185,864.96,Mobile app,Credit Card
+860,309,88,2694.47,Mobile app,Bank Transfer
+861,441,339,2474.4,Online,Cash
+862,141,302,4058.1,In-store,Cash
+863,354,259,1213.83,Online,Credit Card
+864,256,25,2644.87,Online,PayPal
+865,233,135,1436.55,Online,PayPal
+866,293,186,975.17,Online,Cash
+867,116,74,1790.88,In-store,Bank Transfer
+868,205,243,1679.28,Online,Bank Transfer
+869,316,309,3413.38,Online,Credit Card
+870,77,182,1218.5,Online,Bank Transfer
+871,274,209,4994.56,Mobile app,Credit Card
+872,20,70,2755.3,In-store,Bank Transfer
+873,468,130,1364.69,In-store,Credit Card
+874,419,179,4374.47,In-store,Credit Card
+875,416,17,2756.87,In-store,PayPal
+876,132,306,419.7,Online,PayPal
+877,70,200,3144.81,In-store,Cash
+878,311,42,810.48,Mobile app,Bank Transfer
+879,426,290,3831.34,Mobile app,Credit Card
+880,371,294,2197.82,Mobile app,Bank Transfer
+881,471,272,258.54,In-store,Cash
+882,235,359,1582.85,Mobile app,Credit Card
+883,190,301,1941.81,Mobile app,Cash
+884,171,270,2075.86,In-store,Cash
+885,110,333,1279.32,Mobile app,Cash
+886,8,269,1313.79,Online,Credit Card
+887,418,157,1235.73,Online,PayPal
+888,394,225,3474.78,Mobile app,Credit Card
+889,254,150,3799.42,Mobile app,PayPal
+890,457,314,1106.45,Mobile app,PayPal
+891,5,87,2646.62,Mobile app,PayPal
+892,464,343,3462.56,In-store,PayPal
+893,24,204,737.61,Online,PayPal
+894,273,302,500.6,In-store,Bank Transfer
+895,427,100,2621.47,Online,PayPal
+896,202,365,208.22,Mobile app,PayPal
+897,102,238,1027.53,Mobile app,Bank Transfer
+898,167,58,3090.59,Online,Bank Transfer
+899,169,45,1174.9,Online,Bank Transfer
+900,53,154,2967.78,In-store,PayPal
+901,473,3,1071.9,Online,PayPal
+902,443,94,88.4,Online,Bank Transfer
+903,296,158,607.15,In-store,Cash
+904,181,333,5292.21,Mobile app,Bank Transfer
+905,176,304,499.85,Mobile app,Cash
+906,23,3,613.34,Online,Bank Transfer
+907,131,83,578.7,Online,Credit Card
+908,325,34,2001.85,Online,Bank Transfer
+909,449,328,542.12,Online,Bank Transfer
+910,461,191,1623.87,Online,Bank Transfer
+911,36,58,5668.36,Online,Credit Card
+912,248,241,3626.26,Online,Credit Card
+913,28,314,2725.0,In-store,Cash
+914,492,222,1356.77,In-store,Bank Transfer
+915,246,43,3930.89,Mobile app,Bank Transfer
+916,437,21,1294.34,In-store,PayPal
+917,412,179,1717.88,In-store,Cash
+918,429,181,1827.69,Online,Cash
+919,427,201,6056.43,Online,PayPal
+920,183,138,3690.18,In-store,Cash
+921,245,135,1310.16,In-store,Credit Card
+922,429,364,1243.76,Online,Credit Card
+923,11,278,1058.03,Online,Bank Transfer
+924,333,342,190.19,Online,PayPal
+925,402,347,4338.32,Online,Cash
+926,29,360,2025.34,Online,PayPal
+927,334,131,2581.2,Online,PayPal
+928,144,189,1545.19,Mobile app,Credit Card
+929,153,73,1177.9,Online,Bank Transfer
+930,77,239,997.3,Mobile app,PayPal
+931,312,253,1880.84,Online,Credit Card
+932,215,42,1334.62,Online,PayPal
+933,387,13,4790.75,In-store,Bank Transfer
+934,27,266,4250.79,Mobile app,Credit Card
+935,30,212,1477.77,Online,Credit Card
+936,180,160,940.3,Mobile app,Bank Transfer
+937,272,149,281.12,Mobile app,PayPal
+938,219,83,926.19,Online,PayPal
+939,318,108,910.62,In-store,Bank Transfer
+940,174,129,751.28,Online,Credit Card
+941,477,149,4361.71,Mobile app,Cash
+942,438,11,3192.5,In-store,Cash
+943,476,331,1680.6,Online,PayPal
+944,2,215,2266.85,Online,PayPal
+945,321,127,2931.07,Online,Credit Card
+946,340,198,4391.72,Mobile app,Cash
+947,45,233,710.71,In-store,Bank Transfer
+948,205,55,1234.9,Online,PayPal
+949,264,78,6076.45,Mobile app,Credit Card
+950,111,64,5108.82,Online,Cash
+951,27,336,3592.55,In-store,Cash
+952,454,289,1421.91,Mobile app,Bank Transfer
+953,431,44,990.92,Mobile app,PayPal
+954,6,42,3010.94,Online,PayPal
+955,474,90,1859.22,In-store,Cash
+956,131,151,1029.81,In-store,Credit Card
+957,303,91,1888.16,Mobile app,PayPal
+958,157,163,5739.44,Online,Credit Card
+959,308,66,2626.07,In-store,PayPal
+960,275,85,3608.72,Online,Bank Transfer
+961,474,81,188.19,Mobile app,PayPal
+962,487,60,597.8,Online,Credit Card
+963,186,76,1201.6,In-store,Credit Card
+964,95,99,2071.2,Mobile app,Credit Card
+965,350,8,3857.21,In-store,Bank Transfer
+966,374,270,1139.04,Online,Bank Transfer
+967,23,176,2992.17,Online,Bank Transfer
+968,275,281,1663.99,Mobile app,PayPal
+969,423,157,1475.1,Mobile app,Cash
+970,471,121,2618.12,Mobile app,PayPal
+971,295,306,3213.58,Online,Credit Card
+972,80,234,3146.55,Online,Cash
+973,339,334,1401.36,Online,Credit Card
+974,290,106,3221.8,Online,PayPal
+975,269,175,3286.85,Online,Cash
+976,206,360,2130.78,Mobile app,Credit Card
+977,351,68,3392.86,Mobile app,PayPal
+978,17,120,569.42,Mobile app,PayPal
+979,92,322,3210.54,In-store,Credit Card
+980,165,244,719.79,Online,Bank Transfer
+981,30,364,3876.95,Mobile app,Bank Transfer
+982,329,56,2836.69,In-store,PayPal
+983,197,216,1210.16,In-store,Bank Transfer
+984,358,248,3913.98,Online,Bank Transfer
+985,469,272,2542.7,In-store,Credit Card
+986,260,31,3191.31,Online,PayPal
+987,362,29,2290.05,In-store,Credit Card
+988,449,340,817.26,In-store,Credit Card
+989,272,350,3937.78,In-store,Cash
+990,269,59,2189.65,Online,PayPal
+991,388,136,433.84,Mobile app,Bank Transfer
+992,248,155,3172.44,In-store,Cash
+993,320,262,2029.89,Mobile app,Credit Card
+994,49,15,4610.9,Mobile app,Bank Transfer
+995,77,216,2329.06,Mobile app,PayPal
+996,220,215,662.28,In-store,Cash
+997,155,222,2305.0,Mobile app,PayPal
+998,308,130,319.2,Online,Bank Transfer
+999,397,89,5250.4,Online,Credit Card
+1000,38,205,3449.66,In-store,PayPal
+1001,201,344,2158.56,Mobile app,Bank Transfer
+1002,60,348,404.16,In-store,PayPal
+1003,10,198,1245.88,In-store,Cash
+1004,470,333,3407.92,Online,Cash
+1005,162,239,3628.79,In-store,Cash
+1006,317,201,1402.31,In-store,Cash
+1007,327,239,755.59,Online,Cash
+1008,416,171,3587.59,In-store,Credit Card
+1009,293,200,3964.39,In-store,PayPal
+1010,124,252,1255.4,Online,Credit Card
+1011,199,271,1676.9,Online,Credit Card
+1012,379,356,1159.5,In-store,Credit Card
+1013,269,23,2131.75,Mobile app,Credit Card
+1014,472,132,1158.61,In-store,PayPal
+1015,37,164,2380.6,In-store,Bank Transfer
+1016,242,359,2672.96,Mobile app,Cash
+1017,339,199,2313.4,In-store,PayPal
+1018,217,105,2213.0,Mobile app,Credit Card
+1019,205,335,2636.49,Mobile app,Bank Transfer
+1020,130,10,896.6,In-store,Bank Transfer
+1021,130,162,3276.06,Mobile app,Credit Card
+1022,278,276,3091.09,Online,PayPal
+1023,198,307,590.97,In-store,PayPal
+1024,455,95,1306.15,Online,Bank Transfer
+1025,236,7,3602.59,In-store,Cash
+1026,133,180,1222.71,Mobile app,PayPal
+1027,438,15,2183.55,In-store,Credit Card
+1028,188,148,455.16,In-store,PayPal
+1029,356,1,6874.41,In-store,Cash
+1030,252,304,2336.59,Online,PayPal
+1031,132,214,2014.73,Online,PayPal
+1032,367,82,3779.26,Mobile app,Credit Card
+1033,297,5,6117.73,Mobile app,Cash
+1034,179,139,4972.05,In-store,Bank Transfer
+1035,50,168,3873.76,In-store,Cash
+1036,129,178,1840.74,Online,Credit Card
+1037,293,250,1070.84,Online,Credit Card
+1038,141,166,673.6,In-store,Credit Card
+1039,320,205,3131.98,Online,Cash
+1040,467,312,4655.62,Online,Credit Card
+1041,292,307,582.24,In-store,Bank Transfer
+1042,106,101,844.88,In-store,Cash
+1043,311,267,3033.37,Online,PayPal
+1044,125,170,231.61,Mobile app,Bank Transfer
+1045,292,202,1914.16,Online,Bank Transfer
+1046,238,160,333.55,Mobile app,Bank Transfer
+1047,478,325,3274.05,Mobile app,Bank Transfer
+1048,229,337,918.78,In-store,PayPal
+1049,470,118,6449.13,Online,Credit Card
+1050,66,200,1203.88,In-store,Cash
+1051,394,170,995.1,Mobile app,Bank Transfer
+1052,331,61,1682.78,Mobile app,Bank Transfer
+1053,143,202,780.65,In-store,PayPal
+1054,468,6,3549.74,Online,Bank Transfer
+1055,480,311,584.46,Online,Credit Card
+1056,164,180,2970.05,Online,Cash
+1057,376,208,5111.46,Mobile app,Credit Card
+1058,91,343,390.2,Online,Bank Transfer
+1059,448,182,1240.17,In-store,Credit Card
+1060,180,93,132.6,In-store,Cash
+1061,8,50,3072.94,Mobile app,Credit Card
+1062,160,46,1543.24,In-store,Bank Transfer
+1063,71,213,562.56,In-store,Credit Card
+1064,200,152,982.17,Mobile app,PayPal
+1065,191,309,1345.35,Online,Credit Card
+1066,71,279,1153.54,Mobile app,Bank Transfer
+1067,29,3,819.39,Online,PayPal
+1068,274,199,1597.91,Online,Cash
+1069,116,271,523.8,In-store,PayPal
+1070,384,187,816.81,Online,PayPal
+1071,394,358,472.04,Online,Bank Transfer
+1072,371,152,3383.57,Online,Cash
+1073,269,175,4236.05,Mobile app,Bank Transfer
+1074,249,101,69.67,Online,PayPal
+1075,493,40,3641.3,Mobile app,Cash
+1076,214,303,4949.1,Mobile app,Credit Card
+1077,64,3,4958.12,Mobile app,Bank Transfer
+1078,348,248,1570.0,In-store,PayPal
+1079,130,36,155.96,Online,Bank Transfer
+1080,214,158,1238.52,Online,PayPal
+1081,32,149,1851.38,Online,PayPal
+1082,267,101,4006.26,Mobile app,Credit Card
+1083,105,274,3215.59,Mobile app,Cash
+1084,25,142,640.12,In-store,PayPal
+1085,446,60,3118.32,Mobile app,PayPal
+1086,112,362,1092.2,Mobile app,PayPal
+1087,312,295,4029.85,Mobile app,Bank Transfer
+1088,371,14,1872.56,Online,Bank Transfer
+1089,433,237,1350.2,Mobile app,Cash
+1090,46,155,1604.08,Online,Cash
+1091,425,239,5741.25,In-store,PayPal
+1092,396,362,1654.45,Online,PayPal
+1093,259,70,2678.62,In-store,Credit Card
+1094,16,275,121.24,In-store,Credit Card
+1095,301,232,1382.43,In-store,PayPal
+1096,488,307,2286.75,Online,PayPal
+1097,209,84,538.88,In-store,Credit Card
+1098,264,279,897.76,Online,PayPal
+1099,102,357,1394.37,Mobile app,PayPal
+1100,107,194,3556.53,In-store,Bank Transfer
+1101,44,113,3366.49,Mobile app,Credit Card
+1102,272,361,4936.11,Mobile app,PayPal
+1103,308,151,330.36,Online,Bank Transfer
+1104,456,262,2021.24,Online,Cash
+1105,118,281,4178.8,Mobile app,Cash
+1106,494,197,3347.34,In-store,Bank Transfer
+1107,140,359,4036.1,Online,Cash
+1108,71,278,770.54,Online,Bank Transfer
+1109,107,202,2917.85,In-store,Bank Transfer
+1110,191,179,2639.81,Mobile app,Cash
+1111,262,29,1807.43,Mobile app,Bank Transfer
+1112,136,43,3033.79,Online,Credit Card
+1113,70,313,2014.79,Online,Credit Card
+1114,449,133,1921.36,Online,PayPal
+1115,122,20,2531.4,In-store,Bank Transfer
+1116,13,208,1417.2,Online,PayPal
+1117,44,339,189.12,Mobile app,PayPal
+1118,78,107,3029.57,Online,PayPal
+1119,82,75,3725.54,Mobile app,Cash
+1120,435,349,2093.56,In-store,Bank Transfer
+1121,364,168,1483.81,In-store,Credit Card
+1122,226,291,4214.35,In-store,Cash
+1123,14,37,1542.37,In-store,Cash
+1124,477,323,2776.15,In-store,Cash
+1125,475,334,1845.28,Online,Credit Card
+1126,266,358,3117.33,Online,PayPal
+1127,443,233,3854.96,In-store,PayPal
+1128,488,171,1928.11,Online,Bank Transfer
+1129,301,364,3084.95,Online,Credit Card
+1130,23,194,1164.15,Mobile app,Bank Transfer
+1131,438,221,1510.4,Online,PayPal
+1132,182,18,132.6,Mobile app,Bank Transfer
+1133,255,88,1885.6,In-store,Credit Card
+1134,192,275,1762.64,Online,Cash
+1135,306,144,319.11,In-store,PayPal
+1136,59,251,1731.78,Mobile app,PayPal
+1137,433,26,58.5,Mobile app,PayPal
+1138,463,57,2144.22,In-store,PayPal
+1139,62,291,219.47,Mobile app,Cash
+1140,402,248,604.16,Online,Bank Transfer
+1141,14,12,3582.89,Mobile app,PayPal
+1142,147,321,742.66,Mobile app,Cash
+1143,258,323,92.83,In-store,Cash
+1144,367,10,981.12,Mobile app,Bank Transfer
+1145,353,296,3781.32,Online,Credit Card
+1146,424,141,1778.0,In-store,Cash
+1147,15,191,3059.96,Mobile app,Credit Card
+1148,408,286,471.67,Mobile app,Cash
+1149,328,246,2593.27,In-store,PayPal
+1150,222,351,945.9,Online,Credit Card
+1151,449,356,1329.17,In-store,Cash
+1152,241,30,1000.65,In-store,Cash
+1153,234,20,2006.44,In-store,Cash
+1154,130,312,3449.18,Mobile app,Cash
+1155,488,313,1429.22,In-store,Credit Card
+1156,201,182,2685.13,In-store,PayPal
+1157,342,157,1209.74,Mobile app,Credit Card
+1158,199,60,658.83,In-store,Cash
+1159,270,32,2895.54,Mobile app,PayPal
+1160,273,356,2063.85,Mobile app,Bank Transfer
+1161,196,10,2750.25,Online,Bank Transfer
+1162,214,249,2460.51,Mobile app,Bank Transfer
+1163,466,7,113.79,Online,Bank Transfer
+1164,183,16,3782.85,Online,Bank Transfer
+1165,478,260,3126.95,Online,PayPal
+1166,475,337,2533.76,Mobile app,Cash
+1167,89,18,1779.83,Online,Bank Transfer
+1168,249,128,3240.07,Mobile app,Cash
+1169,487,365,6201.48,Online,Credit Card
+1170,440,153,2706.18,In-store,PayPal
+1171,112,331,1546.0,In-store,Bank Transfer
+1172,479,20,916.64,In-store,Credit Card
+1173,266,235,982.1,In-store,PayPal
+1174,335,254,1531.3,Online,Bank Transfer
+1175,201,195,125.15,In-store,Credit Card
+1176,319,137,1237.33,In-store,Credit Card
+1177,208,246,1974.64,Mobile app,PayPal
+1178,48,330,1928.57,In-store,Cash
+1179,47,291,4822.3,Online,PayPal
+1180,346,251,1129.92,Mobile app,Bank Transfer
+1181,203,49,4183.91,In-store,Credit Card
+1182,500,331,5273.98,Online,Credit Card
+1183,420,338,1422.96,In-store,Credit Card
+1184,378,258,2671.83,Mobile app,Credit Card
+1185,351,237,818.96,In-store,Cash
+1186,102,340,823.82,Online,PayPal
+1187,13,201,811.8,In-store,PayPal
+1188,472,259,4116.6,In-store,Credit Card
+1189,77,298,4405.24,In-store,Bank Transfer
+1190,486,188,908.49,Online,Cash
+1191,12,17,2208.67,In-store,Cash
+1192,301,213,2779.22,Online,Cash
+1193,300,32,732.76,In-store,PayPal
+1194,109,135,2290.04,Mobile app,Cash
+1195,420,29,1195.85,Online,Credit Card
+1196,68,149,4110.59,Mobile app,PayPal
+1197,323,2,1279.97,In-store,PayPal
+1198,399,46,339.18,Online,PayPal
+1199,221,320,2603.41,In-store,Bank Transfer
+1200,60,228,1873.26,Mobile app,Bank Transfer
+1201,99,77,354.3,Online,Bank Transfer
+1202,259,103,1120.44,Mobile app,Bank Transfer
+1203,423,278,5930.5,Online,Bank Transfer
+1204,204,334,3012.9,Mobile app,PayPal
+1205,396,282,1589.26,Online,PayPal
+1206,183,131,2041.91,Online,Bank Transfer
+1207,72,164,5684.83,In-store,Cash
+1208,162,300,8202.31,Online,PayPal
+1209,304,60,39.69,In-store,PayPal
+1210,26,271,859.28,Mobile app,Bank Transfer
+1211,199,72,637.84,In-store,PayPal
+1212,313,130,1807.9,Online,Credit Card
+1213,302,198,474.32,In-store,PayPal
+1214,17,362,1566.13,Mobile app,Bank Transfer
+1215,217,134,1373.32,Online,Cash
+1216,129,105,2934.53,Mobile app,Bank Transfer
+1217,384,285,3818.45,Online,Bank Transfer
+1218,252,206,184.17,Online,Credit Card
+1219,195,211,4557.32,Mobile app,Bank Transfer
+1220,368,279,3437.21,Online,Credit Card
+1221,107,22,4822.8,Mobile app,Bank Transfer
+1222,451,346,2086.14,Mobile app,Credit Card
+1223,401,152,1733.54,In-store,Credit Card
+1224,424,96,1888.16,In-store,Bank Transfer
+1225,119,39,1401.65,In-store,Bank Transfer
+1226,123,312,1758.09,Mobile app,Bank Transfer
+1227,424,248,542.12,In-store,Credit Card
+1228,84,208,1699.64,Mobile app,PayPal
+1229,474,1,1302.01,Mobile app,PayPal
+1230,158,139,386.48,Online,PayPal
+1231,423,354,4501.09,Online,Cash
+1232,489,265,2081.77,Online,Credit Card
+1233,124,312,3235.02,Mobile app,Cash
+1234,28,327,439.22,Mobile app,Credit Card
+1235,432,184,3912.15,In-store,PayPal
+1236,372,31,1960.41,Online,Bank Transfer
+1237,255,193,1459.09,Online,Bank Transfer
+1238,251,310,1334.83,Online,PayPal
+1239,75,250,2138.23,Mobile app,Credit Card
+1240,112,316,1240.12,Mobile app,Bank Transfer
+1241,153,168,3012.18,In-store,Credit Card
+1242,373,7,1024.19,Mobile app,PayPal
+1243,109,24,1483.4,Mobile app,Credit Card
+1244,263,189,3592.8,Online,Credit Card
+1245,56,187,2730.18,In-store,Credit Card
+1246,81,219,2529.55,Mobile app,Cash
+1247,236,337,3522.88,Mobile app,Bank Transfer
+1248,59,12,1828.74,Online,Bank Transfer
+1249,127,4,1913.29,In-store,Bank Transfer
+1250,446,275,4274.38,In-store,PayPal
+1251,36,30,2885.55,In-store,Bank Transfer
+1252,169,363,1026.74,Online,Cash
+1253,191,157,1407.89,Mobile app,Bank Transfer
+1254,152,337,3456.88,Online,Bank Transfer
+1255,385,165,1846.68,Mobile app,Credit Card
+1256,429,38,3138.27,In-store,PayPal
+1257,252,206,3055.33,Online,Credit Card
+1258,202,105,487.4,In-store,Bank Transfer
+1259,370,254,2621.95,Mobile app,Credit Card
+1260,19,213,3977.86,Online,PayPal
+1261,154,15,1030.56,Online,Cash
+1262,49,118,1290.58,In-store,Bank Transfer
+1263,257,21,4429.76,In-store,Credit Card
+1264,197,286,1908.37,Online,PayPal
+1265,54,324,2222.5,Mobile app,Bank Transfer
+1266,482,158,780.81,In-store,Credit Card
+1267,472,225,3545.77,Online,Credit Card
+1268,319,228,72.62,Mobile app,PayPal
+1269,424,112,4874.62,In-store,Cash
+1270,10,282,1399.24,Mobile app,Credit Card
+1271,353,12,1234.92,Mobile app,Cash
+1272,474,272,2688.6,In-store,Credit Card
+1273,281,81,1021.46,Mobile app,Credit Card
+1274,481,316,2674.3,In-store,PayPal
+1275,14,354,645.17,Mobile app,Cash
+1276,309,209,4209.85,Mobile app,Bank Transfer
+1277,371,71,3974.42,Mobile app,PayPal
+1278,363,237,2110.4,Online,PayPal
+1279,449,68,791.68,Online,PayPal
+1280,5,211,5185.09,In-store,PayPal
+1281,445,330,4192.24,Mobile app,Cash
+1282,437,185,1150.57,In-store,PayPal
+1283,197,143,1664.63,Online,Cash
+1284,147,45,2930.05,Mobile app,Bank Transfer
+1285,340,68,647.53,In-store,Cash
+1286,441,195,3601.7,Online,Bank Transfer
+1287,155,241,957.0,Mobile app,PayPal
+1288,401,297,4567.03,In-store,Credit Card
+1289,405,355,1006.76,In-store,Bank Transfer
+1290,478,351,1686.0,Mobile app,Credit Card
+1291,286,234,2380.6,Mobile app,Cash
+1292,195,66,2534.86,Mobile app,Cash
+1293,247,9,343.52,In-store,Bank Transfer
+1294,414,27,1562.88,In-store,Credit Card
+1295,58,35,5661.64,In-store,PayPal
+1296,472,134,5299.22,Online,PayPal
+1297,51,104,2415.27,Mobile app,Bank Transfer
+1298,324,95,3831.41,Online,Credit Card
+1299,66,319,3737.16,In-store,Credit Card
+1300,302,43,2699.05,Mobile app,Credit Card
+1301,450,58,547.62,In-store,Credit Card
+1302,82,18,1638.22,Online,PayPal
+1303,183,251,3781.83,Online,Cash
+1304,119,18,5001.65,In-store,Credit Card
+1305,409,300,1911.5,In-store,Credit Card
+1306,426,84,1642.98,In-store,Cash
+1307,31,246,1107.44,Mobile app,Bank Transfer
+1308,304,350,4025.81,Mobile app,Credit Card
+1309,366,236,1410.59,Online,PayPal
+1310,217,15,1241.87,Online,Bank Transfer
+1311,125,65,1233.1,In-store,Credit Card
+1312,190,63,4457.42,Online,Bank Transfer
+1313,321,151,1974.38,In-store,PayPal
+1314,316,207,1482.6,Online,Bank Transfer
+1315,111,255,6126.9,Mobile app,Cash
+1316,146,359,2867.28,Mobile app,Cash
+1317,63,111,1043.8,Online,Cash
+1318,309,12,5274.11,Online,Cash
+1319,31,289,1515.65,Mobile app,PayPal
+1320,160,269,1832.03,In-store,Cash
+1321,329,139,1001.75,Online,PayPal
+1322,407,307,3935.14,Online,Credit Card
+1323,67,124,2163.84,Mobile app,PayPal
+1324,382,355,2068.63,In-store,Cash
+1325,182,344,560.96,Mobile app,Bank Transfer
+1326,284,286,1298.04,In-store,PayPal
+1327,432,348,2204.95,Online,Cash
+1328,93,332,1256.1,Online,Bank Transfer
+1329,380,26,1039.19,Online,Cash
+1330,99,272,2899.33,Mobile app,Bank Transfer
+1331,292,269,1071.9,In-store,Bank Transfer
+1332,135,189,404.51,Mobile app,Bank Transfer
+1333,491,131,1890.47,Mobile app,Credit Card
+1334,162,255,1654.45,Online,Bank Transfer
+1335,54,201,2012.63,Online,PayPal
+1336,176,208,2210.35,In-store,Credit Card
+1337,21,251,150.0,Online,Cash
+1338,246,206,990.7,In-store,Cash
+1339,337,219,4040.75,Mobile app,Cash
+1340,465,310,1099.31,Mobile app,Cash
+1341,158,343,1523.43,Mobile app,Cash
+1342,428,365,873.36,In-store,Bank Transfer
+1343,266,203,2151.75,In-store,PayPal
+1344,146,131,2956.74,Online,Cash
+1345,489,292,3149.16,In-store,PayPal
+1346,428,310,4580.37,In-store,Credit Card
+1347,46,50,964.5,In-store,Bank Transfer
+1348,172,143,1157.75,In-store,PayPal
+1349,99,177,1304.36,In-store,Bank Transfer
+1350,92,249,667.1,Mobile app,Credit Card
+1351,357,321,1974.45,Online,Bank Transfer
+1352,351,88,3753.09,Online,Bank Transfer
+1353,471,131,3200.78,Online,Credit Card
+1354,485,4,90.32,Mobile app,Cash
+1355,154,220,1345.8,Online,Cash
+1356,449,100,1621.76,Mobile app,Bank Transfer
+1357,74,321,2101.05,Online,Credit Card
+1358,351,217,2089.83,Mobile app,PayPal
+1359,368,319,4844.1,Online,Bank Transfer
+1360,122,102,1154.87,In-store,PayPal
+1361,21,327,1720.04,In-store,Cash
+1362,288,9,369.4,Online,Bank Transfer
+1363,418,244,4105.07,Online,PayPal
+1364,206,185,2735.29,Online,Cash
+1365,254,321,1641.68,Online,PayPal
+1366,13,214,3207.23,Mobile app,PayPal
+1367,83,321,3633.52,Mobile app,Cash
+1368,77,43,1516.89,Mobile app,Bank Transfer
+1369,346,11,1361.38,Online,Bank Transfer
+1370,306,133,2435.28,In-store,PayPal
+1371,149,357,4910.62,Mobile app,PayPal
+1372,112,35,1196.24,Mobile app,Credit Card
+1373,455,226,8172.12,Mobile app,Bank Transfer
+1374,416,216,1383.0,Online,Credit Card
+1375,20,217,2141.11,Online,Credit Card
+1376,22,360,3266.71,Online,Credit Card
+1377,50,90,2725.35,In-store,Bank Transfer
+1378,346,4,530.36,Online,Credit Card
+1379,72,256,1930.82,Online,Cash
+1380,347,339,3200.19,Mobile app,Cash
+1381,318,131,1473.7,In-store,PayPal
+1382,74,332,1667.83,Online,Cash
+1383,240,95,1372.16,Mobile app,Bank Transfer
+1384,435,204,1421.92,Mobile app,Credit Card
+1385,103,245,1434.48,Online,Cash
+1386,273,278,3352.43,In-store,Credit Card
+1387,418,311,4175.51,Online,Credit Card
+1388,179,315,6639.23,Online,Cash
+1389,321,175,3162.3,In-store,PayPal
+1390,324,333,155.6,Mobile app,Credit Card
+1391,9,288,102.96,Mobile app,Cash
+1392,88,221,710.98,Mobile app,Bank Transfer
+1393,451,254,4868.35,Online,Cash
+1394,328,46,1052.69,In-store,Bank Transfer
+1395,349,46,1981.25,In-store,PayPal
+1396,177,337,651.11,Online,PayPal
+1397,258,211,959.09,In-store,Bank Transfer
+1398,113,259,5019.99,Online,Credit Card
+1399,486,14,4226.73,In-store,Credit Card
+1400,333,97,2289.15,In-store,PayPal
+1401,179,215,3035.17,Mobile app,Cash
+1402,435,147,1688.36,Online,PayPal
+1403,64,77,965.97,In-store,Credit Card
+1404,142,325,1020.77,In-store,Cash
+1405,87,195,5805.83,Online,Bank Transfer
+1406,448,219,234.0,Online,Cash
+1407,152,87,529.2,In-store,Credit Card
+1408,197,40,3346.87,In-store,Bank Transfer
+1409,76,86,1545.87,In-store,Bank Transfer
+1410,327,336,2314.34,Online,PayPal
+1411,221,355,3921.97,Mobile app,Bank Transfer
+1412,180,126,317.54,In-store,Bank Transfer
+1413,468,281,297.15,Online,Bank Transfer
+1414,424,112,3228.97,Online,Credit Card
+1415,258,140,4519.58,In-store,Cash
+1416,393,61,4740.59,In-store,Cash
+1417,310,104,1066.87,Mobile app,Credit Card
+1418,380,278,2742.37,Online,Bank Transfer
+1419,283,177,4408.35,Online,Cash
+1420,342,62,2003.71,Mobile app,PayPal
+1421,267,21,1616.28,Mobile app,Bank Transfer
+1422,256,327,1703.83,Online,Credit Card
+1423,488,99,3819.68,Online,Bank Transfer
+1424,387,31,2366.44,Mobile app,Cash
+1425,333,140,1575.12,Online,Bank Transfer
+1426,381,5,398.85,In-store,Credit Card
+1427,111,111,689.38,Mobile app,Cash
+1428,478,186,3092.76,Mobile app,PayPal
+1429,176,263,2458.8,In-store,Credit Card
+1430,169,273,875.34,Online,Cash
+1431,296,154,831.34,Mobile app,Credit Card
+1432,122,229,2573.99,Online,Bank Transfer
+1433,148,79,1959.42,Online,PayPal
+1434,87,38,1308.12,Mobile app,PayPal
+1435,128,182,3686.85,Mobile app,Bank Transfer
+1436,219,44,1150.74,In-store,Bank Transfer
+1437,381,180,2065.4,In-store,Bank Transfer
+1438,68,329,2205.15,In-store,Bank Transfer
+1439,216,102,3868.91,In-store,Bank Transfer
+1440,184,324,1324.29,In-store,Credit Card
+1441,213,19,1751.72,In-store,Credit Card
+1442,252,292,461.6,Online,Credit Card
+1443,32,357,3337.43,Mobile app,Cash
+1444,215,83,2545.43,Online,Cash
+1445,318,174,3552.0,Mobile app,Cash
+1446,247,192,3002.52,Mobile app,Cash
+1447,73,290,1599.28,In-store,Bank Transfer
+1448,54,19,2234.25,Mobile app,Cash
+1449,191,231,607.67,Online,Cash
+1450,107,130,4339.97,In-store,PayPal
+1451,237,296,2659.85,Mobile app,PayPal
+1452,404,291,709.56,Mobile app,Credit Card
+1453,266,45,1827.12,In-store,PayPal
+1454,131,122,233.64,Online,PayPal
+1455,162,12,470.22,Online,PayPal
+1456,160,279,3058.71,Online,Credit Card
+1457,110,15,1259.72,In-store,Bank Transfer
+1458,240,178,1455.6,Online,Bank Transfer
+1459,229,239,2962.9,Online,Cash
+1460,240,31,1667.67,In-store,Bank Transfer
+1461,500,16,4133.25,Mobile app,Cash
+1462,323,173,3502.57,Online,PayPal
+1463,426,78,525.5,Mobile app,PayPal
+1464,36,283,538.88,Online,Credit Card
+1465,45,309,3168.18,Online,Bank Transfer
+1466,33,233,3280.52,Online,PayPal
+1467,134,6,2964.72,Online,Credit Card
+1468,443,234,1146.52,In-store,Credit Card
+1469,182,68,437.93,Mobile app,Cash
+1470,46,251,2979.48,Online,PayPal
+1471,84,88,1309.94,Online,Bank Transfer
+1472,344,61,833.68,Online,Cash
+1473,46,176,719.79,Online,Credit Card
+1474,311,272,1625.09,In-store,PayPal
+1475,408,110,1872.87,Online,Bank Transfer
+1476,41,264,3048.71,Online,PayPal
+1477,387,310,3521.57,In-store,Bank Transfer
+1478,430,341,1155.03,Online,Bank Transfer
+1479,87,121,3235.55,Online,Credit Card
+1480,160,347,1996.05,Mobile app,PayPal
+1481,404,65,3291.38,Online,Cash
+1482,32,199,4194.49,Mobile app,Bank Transfer
+1483,308,236,4372.09,Mobile app,Cash
+1484,76,219,2443.73,In-store,PayPal
+1485,62,131,1267.81,Online,Credit Card
+1486,186,160,52.92,Mobile app,Bank Transfer
+1487,320,119,2372.23,Online,Credit Card
+1488,356,316,6533.37,In-store,Cash
+1489,465,236,2015.61,Online,Credit Card
+1490,20,269,145.24,Online,Cash
+1491,343,351,2369.85,Online,Bank Transfer
+1492,26,335,1109.22,In-store,PayPal
+1493,431,220,3052.81,Mobile app,Bank Transfer
+1494,311,121,4242.14,In-store,PayPal
+1495,341,67,1858.02,In-store,Bank Transfer
+1496,105,173,2206.21,In-store,Cash
+1497,375,56,2277.8,Mobile app,PayPal
+1498,278,63,1554.49,Mobile app,Cash
+1499,86,300,513.56,Online,PayPal
+1500,196,305,3327.72,Mobile app,PayPal
+1501,96,193,3040.04,Mobile app,PayPal
+1502,50,169,2540.35,In-store,Credit Card
+1503,235,153,808.78,Mobile app,Bank Transfer
+1504,207,153,1295.94,Mobile app,PayPal
+1505,437,281,5044.99,In-store,Bank Transfer
+1506,452,119,168.84,Mobile app,Bank Transfer
+1507,375,107,2437.46,Mobile app,Credit Card
+1508,313,194,3697.55,Mobile app,Credit Card
+1509,406,17,2215.85,Online,Cash
+1510,272,59,2348.55,Online,PayPal
+1511,13,53,2789.44,In-store,Credit Card
+1512,388,316,1455.6,In-store,Cash
+1513,262,329,5737.65,In-store,Bank Transfer
+1514,297,291,3262.79,In-store,Bank Transfer
+1515,282,237,5893.31,Mobile app,Cash
+1516,209,111,530.18,Mobile app,PayPal
+1517,215,354,1415.08,In-store,Cash
+1518,173,111,3219.67,In-store,Bank Transfer
+1519,186,44,2932.04,Online,Bank Transfer
+1520,15,326,624.52,Online,PayPal
+1521,328,27,3240.4,Online,Credit Card
+1522,62,329,828.17,In-store,PayPal
+1523,102,177,1969.86,Online,PayPal
+1524,369,90,502.44,Online,Cash
+1525,84,16,1341.52,Mobile app,Bank Transfer
+1526,30,177,3536.22,Online,Bank Transfer
+1527,135,276,2160.76,In-store,PayPal
+1528,89,279,934.05,In-store,Bank Transfer
+1529,37,355,1731.84,Mobile app,Credit Card
+1530,78,20,536.1,Online,Bank Transfer
+1531,256,21,4125.48,Online,Bank Transfer
+1532,90,289,193.24,In-store,Bank Transfer
+1533,447,238,1039.02,Mobile app,Bank Transfer
+1534,289,135,772.9,Mobile app,PayPal
+1535,410,152,952.24,Mobile app,Cash
+1536,89,259,812.56,Mobile app,Cash
+1537,417,137,121.24,In-store,PayPal
+1538,53,74,235.33,Online,Credit Card
+1539,18,284,3074.95,Mobile app,PayPal
+1540,436,80,4492.78,In-store,Credit Card
+1541,259,306,1243.04,In-store,PayPal
+1542,447,291,2452.85,In-store,Bank Transfer
+1543,247,342,4428.76,Mobile app,PayPal
+1544,460,333,4267.02,Online,Credit Card
+1545,265,355,3446.65,In-store,Bank Transfer
+1546,357,215,1869.69,Online,PayPal
+1547,209,276,5756.83,Online,Cash
+1548,152,96,2499.26,Online,Cash
+1549,486,84,2400.84,In-store,Bank Transfer
+1550,38,301,278.53,Mobile app,Bank Transfer
+1551,20,76,483.1,Online,PayPal
+1552,332,202,1739.99,In-store,Credit Card
+1553,62,211,6922.48,Mobile app,Cash
+1554,400,148,2225.23,In-store,Bank Transfer
+1555,81,262,2020.34,Online,Cash
+1556,173,311,1815.03,Online,Cash
+1557,65,64,188.19,Online,Cash
+1558,170,351,331.05,Online,PayPal
+1559,341,91,253.59,In-store,Cash
+1560,480,271,2741.15,Online,Bank Transfer
+1561,44,54,66.15,Online,Bank Transfer
+1562,216,160,2827.04,Online,Cash
+1563,151,50,1527.68,Mobile app,Bank Transfer
+1564,70,340,289.86,In-store,Cash
+1565,153,43,2912.21,Mobile app,PayPal
+1566,372,209,1659.92,In-store,Credit Card
+1567,6,11,2560.99,In-store,Bank Transfer
+1568,85,48,3107.62,Online,PayPal
+1569,79,65,3193.3,In-store,Bank Transfer
+1570,46,348,2157.34,Mobile app,Credit Card
+1571,56,46,192.9,Mobile app,Bank Transfer
+1572,24,253,363.18,Online,Bank Transfer
+1573,67,221,2837.89,Mobile app,Bank Transfer
+1574,399,155,3645.46,In-store,Bank Transfer
+1575,209,160,2935.03,Mobile app,Bank Transfer
+1576,346,226,660.72,Online,Cash
+1577,120,325,6340.19,In-store,PayPal
+1578,182,280,3818.88,Online,Cash
+1579,204,168,1991.82,Online,PayPal
+1580,4,59,2502.02,Online,Bank Transfer
+1581,361,226,3445.67,Online,Cash
+1582,300,239,1623.64,Online,Bank Transfer
+1583,401,250,2895.05,Online,Credit Card
+1584,238,200,1474.12,In-store,Credit Card
+1585,76,235,2645.59,Mobile app,Bank Transfer
+1586,3,169,2180.83,Online,Cash
+1587,264,42,1705.2,Online,PayPal
+1588,334,15,2685.96,Online,Cash
+1589,218,346,2151.56,Online,Credit Card
+1590,223,276,2296.27,Mobile app,Credit Card
+1591,20,333,2141.74,Mobile app,PayPal
+1592,38,116,3437.65,Online,Cash
+1593,81,89,1780.37,Mobile app,Credit Card
+1594,233,224,625.75,Online,PayPal
+1595,230,260,3181.75,Online,Cash
+1596,430,53,1044.71,Online,Cash
+1597,207,183,585.34,Online,PayPal
+1598,127,252,4677.51,Online,Cash
+1599,210,249,1095.24,Mobile app,PayPal
+1600,250,150,1279.39,Mobile app,Bank Transfer
+1601,332,65,2264.49,Online,Credit Card
+1602,181,310,2688.78,Online,Bank Transfer
+1603,163,309,3914.98,Online,Cash
+1604,500,270,3257.2,In-store,PayPal
+1605,41,62,1570.18,Mobile app,Cash
+1606,312,264,331.05,Online,Credit Card
+1607,163,165,3356.52,Online,Cash
+1608,124,363,1308.65,In-store,Bank Transfer
+1609,213,131,1987.02,In-store,Bank Transfer
+1610,379,66,1777.15,Online,Credit Card
+1611,141,195,4308.09,In-store,Bank Transfer
+1612,17,30,583.6,In-store,Bank Transfer
+1613,79,365,508.69,Online,Bank Transfer
+1614,278,132,791.87,In-store,Bank Transfer
+1615,157,346,5021.78,Online,Credit Card
+1616,350,55,3553.69,In-store,Credit Card
+1617,154,81,171.59,In-store,Credit Card
+1618,15,141,1444.12,Mobile app,Bank Transfer
+1619,337,339,2341.15,Online,Bank Transfer
+1620,156,211,3447.41,Online,Bank Transfer
+1621,332,69,4051.65,Mobile app,Cash
+1622,39,212,658.41,In-store,Cash
+1623,388,49,434.65,Online,Credit Card
+1624,131,143,459.0,Online,Bank Transfer
+1625,345,22,1147.24,Online,PayPal
+1626,265,7,5674.26,Online,Cash
+1627,143,275,4000.83,In-store,PayPal
+1628,468,336,2569.71,Online,Credit Card
+1629,458,143,1169.83,In-store,Cash
+1630,398,207,3019.02,Online,Credit Card
+1631,291,221,3843.39,Mobile app,Cash
+1632,319,191,2580.14,Online,Bank Transfer
+1633,199,190,3095.29,Mobile app,Bank Transfer
+1634,449,159,2958.54,Mobile app,Cash
+1635,338,173,3545.63,In-store,PayPal
+1636,133,180,2582.94,Mobile app,PayPal
+1637,81,123,269.44,Mobile app,Credit Card
+1638,5,296,1320.36,In-store,Credit Card
+1639,497,262,1268.74,Online,Cash
+1640,189,5,664.68,In-store,PayPal
+1641,16,116,2609.62,Mobile app,Bank Transfer
+1642,274,164,915.78,Online,Credit Card
+1643,195,243,2104.52,Mobile app,Bank Transfer
+1644,329,314,2503.9,In-store,Cash
+1645,76,323,2949.63,Mobile app,PayPal
+1646,391,240,5303.67,Mobile app,PayPal
+1647,362,267,1188.6,Online,PayPal
+1648,398,226,2565.16,Online,Cash
+1649,373,231,2515.13,Mobile app,PayPal
+1650,143,50,779.8,In-store,PayPal
+1651,14,357,2782.75,Mobile app,Credit Card
+1652,385,253,1360.89,Mobile app,PayPal
+1653,370,361,919.71,Online,Bank Transfer
+1654,335,137,1507.31,Mobile app,Credit Card
+1655,297,191,1465.23,In-store,Bank Transfer
+1656,373,93,3297.81,Mobile app,Cash
+1657,200,105,3424.82,Mobile app,PayPal
+1658,355,365,483.59,Online,Cash
+1659,469,354,4143.51,In-store,Cash
+1660,212,93,2586.48,Mobile app,Bank Transfer
+1661,453,32,2971.4,Online,Cash
+1662,127,21,4009.47,Online,Bank Transfer
+1663,406,190,763.46,Mobile app,Credit Card
+1664,388,259,5574.32,Mobile app,Credit Card
+1665,195,233,2427.72,Online,Credit Card
+1666,373,22,717.75,Online,Bank Transfer
+1667,272,273,1320.53,Mobile app,PayPal
+1668,15,28,3448.96,Online,PayPal
+1669,190,175,1179.36,In-store,PayPal
+1670,456,265,1969.61,Online,Credit Card
+1671,199,138,1975.52,In-store,Credit Card
+1672,125,179,1774.9,Online,Bank Transfer
+1673,413,2,1433.42,In-store,Bank Transfer
+1674,112,313,5001.88,Online,Cash
+1675,435,285,2719.39,Online,Bank Transfer
+1676,18,92,937.6,In-store,Cash
+1677,35,132,632.96,In-store,PayPal
+1678,500,311,1842.65,Online,Bank Transfer
+1679,152,68,1747.17,Online,Bank Transfer
+1680,484,3,4379.06,Online,Bank Transfer
+1681,276,363,1098.05,In-store,PayPal
+1682,183,180,2615.9,In-store,Bank Transfer
+1683,3,72,2187.96,Mobile app,Cash
+1684,400,277,2006.07,In-store,PayPal
+1685,20,88,3400.37,Mobile app,Credit Card
+1686,166,224,2073.88,Mobile app,Cash
+1687,367,236,3632.94,In-store,Cash
+1688,128,34,1902.93,In-store,Cash
+1689,418,9,2666.82,Online,PayPal
+1690,278,323,1652.38,Mobile app,Credit Card
+1691,131,17,2640.17,Online,Cash
+1692,173,237,1817.62,In-store,Cash
+1693,345,172,303.22,Online,Cash
+1694,383,233,2131.66,Online,PayPal
+1695,256,72,2046.52,Online,Credit Card
+1696,83,153,4132.32,In-store,Cash
+1697,62,297,3358.79,Online,Credit Card
+1698,470,311,4159.49,In-store,Credit Card
+1699,354,52,4704.38,Mobile app,Credit Card
+1700,476,321,1897.28,In-store,Credit Card
+1701,310,169,4741.24,In-store,PayPal
+1702,496,328,2846.38,Online,PayPal
+1703,88,88,998.61,Online,Cash
+1704,500,89,4116.97,In-store,Cash
+1705,337,41,1451.33,Online,Bank Transfer
+1706,37,35,2764.39,Online,Bank Transfer
+1707,414,244,950.95,Mobile app,Cash
+1708,365,160,1359.93,In-store,Cash
+1709,264,119,3937.99,Online,Cash
+1710,348,35,4834.49,Mobile app,Credit Card
+1711,463,150,4095.0,Mobile app,PayPal
+1712,143,272,2489.46,In-store,Credit Card
+1713,402,234,1023.95,In-store,Bank Transfer
+1714,174,16,1641.1,In-store,PayPal
+1715,89,299,1406.86,In-store,Credit Card
+1716,157,7,2633.14,Mobile app,Cash
+1717,356,353,1460.14,In-store,Cash
+1718,86,220,3352.26,Online,PayPal
+1719,360,222,799.61,Online,Cash
+1720,436,40,3581.06,Mobile app,Credit Card
+1721,405,302,2501.23,Online,PayPal
+1722,268,178,3747.99,In-store,PayPal
+1723,22,226,605.08,Mobile app,Bank Transfer
+1724,220,35,1711.43,In-store,Credit Card
+1725,3,191,3462.08,In-store,Credit Card
+1726,217,210,1529.2,Online,PayPal
+1727,93,242,774.46,In-store,Cash
+1728,130,254,84.42,Online,Credit Card
+1729,91,363,137.68,Online,Bank Transfer
+1730,397,41,1904.48,Online,Cash
+1731,400,144,1499.02,Online,Bank Transfer
+1732,12,160,3033.97,Online,Bank Transfer
+1733,262,347,2787.81,Online,Bank Transfer
+1734,44,320,2400.58,In-store,Bank Transfer
+1735,204,48,2284.07,In-store,Bank Transfer
+1736,163,304,910.62,Online,Credit Card
+1737,406,24,221.56,In-store,PayPal
+1738,230,120,134.72,In-store,Bank Transfer
+1739,163,38,2911.09,Mobile app,PayPal
+1740,168,79,3496.46,Mobile app,PayPal
+1741,76,330,3366.52,Online,Bank Transfer
+1742,48,338,96.62,In-store,PayPal
+1743,495,20,1361.1,Online,Credit Card
+1744,213,229,2010.96,Mobile app,Credit Card
+1745,224,239,645.74,Online,Credit Card
+1746,380,65,26.46,In-store,PayPal
+1747,28,33,986.48,Mobile app,Bank Transfer
+1748,203,326,3991.75,Mobile app,Bank Transfer
+1749,182,332,1039.62,In-store,Bank Transfer
+1750,400,172,2882.75,In-store,Credit Card
+1751,51,273,2984.43,In-store,Bank Transfer
+1752,497,205,154.07,Online,Cash
+1753,374,183,2577.76,Mobile app,Cash
+1754,103,161,3220.75,Online,Cash
+1755,275,232,210.24,Online,Bank Transfer
+1756,347,124,1194.38,Online,PayPal
+1757,248,213,567.55,Mobile app,Bank Transfer
+1758,22,109,3435.08,Online,Cash
+1759,323,297,779.58,Online,Credit Card
+1760,280,259,84.42,Mobile app,PayPal
+1761,103,139,2022.55,Online,Credit Card
+1762,1,139,2648.03,Mobile app,PayPal
+1763,135,245,1174.76,Online,Credit Card
+1764,485,276,129.66,Mobile app,PayPal
+1765,260,40,1284.77,Mobile app,Bank Transfer
+1766,288,158,4429.9,Mobile app,Cash
+1767,113,281,2689.28,Mobile app,Bank Transfer
+1768,14,283,1885.94,Mobile app,Credit Card
+1769,70,145,2419.47,In-store,Credit Card
+1770,231,139,2464.95,Online,PayPal
+1771,105,92,492.99,In-store,Bank Transfer
+1772,437,353,308.73,Online,Credit Card
+1773,288,336,772.26,Online,PayPal
+1774,225,177,1832.43,Online,Bank Transfer
+1775,153,195,1686.07,In-store,Credit Card
+1776,186,281,2284.81,Mobile app,Bank Transfer
+1777,30,271,5393.49,In-store,Bank Transfer
+1778,454,166,4808.75,Mobile app,PayPal
+1779,454,62,328.16,In-store,PayPal
+1780,302,324,4222.63,Mobile app,PayPal
+1781,2,102,1291.01,Online,Cash
+1782,294,235,2982.07,Online,PayPal
+1783,202,331,937.6,Online,PayPal
+1784,378,210,949.44,In-store,Bank Transfer
+1785,341,317,291.12,Mobile app,PayPal
+1786,430,4,3264.85,Mobile app,Credit Card
+1787,384,350,4629.23,Mobile app,Cash
+1788,469,362,1406.64,Mobile app,Bank Transfer
+1789,364,212,1630.82,In-store,Cash
+1790,341,46,3019.75,Online,Cash
+1791,457,274,1953.6,Online,Bank Transfer
+1792,114,126,2552.19,Mobile app,Credit Card
+1793,492,237,2002.85,In-store,Credit Card
+1794,323,242,2792.21,Mobile app,Bank Transfer
+1795,443,252,4237.98,Online,Bank Transfer
+1796,64,333,3043.81,Mobile app,Credit Card
+1797,207,94,1715.59,In-store,Credit Card
+1798,205,44,3388.68,Mobile app,Cash
+1799,206,309,1917.78,Mobile app,Cash
+1800,14,193,445.9,Online,Bank Transfer
+1801,331,232,2250.9,Mobile app,Bank Transfer
+1802,332,109,2174.49,In-store,Credit Card
+1803,179,127,991.46,Mobile app,Bank Transfer
+1804,159,242,564.44,Online,Cash
+1805,286,354,343.18,Mobile app,Cash
+1806,391,131,642.8,Online,Credit Card
+1807,261,41,1910.41,Online,Cash
+1808,289,211,3003.79,Online,Credit Card
+1809,121,29,843.53,Mobile app,Cash
+1810,38,359,4993.13,In-store,Bank Transfer
+1811,69,294,1612.13,Online,Cash
+1812,116,208,1188.6,In-store,PayPal
+1813,157,332,5197.27,Online,Cash
+1814,162,50,196.05,In-store,Cash
+1815,415,40,3212.08,In-store,PayPal
+1816,68,282,1053.58,Mobile app,Cash
+1817,89,340,2715.27,In-store,Bank Transfer
+1818,182,94,3721.3,Online,Bank Transfer
+1819,492,224,4226.82,In-store,Bank Transfer
+1820,408,297,3829.37,Mobile app,Bank Transfer
+1821,389,121,299.76,In-store,Credit Card
+1822,271,347,2400.21,In-store,Cash
+1823,476,174,2784.73,Online,Cash
+1824,25,285,1545.03,In-store,Cash
+1825,366,152,824.65,Online,PayPal
+1826,257,229,1740.4,In-store,Credit Card
+1827,100,54,1583.69,In-store,Bank Transfer
+1828,303,107,1060.34,In-store,PayPal
+1829,83,224,4259.86,Online,PayPal
+1830,168,295,2669.56,In-store,Cash
+1831,6,181,4558.55,In-store,PayPal
+1832,460,70,171.24,Online,Bank Transfer
+1833,392,329,2388.48,Mobile app,Credit Card
+1834,386,250,1403.54,In-store,Cash
+1835,215,47,3749.13,Online,Bank Transfer
+1836,21,116,4702.57,In-store,Credit Card
+1837,104,191,1543.15,In-store,Cash
+1838,419,43,473.97,Online,Bank Transfer
+1839,113,27,1784.47,Online,PayPal
+1840,434,312,2358.35,Mobile app,PayPal
+1841,160,13,2234.06,In-store,Bank Transfer
+1842,88,157,473.04,In-store,Cash
+1843,244,5,1400.16,In-store,Bank Transfer
+1844,382,125,3068.04,Online,PayPal
+1845,417,229,1111.8,Mobile app,Bank Transfer
+1846,433,318,1260.04,In-store,Credit Card
+1847,186,279,3345.8,In-store,Bank Transfer
+1848,443,356,3531.24,Online,Bank Transfer
+1849,232,259,4265.31,In-store,Credit Card
+1850,48,311,1899.58,Mobile app,Credit Card
+1851,162,298,3980.62,In-store,Cash
+1852,403,42,2174.32,Mobile app,Credit Card
+1853,58,141,1070.6,Mobile app,Credit Card
+1854,313,125,219.89,Mobile app,PayPal
+1855,291,54,2354.99,Mobile app,Bank Transfer
+1856,327,307,3225.56,In-store,Credit Card
+1857,433,65,1015.62,Online,Credit Card
+1858,273,263,839.0,Mobile app,PayPal
+1859,334,68,794.68,Mobile app,PayPal
+1860,359,346,5409.77,Mobile app,Bank Transfer
+1861,101,33,6490.77,Online,Bank Transfer
+1862,136,190,758.05,Mobile app,Cash
+1863,141,28,1599.28,Online,Credit Card
+1864,210,314,5061.76,Online,Cash
+1865,156,260,2318.76,In-store,Bank Transfer
+1866,334,13,6562.5,Mobile app,PayPal
+1867,168,184,679.63,In-store,PayPal
+1868,366,321,782.4,In-store,PayPal
+1869,126,81,2683.45,Mobile app,Bank Transfer
+1870,174,363,771.24,Mobile app,PayPal
+1871,17,162,743.36,Online,Cash
+1872,114,248,620.13,In-store,Bank Transfer
+1873,448,4,2313.71,In-store,Cash
+1874,212,356,2452.95,Online,PayPal
+1875,293,299,4044.35,Mobile app,Cash
+1876,218,40,5039.45,In-store,Credit Card
+1877,370,243,2287.13,Mobile app,Cash
+1878,78,178,2072.45,Online,Credit Card
+1879,356,222,1558.86,In-store,Bank Transfer
+1880,432,98,1301.36,Online,Bank Transfer
+1881,205,52,4156.73,Mobile app,Cash
+1882,64,239,2952.22,Online,Credit Card
+1883,320,78,969.91,Online,Cash
+1884,123,100,3367.55,In-store,Cash
+1885,119,256,542.26,Online,Bank Transfer
+1886,193,240,680.9,Mobile app,PayPal
+1887,227,259,1592.06,Online,Credit Card
+1888,206,137,404.61,In-store,Credit Card
+1889,426,330,985.98,Mobile app,PayPal
+1890,417,89,3810.73,Mobile app,PayPal
+1891,44,277,3741.86,Online,Bank Transfer
+1892,231,189,3462.41,Online,Bank Transfer
+1893,286,262,2132.87,Online,Credit Card
+1894,79,286,3705.25,In-store,PayPal
+1895,23,61,910.76,In-store,Bank Transfer
+1896,434,138,3113.8,In-store,Credit Card
+1897,257,283,2681.6,In-store,PayPal
+1898,143,197,4404.3,Online,PayPal
+1899,426,298,2880.63,Online,Cash
+1900,314,178,2044.38,In-store,Cash
+1901,466,319,1051.51,In-store,Bank Transfer
+1902,303,167,1796.29,Online,Bank Transfer
+1903,419,177,1498.59,Mobile app,PayPal
+1904,423,50,2000.9,Online,Credit Card
+1905,362,96,1502.27,Online,PayPal
+1906,442,11,1932.04,Online,PayPal
+1907,394,108,2213.65,In-store,Bank Transfer
+1908,143,284,2959.35,Mobile app,Credit Card
+1909,439,296,3421.04,Mobile app,Credit Card
+1910,141,226,4267.48,Online,Bank Transfer
+1911,229,278,656.98,Mobile app,Credit Card
+1912,367,123,2399.35,Mobile app,PayPal
+1913,363,349,766.19,Mobile app,PayPal
+1914,482,22,3349.52,Online,PayPal
+1915,358,9,319.11,Mobile app,PayPal
+1916,258,98,2463.71,Online,PayPal
+1917,349,306,638.51,In-store,Cash
+1918,457,60,956.32,Mobile app,PayPal
+1919,195,167,3700.28,Online,Bank Transfer
+1920,480,59,328.77,Online,PayPal
+1921,234,307,4000.38,Mobile app,PayPal
+1922,457,281,2062.52,In-store,Cash
+1923,73,320,994.1,Online,PayPal
+1924,369,144,981.53,In-store,PayPal
+1925,443,156,5825.1,Mobile app,Credit Card
+1926,171,331,860.43,In-store,Credit Card
+1927,215,301,900.08,In-store,PayPal
+1928,341,275,2630.13,Mobile app,Cash
+1929,321,6,2162.5,In-store,PayPal
+1930,239,248,568.82,Mobile app,Credit Card
+1931,60,87,2580.97,In-store,Bank Transfer
+1932,226,57,543.69,Online,Bank Transfer
+1933,288,40,1716.49,In-store,PayPal
+1934,120,171,2115.32,Online,Bank Transfer
+1935,53,188,5999.53,Mobile app,Credit Card
+1936,143,167,5353.25,Mobile app,PayPal
+1937,210,41,853.98,Online,Bank Transfer
+1938,7,131,2540.84,Mobile app,Bank Transfer
+1939,218,351,461.6,Online,Bank Transfer
+1940,347,147,2585.15,In-store,PayPal
+1941,181,232,664.68,Online,Cash
+1942,226,246,1721.09,In-store,Cash
+1943,119,113,5532.75,Online,PayPal
+1944,489,85,1094.17,In-store,Cash
+1945,128,140,1419.46,Mobile app,PayPal
+1946,372,353,398.15,Online,Credit Card
+1947,155,242,1726.6,Mobile app,PayPal
+1948,310,187,5153.14,Mobile app,Cash
+1949,196,235,946.53,Online,Credit Card
+1950,412,69,1825.28,In-store,PayPal
+1951,363,108,3442.02,Mobile app,Credit Card
+1952,265,300,561.46,Online,Credit Card
+1953,452,258,3324.05,In-store,Bank Transfer
+1954,361,253,2167.16,Mobile app,Cash
+1955,193,79,371.68,Mobile app,Bank Transfer
+1956,331,286,942.64,Mobile app,PayPal
+1957,348,315,3111.88,In-store,PayPal
+1958,19,326,5320.8,Online,PayPal
+1959,294,345,2695.98,Mobile app,Bank Transfer
+1960,20,283,1679.84,In-store,Credit Card
+1961,267,60,2754.97,Mobile app,PayPal
+1962,339,213,1847.73,Online,Credit Card
+1963,28,262,461.14,In-store,Credit Card
+1964,352,303,1199.48,Mobile app,Bank Transfer
+1965,221,283,4654.03,In-store,Cash
+1966,428,181,2663.39,Mobile app,Bank Transfer
+1967,478,231,770.83,Mobile app,PayPal
+1968,12,288,4365.06,Mobile app,Credit Card
+1969,383,151,1927.52,Mobile app,Bank Transfer
+1970,139,237,2787.13,Online,Credit Card
+1971,82,121,1443.99,Mobile app,Credit Card
+1972,80,285,2950.37,Online,Bank Transfer
+1973,314,238,1018.97,In-store,Credit Card
+1974,47,323,3814.8,In-store,PayPal
+1975,43,174,1904.48,Mobile app,PayPal
+1976,315,34,2909.9,In-store,PayPal
+1977,13,334,5479.76,In-store,Credit Card
+1978,54,85,841.35,Online,Credit Card
+1979,395,204,5026.82,Online,Credit Card
+1980,351,89,5457.32,Online,Credit Card
+1981,80,165,849.72,Mobile app,PayPal
+1982,432,251,3795.23,Mobile app,PayPal
+1983,241,300,5328.79,Online,PayPal
+1984,211,51,1436.02,Mobile app,Bank Transfer
+1985,46,193,311.92,Online,Cash
+1986,398,310,6400.42,Mobile app,PayPal
+1987,250,71,443.17,Online,Credit Card
+1988,85,294,4081.2,Mobile app,PayPal
+1989,479,129,1621.76,Mobile app,Cash
+1990,372,197,3253.66,In-store,Bank Transfer
+1991,121,53,2156.35,Online,Credit Card
+1992,165,326,3647.88,In-store,Credit Card
+1993,17,220,799.64,Online,Cash
+1994,134,277,1214.3,In-store,PayPal
+1995,234,161,2927.09,Mobile app,PayPal
+1996,169,8,2728.04,Mobile app,PayPal
+1997,197,54,2636.19,Online,Credit Card
+1998,285,25,1334.2,Mobile app,Bank Transfer
+1999,7,285,2218.57,Online,Cash
+2000,91,254,2335.06,In-store,Cash
+2001,77,297,2075.79,Mobile app,Bank Transfer
+2002,331,350,1543.65,In-store,Credit Card
+2003,56,329,171.59,Mobile app,Bank Transfer
+2004,317,333,3457.2,Mobile app,Bank Transfer
+2005,156,262,1375.42,Mobile app,Bank Transfer
+2006,325,45,2568.51,Mobile app,Bank Transfer
+2007,231,101,1846.17,Online,Credit Card
+2008,99,68,423.97,In-store,PayPal
+2009,414,175,1473.42,In-store,Cash
+2010,99,6,783.7,In-store,Credit Card
+2011,313,152,587.7,In-store,Credit Card
+2012,299,334,432.84,In-store,Bank Transfer
+2013,158,121,1564.74,Mobile app,Credit Card
+2014,34,334,2000.73,In-store,Cash
+2015,118,166,425.48,Mobile app,PayPal
+2016,428,57,2693.78,Online,Cash
+2017,118,309,3194.48,In-store,Credit Card
+2018,174,348,2428.87,In-store,Bank Transfer
+2019,184,23,754.47,In-store,Bank Transfer
+2020,141,136,122.53,Mobile app,Credit Card
+2021,9,223,2426.32,Mobile app,Cash
+2022,63,74,5197.27,Mobile app,Cash
+2023,59,362,2803.79,Mobile app,PayPal
+2024,50,208,934.05,In-store,Cash
+2025,96,28,4321.9,In-store,Bank Transfer
+2026,402,205,4706.4,Mobile app,Credit Card
+2027,360,49,1618.04,Online,Credit Card
+2028,26,112,3758.52,Online,Cash
+2029,131,233,2146.64,Online,PayPal
+2030,47,327,3146.13,Mobile app,PayPal
+2031,246,192,2233.85,Mobile app,PayPal
+2032,208,167,4366.93,Mobile app,PayPal
+2033,248,15,1409.48,In-store,PayPal
+2034,313,289,3675.18,In-store,Credit Card
+2035,331,35,3280.53,Mobile app,Cash
+2036,270,331,1022.81,Mobile app,Cash
+2037,343,24,2509.65,Online,PayPal
+2038,231,229,1580.84,Mobile app,Bank Transfer
+2039,24,80,117.3,In-store,PayPal
+2040,92,188,2485.13,Online,Cash
+2041,244,64,162.64,Online,Bank Transfer
+2042,279,211,1292.3,Online,Credit Card
+2043,291,126,2325.77,In-store,Bank Transfer
+2044,407,263,1020.06,Online,Credit Card
+2045,15,233,3858.6,In-store,PayPal
+2046,333,313,1004.88,Online,Cash
+2047,28,160,2279.42,Online,Bank Transfer
+2048,444,267,1317.09,Online,PayPal
+2049,435,26,1784.06,In-store,PayPal
+2050,73,269,3206.69,Online,Cash
+2051,413,335,1399.56,Mobile app,Bank Transfer
+2052,17,147,502.44,Mobile app,Bank Transfer
+2053,398,309,349.85,In-store,Credit Card
+2054,354,200,1452.96,Online,PayPal
+2055,84,64,5153.5,Online,PayPal
+2056,128,293,3579.18,Mobile app,PayPal
+2057,138,358,236.52,In-store,Cash
+2058,131,242,2992.22,Mobile app,Credit Card
+2059,164,288,2989.55,Online,Cash
+2060,470,295,2271.56,In-store,Cash
+2061,492,241,5248.98,In-store,Bank Transfer
+2062,218,282,5604.34,Online,Bank Transfer
+2063,23,311,674.93,Mobile app,Cash
+2064,476,39,1546.98,Online,PayPal
+2065,144,230,1654.45,Mobile app,Cash
+2066,216,209,6213.58,In-store,Bank Transfer
+2067,462,292,2144.59,In-store,Cash
+2068,377,147,3951.79,Online,Bank Transfer
+2069,163,232,2234.74,Online,Credit Card
+2070,488,47,2866.68,Online,Bank Transfer
+2071,325,200,2728.97,Online,Cash
+2072,481,306,1388.59,Mobile app,Credit Card
+2073,242,147,6987.92,In-store,Bank Transfer
+2074,90,321,2534.17,Online,Cash
+2075,270,20,3787.75,Online,PayPal
+2076,332,358,4075.85,In-store,Cash
+2077,124,226,406.59,Mobile app,Credit Card
+2078,490,114,3782.94,Mobile app,PayPal
+2079,408,42,1826.77,Online,Cash
+2080,444,33,4125.83,In-store,Credit Card
+2081,91,328,479.31,Online,Credit Card
+2082,428,358,186.24,In-store,Credit Card
+2083,463,24,683.07,Online,Credit Card
+2084,273,273,1117.32,In-store,Bank Transfer
+2085,350,222,634.98,Online,PayPal
+2086,200,33,3050.73,Online,Credit Card
+2087,135,46,4538.65,Online,Bank Transfer
+2088,126,357,416.84,In-store,Cash
+2089,23,186,3631.06,Mobile app,PayPal
+2090,390,284,531.74,Online,Cash
+2091,258,291,2264.31,Online,Cash
+2092,57,73,3988.93,Online,Credit Card
+2093,76,338,1167.2,In-store,PayPal
+2094,351,167,926.65,In-store,Cash
+2095,15,154,1992.12,Mobile app,Cash
+2096,266,293,804.35,In-store,PayPal
+2097,392,208,3321.22,Mobile app,PayPal
+2098,22,156,1880.97,In-store,Bank Transfer
+2099,249,360,6263.16,Mobile app,Bank Transfer
+2100,184,17,1652.95,Mobile app,Credit Card
+2101,139,140,2449.83,Mobile app,Cash
+2102,487,147,60.6,In-store,Bank Transfer
+2103,385,97,2628.76,In-store,Cash
+2104,243,99,2267.87,Online,Credit Card
+2105,382,212,622.29,Mobile app,Cash
+2106,174,108,1565.82,Online,Bank Transfer
+2107,338,191,1949.55,In-store,Credit Card
+2108,184,203,1220.05,In-store,Bank Transfer
+2109,180,287,4680.54,In-store,Cash
+2110,449,6,860.43,In-store,Credit Card
+2111,80,20,1575.05,In-store,PayPal
+2112,208,345,1860.18,In-store,PayPal
+2113,351,317,1718.4,Online,PayPal
+2114,193,286,2928.64,Online,Credit Card
+2115,376,35,2491.13,Online,Credit Card
+2116,9,203,4242.69,Online,PayPal
+2117,277,194,2526.61,Online,Bank Transfer
+2118,341,239,1680.44,Mobile app,PayPal
+2119,438,44,1923.95,In-store,Bank Transfer
+2120,279,97,985.47,Mobile app,Credit Card
+2121,265,51,231.02,Online,Credit Card
+2122,335,113,662.67,In-store,Bank Transfer
+2123,498,131,2372.35,In-store,Cash
+2124,186,43,308.2,In-store,Credit Card
+2125,491,356,2891.04,Online,Credit Card
+2126,440,30,1666.52,Online,PayPal
+2127,427,103,1452.84,Online,PayPal
+2128,12,242,1698.24,In-store,Bank Transfer
+2129,199,88,36.77,Online,Cash
+2130,168,309,2377.68,Online,Credit Card
+2131,281,49,3348.52,Online,Bank Transfer
+2132,317,54,2855.57,Online,Cash
+2133,346,364,3607.08,In-store,PayPal
+2134,35,144,1891.26,Mobile app,Cash
+2135,61,328,606.44,Mobile app,Cash
+2136,34,106,868.16,Online,PayPal
+2137,200,361,4374.12,Online,Bank Transfer
+2138,196,65,694.83,Mobile app,Cash
+2139,218,161,4222.9,Online,Bank Transfer
+2140,271,29,5359.07,Online,PayPal
+2141,207,36,2883.43,Online,Cash
+2142,71,178,4188.46,Online,Cash
+2143,282,22,3256.78,In-store,Credit Card
+2144,323,331,730.02,In-store,Cash
+2145,461,264,2001.82,Online,PayPal
+2146,476,226,2142.21,Online,Cash
+2147,370,304,2173.54,In-store,Bank Transfer
+2148,460,226,131.82,Mobile app,Cash
+2149,202,325,3323.94,In-store,PayPal
+2150,310,300,5274.01,In-store,Bank Transfer
+2151,318,243,1562.88,Mobile app,Cash
+2152,273,196,4573.39,Mobile app,PayPal
+2153,8,35,2117.09,Online,PayPal
+2154,89,170,2903.08,Online,Credit Card
+2155,51,345,1931.37,Online,Bank Transfer
+2156,329,103,2986.61,Online,Credit Card
+2157,86,117,1647.69,Online,Credit Card
+2158,431,158,2236.8,In-store,Bank Transfer
+2159,10,180,866.38,In-store,Credit Card
+2160,108,191,593.92,In-store,Credit Card
+2161,386,156,1641.93,In-store,Cash
+2162,452,280,1129.08,Online,Cash
+2163,416,123,593.92,In-store,PayPal
+2164,23,64,4224.96,Mobile app,Bank Transfer
+2165,246,207,470.66,In-store,Credit Card
+2166,285,277,862.55,In-store,Cash
+2167,413,315,4098.51,Mobile app,Cash
+2168,8,187,1812.16,In-store,PayPal
+2169,304,102,1535.79,In-store,Bank Transfer
+2170,7,100,1698.33,Online,PayPal
+2171,186,76,6017.37,Mobile app,PayPal
+2172,116,293,1693.66,In-store,Credit Card
+2173,20,85,1734.59,Online,Bank Transfer
+2174,454,43,262.8,Mobile app,Cash
+2175,169,171,1418.0,Mobile app,Credit Card
+2176,257,122,2849.1,Mobile app,Bank Transfer
+2177,252,281,193.24,In-store,Credit Card
+2178,48,105,1803.89,Online,Cash
+2179,421,283,2899.04,In-store,Credit Card
+2180,22,334,3007.04,In-store,Cash
+2181,399,319,6224.01,Mobile app,Credit Card
+2182,265,247,2545.55,Online,Credit Card
+2183,166,138,1621.39,In-store,Credit Card
+2184,89,344,1041.4,In-store,Bank Transfer
+2185,165,265,3401.76,In-store,Cash
+2186,151,360,6270.91,In-store,Cash
+2187,443,255,1801.24,Online,Cash
+2188,426,235,4948.32,Mobile app,Credit Card
+2189,270,97,1415.01,In-store,Bank Transfer
+2190,219,216,1478.96,Mobile app,Cash
+2191,280,262,1197.3,Mobile app,Bank Transfer
+2192,130,103,5094.57,Mobile app,Credit Card
+2193,8,18,746.93,Mobile app,Cash
+2194,64,303,4488.59,Mobile app,Cash
+2195,326,121,1381.86,In-store,Bank Transfer
+2196,482,206,2549.18,Mobile app,Cash
+2197,16,115,3523.53,Mobile app,Cash
+2198,107,137,2965.06,In-store,Cash
+2199,340,98,2537.88,Online,Bank Transfer
+2200,50,137,2995.96,Online,PayPal
+2201,263,58,2728.04,Online,Cash
+2202,461,266,419.25,Online,Cash
+2203,224,205,2357.02,Mobile app,Bank Transfer
+2204,389,56,1848.52,Online,Bank Transfer
+2205,362,2,4456.8,Online,Bank Transfer
+2206,230,361,2656.0,Online,Bank Transfer
+2207,85,235,957.15,In-store,Cash
+2208,470,336,3201.81,Online,Bank Transfer
+2209,460,21,214.38,In-store,Bank Transfer
+2210,450,79,2305.0,In-store,PayPal
+2211,262,238,442.58,Mobile app,Bank Transfer
+2212,423,264,2099.08,Mobile app,Cash
+2213,170,182,1350.4,Online,Cash
+2214,317,145,1066.78,Mobile app,Bank Transfer
+2215,408,5,2093.05,In-store,Credit Card
+2216,97,318,2912.54,In-store,Bank Transfer
+2217,380,343,2308.72,Mobile app,Cash
+2218,70,234,3098.61,Mobile app,Bank Transfer
+2219,267,225,3007.95,Mobile app,Credit Card
+2220,104,302,1326.89,In-store,Cash
+2221,163,242,441.47,In-store,Cash
+2222,161,282,4990.87,Online,Credit Card
+2223,463,278,1765.55,Mobile app,PayPal
+2224,148,192,1774.26,In-store,Credit Card
+2225,327,91,4218.7,Mobile app,PayPal
+2226,91,31,1431.3,Online,Bank Transfer
+2227,492,154,1415.01,Mobile app,PayPal
+2228,76,201,2897.57,In-store,Bank Transfer
+2229,437,114,2989.23,Mobile app,PayPal
+2230,10,88,4717.81,Online,PayPal
+2231,439,180,2061.22,Mobile app,Bank Transfer
+2232,103,336,3893.92,Mobile app,Cash
+2233,146,229,2958.13,Mobile app,PayPal
+2234,268,40,4831.16,Mobile app,Credit Card
+2235,265,83,2655.63,Online,PayPal
+2236,255,146,1893.82,Online,Credit Card
+2237,164,247,54.67,Mobile app,Credit Card
+2238,301,71,2720.08,Mobile app,Credit Card
+2239,238,110,1919.36,Mobile app,Cash
+2240,256,79,3646.16,Mobile app,Cash
+2241,151,270,364.8,Mobile app,Credit Card
+2242,466,250,3476.44,In-store,Cash
+2243,79,48,3829.1,Mobile app,Cash
+2244,128,27,3443.78,In-store,Credit Card
+2245,262,298,658.41,Mobile app,Cash
+2246,245,165,4110.76,Mobile app,Bank Transfer
+2247,498,108,2710.31,Online,Cash
+2248,250,156,1173.72,Mobile app,Credit Card
+2249,83,131,2189.65,Online,Cash
+2250,121,3,3395.93,In-store,PayPal
+2251,418,233,2068.57,In-store,PayPal
+2252,474,260,3664.78,Mobile app,PayPal
+2253,192,25,483.1,Online,Bank Transfer
+2254,390,268,3239.69,Online,Credit Card
+2255,142,106,4003.28,In-store,PayPal
+2256,42,311,646.35,Online,Bank Transfer
+2257,282,338,1150.24,Mobile app,Credit Card
+2258,348,143,2840.26,Mobile app,Bank Transfer
+2259,90,198,4171.6,In-store,Credit Card
+2260,48,57,5098.98,Online,Cash
+2261,257,72,2229.58,Mobile app,Credit Card
+2262,352,242,1793.8,Online,Cash
+2263,447,268,2527.96,In-store,Cash
+2264,416,336,5626.99,Online,PayPal
+2265,261,204,1231.2,In-store,Bank Transfer
+2266,2,66,4883.4,In-store,Credit Card
+2267,219,169,4260.04,Mobile app,Bank Transfer
+2268,294,237,4508.25,Online,Credit Card
+2269,240,44,4688.52,In-store,PayPal
+2270,184,292,1949.06,In-store,Cash
+2271,155,154,1994.25,Mobile app,Bank Transfer
+2272,398,204,1380.92,Mobile app,Credit Card
+2273,420,185,879.56,Mobile app,PayPal
+2274,495,68,737.06,Online,Cash
+2275,229,107,2276.3,Online,Cash
+2276,106,122,203.12,Mobile app,Cash
+2277,389,328,1934.39,In-store,PayPal
+2278,112,121,1308.64,In-store,PayPal
+2279,265,297,1493.21,Mobile app,PayPal
+2280,448,114,1687.32,In-store,Credit Card
+2281,144,136,1532.59,Online,Bank Transfer
+2282,335,155,1651.24,Online,PayPal
+2283,224,17,284.11,In-store,PayPal
+2284,78,175,1274.38,Mobile app,Credit Card
+2285,393,166,4392.22,Online,Cash
+2286,154,18,2429.6,Online,PayPal
+2287,455,95,2346.57,Online,Cash
+2288,253,293,1762.52,In-store,Bank Transfer
+2289,401,112,2794.0,Online,Credit Card
+2290,116,166,2732.44,Mobile app,Credit Card
+2291,480,325,5684.84,Mobile app,Bank Transfer
+2292,235,46,1898.06,Mobile app,PayPal
+2293,234,167,4525.62,Mobile app,Bank Transfer
+2294,480,36,234.0,In-store,Credit Card
+2295,493,328,665.85,Online,Credit Card
+2296,379,156,514.77,In-store,Cash
+2297,103,30,2628.55,Online,Bank Transfer
+2298,310,182,2817.78,Mobile app,Bank Transfer
+2299,152,180,1828.38,Mobile app,Cash
+2300,486,270,1795.53,In-store,PayPal
+2301,410,252,1570.0,In-store,Credit Card
+2302,449,302,2933.46,Mobile app,Cash
+2303,326,271,1920.84,In-store,Bank Transfer
+2304,224,292,3052.09,Mobile app,Bank Transfer
+2305,379,158,1559.74,In-store,Bank Transfer
+2306,412,96,2173.91,In-store,Bank Transfer
+2307,225,173,846.81,Mobile app,Cash
+2308,136,222,3932.54,In-store,PayPal
+2309,276,287,668.71,In-store,Cash
+2310,36,161,3101.52,In-store,Cash
+2311,122,225,2425.68,In-store,Bank Transfer
+2312,37,264,4189.59,In-store,Bank Transfer
+2313,431,246,1940.62,Online,Bank Transfer
+2314,453,359,1843.58,Mobile app,Credit Card
+2315,74,142,2747.39,Online,Bank Transfer
+2316,275,221,2408.45,Online,PayPal
+2317,406,131,1542.94,Online,Bank Transfer
+2318,384,291,438.94,Mobile app,PayPal
+2319,178,201,2607.47,Online,Cash
+2320,266,313,3243.98,In-store,Credit Card
+2321,75,325,2183.93,Online,Bank Transfer
+2322,78,18,1115.04,In-store,Credit Card
+2323,145,349,1871.68,Mobile app,Cash
+2324,377,68,2067.11,In-store,PayPal
+2325,33,356,2994.54,In-store,Cash
+2326,443,13,3085.94,Online,Cash
+2327,48,93,5758.91,Mobile app,Bank Transfer
+2328,21,359,3159.28,Online,Credit Card
+2329,169,177,758.05,Mobile app,Credit Card
+2330,215,203,2428.54,Mobile app,PayPal
+2331,113,15,2823.6,Online,Credit Card
+2332,10,58,4674.58,In-store,Cash
+2333,391,279,3727.89,In-store,PayPal
+2334,19,75,498.78,In-store,Credit Card
+2335,17,75,2265.2,Mobile app,Cash
+2336,135,69,891.45,Online,PayPal
+2337,209,279,786.74,Online,Credit Card
+2338,112,14,3620.75,Online,Bank Transfer
+2339,358,268,1856.03,Mobile app,Cash
+2340,405,294,1451.43,In-store,Cash
+2341,153,250,3016.45,Online,Cash
+2342,277,113,671.72,Online,PayPal
+2343,153,244,843.36,In-store,Credit Card
+2344,192,199,1988.08,In-store,Credit Card
+2345,61,17,996.85,Mobile app,Cash
+2346,242,267,2851.2,Online,PayPal
+2347,481,185,3344.31,Online,PayPal
+2348,193,248,4541.16,Mobile app,PayPal
+2349,65,74,1761.32,In-store,PayPal
+2350,466,354,1663.16,In-store,PayPal
+2351,201,196,4513.81,Online,PayPal
+2352,36,100,3600.48,In-store,Credit Card
+2353,411,39,4314.15,Mobile app,PayPal
+2354,319,169,105.12,Online,Cash
+2355,22,32,3779.14,Mobile app,Cash
+2356,79,254,4543.59,Online,Cash
+2357,148,18,3095.18,In-store,Bank Transfer
+2358,276,310,4034.3,Online,Bank Transfer
+2359,33,264,2114.09,In-store,Bank Transfer
+2360,418,321,2102.72,Online,Credit Card
+2361,77,201,796.49,Mobile app,PayPal
+2362,418,173,52.56,In-store,Bank Transfer
+2363,200,104,210.9,Online,PayPal
+2364,260,341,1614.84,Mobile app,Bank Transfer
+2365,401,309,2220.29,Mobile app,Cash
+2366,60,349,1161.74,Mobile app,Credit Card
+2367,86,57,804.7,In-store,Bank Transfer
+2368,10,12,125.15,Online,PayPal
+2369,80,66,1893.54,In-store,Bank Transfer
+2370,307,119,1372.92,In-store,Cash
+2371,371,293,2661.39,Mobile app,Cash
+2372,246,209,1110.11,Mobile app,Bank Transfer
+2373,491,243,478.24,Online,Cash
+2374,21,206,4263.24,In-store,Cash
+2375,9,184,4302.76,In-store,Bank Transfer
+2376,204,100,45.16,Mobile app,Bank Transfer
+2377,69,353,823.15,Online,Cash
+2378,64,333,1953.76,In-store,Credit Card
+2379,246,309,2084.1,In-store,Bank Transfer
+2380,9,296,1749.22,Online,Bank Transfer
+2381,246,363,1488.57,Online,Bank Transfer
+2382,51,292,2722.01,In-store,Bank Transfer
+2383,169,203,2767.17,Mobile app,Credit Card
+2384,201,300,445.44,Online,Credit Card
+2385,181,118,954.2,Online,Bank Transfer
+2386,70,298,1004.88,Online,Cash
+2387,372,62,3742.11,Mobile app,Bank Transfer
+2388,464,43,3342.13,Mobile app,Cash
+2389,143,34,3502.39,Online,PayPal
+2390,316,25,1093.18,Online,PayPal
+2391,285,357,2456.85,Online,PayPal
+2392,24,336,2592.88,Online,Bank Transfer
+2393,324,58,1247.06,Online,Bank Transfer
+2394,254,292,386.5,Online,Cash
+2395,171,278,1258.43,In-store,Bank Transfer
+2396,249,313,1146.64,Mobile app,Cash
+2397,466,220,4353.52,Online,Cash
+2398,92,355,3204.32,Mobile app,Bank Transfer
+2399,128,258,564.18,In-store,Cash
+2400,491,297,263.64,Online,Bank Transfer
+2401,251,77,4988.9,In-store,PayPal
+2402,273,38,317.13,In-store,PayPal
+2403,374,131,3830.32,Online,Credit Card
+2404,153,102,1298.32,In-store,Credit Card
+2405,428,27,2678.79,Mobile app,Bank Transfer
+2406,458,94,1300.83,Mobile app,Bank Transfer
+2407,39,82,3459.2,Online,Cash
+2408,334,103,1887.95,Mobile app,Bank Transfer
+2409,374,256,5203.54,In-store,PayPal
+2410,499,113,1840.18,Mobile app,Bank Transfer
+2411,442,234,5132.72,Online,Bank Transfer
+2412,32,149,4612.43,In-store,Cash
+2413,469,105,1134.2,In-store,Bank Transfer
+2414,241,214,2373.16,Mobile app,Credit Card
+2415,217,117,1557.53,Mobile app,Credit Card
+2416,256,305,1224.9,Mobile app,Credit Card
+2417,94,281,1589.3,Online,Bank Transfer
+2418,386,7,3262.11,Online,PayPal
+2419,23,144,5052.72,In-store,Bank Transfer
+2420,187,64,1558.31,In-store,Cash
+2421,158,230,2213.29,In-store,Bank Transfer
+2422,74,80,2241.86,In-store,Bank Transfer
+2423,2,312,626.96,Mobile app,Bank Transfer
+2424,11,222,3228.77,In-store,Credit Card
+2425,242,181,1784.02,Online,PayPal
+2426,261,264,2177.69,In-store,PayPal
+2427,391,247,2615.1,Online,Credit Card
+2428,359,227,1787.17,Mobile app,Cash
+2429,167,348,1188.75,Online,Bank Transfer
+2430,475,205,67.74,Mobile app,Bank Transfer
+2431,114,287,2658.89,Mobile app,Bank Transfer
+2432,442,253,5032.97,Online,Credit Card
+2433,401,157,2519.67,Online,PayPal
+2434,47,191,347.72,Online,Bank Transfer
+2435,333,358,3827.65,In-store,Credit Card
+2436,83,288,920.85,Online,Bank Transfer
+2437,326,267,176.8,Mobile app,Bank Transfer
+2438,393,225,605.3,Online,PayPal
+2439,331,70,1422.96,In-store,Credit Card
+2440,268,350,3259.93,Mobile app,Bank Transfer
+2441,79,185,4564.0,Online,Cash
+2442,362,124,3101.07,In-store,Bank Transfer
+2443,66,310,5675.61,In-store,Credit Card
+2444,211,70,5764.21,Online,Bank Transfer
+2445,432,357,3830.45,Mobile app,PayPal
+2446,188,176,1155.02,In-store,PayPal
+2447,62,273,4977.16,In-store,Credit Card
+2448,107,118,833.68,Mobile app,PayPal
+2449,66,104,3669.55,Mobile app,PayPal
+2450,263,148,3559.88,In-store,Cash
+2451,25,328,214.44,Online,Credit Card
+2452,368,154,3232.04,Online,PayPal
+2453,105,114,2804.91,Online,Cash
+2454,324,43,5412.74,Online,PayPal
+2455,151,95,2062.16,Mobile app,PayPal
+2456,319,188,5164.65,In-store,PayPal
+2457,367,300,503.38,Mobile app,Cash
+2458,299,337,182.4,Online,Cash
+2459,496,267,2444.54,Mobile app,PayPal
+2460,166,335,2190.1,Mobile app,Credit Card
+2461,252,49,2136.14,Mobile app,Cash
+2462,412,72,1375.7,Online,Cash
+2463,302,186,1959.18,In-store,Cash
+2464,323,183,1976.56,In-store,Credit Card
+2465,38,97,338.29,Mobile app,PayPal
+2466,110,53,2157.4,Mobile app,Bank Transfer
+2467,332,339,829.96,In-store,PayPal
+2468,451,239,2499.25,In-store,Bank Transfer
+2469,476,226,131.16,In-store,Bank Transfer
+2470,312,67,1630.83,In-store,Credit Card
+2471,229,112,2908.39,Online,PayPal
+2472,35,337,2023.05,Online,PayPal
+2473,246,295,2059.55,Mobile app,Credit Card
+2474,238,227,4901.43,Mobile app,Cash
+2475,448,183,165.18,Mobile app,PayPal
+2476,209,296,2546.03,In-store,Cash
+2477,312,22,3765.25,Online,Bank Transfer
+2478,27,186,4672.78,Online,Cash
+2479,476,100,2811.06,Online,Bank Transfer
+2480,412,256,590.97,Mobile app,Credit Card
+2481,295,160,1297.45,Online,PayPal
+2482,211,258,1333.5,Mobile app,Cash
+2483,74,135,1802.21,Mobile app,Bank Transfer
+2484,221,171,2347.61,Mobile app,Bank Transfer
+2485,327,292,3090.82,Mobile app,PayPal
+2486,240,320,5411.15,Mobile app,Credit Card
+2487,135,122,588.04,Mobile app,Cash
+2488,331,331,2770.32,Mobile app,Bank Transfer
+2489,306,37,70.7,Online,Cash
+2490,383,173,1038.33,Online,Credit Card
+2491,298,220,2679.72,Online,Credit Card
+2492,404,220,724.29,Online,Cash
+2493,307,257,860.43,In-store,Bank Transfer
+2494,316,301,4503.34,Mobile app,Credit Card
+2495,206,361,2042.94,In-store,PayPal
+2496,356,145,1188.6,In-store,Credit Card
+2497,136,156,2419.4,Online,Bank Transfer
+2498,448,89,1642.63,Online,Cash
+2499,406,210,1636.21,Mobile app,Cash
+2500,422,170,4274.27,Mobile app,Credit Card
+2501,114,17,2088.67,Mobile app,Credit Card
+2502,456,221,1143.7,In-store,Cash
+2503,233,90,1447.26,Mobile app,Cash
+2504,411,47,760.76,Mobile app,Bank Transfer
+2505,383,103,4839.8,Online,Credit Card
+2506,252,151,615.3,Mobile app,PayPal
+2507,64,249,2646.19,Online,Bank Transfer
+2508,76,52,1099.08,In-store,Cash
+2509,57,162,1918.01,Mobile app,Credit Card
+2510,187,154,4271.92,Mobile app,Credit Card
+2511,189,175,1824.79,Mobile app,Bank Transfer
+2512,444,14,1669.45,Mobile app,Bank Transfer
+2513,138,285,4647.97,Online,Cash
+2514,420,54,1445.07,Mobile app,PayPal
+2515,95,31,2115.06,In-store,Bank Transfer
+2516,16,137,861.2,In-store,PayPal
+2517,388,292,56.56,In-store,Cash
+2518,8,254,1428.72,Online,Cash
+2519,437,317,2419.87,In-store,PayPal
+2520,313,221,314.0,Mobile app,Bank Transfer
+2521,252,143,1040.64,Mobile app,Credit Card
+2522,460,344,1073.87,Mobile app,Cash
+2523,344,128,2641.5,In-store,PayPal
+2524,229,254,303.22,In-store,Cash
+2525,420,97,1007.07,Online,Bank Transfer
+2526,57,70,2290.05,Mobile app,Bank Transfer
+2527,434,27,3396.72,In-store,PayPal
+2528,239,279,70.46,Online,PayPal
+2529,166,258,2324.99,Online,Bank Transfer
+2530,468,295,995.15,Online,Cash
+2531,437,191,6172.65,In-store,Bank Transfer
+2532,476,143,547.62,Mobile app,Credit Card
+2533,170,359,3381.39,In-store,Cash
+2534,322,104,2106.71,In-store,Bank Transfer
+2535,153,285,2108.44,In-store,Credit Card
+2536,234,38,1310.82,Online,Credit Card
+2537,388,232,2695.48,In-store,Credit Card
+2538,493,177,674.52,Online,Credit Card
+2539,134,183,1022.35,In-store,Credit Card
+2540,388,256,6938.41,Online,Cash
+2541,448,104,4760.55,In-store,Credit Card
+2542,316,306,1899.93,Mobile app,PayPal
+2543,394,25,1022.82,Mobile app,Bank Transfer
+2544,133,322,2647.83,Mobile app,Credit Card
+2545,223,243,3263.03,Mobile app,Bank Transfer
+2546,10,114,1006.39,Online,PayPal
+2547,335,161,1862.72,In-store,Credit Card
+2548,393,86,3389.47,Online,Credit Card
+2549,30,134,1815.16,In-store,PayPal
+2550,363,28,3689.6,Mobile app,Credit Card
+2551,263,207,2455.19,In-store,Bank Transfer
+2552,391,252,5324.54,Online,Credit Card
+2553,456,322,884.38,In-store,PayPal
+2554,170,29,760.93,In-store,Credit Card
+2555,288,296,2878.05,Mobile app,Cash
+2556,292,136,1897.28,In-store,Cash
+2557,462,49,200.63,In-store,Credit Card
+2558,328,317,4104.63,Mobile app,Bank Transfer
+2559,73,73,997.56,In-store,PayPal
+2560,276,92,624.08,Mobile app,Credit Card
+2561,335,9,794.4,In-store,Credit Card
+2562,127,172,3096.66,Online,Credit Card
+2563,113,166,1768.88,Online,Credit Card
+2564,295,317,3652.66,Mobile app,Cash
+2565,477,210,3904.85,Mobile app,Cash
+2566,197,196,3811.01,Mobile app,Cash
+2567,121,26,1466.44,In-store,Credit Card
+2568,111,182,648.3,In-store,Bank Transfer
+2569,463,330,1635.9,In-store,Cash
+2570,307,68,1307.02,In-store,Cash
+2571,497,153,2733.99,Mobile app,Bank Transfer
+2572,224,210,1936.1,Mobile app,PayPal
+2573,412,224,3548.39,Mobile app,Credit Card
+2574,341,49,1563.92,Mobile app,PayPal
+2575,214,344,3074.14,Mobile app,Credit Card
+2576,196,129,1049.28,In-store,Bank Transfer
+2577,455,132,2952.29,Online,PayPal
+2578,266,350,218.68,Online,Cash
+2579,368,18,292.5,Mobile app,Bank Transfer
+2580,117,313,2885.19,Mobile app,Bank Transfer
+2581,344,305,3121.11,In-store,Bank Transfer
+2582,490,352,1498.98,Online,Credit Card
+2583,8,294,775.99,Mobile app,Bank Transfer
+2584,364,164,3812.25,Online,Cash
+2585,450,346,2486.43,Online,Cash
+2586,428,203,687.62,Mobile app,Cash
+2587,376,36,618.25,In-store,Credit Card
+2588,251,261,3609.49,In-store,Bank Transfer
+2589,350,129,738.72,Online,Cash
+2590,11,246,4484.23,Mobile app,Credit Card
+2591,229,267,1106.2,Online,Cash
+2592,64,148,985.98,In-store,Credit Card
+2593,96,287,2155.0,Online,Bank Transfer
+2594,69,307,430.65,Mobile app,Bank Transfer
+2595,413,285,1640.8,In-store,Credit Card
+2596,21,296,1520.49,In-store,Bank Transfer
+2597,365,334,3720.72,In-store,PayPal
+2598,424,98,2675.64,Mobile app,Credit Card
+2599,273,98,2295.64,Online,Credit Card
+2600,133,57,3836.82,Mobile app,Cash
+2601,358,331,3435.0,In-store,PayPal
+2602,114,284,3558.38,Online,Bank Transfer
+2603,251,61,455.38,In-store,PayPal
+2604,488,26,1353.99,Online,Bank Transfer
+2605,2,123,1262.64,In-store,Bank Transfer
+2606,205,30,3015.49,Mobile app,PayPal
+2607,111,276,2458.02,Mobile app,Bank Transfer
+2608,46,305,496.33,Online,PayPal
+2609,83,41,3216.46,In-store,PayPal
+2610,52,217,544.72,Online,Bank Transfer
+2611,397,99,251.22,Mobile app,Bank Transfer
+2612,166,27,5995.86,Mobile app,Bank Transfer
+2613,274,156,696.16,In-store,PayPal
+2614,449,136,931.49,Online,Cash
+2615,480,171,1256.0,Online,PayPal
+2616,292,9,1888.16,Online,Credit Card
+2617,197,92,1212.23,Mobile app,Credit Card
+2618,110,203,4194.91,Online,Credit Card
+2619,253,322,3563.37,Online,PayPal
+2620,195,163,1262.34,In-store,PayPal
+2621,378,326,3303.46,Online,Cash
+2622,402,48,4563.51,In-store,Cash
+2623,57,29,1266.25,Online,Bank Transfer
+2624,422,267,520.41,Mobile app,PayPal
+2625,170,82,303.22,Online,Credit Card
+2626,146,95,326.54,Mobile app,Cash
+2627,106,268,4965.64,Online,Credit Card
+2628,311,357,862.68,In-store,Cash
+2629,318,95,1958.98,In-store,Cash
+2630,38,315,1216.91,Online,PayPal
+2631,306,186,2251.55,In-store,Credit Card
+2632,119,152,2341.17,Mobile app,Credit Card
+2633,68,336,2200.28,Mobile app,PayPal
+2634,139,327,2933.01,Mobile app,PayPal
+2635,267,127,1517.09,Online,Credit Card
+2636,483,330,904.48,In-store,PayPal
+2637,91,319,1994.46,In-store,Cash
+2638,386,98,3494.33,Online,Cash
+2639,239,198,3457.72,In-store,Cash
+2640,39,82,2455.83,Online,PayPal
+2641,229,227,314.0,In-store,Bank Transfer
+2642,286,247,3194.93,Mobile app,PayPal
+2643,72,73,2564.17,In-store,PayPal
+2644,307,180,102.96,In-store,Credit Card
+2645,141,53,2404.09,Mobile app,Bank Transfer
+2646,438,149,2770.84,Online,PayPal
+2647,47,188,2157.17,Mobile app,Bank Transfer
+2648,28,233,4122.76,Online,PayPal
+2649,452,167,2257.44,In-store,Cash
+2650,247,321,3420.0,Mobile app,PayPal
+2651,255,264,2651.47,In-store,Cash
+2652,382,248,3983.48,Online,Cash
+2653,412,337,925.32,Mobile app,Cash
+2654,146,251,2302.98,Online,Bank Transfer
+2655,94,42,4114.2,Online,PayPal
+2656,210,85,848.06,In-store,Credit Card
+2657,356,36,1778.0,Online,Credit Card
+2658,107,340,2097.92,Mobile app,PayPal
+2659,187,358,3002.04,Mobile app,Credit Card
+2660,407,203,60.62,Online,Cash
+2661,96,153,2924.75,Mobile app,Cash
+2662,251,321,734.76,In-store,Bank Transfer
+2663,55,25,281.2,In-store,PayPal
+2664,495,80,1232.8,Mobile app,PayPal
+2665,331,301,3054.72,In-store,Bank Transfer
+2666,109,343,1517.7,Mobile app,Bank Transfer
+2667,356,314,1687.11,Mobile app,Bank Transfer
+2668,113,314,3518.3,Mobile app,Bank Transfer
+2669,182,193,3508.96,Mobile app,Bank Transfer
+2670,288,72,1794.35,Mobile app,Credit Card
+2671,64,35,4858.32,Mobile app,Cash
+2672,249,176,3631.06,In-store,Bank Transfer
+2673,491,307,4159.36,Mobile app,Credit Card
+2674,196,325,2936.44,In-store,Cash
+2675,270,320,2691.95,Mobile app,Credit Card
+2676,279,200,3969.95,In-store,Bank Transfer
+2677,323,194,2757.31,Online,Credit Card
+2678,228,145,839.0,In-store,PayPal
+2679,165,2,5440.02,Online,Bank Transfer
+2680,165,362,1910.55,In-store,Bank Transfer
+2681,320,82,2149.0,Mobile app,Bank Transfer
+2682,195,172,4425.2,Mobile app,PayPal
+2683,122,149,3431.63,Online,PayPal
+2684,223,248,4130.28,In-store,Cash
+2685,107,353,3169.02,Mobile app,Credit Card
+2686,253,70,3056.89,Online,Bank Transfer
+2687,359,185,1329.51,In-store,Credit Card
+2688,465,59,1237.69,In-store,Bank Transfer
+2689,9,281,3909.4,Online,PayPal
+2690,112,279,2473.84,In-store,PayPal
+2691,34,355,1107.49,In-store,Bank Transfer
+2692,83,305,1104.77,Online,Cash
+2693,118,26,351.5,In-store,PayPal
+2694,367,281,2307.33,Mobile app,PayPal
+2695,122,173,1272.26,In-store,Cash
+2696,10,344,2647.68,In-store,Cash
+2697,251,357,3674.88,Online,PayPal
+2698,394,324,2409.05,Mobile app,PayPal
+2699,163,16,1446.44,In-store,Cash
+2700,421,354,295.45,In-store,Cash
+2701,442,192,2224.55,Mobile app,Bank Transfer
+2702,347,324,343.52,In-store,PayPal
+2703,346,67,3221.8,Online,Bank Transfer
+2704,248,107,1421.91,In-store,Cash
+2705,492,311,2140.71,In-store,Credit Card
+2706,120,75,4129.47,Online,Credit Card
+2707,178,123,3241.06,Mobile app,PayPal
+2708,386,156,1138.45,In-store,Bank Transfer
+2709,354,328,4906.48,Mobile app,Credit Card
+2710,422,294,3194.87,In-store,Cash
+2711,224,103,2137.43,Online,Bank Transfer
+2712,420,28,3132.45,Online,Bank Transfer
+2713,157,103,4456.53,Online,Bank Transfer
+2714,426,248,1312.43,Mobile app,PayPal
+2715,417,42,1339.54,Online,Bank Transfer
+2716,182,105,4729.25,Mobile app,PayPal
+2717,368,225,544.54,In-store,Cash
+2718,148,79,140.02,Mobile app,PayPal
+2719,391,45,1379.1,In-store,Credit Card
+2720,424,277,5483.22,Mobile app,Cash
+2721,277,87,3325.29,In-store,Credit Card
+2722,162,249,1994.25,In-store,PayPal
+2723,137,125,2600.61,Online,Credit Card
+2724,337,180,585.34,Mobile app,Bank Transfer
+2725,29,94,1460.12,In-store,PayPal
+2726,118,64,4053.59,Online,Credit Card
+2727,30,36,2865.74,Mobile app,Cash
+2728,473,166,12.12,Online,Cash
+2729,471,336,3653.51,Online,Cash
+2730,151,339,5083.66,Online,Credit Card
+2731,274,311,1362.21,Mobile app,Bank Transfer
+2732,70,290,1814.87,Mobile app,Bank Transfer
+2733,443,75,110.31,Online,Cash
+2734,35,6,2607.48,Mobile app,Credit Card
+2735,421,269,869.4,Mobile app,Credit Card
+2736,497,120,6733.96,Mobile app,Cash
+2737,89,311,2539.2,In-store,Credit Card
+2738,253,164,1642.45,Online,Cash
+2739,3,258,1195.72,Online,Bank Transfer
+2740,336,26,4710.6,Online,Credit Card
+2741,69,161,2452.36,In-store,Credit Card
+2742,484,141,2932.43,In-store,Cash
+2743,231,67,2274.05,In-store,PayPal
+2744,2,267,2983.49,Mobile app,Cash
+2745,252,167,4297.59,In-store,Cash
+2746,26,212,1960.33,Mobile app,Cash
+2747,108,104,4307.68,In-store,PayPal
+2748,206,27,920.4,Mobile app,PayPal
+2749,179,278,183.85,In-store,PayPal
+2750,79,36,1723.26,Online,Credit Card
+2751,492,218,3697.84,Mobile app,PayPal
+2752,488,338,4552.91,Online,Bank Transfer
+2753,204,117,6288.01,In-store,Bank Transfer
+2754,299,205,6431.08,Online,Credit Card
+2755,150,273,1784.5,Mobile app,Bank Transfer
+2756,254,242,3004.3,In-store,Bank Transfer
+2757,436,198,1924.34,Mobile app,Credit Card
+2758,352,254,5077.74,Mobile app,Credit Card
+2759,44,30,1683.12,In-store,Cash
+2760,414,67,1791.74,Mobile app,PayPal
+2761,457,211,2681.56,Mobile app,Credit Card
+2762,48,202,518.95,Online,Credit Card
+2763,121,130,1676.98,In-store,Credit Card
+2764,226,51,1879.68,Online,Cash
+2765,283,242,148.48,In-store,Bank Transfer
+2766,226,168,360.34,Online,PayPal
+2767,349,333,2866.55,Mobile app,Credit Card
+2768,156,22,436.56,In-store,PayPal
+2769,417,88,5517.0,Online,PayPal
+2770,66,277,155.76,In-store,Bank Transfer
+2771,371,3,3689.89,Mobile app,Credit Card
+2772,380,165,2059.55,Mobile app,Cash
+2773,231,303,2812.7,Online,Bank Transfer
+2774,101,6,198.63,Online,Cash
+2775,470,191,983.3,Mobile app,PayPal
+2776,144,160,643.56,Mobile app,PayPal
+2777,446,34,5050.49,In-store,PayPal
+2778,243,314,1505.1,Online,PayPal
+2779,392,252,2769.77,In-store,Cash
+2780,187,207,4084.99,In-store,Bank Transfer
+2781,95,58,3185.77,Online,Credit Card
+2782,437,165,1726.66,Mobile app,Cash
+2783,387,117,3453.24,Online,Bank Transfer
+2784,4,283,14.14,In-store,Cash
+2785,141,255,850.44,Mobile app,PayPal
+2786,122,323,3911.21,Online,PayPal
+2787,336,217,956.0,Mobile app,Credit Card
+2788,433,324,2945.37,Online,Credit Card
+2789,114,170,875.86,Mobile app,Credit Card
+2790,146,49,1974.45,Online,Bank Transfer
+2791,228,277,1081.2,In-store,Credit Card
+2792,72,65,1738.8,In-store,Bank Transfer
+2793,388,202,2679.72,Mobile app,Cash
+2794,314,312,2977.04,Mobile app,Credit Card
+2795,46,157,2234.39,Online,Bank Transfer
+2796,169,227,3118.96,Mobile app,Bank Transfer
+2797,358,85,1718.82,In-store,Credit Card
+2798,221,224,1323.56,Online,Credit Card
+2799,462,23,296.96,In-store,PayPal
+2800,417,67,1914.67,Online,Credit Card
+2801,303,215,520.05,Online,PayPal
+2802,146,59,5518.09,In-store,Cash
+2803,429,109,1331.48,In-store,PayPal
+2804,291,62,3296.18,Online,Cash
+2805,124,75,1466.82,Online,Cash
+2806,348,350,2040.91,Online,Bank Transfer
+2807,278,306,315.01,Mobile app,PayPal
+2808,349,53,2310.24,Mobile app,PayPal
+2809,4,271,4238.56,Online,Bank Transfer
+2810,62,109,4226.72,Mobile app,Bank Transfer
+2811,207,259,780.65,Mobile app,Cash
+2812,348,326,4442.87,Online,PayPal
+2813,447,149,2618.04,Mobile app,PayPal
+2814,311,59,1077.7,Online,PayPal
+2815,476,348,3509.67,Mobile app,Cash
+2816,296,93,3338.17,Online,Credit Card
+2817,62,296,140.76,Mobile app,Credit Card
+2818,67,184,156.13,Online,Credit Card
+2819,407,306,2171.84,Mobile app,PayPal
+2820,318,9,3477.65,Mobile app,PayPal
+2821,319,156,2181.5,In-store,Bank Transfer
+2822,92,92,2953.24,In-store,Credit Card
+2823,391,124,750.08,In-store,PayPal
+2824,356,150,1556.18,In-store,PayPal
+2825,136,311,5699.65,In-store,Bank Transfer
+2826,240,197,1144.22,Online,Credit Card
+2827,71,140,203.14,In-store,Bank Transfer
+2828,325,127,1980.01,Mobile app,Bank Transfer
+2829,363,73,709.68,Online,Bank Transfer
+2830,450,364,3095.96,Online,Bank Transfer
+2831,232,235,2103.9,Mobile app,Cash
+2832,326,192,4333.75,In-store,Cash
+2833,136,259,6119.27,In-store,Cash
+2834,120,107,491.6,Mobile app,Credit Card
+2835,90,32,3630.09,In-store,Cash
+2836,421,136,3901.31,In-store,Bank Transfer
+2837,393,145,731.1,In-store,Cash
+2838,233,273,5278.53,Mobile app,Cash
+2839,317,240,4015.42,In-store,Cash
+2840,157,348,895.77,Online,Credit Card
+2841,400,329,3272.94,Mobile app,Cash
+2842,202,88,667.1,Mobile app,Cash
+2843,323,298,2525.63,Online,Bank Transfer
+2844,303,296,1140.42,Mobile app,Bank Transfer
+2845,42,218,3135.1,In-store,PayPal
+2846,5,117,2365.52,Mobile app,Bank Transfer
+2847,186,271,272.08,Online,Bank Transfer
+2848,161,246,4562.4,In-store,Cash
+2849,54,295,2042.48,In-store,Credit Card
+2850,101,19,4576.94,Mobile app,Credit Card
+2851,272,184,5215.58,Online,PayPal
+2852,393,97,2850.9,In-store,Cash
+2853,75,256,541.97,Online,Cash
+2854,151,276,823.35,Online,Bank Transfer
+2855,365,139,5957.06,Mobile app,Credit Card
+2856,398,213,1057.32,Online,Credit Card
+2857,165,59,3664.08,Online,Bank Transfer
+2858,462,292,1125.96,In-store,Bank Transfer
+2859,479,178,5413.82,Mobile app,Cash
+2860,463,253,281.2,In-store,Bank Transfer
+2861,180,3,2898.7,Mobile app,Bank Transfer
+2862,351,356,5490.11,In-store,Credit Card
+2863,34,195,1566.93,In-store,Cash
+2864,56,60,3415.82,In-store,Credit Card
+2865,57,166,1816.46,Online,Bank Transfer
+2866,329,284,3724.23,Mobile app,Cash
+2867,348,31,2427.51,Online,Bank Transfer
+2868,360,299,4413.82,In-store,Credit Card
+2869,69,328,5473.24,Mobile app,PayPal
+2870,213,97,3746.11,Mobile app,PayPal
+2871,261,333,1099.34,In-store,Credit Card
+2872,262,270,692.68,Online,PayPal
+2873,232,132,5398.52,Mobile app,PayPal
+2874,97,339,2526.89,In-store,Bank Transfer
+2875,112,247,328.77,Mobile app,PayPal
+2876,122,93,1264.61,In-store,Credit Card
+2877,55,22,2477.52,In-store,PayPal
+2878,77,57,1122.74,Mobile app,PayPal
+2879,388,325,1848.56,Online,PayPal
+2880,414,339,2162.57,Online,Bank Transfer
+2881,165,344,993.6,Online,PayPal
+2882,486,8,3940.34,Mobile app,Cash
+2883,234,54,2160.91,In-store,Cash
+2884,229,211,2371.48,Online,Bank Transfer
+2885,347,150,2637.07,Online,PayPal
+2886,262,194,4283.29,In-store,Credit Card
+2887,99,291,578.7,In-store,Credit Card
+2888,72,318,5491.33,Mobile app,Cash
+2889,7,225,2249.7,Online,Bank Transfer
+2890,334,106,369.18,In-store,Bank Transfer
+2891,151,261,3003.0,In-store,Bank Transfer
+2892,492,116,4079.78,Online,PayPal
+2893,500,286,798.18,In-store,Cash
+2894,169,142,2313.53,Online,PayPal
+2895,355,195,3796.02,Online,Credit Card
+2896,167,229,2566.27,Mobile app,Bank Transfer
+2897,76,331,3847.06,Mobile app,PayPal
+2898,316,200,3010.11,Online,Cash
+2899,340,103,995.5,In-store,Cash
+2900,93,344,2914.89,Online,Cash
+2901,377,234,436.88,In-store,Credit Card
+2902,310,183,2802.6,Online,Bank Transfer
+2903,138,116,442.02,Online,Bank Transfer
+2904,131,187,2790.92,In-store,PayPal
+2905,317,171,6250.54,In-store,Cash
+2906,419,119,1741.04,Mobile app,PayPal
+2907,291,364,811.28,In-store,Bank Transfer
+2908,356,70,2481.8,Online,Bank Transfer
+2909,149,101,4054.07,Online,Credit Card
+2910,232,329,3254.36,In-store,Bank Transfer
+2911,317,354,3881.26,Mobile app,PayPal
+2912,24,266,2116.53,Online,Cash
+2913,99,77,418.94,In-store,PayPal
+2914,62,318,1778.66,Online,Bank Transfer
+2915,326,174,4537.41,Online,Bank Transfer
+2916,130,116,3398.05,Online,Cash
+2917,60,125,3575.6,In-store,Cash
+2918,495,168,4143.71,Mobile app,PayPal
+2919,447,30,2825.07,Online,Cash
+2920,166,272,2461.48,Mobile app,PayPal
+2921,121,22,129.66,Mobile app,Bank Transfer
+2922,40,217,368.53,In-store,Cash
+2923,295,160,1901.94,Online,PayPal
+2924,451,169,1517.09,Mobile app,Bank Transfer
+2925,97,53,2669.85,Mobile app,Credit Card
+2926,386,86,3549.55,Online,Cash
+2927,170,323,284.41,Online,Credit Card
+2928,132,181,4323.9,In-store,Credit Card
+2929,175,16,1104.58,In-store,Credit Card
+2930,469,346,2155.07,Mobile app,Credit Card
+2931,473,13,1887.24,Mobile app,Bank Transfer
+2932,279,356,3100.97,Mobile app,Cash
+2933,188,122,551.72,In-store,PayPal
+2934,263,308,4324.81,In-store,Bank Transfer
+2935,111,336,373.24,Online,Credit Card
+2936,331,60,6368.04,Online,PayPal
+2937,463,7,694.83,Mobile app,Bank Transfer
+2938,359,232,2784.95,In-store,Bank Transfer
+2939,22,93,614.24,In-store,Cash
+2940,465,21,2693.45,In-store,Cash
+2941,18,8,1978.34,Mobile app,Cash
+2942,272,251,544.54,In-store,PayPal
+2943,11,22,552.58,In-store,Cash
+2944,188,44,4304.96,Online,Credit Card
+2945,180,66,1962.8,Mobile app,PayPal
+2946,354,68,195.84,In-store,PayPal
+2947,59,313,436.88,In-store,Credit Card
+2948,181,319,503.38,In-store,Cash
+2949,473,196,312.04,In-store,Credit Card
+2950,117,119,1945.62,Online,Cash
+2951,362,313,4077.11,Mobile app,Cash
+2952,312,105,5277.21,In-store,PayPal
+2953,412,187,4080.59,In-store,Credit Card
+2954,188,157,1042.91,Online,Bank Transfer
+2955,476,266,4527.28,Mobile app,Credit Card
+2956,401,148,2154.31,Mobile app,Credit Card
+2957,272,37,4857.48,In-store,PayPal
+2958,4,270,3348.52,Online,Credit Card
+2959,139,302,3761.87,In-store,PayPal
+2960,397,73,1357.45,Online,Bank Transfer
+2961,377,46,2742.53,Online,Bank Transfer
+2962,80,182,1890.25,Online,Cash
+2963,215,283,2514.65,In-store,Bank Transfer
+2964,78,228,2692.16,Online,Credit Card
+2965,211,33,1661.48,Mobile app,PayPal
+2966,226,60,1702.26,Online,Cash
+2967,34,49,2290.05,Online,Bank Transfer
+2968,439,343,2833.26,Online,Cash
+2969,269,210,664.68,Mobile app,Credit Card
+2970,173,276,4823.17,Mobile app,Credit Card
+2971,46,84,4212.16,In-store,PayPal
+2972,102,352,2436.31,Online,Credit Card
+2973,267,8,824.52,In-store,PayPal
+2974,22,204,1136.25,Mobile app,Bank Transfer
+2975,309,20,2369.38,In-store,Credit Card
+2976,28,260,1231.2,Mobile app,Cash
+2977,373,215,3823.07,Mobile app,Credit Card
+2978,485,158,319.05,In-store,Credit Card
+2979,63,316,5297.35,In-store,PayPal
+2980,191,29,2187.46,Mobile app,Bank Transfer
+2981,14,270,886.24,In-store,Cash
+2982,351,167,3708.04,Online,Cash
+2983,102,225,1836.87,Online,Cash
+2984,314,357,2965.96,Online,Bank Transfer
+2985,276,338,3793.23,In-store,Bank Transfer
+2986,345,13,1281.23,In-store,PayPal
+2987,297,137,3050.21,Mobile app,Cash
+2988,105,311,1912.86,Mobile app,Credit Card
+2989,261,234,5542.57,Mobile app,Cash
+2990,262,46,5501.41,Online,PayPal
+2991,311,358,3808.75,Mobile app,Credit Card
+2992,410,41,1871.81,Online,Cash
+2993,336,241,1439.61,Online,Credit Card
+2994,135,252,944.39,In-store,PayPal
+2995,384,273,2710.67,In-store,Credit Card
+2996,347,335,2611.07,In-store,Cash
+2997,291,134,165.18,Mobile app,PayPal
+2998,232,249,3993.06,In-store,Cash
+2999,120,90,730.75,Online,PayPal
+3000,305,28,1227.1,Online,PayPal
