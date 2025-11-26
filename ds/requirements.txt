@@ -1,6 +1,0 @@
-pandas
-numpy
-faker
-fastapi
-uvicorn[standard]
-mlxtend
