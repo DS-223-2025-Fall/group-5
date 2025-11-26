@@ -1,0 +1,118 @@
+version: "3.9"
+
+services:
+
+  # ========================
+  # POSTGRES DATABASE
+  # ========================
+  db:
+    container_name: postgres_db
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - "5433:5432"     # host:container
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - marketing_network
+
+
+  # ========================
+  # PGADMIN
+  # ========================
+  pgadmin:
+    container_name: pgadmin
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASSWORD}
+    ports:
+      - "5051:80"       # access pgAdmin at http://localhost:5051
+    volumes:
+      - ./pgadmin_data:/var/lib/pgadmin
+    depends_on:
+      - db
+    networks:
+      - marketing_network
+
+
+  # ========================
+  # ETL SERVICE
+  # ========================
+  etl:
+    container_name: etl
+    build:
+      context: ./etl
+      dockerfile: Dockerfile
+    volumes:
+      - ./etl:/etl
+    ports:
+      - "3000:3000"       # optional — only if your ETL exposes a service
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - marketing_network
+
+
+  # ========================
+  # FASTAPI BACKEND
+  # ========================
+  api:
+    container_name: api
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    volumes:
+      - ./api:/api
+    ports:
+      - "8008:8000"       # Swagger: http://localhost:8008/docs
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+    depends_on:
+      - db
+    networks:
+      - marketing_network
+
+
+  # ========================
+  # STREAMLIT FRONTEND
+  # ========================
+  app:
+    container_name: streamlit_app
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    volumes:
+      - ./app:/app
+    ports:
+      - "8501:8501"       # Streamlit UI: http://localhost:8501
+    environment:
+      - API_URL=http://api:8000
+    depends_on:
+      - api
+    networks:
+      - marketing_network
+
+
+# ========================
+# NETWORK AND VOLUMES
+# ========================
+networks:
+  marketing_network:
+    driver: bridge
+
+volumes:
+  postgres_data:

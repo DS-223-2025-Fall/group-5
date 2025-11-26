@@ -1,0 +1,14 @@
+pandas
+numpy
+faker
+fastapi
+uvicorn[standard]
+mlxtend
+greenlet
+psycopg2-binary
+python-dateutil
+pytz
+six
+SQLAlchemy
+typing_extensions
+tzdata
