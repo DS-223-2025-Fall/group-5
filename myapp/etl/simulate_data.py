@@ -1,3 +1,20 @@
+"""
+Synthetic dataset generator for the marketing analytics ETL.
+
+This script creates a fully artificial dataset that mimics a retail
+transaction database, including:
+
+- Customers
+- Products
+- Timeframe (daily)
+- Transactions
+- Sales line items
+
+All generated CSVs are stored under:  data/raw/
+
+Used when the ETL pipeline runs and no raw data exists yet.
+"""
+
 from faker import Faker
 import pandas as pd
 import random
@@ -6,7 +23,7 @@ from pathlib import Path
 
 fake = Faker()
 
-# PARAMETERS
+# Parameters controlling dataset size
 N_CUSTOMERS = 500
 N_PRODUCTS = 200
 N_DAYS = 365
@@ -19,6 +36,25 @@ OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 
 def generate_data():
+    """
+    Generate synthetic retail transaction dataset.
+
+    Creates:
+        - customers.csv
+        - products.csv
+        - timeframe.csv
+        - transactions.csv
+        - sales.csv
+
+    This data imitates real retail behavior:
+        - random ages, names, phone numbers, emails
+        - product categories & brands
+        - multiple lines per transaction
+        - realistic transaction totals and daily dates
+
+    Returns:
+        None (writes CSVs to disk).
+    """
     # CUSTOMERS
     customers = []
     for cid in range(1, N_CUSTOMERS + 1):
@@ -43,11 +79,11 @@ def generate_data():
             "product_name": fake.word().capitalize() + " " + fake.word().capitalize(),
             "category": random.choice(categories),
             "brand": random.choice(brands),
-            "price": round(random.uniform(5, 500), 2)
+            "price": round(random.uniform(5, 500), 2),
         })
     df_products = pd.DataFrame(products)
 
-    # TIMEFRAME
+    # TIMEFRAME (Daily dimension)
     start_date = datetime(2023, 1, 1)
     timeframe = []
     for i in range(N_DAYS):
@@ -57,7 +93,7 @@ def generate_data():
             "date": d.date(),
             "day": d.day,
             "month": d.month,
-            "year": d.year
+            "year": d.year,
         })
     df_timeframe = pd.DataFrame(timeframe)
 
@@ -76,7 +112,7 @@ def generate_data():
             "time_id": int(time_row["time_id"]),
             "transaction_amount": 0.00,
             "channel": random.choice(channels),
-            "payment_type": random.choice(payment_types)
+            "payment_type": random.choice(payment_types),
         })
         transaction_totals[tid] = 0.0
 
@@ -84,44 +120,3 @@ def generate_data():
 
     # SALES
     sales = []
-    sale_id = 1
-
-    for tid in range(1, N_TRANSACTIONS + 1):
-        n_lines = random.randint(1, MAX_LINES_PER_TRANSACTION)
-        for _ in range(n_lines):
-            product = df_products.sample(1).iloc[0]
-            quantity = random.randint(1, 5)
-            unit_price = float(product["price"])
-            line_total = round(quantity * unit_price, 2)
-
-            transaction_totals[tid] += line_total
-
-            sales.append({
-                "sale_id": sale_id,
-                "transaction_id": tid,
-                "product_sku": int(product["product_sku"]),
-                "quantity": quantity,
-                "unit_price": round(unit_price, 2),
-                "line_total": line_total
-            })
-            sale_id += 1
-
-    df_sales = pd.DataFrame(sales)
-
-    # Update totals
-    df_transactions["transaction_amount"] = df_transactions["transaction_id"].map(
-        lambda t: round(transaction_totals[t], 2)
-    )
-
-    # SAVE CSV FILES
-    df_customers.to_csv(OUTPUT_DIR / "customers.csv", index=False)
-    df_products.to_csv(OUTPUT_DIR / "products.csv", index=False)
-    df_timeframe.to_csv(OUTPUT_DIR / "timeframe.csv", index=False)
-    df_transactions.to_csv(OUTPUT_DIR / "transactions.csv", index=False)
-    df_sales.to_csv(OUTPUT_DIR / "sales.csv", index=False)
-
-    print(f"Generated synthetic data into {OUTPUT_DIR}")
-
-
-if __name__ == "__main__":
-    generate_data()
