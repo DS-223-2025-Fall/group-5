@@ -1,37 +1,52 @@
 import streamlit as st
 
+
 def settings_screen():
-    st.title("Settings")
-    
-    # Input fields for settings
-    username = st.text_input("Change Username", value="User123")
-    st.write(f"Current Username: {username}")
-    
-    # Option to change app theme (dark or light)
-    theme = st.selectbox("Choose App Theme", ["Light", "Dark"])
-    if theme == "Dark":
-        st.markdown(
-            """
-            <style>
-            .main {
-                background-color: #2b2b2b;
-                color: white;
-            }
-            </style>
-            """, unsafe_allow_html=True
+    st.markdown('<h1 style="margin-bottom:0.3rem;">Settings</h1>', unsafe_allow_html=True)
+    st.markdown(
+        '<p style="color:#64748b;margin-bottom:1.3rem;">'
+        'Configure how bundle recommendations are generated.'
+        '</p>',
+        unsafe_allow_html=True,
+    )
+
+    if "settings" not in st.session_state:
+        st.session_state.settings = {
+            "username": "Demo User",
+            "theme": "Light",
+            "min_support": 0.01,
+            "min_confidence": 0.0,
+        }
+
+    s = st.session_state.settings
+
+    st.markdown('<div class="card">', unsafe_allow_html=True)
+    st.subheader("Recommendation Settings")
+
+    s["username"] = st.text_input("Display name", value=s["username"])
+
+    col1, col2 = st.columns(2)
+    with col1:
+        s["min_support"] = st.slider(
+            "Minimum support (fraction)",
+            0.0,
+            0.2,
+            float(s["min_support"]),
+            step=0.005,
         )
-    else:
-        st.markdown(
-            """
-            <style>
-            .main {
-                background-color: white;
-                color: black;
-            }
-            </style>
-            """, unsafe_allow_html=True
+    with col2:
+        s["min_confidence"] = st.slider(
+            "Minimum confidence (0–1, used to filter display)",
+            0.0,
+            1.0,
+            float(s["min_confidence"]),
+            step=0.05,
         )
-    
-    # Example: Save settings (this is just a placeholder for later functionality)
-    if st.button("Save Settings"):
-        st.success("Settings saved successfully!")
+
+    theme = st.selectbox("Theme (visual only)", ["Light", "Dark"], index=["Light", "Dark"].index(s["theme"]))
+    s["theme"] = theme
+
+    if st.button("Save settings"):
+        st.success("Settings saved (stored in session).")
+
+    st.markdown("</div>", unsafe_allow_html=True)
