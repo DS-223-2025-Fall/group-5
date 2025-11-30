@@ -1,12 +1,26 @@
-from sqlalchemy import create_engine, text
+"""
+Helper functions for analytical queries on the marketing database.
+
+These helpers are used mainly by the dashboard / reporting layer and are
+intentionally written with raw SQL for clarity and performance.
+
+The module:
+- Creates a standalone SQLAlchemy engine (for scripts / dashboards).
+- Exposes convenience functions that return query results as mappings().
+"""
+
 import os
+
+from sqlalchemy import create_engine, text
 
 # -------------------------------------------------------------------
 # DB connection
 # -------------------------------------------------------------------
+# Standalone connection string for running this module directly.
+# If DATABASE_URL is not set, a local Postgres instance is assumed.
 DATABASE_URL = os.getenv(
     "DATABASE_URL",
-    "postgresql+psycopg2://admin:admin123@localhost:5432/marketing_db"
+    "postgresql+psycopg2://admin:admin123@localhost:5432/marketing_db",
 )
 
 engine = create_engine(DATABASE_URL)
@@ -17,7 +31,15 @@ engine = create_engine(DATABASE_URL)
 # -------------------------------------------------------------------
 def get_category_revenue(engine):
     """
-    Returns total revenue per product category.
+    Compute total revenue per product category.
+
+    Args:
+        engine: SQLAlchemy engine connected to the marketing database.
+
+    Returns:
+        A list of mapping rows, each with:
+            - category: product category name.
+            - total_revenue: aggregated revenue for that category.
     """
     sql = """
         SELECT
@@ -41,8 +63,17 @@ def get_category_revenue(engine):
 # -------------------------------------------------------------------
 def get_top_customers(engine, limit: int = 5):
     """
-    Returns top customers by total spending.
-    customers → transactions → sales.
+    Return top customers ranked by total spending.
+
+    Args:
+        engine: SQLAlchemy engine connected to the marketing database.
+        limit:  Maximum number of customers to return (default: 5).
+
+    Returns:
+        A list of mapping rows, each with:
+            - customer_id: ID of the customer.
+            - total_spent: total money spent across all orders.
+            - num_orders: number of distinct transactions.
     """
     sql = """
         SELECT
@@ -69,6 +100,8 @@ def get_top_customers(engine, limit: int = 5):
 # Manual test
 # -------------------------------------------------------------------
 if __name__ == "__main__":
+    # Simple smoke test so we can run:
+    #   python -m myapp.api.Database.db_helpers
     print("▶ CATEGORY REVENUE")
     print(get_category_revenue(engine))
     print("\n▶ TOP CUSTOMERS")

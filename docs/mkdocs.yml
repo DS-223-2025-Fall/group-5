@@ -7,3 +7,7 @@ nav:
       - Services & Architecture: milestone2/services_architecture.md
       - Branches & PR Workflow: milestone2/branches_and_prs.md
       - Baseline Models & Data Flow: milestone2/baseline_models_and_data_flow.md
+
+  - Milestone 3:
+      - Database & ETL Documentation: milestone3/database.md
+
