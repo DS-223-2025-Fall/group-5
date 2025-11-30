@@ -1,158 +1,124 @@
 """
 SQLAlchemy ORM models backing the marketing analytics application.
-
-Each class represents a table in the main Postgres database.
-
-Logical relationships (not enforced here with ForeignKey constraints):
-- `transactions.customer_id` → `customers.customer_id`
-- `transactions.time_id`     → `timeframe.time_id`
-- `sales.transaction_id`     → `transactions.transaction_id`
-- `sales.product_sku`        → `products.product_sku`
-- `bundle_rules` stores association-rule results used for product bundling.
 """
 
-from sqlalchemy import Column, Integer, String, Float, Date
+from sqlalchemy import Column, Integer, String, DECIMAL, Date, ForeignKey
+from sqlalchemy.orm import relationship
 
 from .database import Base
 
 
+# ---------------------------------------------------
+# PRODUCTS
+# ---------------------------------------------------
 class Product(Base):
-    """
-    Product catalog.
-
-    Represents a single SKU available for purchase.
-    """
     __tablename__ = "products"
 
-    # Unique product identifier used across all tables.
-    product_sku = Column(Integer, primary_key=True, index=True)
-
-    # Human-readable product name shown in the UI.
+    product_sku = Column(Integer, primary_key=True, index=True, autoincrement=True)
     product_name = Column(String, nullable=False)
-
-    # Product category (e.g., "Skincare", "Makeup"). Optional.
     category = Column(String, nullable=True)
-
-    # Brand name, if available.
     brand = Column(String, nullable=True)
 
-    # Default unit price of the product.
-    price = Column(Float, nullable=False)
+    # NUMERIC(10,2)
+    price = Column(DECIMAL(10, 2), nullable=False)
+
+    # Relations
+    sales = relationship("Sale", back_populates="product")
 
 
+# ---------------------------------------------------
+# CUSTOMERS
+# ---------------------------------------------------
 class Customer(Base):
-    """
-    Customer master data.
-
-    Stores basic demographic and contact information for each customer.
-    """
     __tablename__ = "customers"
 
-    # Internal customer identifier.
     customer_id = Column(Integer, primary_key=True, index=True)
-
     first_name = Column(String, nullable=False)
     last_name = Column(String, nullable=False)
-
-    # Date of birth parsed from customers.csv (string → date).
     dob = Column(Date, nullable=True)
-
-    # Optional contact fields used for segmentation / CRM.
     phone = Column(String, nullable=True)
     email = Column(String, nullable=True)
 
+    # Relations
+    transactions = relationship("Transaction", back_populates="customer")
 
+
+# ---------------------------------------------------
+# TIMEFRAME
+# ---------------------------------------------------
 class Timeframe(Base):
-    """
-    Time dimension table.
-
-    Used to support time-based analytics (day, month, year).
-    """
     __tablename__ = "timeframe"
 
     time_id = Column(Integer, primary_key=True, index=True)
-
-    # Exact calendar date for the event.
     date = Column(Date, nullable=False)
-
-    # Pre-computed date components for easy grouping.
     day = Column(Integer, nullable=False)
     month = Column(Integer, nullable=False)
     year = Column(Integer, nullable=False)
 
+    # Relations
+    transactions = relationship("Transaction", back_populates="timeframe")
 
+
+# ---------------------------------------------------
+# TRANSACTION HEADER
+# ---------------------------------------------------
 class Transaction(Base):
-    """
-    Transaction header.
-
-    One row per order/checkout. Line items are stored in the `sales` table.
-    """
     __tablename__ = "transactions"
 
     transaction_id = Column(Integer, primary_key=True, index=True)
 
-    # References customers.customer_id (logical FK).
-    customer_id = Column(Integer, nullable=False)
+    customer_id = Column(Integer, ForeignKey("customers.customer_id"), nullable=False)
+    time_id = Column(Integer, ForeignKey("timeframe.time_id"), nullable=False)
 
-    # References timeframe.time_id (logical FK).
-    time_id = Column(Integer, nullable=False)
-
-    # Total order value.
-    transaction_amount = Column(Float, nullable=False)
-
-    # Sales channel, e.g. "Online" or "In-store".
+    transaction_amount = Column(DECIMAL(10, 2), nullable=False)
     channel = Column(String, nullable=True)
-
-    # Payment method, e.g. "Card", "Cash".
     payment_type = Column(String, nullable=True)
 
+    # Relations
+    customer = relationship("Customer", back_populates="transactions")
+    timeframe = relationship("Timeframe", back_populates="transactions")
+    sales = relationship("Sale", back_populates="transaction")
 
+
+# ---------------------------------------------------
+# SALES LINE ITEMS
+# ---------------------------------------------------
 class Sale(Base):
-    """
-    Transaction line items.
-
-    One row per product within a transaction.
-    """
     __tablename__ = "sales"
 
     sale_id = Column(Integer, primary_key=True, index=True)
 
-    # References transactions.transaction_id (logical FK).
-    transaction_id = Column(Integer, nullable=False)
+    transaction_id = Column(
+        Integer,
+        ForeignKey("transactions.transaction_id"),
+        nullable=False,
+    )
 
-    # References products.product_sku (logical FK).
-    product_sku = Column(Integer, nullable=False)
+    product_sku = Column(
+        Integer,
+        ForeignKey("products.product_sku"),
+        nullable=False,
+    )
 
-    # Quantity of this SKU in the transaction.
     quantity = Column(Integer, nullable=False)
+    unit_price = Column(DECIMAL(10, 2), nullable=False)
+    line_total = Column(DECIMAL(10, 2), nullable=False)
 
-    # Unit price at the time of sale.
-    unit_price = Column(Float, nullable=False)
-
-    # quantity * unit_price, stored for convenience.
-    line_total = Column(Float, nullable=False)
+    # Relations
+    transaction = relationship("Transaction", back_populates="sales")
+    product = relationship("Product", back_populates="sales")
 
 
+# ---------------------------------------------------
+# BUNDLE RULES
+# ---------------------------------------------------
 class BundleRule(Base):
-    """
-    Association rules generated by the bundling / recommendation pipeline.
-
-    Matches the structure of `baseline_rules.csv` and stores:
-    - antecedents: comma-separated SKUs or categories on the left-hand side.
-    - consequents: SKUs or categories recommended together with the antecedents.
-    - support, confidence, lift: standard metrics for association rules.
-    """
     __tablename__ = "bundle_rules"
 
     id = Column(Integer, primary_key=True, index=True)
 
-    # Left-hand side of the rule (items already in the basket).
     antecedents = Column(String, nullable=False)
-
-    # Right-hand side of the rule (items to recommend).
     consequents = Column(String, nullable=False)
-
-    # Rule metrics.
-    support = Column(Float, nullable=False)
-    confidence = Column(Float, nullable=False)
-    lift = Column(Float, nullable=False)
+    support = Column(DECIMAL(10, 4), nullable=False)
+    confidence = Column(DECIMAL(10, 4), nullable=False)
+    lift = Column(DECIMAL(10, 4), nullable=False)
