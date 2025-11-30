@@ -15,6 +15,8 @@ from sqlalchemy.orm import Session
 from routes import router as api_router
 from Database import models
 from Database.database import engine, get_db
+from sqlalchemy import text
+
 
 # Create all tables (dev/demo mode)
 models.Base.metadata.create_all(bind=engine)
@@ -44,8 +46,9 @@ def health_check(db: Session = Depends(get_db)):
     Verify DB connection + API health.
     Returns "ok" if the database is reachable.
     """
-    db.execute("SELECT 1")
+    db.execute(text("SELECT 1"))
     return {"status": "ok"}
+
 
 
 # Include all versioned API endpoints under /api/...

@@ -18,13 +18,12 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${DB_USER}"]
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}"]
       interval: 10s
       timeout: 5s
       retries: 5
     networks:
       - marketing_network
-
 
   # ========================
   # PGADMIN
@@ -44,7 +43,6 @@ services:
       - db
     networks:
       - marketing_network
-
 
   # ========================
   # ETL SERVICE
@@ -66,7 +64,6 @@ services:
     networks:
       - marketing_network
 
-
   # ========================
   # FASTAPI BACKEND
   # ========================
@@ -86,7 +83,6 @@ services:
     networks:
       - marketing_network
 
-
   # ========================
   # STREAMLIT FRONTEND
   # ========================
@@ -105,7 +101,6 @@ services:
       - api
     networks:
       - marketing_network
-
 
 # ========================
 # NETWORK AND VOLUMES
