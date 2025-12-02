@@ -135,7 +135,7 @@ def login_screen(on_login):
         }}
 
         .stButton > button:hover {{
-            transform: translateY(-2px) !important;
+            transform: translateY(-1px) !important;
             box-shadow: 0 8px 25px rgba(139, 92, 246, 0.5) !important;
         }}
 
@@ -157,15 +157,15 @@ def login_screen(on_login):
     """, unsafe_allow_html=True)
 
     # Create a large spacer to push form down
-    st.markdown('<div style="height: 35vh; width: 100%;"></div>', unsafe_allow_html=True)
+    st.markdown('<div style="height: 31vh; width: 100%;"></div>', unsafe_allow_html=True)
 
     # Login form at bottom
     col1, col2, col3 = st.columns([1, 2, 1])
     
     with col2:
         with st.form("login_form"):
-            username = st.text_input("Email or username", placeholder="you@example.com")
-            password = st.text_input("Password", type="password", placeholder="Enter your password")
+            username = st.text_input("Email or username")
+            password = st.text_input("Password", type="password")
             submitted = st.form_submit_button("Sign in")
 
         if submitted:
