@@ -61,3 +61,59 @@ def load_table_data(table_name):
     except Exception as e:
         st.error(f"Error loading table '{table_name}': {e}")
         return None
+    
+    
+# Add this new function after load_table_data():
+
+def load_all_tables():
+    """Load all tables from database into a dictionary."""
+    try:
+        tables = get_all_tables()
+        all_data = {}
+        
+        db_info = get_db_connection()
+        if db_info is None:
+            return {}
+        
+        engine = db_info["engine"]
+        import pandas as pd
+        
+        for table_name in tables:
+            try:
+                query = f"SELECT * FROM {table_name}"
+                with engine.connect() as conn:
+                    df = pd.read_sql(query, conn)
+                all_data[table_name] = df
+            except Exception as e:
+                st.warning(f"Could not load table '{table_name}': {e}")
+                continue
+        
+        return all_data
+    except Exception as e:
+        st.error(f"Error loading all tables: {e}")
+        return {}
+
+
+def get_table_info(table_name):
+    """Get detailed info about a table (columns, types, row count)."""
+    try:
+        db_info = get_db_connection()
+        if db_info is None:
+            return None
+        
+        engine = db_info["engine"]
+        inspector = sa.inspect(engine)
+        columns = inspector.get_columns(table_name)
+        
+        # Get row count
+        with engine.connect() as conn:
+            result = conn.execute(sa.text(f"SELECT COUNT(*) FROM {table_name}"))
+            row_count = result.scalar()
+        
+        return {
+            "columns": columns,
+            "row_count": row_count,
+            "column_count": len(columns)
+        }
+    except Exception as e:
+        return None

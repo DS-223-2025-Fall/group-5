@@ -36,9 +36,9 @@ services:
       PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL}
       PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASSWORD}
     ports:
-      - "5051:80"       # access pgAdmin at http://localhost:5051
+      - "5051:80"
     volumes:
-      - ./pgadmin_data:/var/lib/pgadmin
+      - pgadmin_data:/var/lib/pgadmin   # <- named volume
     depends_on:
       - db
     networks:
@@ -117,3 +117,4 @@ networks:
 
 volumes:
   postgres_data:
+  pgadmin_data:

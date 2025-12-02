@@ -6,6 +6,13 @@ from bundles import bundles_screen
 from performance import performance_screen
 from settings import settings_screen
 from db import get_db_connection
+import base64
+
+def load_image_base64(path):
+    with open(path, "rb") as img:
+         return base64.b64encode(img.read()).decode()
+
+logo = load_image_base64("assets/clustr.png")
 
 # ---- Global page config ----
 st.set_page_config(
@@ -43,34 +50,27 @@ def on_login():
         st.session_state["db_conn"] = db_info["connection"]
         st.session_state["db_engine"] = db_info["engine"]
 
-# ---- Top Navigation ----
-def render_top_nav():
-    top_nav_html = """
-    <div class="card top-nav">
-        <div class="top-nav-inner">
-            <div class="top-nav-left">
-                <div class="top-nav-logo">C</div>
-                <div class="top-nav-text">
-                    <div class="top-nav-title">Smart Bundling Optimizer</div>
-                </div>
-            </div>
-            <div class="top-nav-user">Demo User • user@example.com</div>
-        </div>
-    </div>
-    """
-    st.markdown(top_nav_html, unsafe_allow_html=True)
 
 
 # ---- Sidebar Navigation ----
+
 def navigation():
     if "current_screen" not in st.session_state:
         st.session_state.current_screen = "Database"
 
     with st.sidebar:
+        st.markdown(
+        f"""
+        <div style="display: flex; justify-content: center;">
+            <img src="data:image/png;base64,{logo}" width="220">
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
         st.markdown("### Navigation")
         choice = st.pills(
             "Go to",
-            options=["Database", "Dashboard", "Bundle Suggestions", "Performance", "Settings"],
+            options=["Database", "Dashboard", "Bundle Suggestions", "Bundle A/B Testing", "Settings"],
             default=st.session_state.current_screen
         )
         st.session_state.current_screen = choice
@@ -80,8 +80,6 @@ def navigation():
             st.session_state.clear()
             st.rerun()
 
-    # Top nav
-    render_top_nav()
 
     # Ensure DB connection
     if "db_conn" not in st.session_state:
