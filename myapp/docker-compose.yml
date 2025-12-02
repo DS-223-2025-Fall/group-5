@@ -55,7 +55,7 @@ services:
     volumes:
       - ./etl:/etl
     ports:
-      - "3000:3000"       # optional — only if your ETL exposes a service
+      - "3000:3000"       # optional – only if your ETL exposes a service
     environment:
       - DATABASE_URL=${DATABASE_URL}
     depends_on:
@@ -97,8 +97,14 @@ services:
       - "8501:8501"       # Streamlit UI: http://localhost:8501
     environment:
       - API_URL=http://api:8000
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_NAME=${DB_NAME}
     depends_on:
       - api
+      - db
     networks:
       - marketing_network
 
