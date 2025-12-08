@@ -106,14 +106,25 @@ def load_sales(name: str = "sales.csv") -> None:
 def load_rules_from_csv(name: str = "baseline_rules.csv") -> None:
     """
     Load association rules from CSV into the `bundle_rules` table.
+
+    The CSV may contain many columns (antecedent support, consequent support,
+    leverage, conviction, etc.), but our DB table only has:
+
+        - antecedents
+        - consequents
+        - support
+        - confidence
+        - lift
     """
     df = pd.read_csv(RAW / name)
 
-    # (optional) any renaming you already do stays here
-    # e.g. df = df.rename(columns={...})
+    # Keep only the columns that actually exist in the DB table
+    expected_cols = ["antecedents", "consequents", "support", "confidence", "lift"]
+    df = df[expected_cols]
 
-    # prevent duplicates
+    # Clear existing data to avoid duplicates
     truncate_table("bundle_rules")
 
     df.to_sql("bundle_rules", engine, if_exists="append", index=False)
     print("Loaded bundle_rules.")
+

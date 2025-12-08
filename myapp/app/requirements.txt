@@ -6,3 +6,7 @@ psycopg2-binary
 altair
 openpyxl
 pyarrow
+joblib
+numpy
+pandas
+scikit-learn

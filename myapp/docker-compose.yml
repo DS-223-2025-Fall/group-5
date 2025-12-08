@@ -64,6 +64,33 @@ services:
     networks:
       - marketing_network
 
+
+  # ========================
+  # DS SERVICE (DATA SCIENCE)
+  # ========================
+  ml:
+    container_name: ml
+    build:
+      context: ./ml          # <– points to your ml folder
+      dockerfile: Dockerfile
+    volumes:
+      - ./ml:/ml             # so you can edit code locally
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_NAME=${DB_NAME}
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "8888:8888"          # open in browser at http://localhost:8888
+    networks:
+      - marketing_network
+
+
   # ========================
   # FASTAPI BACKEND
   # ========================
@@ -93,6 +120,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./app:/app
+      - ./ml:/ml 
     ports:
       - "8501:8501"       # Streamlit UI: http://localhost:8501
     environment:
