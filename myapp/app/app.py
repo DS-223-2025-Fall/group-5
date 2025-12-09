@@ -3,7 +3,7 @@ from login import login_screen
 from dashboard import dashboard_screen
 from upload import upload_screen
 from bundles import bundles_screen
-from performance import performance_screen
+from campaign import campaigns_screen
 from settings import settings_screen
 from db import get_db_connection
 import base64
@@ -70,7 +70,7 @@ def navigation():
         st.markdown("### Navigation")
         choice = st.pills(
             "Go to",
-            options=["Database", "Dashboard", "Bundle Suggestions", "Bundle A/B Testing", "Settings"],
+            options=["Database", "Dashboard", "Bundle Suggestions", "Campaigns", "Settings"],
             default=st.session_state.current_screen
         )
         st.session_state.current_screen = choice
@@ -96,8 +96,8 @@ def navigation():
         dashboard_screen()
     elif screen == "Bundle Suggestions":
         bundles_screen()
-    elif screen == "Performance":
-        performance_screen()
+    elif screen == "Campaigns":
+        campaigns_screen()
     elif screen == "Settings":
         settings_screen()
     else:

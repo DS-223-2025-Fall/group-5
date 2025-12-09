@@ -99,12 +99,8 @@ def upload_screen():
                 with st.expander("👁️ Data Preview (First 20 rows)"):
                     st.dataframe(df.head(20), use_container_width=True)
                 
-                # Set as active dataset for analysis
-                st.markdown("---")
-                if st.button(f"📈 Use '{selected_table}' for Analysis", type="primary"):
-                    st.session_state.data = df
-                    st.session_state.current_table = selected_table
-                    st.success(f"'{selected_table}' is now the active dataset for Dashboard & Bundles.")
+                # REMOVED: The "Use for Analysis" button that was causing confusion
+                # Data is automatically available for all screens through st.session_state.all_tables_data
         
         # === ALL TABLES OVERVIEW ===
         st.markdown("---")
@@ -129,12 +125,13 @@ def upload_screen():
                 if key in st.session_state:
                     del st.session_state[key]
             st.rerun()
+        
+        # Info message
+        st.markdown("---")
+        st.info("💡 **All tables are automatically available for Dashboard and Bundle Suggestions.** "
+                "Use the navigation menu to access different features.")
     
     else:
         st.error("❌ Database not connected.")
     
     st.markdown("</div>", unsafe_allow_html=True)
-    
-    # Status indicator
-    if st.session_state.get("data") is not None:
-        st.success(f"✅ Active dataset: `{st.session_state.get('current_table', 'Unknown')}` - Ready for analysis!")
