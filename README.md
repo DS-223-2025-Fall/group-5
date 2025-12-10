@@ -1,199 +1,201 @@
-# Smart Packaging Optimizer
+# Clustr – Intelligent Product Bundling & Retail Insights Platform
 
-A data-driven analytics system for identifying complementary products in the cosmetics and perfumery industry. The tool analyzes transaction data to recommend product bundles, support gift package design, and improve cross-selling efficiency.
+Clustr is an end-to-end analytics ecosystem designed to simulate retail environments, process transactional data, generate product bundle recommendations (association-rule + ML), and present insights through a clean Streamlit interface.  
+It includes an ETL pipeline, FastAPI backend, PostgreSQL database, ML engine, and MkDocs documentation.
 
----
-
-## 1. Problem Definition
-
-Bundling decisions in cosmetics retail are often based on intuition, leading to inefficient gift sets and missed revenue. Retailers lack analytical insight into which products are purchased together and cannot reliably detect profitable product combinations.
-
-Specific challenge:
-
-Retailers cannot quantify co-purchase patterns and therefore miss opportunities for higher basket value through optimized product bundling.
+This README provides installation steps, run instructions, platform links, and screenshots integrated throughout the document.
 
 ---
 
-## 2. Solution Overview
+## Documentation
 
-The system analyzes historical transaction data to detect product associations and recommend bundles based on statistical measures. It uses three algorithms:
+Local documentation (MkDocs):
 
-1. Association Rule Mining (Apriori)
-2. Item2Vec product embeddings
-3. Item-based collaborative filtering
+    http://127.0.0.1:8000
 
-Outputs include:
+Run using:
 
-- Ranked bundle suggestions
-- Support, confidence, lift metrics
-- Profitability impact
-- Insights by customer segment
-
-A Streamlit dashboard provides access for marketing teams without requiring technical knowledge.
-
-Prototype UI on Figma:  
-https://layer-bonus-12629325.figma.site/  
-Login: test@test.com  
-Password: test
-
----
-
-## 3. Architecture
-
-Directory structure:
-
-```
-group-5/
-├── docs/              # Documentation (MkDocs)
-│   ├── api.md
-│   ├── app.md
-│   ├── etl.md
-│   ├── demo.md
-│   └── index.md
-│
-├── myapp/
-│   ├── api/           # FastAPI backend
-│   ├── app/           # Streamlit UI
-│   ├── etl/           # Data ingestion and CSV loader
-│   ├── ml/            # Analytics engine
-│   ├── pgadmin_data/  # Database admin files
-│   ├── docker-compose.yml
-│   └── .env
-│
-├── ERD.png
-
-└── Roadmap.png
-```
-<img width="1024" height="768" alt="image" src="https://github.com/user-attachments/assets/32ba49a0-89a6-4617-8257-4c949c58dc64" />
-
-
-Technologies used:
-- PostgreSQL (database)
-- FastAPI (REST API)
-- Streamlit (UI)
-- Docker Compose (orchestration)
-- MkDocs (documentation)
-
----
-
-## 4. Database Schema
-
-Tables:
-
-- products
-- customers
-- transactions
-- sales
-- timeframe
-
- 
-<img width="791" height="771" alt="image" src="https://github.com/user-attachments/assets/428b4499-d45c-42cd-9c7f-d012e60c5480" />
+    python -m mkdocs serve
 
 
 ---
 
-## 5. Data Inputs
+## Platform Links (Local Development)
 
-Required fields:
+Streamlit UI:
 
-- product SKU, name, category, brand
-- quantity, unit price
-- transaction date
-- customer ID (optional)
-- channel and payment type (optional)
+    http://localhost:8501
 
-Sample datasets are located in:  
-`/myapp/etl/data/raw/`
+FastAPI Root:
 
----
+    http://127.0.0.1:8008
 
-## 6. Running the System (Docker)
+FastAPI Swagger Docs:
 
-### Environment Variables
+    http://127.0.0.1:8008/docs
 
-Create a `.env` file in `myapp/`:
+pgAdmin (if configured in Docker):
 
-```
-DB_NAME=marketing_db
-DB_USER=admin
-DB_PASSWORD=admin123
-
-PGADMIN_EMAIL=admin@admin.com
-PGADMIN_PASSWORD=admin123
-
-DATABASE_URL=postgresql+psycopg2://admin:admin123@db:5432/marketing_db
-```
-
-### Start
-
-Open terminal:
-
-```
-cd myapp
-docker compose up --build
-```
-
-Docker will start database services, load CSV data, and launch the dashboard.
+    http://localhost:5050
 
 ---
 
-## 7. Application Interfaces
+## Project Structure
 
-### Dashboard (Streamlit)
-
-Start the application and open:
-
-http://localhost:8501
-
-<img width="1280" height="446" alt="image" src="https://github.com/user-attachments/assets/a820317a-f9d6-4127-9262-56116d1b8d61" />
-
-<img width="1280" height="647" alt="image" src="https://github.com/user-attachments/assets/2d052f0c-3723-4fb7-ac10-b87545867a3a" />
-
-<img width="1280" height="456" alt="image" src="https://github.com/user-attachments/assets/665ddb46-d852-4a13-ac72-57010b92ee45" />
-
-<img width="1280" height="423" alt="image" src="https://github.com/user-attachments/assets/6f4197af-b983-471f-a441-d9cc190113cd" />
-
-<img width="1280" height="582" alt="image" src="https://github.com/user-attachments/assets/f82f5351-209e-4791-95bf-a11a73d457fb" />
-
-
-
-
-### API Documentation (Swagger)
-
-http://localhost:8008/docs
-
-
-
-### Database Interface (pgAdmin)
-
-http://localhost:5051
-
-
-## 8. Expected Outcomes
-
-Key metrics:
-
-- Multi-product transactions
-- Average Basket Value (ABV)
-- Bundle ROI
-- Bundle sell-through rate
-- Reduction of under-performing gift sets
-
-Expected value:
-
-Improved cross-selling, better assortment planning, and reduced waste through optimized gift set design.
+myapp/
+├── api/                  # FastAPI backend  
+├── app/                  # Streamlit UI  
+├── etl/                  # ETL pipeline + data generator  
+├── ml/                   # Machine learning engine  
+├── pgadmin_data/         # pgAdmin storage (Docker)  
+├── .env                  # Environment variables  
+├── docker                # Dockerfile (rename recommended)  
+├── docker-compose        # Docker Compose config  
+└── README.md             # App-level instructions  
 
 ---
 
-## 9. Contributors
+## Features
 
-Marketing Analytics Project, AUA, 2025.
+### ETL & Data
+- Synthetic dataset generation  
+- Loading into PostgreSQL  
+- Association-rule bundle generation  
 
-- Keema 
-- norayramirkhanyan23  
-- yeghiazariangor  
-- lizakhachatryan
+### API (FastAPI)
+- CRUD endpoints  
+- ML recommendation endpoint  
+- Association-rule bundles  
+- Automatic Swagger documentation  
+
+### Streamlit Application
+- KPI dashboard  
+- Database browser  
+- Bundle explorer (association rules + ML recommendations)  
+- Campaign builder (turns bundles into actionable marketing ideas such as messaging, segment targeting, and channel selection)  
+- Settings page  
+
+### ML Engine
+- Predictive scoring of product bundles  
+- Demographic segmentation filters  
 
 ---
+
+## Installation
+
+Install dependencies:
+
+    pip install -r requirements.txt
+
+---
+
+## Running the System
+
+### Step 1 — Run ETL
+
+    python etl/etl_process.py
+
+This step:
+- Generates synthetic data  
+- Creates tables  
+- Loads CSVs  
+- Generates association rules  
+- Populates `bundle_rules`  
+
+---
+
+### Step 2 — Start FastAPI Backend
+
+    uvicorn api.main:app --reload
+
+FastAPI:
+
+    http://127.0.0.1:8008
+
+Swagger:
+
+    http://127.0.0.1:8008/docs
+
+Swagger preview:  
+`![swagger](docs/images/swagger.png)` 
+
+---
+
+### Step 3 — Launch Streamlit UI
+
+    streamlit run app/app.py
+
+Then open:
+
+    http://localhost:8501
+
+Dashboard preview:  
+`![dashboard](docs/images/dashboard.png)` 
+
+Bundle Recommendations preview:  
+`![bundles](docs/images/bundles.png)` 
+
+Campaign Builder is accessible from the sidebar inside Streamlit.
+
+---
+
+### Step 4 — Run MkDocs Documentation
+
+    python -m mkdocs serve
+
+Open:
+
+    http://127.0.0.1:8000
+
+Documentation preview:  
+`![docs](docs/images/docs.png)` 
+
+---
+
+## PostgreSQL Access (Optional)
+
+If pgAdmin is running:
+
+    http://localhost:5051
+
+Tables include:
+
+- products  
+- customers  
+- timeframe  
+- transactions  
+- sales  
+- bundle_rules  
+
+pgAdmin preview:  
+`![pgadmin](docs/images/pgadmin.png)`
+
+---
+
+## Contribution Guide
+
+1. Fork the repository  
+2. Create a new branch  
+3. Commit changes  
+4. Open a pull request  
+
+Documentation changes must also update the `docs/` folder.
+
+---
+
+## Maintainers
+
+Clustr is developed by:
+
+**Group 5 – Marketing Analytics**
+
+Team:
+
+1. Kima Badalyan (Product Manager)  
+2. Gor Yeghiazaryan (Backend and Frontend Developer)  
+3. Norayr Amirkhanyan (Data Scientist)  
+4. Liza Khachatryan (DB Developer)
+
+Superviser: Karen Hovhannisyan
 
 
