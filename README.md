@@ -17,7 +17,6 @@ Run using:
 
     python -m mkdocs serve
 
-
 ---
 
 ## Platform Links (Local Development)
@@ -117,7 +116,7 @@ Swagger:
     http://127.0.0.1:8008/docs
 
 Swagger preview:  
-`![swagger](docs/images/swagger.png)` 
+![swagger](docs/images/swagger.png)
 
 ---
 
@@ -130,10 +129,10 @@ Then open:
     http://localhost:8501
 
 Dashboard preview:  
-`![dashboard](docs/images/dashboard.png)` 
+![dashboard](docs/images/dashboard.png)
 
 Bundle Recommendations preview:  
-`![bundles](docs/images/bundles.png)` 
+![bundles](docs/images/bundles.png)
 
 Campaign Builder is accessible from the sidebar inside Streamlit.
 
@@ -148,7 +147,7 @@ Open:
     http://127.0.0.1:8000
 
 Documentation preview:  
-`![docs](docs/images/docs.png)` 
+![docs](docs/images/docs.png)
 
 ---
 
@@ -168,7 +167,7 @@ Tables include:
 - bundle_rules  
 
 pgAdmin preview:  
-`![pgadmin](docs/images/pgadmin.png)`
+![pgadmin](docs/images/pgadmin.png)
 
 ---
 
@@ -197,5 +196,3 @@ Team:
 4. Liza Khachatryan (DB Developer)
 
 Superviser: Karen Hovhannisyan
-
-
