@@ -24,129 +24,189 @@ def campaigns_screen():
 
 
 def create_campaign_form():
-    """Form to create a new campaign from a bundle."""
+    """Screen to create a new campaign from a bundle."""
     bundle = st.session_state.campaign_bundle
-    
+
     st.markdown('<div class="card">', unsafe_allow_html=True)
     st.markdown("### 🎯 Create New Campaign")
-    
+
     st.markdown(f"**Selected Bundle:** `{bundle['products']}`")
     st.markdown(f"**Success Probability:** {bundle['success_probability']*100:.1f}%")
-    
+
     st.markdown("---")
-    
-    with st.form("campaign_form"):
-        # Campaign details
-        col1, col2 = st.columns(2)
-        
-        with col1:
-            campaign_name = st.text_input(
-                "Campaign Name *",
-                value=f"{bundle['products']} Bundle Offer",
-                help="Give your campaign a memorable name"
-            )
-            
-            campaign_type = st.selectbox(
-                "Campaign Type *",
-                ["Email", "Social Media", "Website Banner", "Push Notification", "In-Store Display"],
-                help="Where will this campaign run?"
-            )
-            
-            discount_type = st.selectbox(
-                "Discount Type",
-                ["Percentage Off", "Fixed Amount", "Buy One Get One", "Free Shipping", "No Discount"],
-            )
-        
-        with col2:
-            start_date = st.date_input(
-                "Start Date *",
-                value=datetime.now(),
-                help="When should the campaign begin?"
-            )
-            
-            end_date = st.date_input(
-                "End Date *",
-                value=datetime.now() + timedelta(days=30),
-                help="When should the campaign end?"
-            )
-            
-            if discount_type == "Percentage Off":
-                discount_value = st.slider("Discount Percentage", 5, 50, 15, step=5)
-            elif discount_type == "Fixed Amount":
-                discount_value = st.number_input("Discount Amount ($)", 5.0, 100.0, 10.0, step=5.0)
-            else:
-                discount_value = 0
-        
-        # Target audience
-        st.markdown("**🎯 Target Audience**")
-        col1, col2, col3 = st.columns(3)
-        
-        with col1:
-            target_segment = st.multiselect(
-                "Customer Segment",
-                ["All Customers", "High Value", "Medium Value", "New Customers", "At Risk"],
-                default=["All Customers"]
-            )
-        
-        with col2:
-            min_order_value = st.number_input("Minimum Order Value ($)", 0, 500, 0, step=10)
-        
-        with col3:
-            budget = st.number_input("Campaign Budget ($)", 100, 50000, 1000, step=100)
-        
-        # Description
-        description = st.text_area(
-            "Campaign Description",
-            value=f"Special bundle offer: {bundle['products']}. Buy together and save!",
-            help="Describe your campaign message"
+
+    # ── Campaign details ──────────────────────────────────────────────
+    col1, col2 = st.columns(2)
+
+    with col1:
+        campaign_name = st.text_input(
+            "Campaign Name *",
+            value=f"{bundle['products']} Bundle Offer",
+            help="Give your campaign a memorable name",
+            key="campaign_name",
         )
-        
-        # Submit buttons
-        col1, col2, col3 = st.columns([1, 1, 2])
-        with col1:
-            submit = st.form_submit_button("🚀 Create Campaign", type="primary", use_container_width=True)
-        with col2:
-            cancel = st.form_submit_button("Cancel", use_container_width=True)
-    
-    if submit:
-        if not campaign_name:
-            st.error("Please provide a campaign name")
-        elif end_date <= start_date:
-            st.error("End date must be after start date")
+
+        campaign_type = st.selectbox(
+            "Campaign Type *",
+            ["Email", "Social Media", "Website Banner", "Push Notification", "In-Store Display"],
+            help="Where will this campaign run?",
+            key="campaign_type",
+        )
+
+        discount_type = st.selectbox(
+            "Discount Type",
+            ["Percentage Off", "Fixed Amount", "Buy One Get One", "Free Shipping", "No Discount"],
+            help="What type of offer will you use?",
+            key="discount_type",
+        )
+
+    with col2:
+        start_date = st.date_input(
+            "Start Date *",
+            value=datetime.now(),
+            help="When should the campaign begin?",
+            key="start_date",
+        )
+
+        end_date = st.date_input(
+            "End Date *",
+            value=datetime.now() + timedelta(days=30),
+            help="When should the campaign end?",
+            key="end_date",
+        )
+
+        # 👇 This is the dynamic field that must change immediately
+        if discount_type == "Percentage Off":
+            discount_value = st.slider(
+                "Discount (%)",
+                min_value=0,
+                max_value=80,
+                value=10,
+                step=5,
+                help="Percentage off the regular bundle price",
+                key="discount_value_percent",
+            )
+        elif discount_type == "Fixed Amount":
+            discount_value = st.number_input(
+                "Discount Amount ($)",
+                min_value=0.0,
+                max_value=100000.0,
+                value=10.0,
+                step=5.0,
+                help="Flat amount discounted from the regular bundle price",
+                key="discount_value_amount",
+            )
         else:
-            # Create campaign
-            campaign = {
-                'id': len(st.session_state.campaigns) + 1,
-                'name': campaign_name,
-                'bundle': bundle['products'],
-                'bundle_data': bundle,
-                'type': campaign_type,
-                'discount_type': discount_type,
-                'discount_value': discount_value,
-                'start_date': start_date,
-                'end_date': end_date,
-                'target_segment': target_segment,
-                'min_order_value': min_order_value,
-                'budget': budget,
-                'description': description,
-                'status': 'Draft',
-                'created_at': datetime.now(),
-                'impressions': 0,
-                'clicks': 0,
-                'conversions': 0,
-                'revenue': 0
-            }
-            
-            st.session_state.campaigns.append(campaign)
-            st.session_state.campaign_bundle = None
-            st.success(f"✅ Campaign '{campaign_name}' created successfully!")
-            st.rerun()
-    
-    if cancel:
+            # For BOGO, Free Shipping, No Discount → no numeric field
+            discount_value = 0
+
+    # ── Target audience ───────────────────────────────────────────────
+    st.markdown("**🎯 Target Audience**")
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        target_segment = st.multiselect(
+            "Customer Segment",
+            ["All Customers", "High Value", "Medium Value", "New Customers", "At Risk"],
+            default=["All Customers"],
+            key="target_segment",
+        )
+
+    with col2:
+        regions = st.multiselect(
+            "Regions",
+            ["All Regions", "North", "South", "East", "West"],
+            default=["All Regions"],
+            key="regions",
+        )
+
+    with col3:
+        channels = st.multiselect(
+            "Channels",
+            ["Email", "Social Media", "In-App", "Website", "In-Store"],
+            default=["Email"],
+            key="channels",
+        )
+
+    # ── KPIs & budget ────────────────────────────────────────────────
+    st.markdown("**📊 Goals & Budget**")
+    col1, col2 = st.columns(2)
+
+    with col1:
+        primary_kpi = st.selectbox(
+            "Primary KPI",
+            ["Revenue", "Conversions", "Click-Through Rate", "Impressions"],
+            key="primary_kpi",
+        )
+
+        min_order_value = st.number_input(
+            "Minimum Order Value ($)", 0, 500, 0, step=10, key="min_order_value"
+        )
+
+    with col2:
+        budget = st.number_input(
+            "Campaign Budget ($)", 100, 50000, 1000, step=100, key="campaign_budget"
+        )
+
+    # Description
+    description = st.text_area(
+        "Campaign Description",
+        value=f"Special bundle offer: {bundle['products']}. Buy together and save!",
+        help="Describe your campaign message",
+        key="campaign_description",
+    )
+
+    # ── Submit buttons (no form) ─────────────────────────────────────
+    col1, col2 = st.columns([1, 1])
+    create_clicked = col1.button("🚀 Create Campaign", use_container_width=True)
+    cancel_clicked = col2.button("Cancel", use_container_width=True)
+
+    # ── Button logic ────────────────────────────────────────────────
+    if cancel_clicked:
         st.session_state.campaign_bundle = None
         st.rerun()
-    
+
+    if create_clicked:
+        if not campaign_name:
+            st.error("Please enter a campaign name.")
+            return
+
+        if end_date < start_date:
+            st.error("End date cannot be before start date.")
+            return
+
+        campaign = {
+            'id': len(st.session_state.campaigns) + 1,
+            'name': campaign_name,
+            'bundle': bundle['products'],
+            'bundle_data': bundle,
+            'type': campaign_type,
+            'discount_type': discount_type,
+            'discount_value': discount_value,
+            'start_date': start_date,
+            'end_date': end_date,
+            'target_segment': target_segment,
+            'regions': regions,
+            'channels': channels,
+            'primary_kpi': primary_kpi,
+            'min_order_value': min_order_value,
+            'budget': budget,
+            'description': description,
+            'status': 'Draft',
+            'created_at': datetime.now(),
+            'impressions': 0,
+            'clicks': 0,
+            'conversions': 0,
+            'revenue': 0,
+        }
+
+        st.session_state.campaigns.append(campaign)
+        st.session_state.campaign_bundle = None
+        st.success(f"✅ Campaign '{campaign_name}' created successfully!")
+        st.rerun()
+
     st.markdown("</div>", unsafe_allow_html=True)
+
 
 
 def show_campaigns_list():
