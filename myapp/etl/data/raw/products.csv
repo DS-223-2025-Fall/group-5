@@ -1,201 +1,61 @@
 product_sku,product_name,category,brand,price
-1,Under Armour Boots,Shoes,Under Armour,162.57
-2,H&M Basketball Shorts,Shorts,H&M,29.23
-3,Puma Sweatpants,Pants,Puma,40.33
-4,Under Armour Tech Hoodie,Hoodies,Under Armour,61.99
-5,Nike Windbreaker,Jackets,Nike,135.9
-6,Puma Chinos,Pants,Puma,55.13
-7,Adidas Gym Bag,Bags,Adidas,38.92
-8,H&M Boots,Shoes,H&M,126.75
-9,Adidas No-Show Socks,Socks,Adidas,19.42
-10,Puma Chinos,Pants,Puma,73.82
-11,Adidas Athletic Shorts,Shorts,Adidas,29.47
-12,Under Armour Track Pants,Pants,Under Armour,59.15
-13,H&M Backpack,Bags,H&M,90.09
-14,H&M Baseball Cap,Hats,H&M,36.13
-15,Under Armour Basketball Shoes,Shoes,Under Armour,151.16
-16,Adidas Baseball Cap,Hats,Adidas,36.25
-17,H&M Gym Bag,Accessories,H&M,41.82
-18,Under Armour Performance Tee,T-Shirts,Under Armour,24.67
-19,Reebok Ankle Socks,Socks,Reebok,16.53
-20,Adidas Beanie,Hats,Adidas,20.13
-21,Adidas Backpack,Accessories,Adidas,51.63
-22,Zara Cargo Pants,Pants,Zara,45.33
-23,Puma Belt,Accessories,Puma,32.39
-24,Reebok Windbreaker,Jackets,Reebok,119.77
-25,Adidas Bucket Hat,Hats,Adidas,20.66
-26,H&M Graphic Hoodie,Hoodies,H&M,40.12
-27,Under Armour Snapback,Hats,Under Armour,31.94
-28,Adidas Chinos,Pants,Adidas,71.95
-29,H&M Track Pants,Pants,H&M,57.04
-30,Adidas Boots,Shoes,Adidas,86.32
-31,Adidas Tote Bag,Bags,Adidas,51.43
-32,H&M Running Shorts,Shorts,H&M,47.27
-33,Reebok Water Bottle,Accessories,Reebok,32.97
-34,Nike Crew Neck Tee,T-Shirts,Nike,45.23
-35,Puma No-Show Socks,Socks,Puma,10.32
-36,Adidas Bomber Jacket,Jackets,Adidas,78.56
-37,Reebok Ankle Socks,Socks,Reebok,23.86
-38,Reebok Cargo Pants,Pants,Reebok,79.2
-39,Adidas Snapback,Hats,Adidas,38
-40,H&M Zip-Up Hoodie,Hoodies,H&M,41.41
-41,Adidas No-Show Socks,Socks,Adidas,15.08
-42,Adidas Bomber Jacket,Jackets,Adidas,109.88
-43,Under Armour Track Pants,Pants,Under Armour,53.85
-44,Nike Chinos,Pants,Nike,78.79
-45,H&M Casual Shoes,Shoes,H&M,148.93
-46,Under Armour Bomber Jacket,Jackets,Under Armour,78.43
-47,Zara Puffer Jacket,Jackets,Zara,80.75
-48,Adidas Joggers,Pants,Adidas,43.87
-49,Nike Sweatpants,Pants,Nike,36.92
-50,Puma Tech Hoodie,Hoodies,Puma,79.89
-51,Zara Belt,Accessories,Zara,28.64
-52,Reebok Puffer Jacket,Jackets,Reebok,134.85
-53,Zara Bucket Hat,Hats,Zara,37.56
-54,Under Armour Compression Socks,Socks,Under Armour,15.07
-55,Puma Running Shorts,Shorts,Puma,40.97
-56,Adidas Track Pants,Pants,Adidas,51.77
-57,Under Armour Crew Socks,Socks,Under Armour,19.3
-58,H&M Bucket Hat,Hats,H&M,29.74
-59,Under Armour Zip-Up Hoodie,Hoodies,Under Armour,48.89
-60,H&M Compression Socks,Socks,H&M,18.75
-61,H&M Water Bottle,Accessories,H&M,48.89
-62,H&M Training Shoes,Shoes,H&M,117.37
-63,Under Armour Crew Neck Tee,T-Shirts,Under Armour,29.94
-64,Adidas Windbreaker,Jackets,Adidas,110.83
-65,H&M Bomber Jacket,Jackets,H&M,143.59
-66,Puma Tote Bag,Bags,Puma,43.36
-67,Puma Rain Jacket,Jackets,Puma,109.46
-68,Under Armour Basketball Shorts,Shorts,Under Armour,28.62
-69,H&M Running Shoes,Shoes,H&M,136.86
-70,Under Armour Rain Jacket,Jackets,Under Armour,90.54
-71,Zara Zip-Up Hoodie,Hoodies,Zara,89.16
-72,Adidas Chinos,Pants,Adidas,50.33
-73,Puma Compression Socks,Socks,Puma,15.56
-74,Adidas Sneakers,Shoes,Adidas,174.41
-75,Zara Backpack,Accessories,Zara,20.55
-76,H&M Puffer Jacket,Jackets,H&M,99.37
-77,Puma Compression Socks,Socks,Puma,15.89
-78,Puma Gym Bag,Bags,Puma,38.95
-79,Reebok Cargo Shorts,Shorts,Reebok,25.83
-80,Nike Graphic Tee,T-Shirts,Nike,41.49
-81,Under Armour Basketball Shorts,Shorts,Under Armour,49.67
-82,Under Armour Bomber Jacket,Jackets,Under Armour,88.96
-83,Reebok Tech Hoodie,Hoodies,Reebok,89.63
-84,Puma Performance Tee,T-Shirts,Puma,35.64
-85,Zara Tech Hoodie,Hoodies,Zara,79.06
-86,Nike Boots,Shoes,Nike,65.35
-87,H&M Zip-Up Hoodie,Hoodies,H&M,42.21
-88,H&M Belt,Accessories,H&M,46.54
-89,Reebok Compression Socks,Socks,Reebok,16.15
-90,Reebok Messenger Bag,Bags,Reebok,49.47
-91,Under Armour Cargo Shorts,Shorts,Under Armour,44.1
-92,Puma Messenger Bag,Bags,Puma,67.97
-93,Adidas Zip-Up Hoodie,Hoodies,Adidas,87.84
-94,Zara Snapback,Hats,Zara,27.85
-95,Puma V-Neck Tee,T-Shirts,Puma,34.61
-96,Under Armour Puffer Jacket,Jackets,Under Armour,81.91
-97,Under Armour Rain Jacket,Jackets,Under Armour,137.99
-98,Puma Ankle Socks,Socks,Puma,12.82
-99,Zara Running Shorts,Shorts,Zara,42.54
-100,Zara Water Bottle,Accessories,Zara,19.56
-101,Puma Tech Hoodie,Hoodies,Puma,68.52
-102,Puma Headband,Accessories,Puma,16.49
-103,H&M Crew Socks,Socks,H&M,22.83
-104,H&M Gym Bag,Accessories,H&M,15.96
-105,H&M Basketball Shorts,Shorts,H&M,43.68
-106,Under Armour Ankle Socks,Socks,Under Armour,11.84
-107,Nike Casual Shoes,Shoes,Nike,124.07
-108,Adidas Rain Jacket,Jackets,Adidas,74.67
-109,Puma Crew Socks,Socks,Puma,18.24
-110,Puma Windbreaker,Jackets,Puma,72.37
-111,Puma Casual Shoes,Shoes,Puma,124.28
-112,Reebok Beanie,Hats,Reebok,39.64
-113,Puma Graphic Hoodie,Hoodies,Puma,69.78
-114,Puma Running Shorts,Shorts,Puma,51.47
-115,Zara Duffel Bag,Bags,Zara,74.21
-116,Zara Basketball Shorts,Shorts,Zara,35.88
-117,Under Armour Compression Socks,Socks,Under Armour,18.44
-118,Zara Beanie,Hats,Zara,35.85
-119,Nike Baseball Cap,Hats,Nike,33.74
-120,Nike Compression Socks,Socks,Nike,13.05
-121,Zara Backpack,Accessories,Zara,26.18
-122,Under Armour Running Shorts,Shorts,Under Armour,28.61
-123,Reebok Beanie,Hats,Reebok,39.24
-124,Adidas Backpack,Bags,Adidas,46.3
-125,Zara Basketball Shoes,Shoes,Zara,71.46
-126,Puma Track Jacket,Jackets,Puma,135.29
-127,Adidas Headband,Accessories,Adidas,19.17
-128,Zara Tote Bag,Bags,Zara,67.35
-129,H&M Duffel Bag,Bags,H&M,66.17
-130,Reebok Gym Bag,Accessories,Reebok,46.54
-131,H&M Crew Neck Tee,T-Shirts,H&M,36.56
-132,Under Armour Beanie,Hats,Under Armour,39.55
-133,Under Armour Running Shoes,Shoes,Under Armour,155.75
-134,Adidas Joggers,Pants,Adidas,45.01
-135,Nike Graphic Hoodie,Hoodies,Nike,66.76
-136,H&M Beanie,Hats,H&M,36.69
-137,Nike Basketball Shorts,Shorts,Nike,28.26
-138,Adidas Bucket Hat,Hats,Adidas,27.19
-139,H&M Backpack,Accessories,H&M,41.02
-140,Puma Snapback,Hats,Puma,20.03
-141,Puma Gym Bag,Bags,Puma,32.67
-142,Under Armour Backpack,Bags,Under Armour,64.29
-143,Zara Tech Hoodie,Hoodies,Zara,50.98
-144,Puma Rain Jacket,Jackets,Puma,70.52
-145,Adidas V-Neck Tee,T-Shirts,Adidas,30.29
-146,Under Armour Gym Bag,Accessories,Under Armour,44.51
-147,Under Armour Polo Shirt,T-Shirts,Under Armour,27.42
-148,Under Armour Cargo Shorts,Shorts,Under Armour,37.98
-149,Puma Ankle Socks,Socks,Puma,23.83
-150,Reebok Cargo Shorts,Shorts,Reebok,51.46
-151,Under Armour Cargo Shorts,Shorts,Under Armour,51.9
-152,Puma Boots,Shoes,Puma,156.19
-153,Nike Running Shoes,Shoes,Nike,159.02
-154,Under Armour Puffer Jacket,Jackets,Under Armour,140.55
-155,Zara Trucker Hat,Hats,Zara,32.2
-156,Puma No-Show Socks,Socks,Puma,24.44
-157,H&M Tote Bag,Bags,H&M,40.05
-158,H&M Messenger Bag,Bags,H&M,40.09
-159,Reebok Pullover Hoodie,Hoodies,Reebok,75.43
-160,H&M Track Jacket,Jackets,H&M,134.77
-161,Nike Wristband,Accessories,Nike,56.43
-162,H&M Basketball Shorts,Shorts,H&M,30.86
-163,Under Armour Polo Shirt,T-Shirts,Under Armour,31.49
-164,Adidas Baseball Cap,Hats,Adidas,33.31
-165,Nike Track Jacket,Jackets,Nike,91.6
-166,Zara Crew Socks,Socks,Zara,14.17
-167,Under Armour Tech Hoodie,Hoodies,Under Armour,45
-168,H&M Rain Jacket,Jackets,H&M,115.75
-169,Nike No-Show Socks,Socks,Nike,12.13
-170,Puma Crew Neck Tee,T-Shirts,Puma,21.61
-171,Under Armour Snapback,Hats,Under Armour,33.87
-172,Zara Compression Socks,Socks,Zara,24.69
-173,Zara Basketball Shorts,Shorts,Zara,27.67
-174,H&M Zip-Up Hoodie,Hoodies,H&M,77.57
-175,H&M Basketball Shorts,Shorts,H&M,26.09
-176,H&M Backpack,Accessories,H&M,35.36
-177,Puma Graphic Hoodie,Hoodies,Puma,56.59
-178,Under Armour Gym Bag,Bags,Under Armour,43.95
-179,H&M Compression Socks,Socks,H&M,12.65
-180,Under Armour Trucker Hat,Hats,Under Armour,34.34
-181,H&M Tech Hoodie,Hoodies,H&M,65.45
-182,Puma Water Bottle,Accessories,Puma,57.97
-183,Nike Beanie,Hats,Nike,28.28
-184,Puma Joggers,Pants,Puma,66.75
-185,Reebok Chinos,Pants,Reebok,40.7
-186,Puma Snapback,Hats,Puma,22.13
-187,Adidas Bucket Hat,Hats,Adidas,25.38
-188,H&M Backpack,Accessories,H&M,42.85
-189,Zara Beanie,Hats,Zara,37.34
-190,H&M Baseball Cap,Hats,H&M,35.07
-191,H&M Trucker Hat,Hats,H&M,35.64
-192,Puma Graphic Hoodie,Hoodies,Puma,46.47
-193,Under Armour Cargo Shorts,Shorts,Under Armour,30.37
-194,Nike Tech Hoodie,Hoodies,Nike,72.73
-195,Under Armour Beanie,Hats,Under Armour,37.38
-196,Nike Graphic Tee,T-Shirts,Nike,32.79
-197,Zara Training Shoes,Shoes,Zara,105.66
-198,H&M Athletic Shorts,Shorts,H&M,27.74
-199,Puma Zip-Up Hoodie,Hoodies,Puma,87.08
-200,Zara No-Show Socks,Socks,Zara,13.39
+1,Hydrating Shampoo,Hair Care,LuxeHair,14.99
+2,Nourishing Conditioner,Hair Care,LuxeHair,15.99
+3,Liquid Foundation,Makeup,FlawlessMe,19.99
+4,Concealer Stick,Makeup,FlawlessMe,12.99
+5,Matte Lipstick,Makeup,CharmBeauty,13.5
+6,Lip Liner Pencil,Makeup,CharmBeauty,5.99
+7,Black Mascara,Makeup,ElegantEyes,11.99
+8,Waterproof Eyeliner,Makeup,ElegantEyes,9.99
+9,Makeup Remover,Skincare,SkinGlow,8.99
+10,Cotton Pads,Accessories,SkinGlow,3.99
+11,Face Cream,Skincare,SkinGlow,22.5
+12,Vitamin C Serum,Skincare,SkinGlow,27.99
+13,Perfume Vanilla,Fragrance,AromaLux,39.99
+14,Lotion Vanilla,Body Care,AromaLux,18.99
+15,Perfume Rose,Fragrance,AromaLux,42.5
+16,Lotion Rose,Body Care,AromaLux,19.5
+17,Brightening Toner,Skincare,SkinGlow,16.99
+18,Night Repair Cream,Skincare,SkinGlow,29.99
+19,Clarifying Cleanser,Skincare,SkinGlow,13.49
+20,Beauty Item 20,Skincare,SkinGlow,39.48
+21,Beauty Item 21,Accessories,LuxeHair,15.35
+22,Beauty Item 22,Hair Care,AromaLux,22.23
+23,Beauty Item 23,Hair Care,AromaLux,39.03
+24,Beauty Item 24,Body Care,SkinGlow,18.78
+25,Beauty Item 25,Skincare,SkinGlow,8.73
+26,Beauty Item 26,Hair Care,LuxeHair,13.83
+27,Beauty Item 27,Skincare,LuxeHair,15.74
+28,Beauty Item 28,Skincare,LuxeHair,28.62
+29,Beauty Item 29,Accessories,ElegantEyes,23.18
+30,Beauty Item 30,Accessories,ElegantEyes,21.42
+31,Beauty Item 31,Skincare,CharmBeauty,10.4
+32,Beauty Item 32,Hair Care,ElegantEyes,36.58
+33,Beauty Item 33,Skincare,CharmBeauty,38.86
+34,Beauty Item 34,Body Care,CharmBeauty,25.39
+35,Beauty Item 35,Accessories,ElegantEyes,9.29
+36,Beauty Item 36,Skincare,LuxeHair,22.86
+37,Beauty Item 37,Skincare,ElegantEyes,11.29
+38,Beauty Item 38,Makeup,ElegantEyes,37.1
+39,Beauty Item 39,Accessories,AromaLux,37.2
+40,Beauty Item 40,Skincare,CharmBeauty,38.33
+41,Beauty Item 41,Makeup,LuxeHair,30.04
+42,Beauty Item 42,Makeup,SkinGlow,24.34
+43,Beauty Item 43,Body Care,AromaLux,25.2
+44,Beauty Item 44,Hair Care,ElegantEyes,28.42
+45,Beauty Item 45,Hair Care,LuxeHair,33.62
+46,Beauty Item 46,Accessories,LuxeHair,27.91
+47,Beauty Item 47,Makeup,LuxeHair,29.24
+48,Beauty Item 48,Skincare,AromaLux,28.04
+49,Beauty Item 49,Hair Care,CharmBeauty,35.55
+50,Beauty Item 50,Skincare,CharmBeauty,25.24
+51,Beauty Item 51,Hair Care,ElegantEyes,12.04
+52,Beauty Item 52,Makeup,LuxeHair,38.39
+53,Beauty Item 53,Hair Care,LuxeHair,11.4
+54,Beauty Item 54,Makeup,ElegantEyes,30.8
+55,Beauty Item 55,Hair Care,SkinGlow,27.65
+56,Beauty Item 56,Makeup,AromaLux,28.74
+57,Beauty Item 57,Hair Care,ElegantEyes,28.98
+58,Beauty Item 58,Skincare,LuxeHair,34.35
+59,Beauty Item 59,Body Care,CharmBeauty,15.87
+60,Beauty Item 60,Hair Care,AromaLux,14.49
