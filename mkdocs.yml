@@ -1,0 +1,45 @@
+site_name: Group 5 – Beauty Bundling Demo
+
+nav:
+  - Home: index.md
+  - Demo & Use Case: demo.md
+  - ETL Pipeline: etl.md
+  - API Service: api.md
+  - Streamlit App: app.md
+  - ML & API Models: api_models.md
+
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  language: en
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+      primary: teal
+      accent: purple
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+      primary: teal
+      accent: lime
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths:
+            - myapp
