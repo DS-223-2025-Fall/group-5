@@ -1,267 +1,196 @@
-# ETL Pipeline Documentation
+# ETL – Clustr Data Generation and Loading Pipeline
 
-The ETL (Extract–Transform–Load) subsystem is responsible for importing the synthetic retail dataset into PostgreSQL and preparing it for use by the API, ML engine, and Streamlit application.
+The ETL layer in Clustr is responsible for generating a synthetic retail dataset, creating the database schema, loading data into PostgreSQL, and preparing baseline association-rule bundles.
 
-This module ensures that all tables required for analysis and bundle generation are properly cleaned, structured, and available for querying.
-
----
-
-# 🎯 Purpose of the ETL System
-
-The ETL pipeline performs four main functions:
-
-1. **Extract**  
-   - Load raw CSV files from `data/raw/`
-
-2. **Transform**  
-   - Clean and standardize fields  
-   - Convert date formats  
-   - Ensure referential integrity  
-   - Aggregate or merge where needed  
-   - Validate numerical values (prices, totals, etc.)
-
-3. **Load**  
-   - Insert transformed data into PostgreSQL  
-   - Overwrite or append based on configuration
-
-4. **Prepare for Analytics**  
-   - Ensure API endpoints can query data efficiently  
-   - Allow ML engine to compute associations  
-   - Support Streamlit dashboards
+All ETL-related code is located in the `etl/` directory.
 
 ---
 
-# 📁 Folder Structure
+## 1. ETL Structure
 
-The ETL code for this project lives in the `myapp/etl/` package and is structured as follows:
+Main components:
 
-```
-myapp/
-└── etl/
-    ├── __init__.py
-    ├── database.py
-    ├── load_data.py
-    ├── models.py
-    ├── __pycache__/
-    └── data/
-        └── raw/
-            ├── customers.xlsx
-            ├── products.xlsx
-            ├── sales.xlsx
-            ├── timeframe.xlsx
-            ├── transactions.xlsx
-            └── baseline_rules.xlsx
-```
+- `simulate_data.py` – synthetic data generator  
+- `etl_process.py` – ETL orchestrator script  
+- `Database/models.py` – SQLAlchemy ORM models  
+- `Database/load_data.py` – CSV loading utilities  
+- `data/raw/` – folder where generated CSVs are stored  
 
-- **database.py** – database connection / engine configuration  
-- **load_data.py** – main ETL script that reads the raw files and loads them into PostgreSQL  
-- **models.py** – (optional) data classes / helper models used by the ETL  
-- **data/raw/** – folder with all input spreadsheets used by the ETL
+This pipeline ensures that all layers (ETL, API, ML, Streamlit UI) operate on the same clean and consistent data.
 
 ---
 
-# 📦 Raw Data Files (Inputs)
+## 2. Synthetic Data Generation (`simulate_data.py`)
 
-The ETL pipeline reads a set of Excel files from `myapp/etl/data/raw/`:
+The synthetic data generator creates a realistic retail-style dataset. It produces:
 
-| File               | Description                                  |
-|--------------------|----------------------------------------------|
-| `customers.xlsx`   | Customer demographic info                    |
-| `products.xlsx`    | Product catalog with categories and pricing  |
-| `timeframe.xlsx`   | Calendar / date dimension                    |
-| `transactions.xlsx`| Transaction-level order metadata             |
-| `sales.xlsx`       | Line-item sales details per transaction      |
-| `baseline_rules.xlsx` | Optional file with precomputed baseline bundle rules used for comparison/initialization |
+- Customers  
+- Products  
+- Timeframe (daily dates)  
+- Transactions  
+- Sales line items  
 
-> Note: in some earlier versions this dataset was stored as CSV files; in the current project version the ETL reads **Excel (.xlsx)** files from this folder.
+All generated CSV files are stored in:
 
----
+    etl/data/raw/
 
-## Schema Overview
+Typical configuration parameters inside the script include:
 
-### **customers.csv**
-| Column | Description |
-|--------|-------------|
-| customer_id | Unique ID |
-| first_name | Customer name |
-| last_name | — |
-| dob | Birth date |
-| phone | Contact |
-| email | — |
+- number of customers  
+- number of products  
+- number of days  
+- total number of transactions  
+- maximum number of line items per transaction  
 
-### **products.csv**
-| Column | Description |
-|--------|-------------|
-| product_sku | Unique identifier |
-| product_name | Name |
-| category | Makeup / Skincare / Hair Care… |
-| brand | Product brand |
-| price | Unit price |
+Output CSV files:
 
-### **timeframe.csv**
-| Column | Description |
-|--------|-------------|
-| time_id | Calendar ID |
-| date | Date |
-| day | Day number |
-| month | Month |
-| year | Year |
+- `customers.csv`  
+- `products.csv`  
+- `timeframe.csv`  
+- `transactions.csv`  
+- `sales.csv`  
 
-### **transactions.csv**
-| Column | Description |
-|--------|-------------|
-| transaction_id | Unique order ID |
-| customer_id | FK to customers |
-| time_id | FK to timeframe |
-| transaction_amount | Order total |
-| channel | Online / In-store |
-| payment_type | Card, PayPal, Cash… |
+The data is internally consistent:
 
-### **sales.csv**
-| Column | Description |
-|--------|-------------|
-| sale_id | Line-item ID |
-| transaction_id | FK to transactions |
-| product_sku | FK to products |
-| quantity | Qty purchased |
-| unit_price | Price |
-| line_total | Price × qty |
+- Each transaction references an existing customer and a timeframe date.  
+- Each sale references both a transaction and a product.  
 
 ---
 
-# ⚙️ How ETL Works
+## 3. Database Schema (`Database/models.py`)
 
-## 1️⃣ Extract Phase
+The ETL layer defines ORM models using SQLAlchemy that mirror the structure used by the API layer.
 
-The pipeline loads each CSV into a Pandas DataFrame:
+Core tables:
 
-```python
-df = pd.read_csv(RAW / "customers.csv")
-```
+- `products`  
+- `customers`  
+- `timeframe`  
+- `transactions`  
+- `sales`  
+- `bundle_rules`  
 
-During extraction, the ETL performs validation:
+These models are used to:
 
-- File exists  
-- Columns match expected schema  
-- Datatypes are interpretable  
+- Create tables in PostgreSQL before loading data.  
+- Ensure column names and types are consistent between ETL and API.  
 
-If any critical file is missing, the ETL process stops immediately.
+This shared schema design guarantees that:
 
----
-
-## 2️⃣ Transform Phase
-
-Transformations applied include:
-
-### ✔ Date parsing
-```python
-df['date'] = pd.to_datetime(df['date'])
-```
-
-### ✔ Numeric conversions
-- Convert all pricing fields to `float`
-- Convert quantity fields to `int`
-- Validate transaction totals
-
-### ✔ Cleaning rules
-- Remove invalid rows (negative totals or quantity)
-- Drop rows with missing foreign keys
-- Ensure product SKUs exist before sales load
-
-### ✔ Referential integrity checks
-The ETL ensures:
-
-- Every sale refers to an existing transaction  
-- Every transaction refers to a valid customer & time_id  
-- Every product_sku in sales exists in products  
-
-If mismatches occur, ETL logs them and removes invalid rows.
+- ETL can load data without schema mismatches.  
+- FastAPI can query and serve the same tables directly.  
 
 ---
 
-## 3️⃣ Load Phase
+## 4. CSV Loading Utilities (`Database/load_data.py`)
 
-Data is loaded into PostgreSQL using SQLAlchemy:
+This module contains helper functions for loading CSV files into PostgreSQL using pandas and SQLAlchemy.
 
-```python
-df.to_sql("customers", engine, if_exists="replace", index=False)
-```
+Typical responsibilities:
 
-### Load Order (to respect dependencies)
+- Open a database connection.  
+- Optionally truncate a table before inserting new data.  
+- Load CSV data from `data/raw/`.  
+- Write data into the matching table.  
 
-1. customers  
-2. products  
-3. timeframe  
-4. transactions  
-5. sales  
+Common conceptual operations:
 
-Tables are overwritten each time ETL runs (demo-friendly behavior).
+- Truncate a table before reloading:
 
----
+      truncate_table("customers")
 
-# 🧪 Running the ETL
+- Load a specific entity:
 
-You can run ETL standalone:
+      load_customers()
+      load_products()
+      load_timeframe()
+      load_transactions()
+      load_sales()
 
-```bash
-docker compose up etl
-```
-
-Or run the full system:
-
-```bash
-docker compose up --build
-```
-
-If ETL is successful, you will see console logs such as:
-
-```
-[INFO] Loading customers...
-[INFO] Loading products...
-[INFO] Loading sales...
-[INFO] ETL completed successfully.
-```
+The goal of this module is to provide a clear, reusable interface for loading each part of the dataset.
 
 ---
 
-# 🧰 Database Tables Produced
+## 5. Baseline Association Rules
 
-After ETL completes, PostgreSQL contains:
+In addition to raw transactional data, Clustr needs baseline product bundles derived from classic market-basket analysis.
 
-| Table | Purpose |
-|--------|---------|
-| **customers** | Customer demographics |
-| **products** | Product catalog |
-| **timeframe** | Time-based lookup table |
-| **transactions** | Transaction-level data |
-| **sales** | Line-item purchase records |
+The ETL process:
 
-These tables support:
+1. Runs association-rule mining on historical transaction data.  
+2. Produces an output CSV, for example: `baseline_rules.csv`.  
+3. Loads the resulting rules into the `bundle_rules` table.  
 
-- Streamlit dashboards  
-- API responses  
-- ML model computations  
+Each rule typically contains:
 
----
-
-# 📊 ETL in the System Architecture
-
-```
-CSV Files → ETL → PostgreSQL → API → ML Engine → Streamlit App
-```
-
-The ETL component is foundational, ensuring all other modules operate on clean, validated, and consistently structured data.
+- antecedents  
+- consequents  
+- support  
+- confidence  
+- lift  
+- counts for the involved products  
 
 ---
 
-# 🏁 Summary
+## 6. ETL Orchestrator (`etl_process.py`)
 
-The ETL pipeline:
+The script `etl_process.py` coordinates all ETL steps and can be run to fully refresh the database.
 
-- Ingests raw CSV data  
-- Cleans and validates input  
-- Enforces referential integrity  
-- Loads structured tables into PostgreSQL  
-- Prepares data for analytics and machine learning  
+High-level workflow:
 
-It ensures the entire beauty bundle recommendation system functions reliably and efficiently.
+1. **Create database schema**  
+   - Uses SQLAlchemy models to create missing tables.
+
+2. **Generate synthetic data**  
+   - Calls `simulate_data.py` logic, if CSVs are missing or regeneration is needed.
+
+3. **Load master and fact tables**  
+   - Loads products, customers, timeframe, transactions, and sales from CSVs.
+
+4. **Generate association rules**  
+   - Runs association-rule mining over the transactional data.
+
+5. **Load bundle rules**  
+   - Inserts the resulting rules into the `bundle_rules` table.
+
+Running this script ensures that the Clustr environment always has fresh data ready for analysis, dashboards, and ML inference.
+
+---
+
+## 7. Running the ETL Pipeline
+
+A typical development workflow:
+
+1. Make sure PostgreSQL is running and accessible.  
+2. Configure the database connection string (for example, via environment variables).  
+3. From the project root, run:
+
+       python etl/etl_process.py
+
+This will:
+
+- Generate synthetic data (if needed).  
+- Create tables (if they do not exist).  
+- Load all core tables.  
+- Populate the `bundle_rules` table with baseline association rules.  
+
+Once ETL finishes:
+
+- The FastAPI backend can query all data.  
+- The Streamlit app can display dashboards and bundles.  
+- The ML engine can train or infer using the loaded dataset.  
+
+---
+
+## 8. ETL in the Overall Clustr Architecture
+
+The ETL layer is the foundation for the entire Clustr platform:
+
+- It feeds the database with structured master and fact tables.  
+- It prepares association-rule bundles for immediate use.  
+- It ensures there is always consistent, reproducible data available for:  
+  - API endpoints  
+  - ML models  
+  - Dashboards and segmentation views  
+
+By separating generation, loading, and rule creation into dedicated components, Clustr maintains a clear, maintainable pipeline that can be extended with real data sources in the future.

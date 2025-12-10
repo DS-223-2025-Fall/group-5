@@ -1,202 +1,158 @@
-# Demo & Use Case
+# Clustr Demo Guide
 
-## 🎯 Project Overview
-
-This project demonstrates how a **beauty & cosmetics retailer** can use data engineering and machine learning to identify product bundles, understand customer behavior, and design more effective marketing campaigns.
-
-The system simulates a real retail pipeline:
-
-- 🧼 **ETL** loads data from CSVs into PostgreSQL  
-- 🗄️ **Database** stores customers, products, and transactions  
-- ⚙️ **API (FastAPI)** exposes bundle logic and product data  
-- 🤖 **ML Engine** computes association rules (support, confidence, lift)  
-- 🎨 **Streamlit App** visualizes insights and enables campaign creation  
-
-Everything is containerized and reproducible via Docker.
+This demo guide explains how to run Clustr from end to end — starting the ETL pipeline, launching the backend API, opening the Streamlit app, and exploring bundle recommendations. It is designed to help developers, analysts, and reviewers quickly understand and operate the system.
 
 ---
 
-# 🌸 Use Case Scenario
+## 1. Prerequisites
 
-A beauty retailer wants to know:
+Before running Clustr, ensure that the following tools are installed:
 
-- Which products are often bought together?  
-- Which bundles have the highest probability of success?  
-- How should marketing create cross-sell campaigns?  
+- Python  
+- PostgreSQL (or use dockerized version if configured)  
+- Required Python dependencies (install via requirements file if provided)  
 
-Our system enables the marketing team to:
-
-1. View sales insights  
-2. Explore data-driven product bundles  
-3. Adjust support & confidence thresholds  
-4. Create a discount or promotional campaign  
-5. Review and export the campaign configuration  
+Additionally, verify that your database connection settings are correctly configured in environment variables or your application settings.
 
 ---
 
-# ▶️ Running the Demo
+## 2. Run the ETL Pipeline
 
-Start the entire system:
+The ETL pipeline generates a full synthetic retail dataset and loads it into PostgreSQL.
 
-```bash
-docker compose up --build
-```
+From the project root, run:
 
-This launches:
+    python etl/etl_process.py
 
-| Service | Description |
-|--------|-------------|
-| **db** | PostgreSQL database |
-| **etl** | Loads CSV data |
-| **api** | FastAPI backend |
-| **app** | Streamlit UI |
-| **pgadmin** | Optional database admin tool |
+This script performs the following:
 
-When running, open:
+1. Generates synthetic customers, products, timeframe, transactions, and sales.  
+2. Saves all CSV files to `etl/data/raw/`.  
+3. Creates database tables using SQLAlchemy models.  
+4. Loads all CSVs into PostgreSQL.  
+5. Generates association rules and loads them into the `bundle_rules` table.  
 
-- **Streamlit App** → http://localhost:8501  
-- **API Docs** → http://localhost:8000/docs  
-- **pgAdmin** → http://localhost:5050  
+When complete, the database will contain all data required for Clustr to operate.
 
 ---
 
-# 🧪 What the Demo Shows
+## 3. Start the FastAPI Backend
 
-## 1️⃣ Sales & Product Dashboard
+The backend exposes all API routes, including CRUD endpoints, association-rule outputs, and ML-based bundle recommendations.
 
-The dashboard provides:
+Run:
 
-- Total revenue and transaction counts  
-- Daily sales trend  
-- Top-selling products  
-- Category breakdown  
-- Customer purchase behavior  
+    uvicorn api.main:app --reload
 
-This helps contextualize which items drive sales volume.
+This will start the backend at:
 
----
+    http://127.0.0.1:8000
 
-## 2️⃣ Bundle Recommendation Engine
+Swagger UI (interactive documentation):
 
-The ML engine uses association rule mining to extract:
+    http://127.0.0.1:8000/docs
 
-- **Support** → How frequently products appear together  
-- **Confidence** → How likely someone buys B after buying A  
-- **Lift** → Strength of association beyond random chance  
+You can use Swagger to:
 
-### Interactive Controls:
-- Minimum **Popularity (Support)**  
-- Minimum **Likelihood (Confidence)**  
-- Maximum number of bundles  
-- Sorting options  
-- Ability to drill into each bundle  
-
-The dataset was intentionally designed with:
-
-- **Strong pairs** (shampoo + conditioner)  
-- **Medium pairs** (face cream + serum)  
-- **Weak pairs** (perfume + lotion)  
-
-This ensures that adjusting thresholds visibly changes results.
+- Inspect endpoints  
+- Send test requests  
+- View response structures  
+- Validate database content  
 
 ---
 
-## 3️⃣ Campaign Creation Workflow
+## 4. Start the Streamlit Application
 
-Once a bundle is selected, the user can create a targeted promotion:
+The Streamlit UI provides dashboards, customer insights, bundle discovery, and campaign tools.
 
-### Inputs include:
-- Discount type (percentage or fixed)
-- Discount value
-- Minimum order price
-- Campaign budget
-- Marketing channel (email, SMS, push)
-- Customer segment:
-    - High Value  
-    - Medium Value  
-    - New Customers  
-    - At-Risk  
-    - All Customers  
-        - In this demo version, segmentation is **not computed automatically** and is stored only as metadata for the campaign.
+Run:
 
+    streamlit run app/app.py
 
-The application then generates a summary card displaying:
+Then open:
 
-- Selected bundle  
-- Expected success probability  
-- Applied discount  
-- Targeted segment  
-- Campaign metadata  
+    http://localhost:8501
 
-This simulates a real marketing decision-making tool.
+Pages available:
+
+- **Dashboard** – visual insights on sales and customer segments  
+- **Database** – browse tables loaded in PostgreSQL  
+- **Bundles** – view association-rule and ML-based product bundles  
+- **Campaigns** – convert bundles into marketing ideas  
+- **Settings** – adjust app preferences  
+
+This interface is designed for analysts and marketing users.
 
 ---
 
-# 🧱 System Architecture Overview
+## 5. Explore the Database (Optional)
 
-```
-         +------------------------+
-         |      Raw CSV Data      |
-         +-----------+------------+
-                     |
-                     v
-         +------------------------+
-         |          ETL           |
-         | Loads & validates data |
-         +-----------+------------+
-                     |
-                     v
-         +------------------------+
-         |      PostgreSQL DB     |
-         +-----------+------------+
-                     |
-         +-----------+-----------+
-         |                       |
-         v                       v
-+------------------+     +---------------------+
-| FastAPI Backend  |     |   Streamlit App     |
-| Bundle Algorithm |     | Dashboards & UI     |
-+------------------+     +---------------------+
-                     |
-                     v
-         +------------------------+
-         | ML Association Rules   |
-         +------------------------+
-```
+If using pgAdmin or another SQL tool, you may explore the generated tables:
+
+- products  
+- customers  
+- timeframe  
+- transactions  
+- sales  
+- bundle_rules  
+
+pgAdmin (if running in Docker):
+
+    http://localhost:5051
+
+This is useful for verifying ETL results or validating API behavior.
 
 ---
 
-# 🧰 Technologies Used
+## 6. Explore Bundle Recommendations
 
-- **Python 3.12**  
-- **Pandas / NumPy**  
-- **FastAPI**  
-- **Streamlit**  
-- **PostgreSQL**  
-- **Docker & Docker Compose**  
-- **Association Rule Mining (lift, support, confidence)**  
+One of the core features of Clustr is recommending product bundles.
 
----
+You can explore bundles using:
 
-# 🏁 Demo Flow Summary
+### Streamlit Bundles Page  
+Provides filters for:
 
-A typical demonstration goes:
+- gender  
+- age range  
+- income level  
+- customer segment  
+- shopping preferences  
 
-1. Run the system with Docker  
-2. Open the Streamlit application  
-3. Explore product & sales dashboard  
-4. Navigate to bundle recommendations  
-5. Try different support/confidence levels  
-6. Select a bundle  
-7. Create a campaign  
-8. View campaign summary and insights  
+Outputs include:
 
-This models a full **data-driven retail marketing workflow**.
+- association-rule bundles  
+- ML bundle predictions (with score rankings)  
 
 ---
 
-# 🎉 Conclusion
+## 7. Full System Workflow Summary
 
-The demo showcases a complete end-to-end system for product bundling analysis and campaign creation.  
-It demonstrates how data engineering, machine learning, and interactive interfaces can support business decision-making in the retail sector.
+The Clustr workflow works as follows:
 
+1. **ETL**  
+   Generates and loads all retail data into PostgreSQL.
+
+2. **Backend (FastAPI)**  
+   Serves data and provides ML-powered bundle recommendations.
+
+3. **Frontend (Streamlit)**  
+   Allows users to visualize insights and build marketing bundles.
+
+4. **ML Engine**  
+   Scores bundles and powers the recommendation system.
+
+---
+
+
+## 8. Conclusion
+
+Clustr provides an integrated environment for:
+
+- data generation  
+- storage  
+- analytics  
+- machine learning  
+- visualization  
+
+This demo guide helps you navigate and operate the full system smoothly.

@@ -1,382 +1,241 @@
-# API Service (FastAPI)
+# API – Clustr Backend
 
-The API is the backend of the Beauty Bundling Recommendation System.  
-It provides access to the PostgreSQL database, performs bundle recommendation computations, and exposes endpoints used by the Streamlit application.
+The Clustr backend is implemented with FastAPI and exposes REST endpoints for accessing master data, transactional data, association rules, and ML-based bundle recommendations.
 
-The API is implemented using **FastAPI**, chosen for its speed, automatic documentation, and strong integration with Pydantic models.
+Base URL in local development:
 
----
+    http://127.0.0.1:8008
 
-# ⚙️ Purpose of the API
+Interactive API docs (Swagger UI):
 
-The API enables:
-
-- Access to products, customers, and transaction data  
-- Computation of product bundles using association rule mining  
-- Serving bundle recommendations to Streamlit  
-- Creating marketing campaigns  
-- Decoupling backend logic from the frontend UI  
-
-All responses are validated using **Pydantic models**.
-
----
-# 📁 API Folder Structure
-
-The FastAPI service is located in the `myapp/api/` directory.  
-Below is the accurate structure based on the current project:
-
-```
-myapp/
-└── api/
-    ├── __init__.py
-    ├── Dockerfile
-    ├── requirements.txt
-    ├── main.py
-    ├── routes/
-    │   ├── __init__.py
-    │   └── ... (route definitions: products, bundles, campaigns)
-    ├── crud/
-    │   ├── __init__.py
-    │   └── ... (database queries, bundle logic)
-    └── Database/
-        ├── __init__.py
-        ├── database.py      # SQLAlchemy engine + session
-        ├── db_helpers.py    # Utility functions (optional)
-        ├── models.py        # Pydantic or ORM models
-        └── schema.py        # Table schemas / validators
-```
-
-### 📌 Folder Descriptions
-
-- **main.py**  
-  Entry point of the FastAPI app. Includes startup events & router registration.
-
-- **routes/**  
-  Contains individual API endpoints grouped by feature (products, bundles, campaigns).
-
-- **crud/**  
-  Database access logic: queries, inserts, updates.  
-  Bundle generation logic may also reside here.
-
-- **Database/**  
-  Contains the database layer:  
-  - `database.py` – connection + session  
-  - `models.py` – ORM models  
-  - `schema.py` – Pydantic schemas  
-  - `db_helpers.py` – helpers or utilities  
-
-- **Dockerfile**  
-  Builds the FastAPI service container.
-
-- **requirements.txt**  
-  Lists Python dependencies for the API.
-
+    http://127.0.0.1:8008/docs
 
 ---
 
-# 🚀 Running the API
+## 1. Base Endpoints
 
-Run using Docker:
+### GET /
 
-```bash
-docker compose up api
-```
+Returns a simple JSON payload confirming that the service is running.
 
-Or run manually (if the environment is set up):
+Example response:
 
-```bash
-uvicorn api.main:app --reload
-```
-
-When running, visit:
-
-🔗 **Interactive API docs (Swagger UI):**  
-```
-http://localhost:8000/docs
-```
+    {
+      "service": "Clustr API",
+      "status": "ok"
+    }
 
 ---
 
-# 🔌 API Endpoints
+### GET /health
 
-All endpoints are mounted under the `/api` prefix (see `router = APIRouter(prefix="/api")`).
+Checks that the API and database are reachable.
 
----
+Example response:
 
-## 🧴 Products
-
-### `GET /api/products/`
-**Description:**  
-Return the full list of products in the catalog.
-
-**Query parameters:**  
-- *(none)*
-
-**Response:**  
-`200 OK` – `list[Product]`  
-Each product includes fields such as SKU, name, category, brand and price (see `Database.schema.Product`).
+    {
+      "status": "ok"
+    }
 
 ---
 
-### `POST /api/products/`
-**Description:**  
-Create a new product in the catalog.
+## 2. Product Endpoints
 
-**Request body:**  
-`ProductCreate` – new product details (name, category, brand, price, etc.)
+These endpoints work with the `products` table and corresponding Pydantic schemas.
 
-**Response:**  
-`201 Created` – `Product`  
-The newly created product, including its generated ID/SKU.
+### GET /api/products/
 
----
+Returns all products.
 
-## 👥 Customers
+Fields:
 
-### `GET /api/customers/`
-**Description:**  
-Return all customers in the database.
-
-**Query parameters:**  
-- *(none)*
-
-**Response:**  
-`200 OK` – `list[Customer]`  
-Each record corresponds to `Database.schema.Customer` (e.g. id, name, contact info, segment flags).
+- product_sku  
+- product_name  
+- category  
+- brand  
+- price  
 
 ---
 
-### `POST /api/customers/`
-**Description:**  
-Create a new customer.
+### POST /api/products/
 
-**Request body:**  
-`CustomerCreate` – fields for a new customer (name, email, etc.)
+Creates a new product.
 
-**Response:**  
-`201 Created` – `Customer`  
-The created customer with its database ID.
+Request body (conceptual structure):
 
----
+- product_name  
+- category  
+- brand  
+- price  
 
-## 🗓 Timeframe (Date Dimension)
+Example request:
 
-### `GET /api/timeframe/`
-**Description:**  
-Return all timeframe rows (date dimension table).
+    {
+      "product_name": "Moisturizer X",
+      "category": "Skincare",
+      "brand": "FreshLine",
+      "price": 19.99
+    }
 
-**Query parameters:**  
-- *(none)*
+Response:
 
-**Response:**  
-`200 OK` – `list[Timeframe]`  
-Rows typically include date, day, month, year and other derived fields.
+- Returns the created product, including its `product_sku`.
 
 ---
 
-### `POST /api/timeframe/`
-**Description:**  
-Insert a new row into the timeframe table.
+## 3. Customer Endpoints
 
-**Request body:**  
-`TimeframeCreate` – fields describing a date (date, day, month, year, etc.)
+These endpoints work with the `customers` table.
 
-**Response:**  
-`201 Created` – `Timeframe`  
-The inserted row.
+### GET /api/customers/
 
----
+Returns all customers.
 
-## 🧾 Transactions (Order Headers)
+Fields:
 
-### `GET /api/transactions/`
-**Description:**  
-Return all transactions (order headers).
-
-**Query parameters:**  
-- *(none)*
-
-**Response:**  
-`200 OK` – `list[Transaction]`  
-Each transaction usually contains customer_id, time_id, total amount, channel, payment type, etc.
+- customer_id  
+- first_name  
+- last_name  
+- gender  
+- age  
+- dob  
+- email  
+- phone  
+- city  
+- income_level  
+- shopping_preference  
+- customer_segment  
 
 ---
 
-### `POST /api/transactions/`
-**Description:**  
-Create a new transaction (order header).
+### POST /api/customers/
 
-**Request body:**  
-`TransactionCreate` – customer id, time id, total amount and other metadata.
+Creates a new customer.
 
-**Response:**  
-`201 Created` – `Transaction`  
-The created transaction.
+Request body (conceptual structure):
 
----
+- first_name  
+- last_name  
+- gender  
+- age  
+- dob  
+- email  
+- phone  
+- city  
+- income_level  
+- shopping_preference  
+- customer_segment  
 
-## 🧾 Sales (Line Items)
+Response:
 
-### `GET /api/sales/`
-**Description:**  
-Return all sales line items.
-
-**Query parameters:**  
-- *(none)*
-
-**Response:**  
-`200 OK` – `list[Sale]`  
-Each sale connects a transaction to a product with quantity and pricing.
+- Returns the created customer, including `customer_id`.
 
 ---
 
-### `POST /api/sales/`
-**Description:**  
-Create a new sale (line item) tied to a transaction and product.
+## 4. Timeframe Endpoints
 
-**Request body:**  
-`SaleCreate` – transaction_id, product_sku, quantity, unit_price, etc.
+The `timeframe` table stores calendar information for analytics.
 
-**Response:**  
-`201 Created` – `Sale`  
-The created sale record.
+### GET /api/timeframe/
 
----
+Returns all timeframe rows.
 
-## 📊 Analytics
+Fields:
 
-### `GET /api/analytics/top-products/`
-**Description:**  
-Return the **top-N products ranked by revenue**.
-
-**Query parameters:**
-- `limit` *(int, optional, default = 10)* – number of products to return.
-
-**Response:**  
-`200 OK` – `list[TopProduct]`  
-Each record includes product identification plus aggregated metrics (e.g. total revenue).
-
-This endpoint is used by the dashboard to populate “Top Products” charts.
+- time_id  
+- date  
+- day  
+- month  
+- year  
 
 ---
 
-## 🧠 Bundle Rules
+### POST /api/timeframe/
 
-### `GET /api/rules/`
-**Description:**  
-Return **pre-computed bundle rules**, sorted by lift (strongest associations first).  
-These rules typically come from association-rule mining over historical transactions (and may be seeded from `baseline_rules.xlsx`).
+Creates a new timeframe record.
 
-**Query parameters:**
-- `limit` *(int, optional, default = 10)* – maximum number of rules to return.
+Request body (conceptual structure):
 
-**Response:**  
-`200 OK` – `list[BundleRuleOut]`  
+- date  
+- day  
+- month  
+- year  
 
-Each rule includes:
+Response:
 
-- the products in the bundle  
-- metrics such as support, confidence, lift  
-- possibly extra fields (e.g. popularity / score), depending on `Database.schema.BundleRuleOut`.
-
-These rules power the bundle recommendation section in the UI.
+- Returns the created timeframe entry.
 
 ---
 
-# 📊 Internal Logic (Behind the Endpoints)
+## 5. Transaction Endpoints
 
-### 1. **Products Retrieval**
-Uses simple SQLAlchemy queries:
+Transactions represent a completed purchase made by a customer at a specific time.
 
-```python
-db.query(Product).all()
-```
+### GET /api/transactions/
 
-### 2. **Bundle Generation**
-The API computes:
+Returns all transactions.
 
-- Item frequencies  
-- Co-occurrences  
-- Conditional probabilities  
-- Lift metrics  
+Fields:
 
-and applies user-chosen thresholds.
-
-The computation is optimized to run fast on 2,500+ transactions.
-
-### 3. **Campaigns**
-Currently stored in a simple DB table, simulating:
-
-- Campaign creation  
-- Storage  
-- Summary generation  
+- transaction_id  
+- customer_id  
+- time_id  
+- transaction_amount  
+- channel  
+- payment_type  
 
 ---
 
-# 🔒 Error Handling
+### POST /api/transactions/
 
-The API validates:
+Creates a new transaction.
 
-- Threshold inputs  
-- Non-existing products  
-- Invalid campaign structures  
-- Division by zero in lift calculations  
+Request body (conceptual structure):
 
-Errors return FastAPI-standard JSON responses.
+- customer_id  
+- time_id  
+- transaction_amount  
+- channel  
+- payment_type  
 
----
+Response:
 
-# 📚 API Documentation via Swagger
-
-FastAPI automatically generates docs:
-
-```
-http://localhost:8008/docs
-```
-
-and Redoc:
-
-```
-http://localhost:8008/redoc
-```
-
-These pages show:
-
-- All endpoints  
-- Example requests  
-- Example responses  
-- Schema definitions  
-
-Useful for debugging and development.
+- Returns the created transaction, including `transaction_id`.
 
 ---
 
-# 🧩 API in the System Architecture
+## 6. Sales Endpoints
 
-```
-Streamlit → FastAPI → PostgreSQL → ML Bundle Engine
-```
+Sales are line items within a transaction, each referring to a specific product.
 
-The API is the bridge between raw data and the user interface.
+### GET /api/sales/
 
-It ensures:
+Returns all sales line items.
 
-- Data integrity  
-- Fast computation  
-- Standardized communication  
-- Easy integration with UI or external tools  
+Fields:
+
+- sale_id  
+- transaction_id  
+- product_sku  
+- quantity  
+- unit_price  
+- line_total  
 
 ---
 
-# 🎉 Summary
+### POST /api/sales/
 
-The FastAPI backend powers the intelligence of the system:
+Creates a new sales line item.
 
-- Serves product & transaction data  
-- Computes bundle recommendations  
-- Validates ML results using Pydantic models  
-- Supports campaign creation  
-- Connects the UI, database, and ML logic  
+Request body (conceptual structure):
 
-It is designed to be modular, scalable, and easily extendable.
+- transaction_id  
+- product_sku  
+- quantity  
+- unit_price  
 
+Response:
+
+- Returns the created sale, including `sale_id` and computed `line_total` where applicable.
+
+---

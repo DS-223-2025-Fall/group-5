@@ -1,192 +1,188 @@
-# Streamlit Application
+# Clustr Application (Streamlit UI)
 
-The Streamlit app is the primary user interface of the Group 5 Beauty Bundling Recommendation System.  
-It allows users (e.g., marketing managers) to explore sales insights, discover product bundles, and create promotional campaigns.
+The Clustr Streamlit application is the main user-facing interface for analysts and marketers.  
+It provides dashboards, database exploration tools, segmentation filters, and product bundle recommendations powered by both association rules and machine learning.
 
-The app communicates with the FastAPI backend to retrieve data, compute bundle recommendations, and submit campaign configurations.
-
----
-
-# 🎨 Application Overview
-
-The Streamlit interface consists of three main sections:
-
-1. **Dashboard** – sales analytics and product performance  
-2. **Bundle Recommendations** – ML-powered product pairing suggestions  
-3. **Campaign Creator** – discount and segmentation configuration  
-
-Each section is designed to mimic a real-world marketing analytics workflow.
+All application-related code is stored in the `app/` directory.
 
 ---
 
-# 📊 1. Dashboard Page
+## 1. Application Structure
 
-The dashboard provides an overview of the retailer's sales, customers, and product activity.
+The Streamlit application is organized into multiple modular pages:
 
-### Key Metrics Displayed
-- Total revenue  
-- Number of transactions  
-- Average order value  
-- Number of customers  
-
-### Interactive Visualizations
-- **Daily sales trend**
-- **Top-selling products**
-- **Revenue by product category**
-- **Customer purchase heatmaps**
-- **Product-level performance metrics**
-
-These charts help the user understand which products matter most before creating bundles or campaigns.
+- **Login** – authentication and session initialization  
+- **Dashboard** – high-level KPIs, visual analytics, and customer insights  
+- **Database** – exploration of PostgreSQL tables  
+- **Bundles** – association-rule and ML-based bundle discovery  
+- **Campaigns** – create campaign concepts based on selected bundles  
+- **Settings** – configure user and application preferences  
 
 ---
 
-# 🔗 2. Bundle Recommendation Page
+## 2. Login Page
 
-This is the core of the Streamlit app.
+The login page provides simple session-based access control.
 
-The page retrieves **bundle recommendation results** from the FastAPI backend, which runs an internal association rule mining algorithm.
+Features:
 
-### User Controls
-The interface includes sliders and filters:
+- username and password fields  
+- basic validation  
+- session state management  
 
-- **Minimum Popularity (Support)**
-- **Minimum Likelihood (Confidence)**
-- **Maximum number of bundles to return**
-- **Sorting options (Lift, Support, Confidence, Price)**
-
-The dataset was designed with **tiered bundle strengths**, so adjusting these thresholds visibly changes the recommendations.
-
-### Bundle Cards
-Each suggested bundle includes:
-
-- Product names  
-- Support, Confidence, Lift  
-- Estimated success probability  
-- Average bundle price  
-- Popularity indicators  
-- An **“Add to Campaign”** button  
-
-Selecting a bundle passes its data to the Campaign Creator.
+After logging in, users can navigate freely across all app sections.
 
 ---
 
-# 🎯 3. Campaign Creator Page
+## 3. Dashboard Page
 
-This page allows users to design a promotional campaign around a selected bundle.
+The dashboard provides visual summaries of the synthetic retail dataset loaded by the ETL pipeline.
 
-### Campaign Configuration Inputs
+Typical insights displayed:
 
-#### 📌 Discount Options
-- Percentage discount (e.g., 15%)  
-- Fixed discount (e.g., $5 off)  
-- Minimum order value  
+- total sales and revenue trends  
+- top-performing products  
+- customer demographics (age, gender, income level)  
+- category and brand-level breakdowns  
+- daily / monthly / yearly performance charts  
 
-### Customer Segmentation (UI-only)
-
-The Streamlit app allows users to **select a customer segment** for campaign targeting.  
-However, as of the current implementation, segmentation is **not computed internally** in the backend.
-
-The segment is sent to the API as plain text and stored as part of the campaign configuration.  
-Future versions of the system may include RFM scoring, churn probabilities, or behavioral clustering.
-
-
-#### 📌 Campaign Metadata
-- Marketing channel (Email, SMS, Push)  
-- Campaign budget  
-- Campaign name & description  
-
-### Campaign Summary
-After submission, the app displays:
-
-- Selected bundle  
-- Discount applied  
-- Estimated uplift  
-- Targeted customer segment  
-- Full configuration in JSON format  
-
-This simulates exporting or storing the campaign in a real marketing system.
+This page helps orient analysts and provides a data-driven overview.
 
 ---
 
-# 🏗️ App Architecture
+## 4. Database Explorer
 
-The Streamlit app interacts with the backend through HTTP calls:
+The Database page connects directly to PostgreSQL and allows users to inspect data tables.
 
-```
-Streamlit → FastAPI → PostgreSQL → ML Engine → Response
-```
+Capabilities:
 
-### Example API Request (Bundle Recommendations)
+- selectable table dropdown  
+- preview of rows  
+- column metadata  
+- dynamic table refresh  
+- scrollable, paginated content  
 
-```python
-response = requests.post(
-    "http://api:8000/bundles",
-    json={
-        "min_support": support,
-        "min_confidence": confidence,
-        "max_results": limit
-    }
-)
-```
-
-### Example API Response
-
-```json
-{
-  "bundle": ["Shampoo", "Conditioner"],
-  "support": 0.18,
-  "confidence": 0.62,
-  "lift": 2.4,
-  "success_probability": 0.73
-}
-```
-
-Streamlit then renders the result using cards, tables, or metrics.
+It provides a simple way to validate ETL results or understand database structure.
 
 ---
 
-# 🎛️ Running the App
+## 5. Bundles Page
 
-Start the app through Docker Compose:
+The Bundles page is the core analytical section of the Clustr application.
 
-```bash
-docker compose up app
-```
+### Filters available:
 
-OR run the entire system:
+- gender  
+- age range  
+- income level  
+- customer segment  
+- shopping preference  
 
-```bash
-docker compose up --build
-```
+### Outputs displayed:
 
-Then visit:
+- association-rule bundles from the `bundle_rules` table  
+- ML-recommended bundles, ranked by predicted success score  
 
-```
-http://localhost:8501
-```
+Each bundle includes:
 
-The app will automatically connect to the API and database.
+- bundle items (antecedents + consequents)  
+- support  
+- confidence  
+- lift  
+- ML score (if using the prediction model)  
 
----
-
-# 🧩 Technologies Used
-
-- **Streamlit** (UI framework)
-- **Python (Pandas/Numpy)** for client-side processing
-- **Requests** for API communication
-- **FastAPI** for backend logic
-- **PostgreSQL** as data source
+This page empowers marketers to identify high-value product combinations.
 
 ---
 
-# 🎉 Summary
+## 6. Campaigns Page
 
-The Streamlit application serves as the interactive layer of the system, enabling users to:
+The Campaigns page helps convert insights into actionable ideas.
 
-- Analyze sales data  
-- Discover meaningful product bundles  
-- Create campaigns using data-driven insights  
-- Target specific customer segments  
+It allows the user to:
 
-It transforms backend analytics into an intuitive interface suitable for real-world marketing teams.
+- select a recommended bundle  
+- target a specific customer segment  
+- generate messaging suggestions  
+- outline promotional strategies  
 
+This bridges analytics with practical marketing execution.
+
+---
+
+## 7. Settings Page
+
+The Settings page supports configuration options for Clustr.
+
+Possible settings:
+
+- number of bundles to display  
+- ML threshold sensitivity  
+- UI configuration options  
+- demo mode toggles  
+
+These settings help customize the user experience.
+
+---
+
+## 8. API & Database Connectivity
+
+The Streamlit application interacts with:
+
+### FastAPI backend
+Used for:
+
+- fetching master and transactional data  
+- retrieving association rules  
+- fetching ML-based recommendations  
+
+### PostgreSQL database
+Used for:
+
+- direct table inspection  
+- validating ETL-loaded data  
+
+This dual-access strategy ensures both operational reliability and debugging flexibility.
+
+---
+
+## 9. Running the App
+
+To launch the Streamlit UI:
+
+    streamlit run app/app.py
+
+The application will be available at:
+
+    http://localhost:8501
+
+Users must log in before accessing other pages.
+
+---
+
+## 10. Role of the Streamlit App in the Clustr Ecosystem
+
+The app serves as the primary interface for non-technical users.
+
+It enables:
+
+- intuitive data visualization  
+- interactive segmentation filtering  
+- real-time ML bundle recommendation exploration  
+- campaign planning based on bundle insights  
+
+Clustr’s architecture ensures that the Streamlit UI always reflects the latest ETL-loaded and API-exposed data.
+
+---
+
+## 11. Summary
+
+The Clustr Streamlit application provides a complete analytical experience, allowing users to:
+
+- explore generated retail datasets  
+- visualize customer behavior  
+- analyze product performance  
+- discover high-value product bundles  
+- plan marketing campaigns  
+
+This interactive layer makes Clustr accessible, practical, and impactful for end-users.
