@@ -216,13 +216,17 @@ def bundles_screen():
         st.markdown('<div class="card">', unsafe_allow_html=True)
         st.markdown("### 💎 Top Bundle Recommendations")
         
-        # Filter
-        filter_prob = st.slider(
+        # Filter - use percentage values directly
+        filter_prob_pct = st.slider(
             "Filter by minimum success rate",
-            0.0, 1.0, 0.0, step=0.1,
+            min_value=0,
+            max_value=100,
+            value=0,
+            step=1,
             format="%d%%",
             key="filter_prob"
         )
+        filter_prob = filter_prob_pct / 100.0  # Convert to decimal for comparison
         
         filtered_bundles = [b for b in bundles if b['success_probability'] >= filter_prob]
         
