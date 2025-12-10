@@ -58,6 +58,70 @@ def dashboard_screen():
 
     st.markdown("---")
 
+    # === CUSTOMER SEGMENTATION (NEW) ===
+    if customers_df is not None and not customers_df.empty:
+        st.markdown("### 👥 Customer Segmentation")
+        
+        col1, col2, col3, col4 = st.columns(4)
+        
+        with col1:
+            if 'gender' in customers_df.columns:
+                st.markdown("#### Gender Distribution")
+                gender_counts = customers_df['gender'].value_counts().reset_index()
+                gender_counts.columns = ['Gender', 'Count']
+                
+                chart = alt.Chart(gender_counts).mark_arc(innerRadius=30).encode(
+                    theta='Count:Q',
+                    color=alt.Color('Gender:N', scale=alt.Scale(scheme='set2')),
+                    tooltip=['Gender', 'Count']
+                ).properties(height=200)
+                st.altair_chart(chart, use_container_width=True)
+        
+        with col2:
+            if 'age' in customers_df.columns:
+                st.markdown("#### Age Distribution")
+                age_data = customers_df['age'].dropna()
+                
+                chart = alt.Chart(pd.DataFrame({'age': age_data})).mark_bar(color='#3b82f6').encode(
+                    x=alt.X('age:Q', bin=alt.Bin(maxbins=10), title='Age'),
+                    y=alt.Y('count()', title='Count'),
+                    tooltip=['count()']
+                ).properties(height=200)
+                st.altair_chart(chart, use_container_width=True)
+        
+        with col3:
+            if 'income_level' in customers_df.columns:
+                st.markdown("#### Income Levels")
+                income_counts = customers_df['income_level'].value_counts().reset_index()
+                income_counts.columns = ['Income', 'Count']
+                
+                # Define order
+                order = ['Low', 'Medium', 'High', 'Premium']
+                income_counts['Income'] = pd.Categorical(income_counts['Income'], categories=order, ordered=True)
+                income_counts = income_counts.sort_values('Income')
+                
+                chart = alt.Chart(income_counts).mark_bar(color='#10b981').encode(
+                    x=alt.X('Income:N', sort=order),
+                    y='Count:Q',
+                    tooltip=['Income', 'Count']
+                ).properties(height=200)
+                st.altair_chart(chart, use_container_width=True)
+        
+        with col4:
+            if 'customer_segment' in customers_df.columns:
+                st.markdown("#### Customer Segments")
+                segment_counts = customers_df['customer_segment'].value_counts().reset_index()
+                segment_counts.columns = ['Segment', 'Count']
+                
+                chart = alt.Chart(segment_counts).mark_arc(innerRadius=30).encode(
+                    theta='Count:Q',
+                    color=alt.Color('Segment:N', scale=alt.Scale(scheme='category20')),
+                    tooltip=['Segment', 'Count']
+                ).properties(height=200)
+                st.altair_chart(chart, use_container_width=True)
+        
+        st.markdown("---")
+
     # === SALES CHARTS ===
     col1, col2 = st.columns(2)
     
@@ -100,6 +164,28 @@ def dashboard_screen():
             st.info("Product category data not available")
 
     st.markdown("---")
+
+    # === SALES BY CUSTOMER SEGMENT (NEW) ===
+    if sales_df is not None and transactions_df is not None and customers_df is not None:
+        if 'customer_segment' in customers_df.columns:
+            st.markdown("#### Sales by Customer Segment")
+            
+            # Merge to get customer segments
+            merged = sales_df.merge(transactions_df[['transaction_id', 'customer_id']], on='transaction_id')
+            merged = merged.merge(customers_df[['customer_id', 'customer_segment']], on='customer_id')
+            
+            segment_sales = merged.groupby('customer_segment')['line_total'].sum().reset_index()
+            segment_sales.columns = ['Segment', 'Revenue']
+            segment_sales = segment_sales.sort_values('Revenue', ascending=False)
+            
+            chart = alt.Chart(segment_sales).mark_bar(color='#8b5cf6').encode(
+                x=alt.X('Segment:N', sort='-y', title='Customer Segment'),
+                y=alt.Y('Revenue:Q', title='Revenue ($)'),
+                tooltip=['Segment', alt.Tooltip('Revenue:Q', format='$,.0f')]
+            ).properties(height=250)
+            st.altair_chart(chart, use_container_width=True)
+            
+            st.markdown("---")
 
     # === MORE ANALYTICS ===
     col1, col2 = st.columns(2)

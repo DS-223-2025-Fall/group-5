@@ -3,7 +3,7 @@ ML-Powered Bundle Recommendation Engine
 
 This module:
 1. Analyzes transaction patterns to find product pairs
-2. Extracts features for each potential bundle
+2. Extracts features for each potential bundle (including customer demographics)
 3. Uses ML to predict bundle success probability
 4. Returns ranked bundle recommendations
 """
@@ -27,6 +27,7 @@ BUNDLE_MODEL_PATH = MODELS_DIR / "bundle_predictor.joblib"
 class BundleRecommendationEngine:
     """
     ML-powered engine that predicts bundle success probability.
+    Now includes customer demographic features for better segmentation.
     """
     
     def __init__(self):
@@ -40,7 +41,8 @@ class BundleRecommendationEngine:
         tx_col: str, 
         item_col: str,
         price_col: str = None,
-        category_col: str = None
+        category_col: str = None,
+        customer_cols: dict = None
     ) -> pd.DataFrame:
         """
         Extract features for all potential product bundles.
@@ -51,8 +53,7 @@ class BundleRecommendationEngine:
         - Lift
         - Price compatibility
         - Category diversity
-        - Temporal patterns
-        - Customer segment overlap
+        - Customer demographic patterns (NEW)
         
         Args:
             df: Transaction data with columns [tx_col, item_col, ...]
@@ -60,6 +61,8 @@ class BundleRecommendationEngine:
             item_col: Product/Item column name
             price_col: Optional price column
             category_col: Optional category column
+            customer_cols: Optional dict with customer demographic columns
+                          e.g., {'gender': 'gender', 'age': 'age', 'income': 'income_level'}
             
         Returns:
             DataFrame with bundle features
@@ -75,6 +78,9 @@ class BundleRecommendationEngine:
         # Track which transactions contain each item
         item_transactions = {}
         
+        # Track customer demographics for each pair (NEW)
+        pair_demographics = {} if customer_cols else None
+        
         for tx_id, basket in grouped.items():
             unique_items = list(set(basket))
             
@@ -87,7 +93,41 @@ class BundleRecommendationEngine:
             
             # Count pairs
             for a, b in combinations(sorted(unique_items), 2):
-                pair_counter[(a, b)] += 1
+                pair_key = (a, b)
+                pair_counter[pair_key] += 1
+                
+                # Track demographics for this pair (NEW)
+                if customer_cols:
+                    if pair_key not in pair_demographics:
+                        pair_demographics[pair_key] = {
+                            'ages': [],
+                            'genders': [],
+                            'income_levels': [],
+                            'segments': []
+                        }
+                    
+                    # Get customer info for this transaction
+                    tx_data = df[df[tx_col] == tx_id].iloc[0]
+                    
+                    if 'age' in customer_cols and customer_cols['age'] in tx_data:
+                        age = tx_data[customer_cols['age']]
+                        if pd.notna(age):
+                            pair_demographics[pair_key]['ages'].append(age)
+                    
+                    if 'gender' in customer_cols and customer_cols['gender'] in tx_data:
+                        gender = tx_data[customer_cols['gender']]
+                        if pd.notna(gender):
+                            pair_demographics[pair_key]['genders'].append(gender)
+                    
+                    if 'income' in customer_cols and customer_cols['income'] in tx_data:
+                        income = tx_data[customer_cols['income']]
+                        if pd.notna(income):
+                            pair_demographics[pair_key]['income_levels'].append(income)
+                    
+                    if 'segment' in customer_cols and customer_cols['segment'] in tx_data:
+                        segment = tx_data[customer_cols['segment']]
+                        if pd.notna(segment):
+                            pair_demographics[pair_key]['segments'].append(segment)
         
         # Build feature table
         bundles = []
@@ -130,6 +170,33 @@ class BundleRecommendationEngine:
                 'max_confidence': max(conf_a_to_b, conf_b_to_a),
                 'avg_confidence': (conf_a_to_b + conf_b_to_a) / 2,
             }
+            
+            # Add demographic features (NEW)
+            if pair_demographics and (item_a, item_b) in pair_demographics:
+                demo = pair_demographics[(item_a, item_b)]
+                
+                # Age features
+                if demo['ages']:
+                    features['avg_customer_age'] = np.mean(demo['ages'])
+                    features['age_diversity'] = np.std(demo['ages'])
+                
+                # Gender features
+                if demo['genders']:
+                    gender_counts = Counter(demo['genders'])
+                    features['gender_diversity'] = len(gender_counts) / max(len(demo['genders']), 1)
+                    features['dominant_gender'] = gender_counts.most_common(1)[0][0] if gender_counts else 'Unknown'
+                
+                # Income features
+                if demo['income_levels']:
+                    income_counts = Counter(demo['income_levels'])
+                    features['income_diversity'] = len(income_counts) / max(len(demo['income_levels']), 1)
+                    features['dominant_income'] = income_counts.most_common(1)[0][0] if income_counts else 'Unknown'
+                
+                # Segment features
+                if demo['segments']:
+                    segment_counts = Counter(demo['segments'])
+                    features['segment_diversity'] = len(segment_counts) / max(len(demo['segments']), 1)
+                    features['dominant_segment'] = segment_counts.most_common(1)[0][0] if segment_counts else 'Unknown'
             
             bundles.append(features)
         
@@ -195,10 +262,15 @@ class BundleRecommendationEngine:
         ]
         
         # Add optional features if they exist
-        if 'price_ratio' in df.columns:
-            feature_cols.append('price_ratio')
-        if 'is_cross_category' in df.columns:
-            feature_cols.append('is_cross_category')
+        optional_features = [
+            'price_ratio', 'is_cross_category', 
+            'avg_customer_age', 'age_diversity',
+            'gender_diversity', 'income_diversity', 'segment_diversity'
+        ]
+        
+        for feat in optional_features:
+            if feat in df.columns:
+                feature_cols.append(feat)
         
         # Ensure all features exist
         feature_cols = [col for col in feature_cols if col in df.columns]
@@ -220,7 +292,6 @@ class BundleRecommendationEngine:
                 print("Falling back to heuristic scoring...")
         
         # Heuristic scoring (weighted combination of metrics)
-        # This works well even without historical training data
         weights = {
             'lift': 0.25,
             'min_confidence': 0.25,
@@ -238,6 +309,17 @@ class BundleRecommendationEngine:
         
         # Calculate weighted score
         score = sum(normalized[col] * weight for col, weight in weights.items())
+        
+        # Boost score based on customer demographics (NEW)
+        if 'avg_customer_age' in df.columns:
+            # Younger customers (18-35) might have higher engagement
+            age_boost = 1.0 + (0.1 * (1 - df['avg_customer_age'].fillna(40) / 100))
+            score = score * age_boost
+        
+        if 'segment_diversity' in df.columns:
+            # Lower diversity = more focused segment = potentially better
+            segment_boost = 1.0 + (0.05 * (1 - df['segment_diversity'].fillna(0.5)))
+            score = score * segment_boost
         
         # Apply sigmoid to get probability-like values
         df['success_probability'] = 1 / (1 + np.exp(-5 * (score - 0.5)))
@@ -260,7 +342,7 @@ class BundleRecommendationEngine:
         Main method to get ML-powered bundle recommendations.
         
         Args:
-            df: Transaction data
+            df: Transaction data (may include customer demographic columns)
             tx_col: Transaction ID column
             item_col: Product/Item column
             top_n: Number of top bundles to return
@@ -272,9 +354,21 @@ class BundleRecommendationEngine:
         Returns:
             List of bundle dictionaries with predictions
         """
-        # Extract features
+        # Check for customer demographic columns
+        customer_cols = {}
+        if 'age' in df.columns:
+            customer_cols['age'] = 'age'
+        if 'gender' in df.columns:
+            customer_cols['gender'] = 'gender'
+        if 'income_level' in df.columns:
+            customer_cols['income'] = 'income_level'
+        if 'customer_segment' in df.columns:
+            customer_cols['segment'] = 'customer_segment'
+        
+        # Extract features (now includes demographics)
         bundle_features = self.extract_bundle_features(
-            df, tx_col, item_col, price_col, category_col
+            df, tx_col, item_col, price_col, category_col,
+            customer_cols=customer_cols if customer_cols else None
         )
         
         # Filter by minimum thresholds
@@ -315,6 +409,16 @@ class BundleRecommendationEngine:
             if 'is_cross_category' in row:
                 bundle['is_cross_category'] = bool(row['is_cross_category'])
             
+            # Add demographic insights (NEW)
+            if 'avg_customer_age' in row:
+                bundle['avg_customer_age'] = float(row['avg_customer_age'])
+            if 'dominant_gender' in row:
+                bundle['dominant_gender'] = str(row['dominant_gender'])
+            if 'dominant_income' in row:
+                bundle['dominant_income'] = str(row['dominant_income'])
+            if 'dominant_segment' in row:
+                bundle['dominant_segment'] = str(row['dominant_segment'])
+            
             results.append(bundle)
         
         return results
@@ -334,7 +438,9 @@ def train_bundle_success_model(
     feature_cols = [
         'support', 'lift', 'min_confidence', 'avg_confidence',
         'jaccard_similarity', 'frequency_a', 'frequency_b',
-        'price_ratio', 'is_cross_category'
+        'price_ratio', 'is_cross_category',
+        'avg_customer_age', 'age_diversity',
+        'gender_diversity', 'income_diversity', 'segment_diversity'
     ]
     
     # Filter to available features

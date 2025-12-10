@@ -1,61 +1,201 @@
 product_sku,product_name,category,brand,price
-1,Hydrating Shampoo,Hair Care,LuxeHair,14.99
-2,Nourishing Conditioner,Hair Care,LuxeHair,15.99
-3,Liquid Foundation,Makeup,FlawlessMe,19.99
-4,Concealer Stick,Makeup,FlawlessMe,12.99
-5,Matte Lipstick,Makeup,CharmBeauty,13.5
-6,Lip Liner Pencil,Makeup,CharmBeauty,5.99
-7,Black Mascara,Makeup,ElegantEyes,11.99
-8,Waterproof Eyeliner,Makeup,ElegantEyes,9.99
-9,Makeup Remover,Skincare,SkinGlow,8.99
-10,Cotton Pads,Accessories,SkinGlow,3.99
-11,Face Cream,Skincare,SkinGlow,22.5
-12,Vitamin C Serum,Skincare,SkinGlow,27.99
-13,Perfume Vanilla,Fragrance,AromaLux,39.99
-14,Lotion Vanilla,Body Care,AromaLux,18.99
-15,Perfume Rose,Fragrance,AromaLux,42.5
-16,Lotion Rose,Body Care,AromaLux,19.5
-17,Brightening Toner,Skincare,SkinGlow,16.99
-18,Night Repair Cream,Skincare,SkinGlow,29.99
-19,Clarifying Cleanser,Skincare,SkinGlow,13.49
-20,Beauty Item 20,Skincare,SkinGlow,39.48
-21,Beauty Item 21,Accessories,LuxeHair,15.35
-22,Beauty Item 22,Hair Care,AromaLux,22.23
-23,Beauty Item 23,Hair Care,AromaLux,39.03
-24,Beauty Item 24,Body Care,SkinGlow,18.78
-25,Beauty Item 25,Skincare,SkinGlow,8.73
-26,Beauty Item 26,Hair Care,LuxeHair,13.83
-27,Beauty Item 27,Skincare,LuxeHair,15.74
-28,Beauty Item 28,Skincare,LuxeHair,28.62
-29,Beauty Item 29,Accessories,ElegantEyes,23.18
-30,Beauty Item 30,Accessories,ElegantEyes,21.42
-31,Beauty Item 31,Skincare,CharmBeauty,10.4
-32,Beauty Item 32,Hair Care,ElegantEyes,36.58
-33,Beauty Item 33,Skincare,CharmBeauty,38.86
-34,Beauty Item 34,Body Care,CharmBeauty,25.39
-35,Beauty Item 35,Accessories,ElegantEyes,9.29
-36,Beauty Item 36,Skincare,LuxeHair,22.86
-37,Beauty Item 37,Skincare,ElegantEyes,11.29
-38,Beauty Item 38,Makeup,ElegantEyes,37.1
-39,Beauty Item 39,Accessories,AromaLux,37.2
-40,Beauty Item 40,Skincare,CharmBeauty,38.33
-41,Beauty Item 41,Makeup,LuxeHair,30.04
-42,Beauty Item 42,Makeup,SkinGlow,24.34
-43,Beauty Item 43,Body Care,AromaLux,25.2
-44,Beauty Item 44,Hair Care,ElegantEyes,28.42
-45,Beauty Item 45,Hair Care,LuxeHair,33.62
-46,Beauty Item 46,Accessories,LuxeHair,27.91
-47,Beauty Item 47,Makeup,LuxeHair,29.24
-48,Beauty Item 48,Skincare,AromaLux,28.04
-49,Beauty Item 49,Hair Care,CharmBeauty,35.55
-50,Beauty Item 50,Skincare,CharmBeauty,25.24
-51,Beauty Item 51,Hair Care,ElegantEyes,12.04
-52,Beauty Item 52,Makeup,LuxeHair,38.39
-53,Beauty Item 53,Hair Care,LuxeHair,11.4
-54,Beauty Item 54,Makeup,ElegantEyes,30.8
-55,Beauty Item 55,Hair Care,SkinGlow,27.65
-56,Beauty Item 56,Makeup,AromaLux,28.74
-57,Beauty Item 57,Hair Care,ElegantEyes,28.98
-58,Beauty Item 58,Skincare,LuxeHair,34.35
-59,Beauty Item 59,Body Care,CharmBeauty,15.87
-60,Beauty Item 60,Hair Care,AromaLux,14.49
+1001,Nike Classic Tee,T-Shirts,Nike,29.78
+1002,Nike Performance Tee,T-Shirts,Nike,32.5
+1003,Nike Pullover Hoodie,Hoodies,Nike,55.77
+1004,Nike Zip Hoodie,Hoodies,Nike,66.53
+1005,Nike Athletic Shorts,Shorts,Nike,34.22
+1006,Nike Cargo Shorts,Shorts,Nike,48.22
+1007,Nike Track Pants,Pants,Nike,64.69
+1008,Nike Joggers,Pants,Nike,112.51
+1009,Nike Running Shoes,Sneakers,Nike,119.24
+1010,Nike Court Shoes,Sneakers,Nike,135.43
+1011,Nike Gym Bag,Accessories,Nike,18.8
+1012,Nike Wallet,Accessories,Nike,30.3
+1013,Nike Windbreaker,Jackets,Nike,92.91
+1014,Nike Bomber Jacket,Jackets,Nike,135.84
+1015,Nike Crew Socks,Socks,Nike,19.62
+1016,Nike Ankle Socks,Socks,Nike,17.34
+1017,Nike Baseball Cap,Caps,Nike,27.79
+1018,Nike Snapback,Caps,Nike,34.93
+1019,Nike Sport Backpack,Backpacks,Nike,74.98
+1020,Nike School Backpack,Backpacks,Nike,74.75
+1021,Adidas Classic Tee,T-Shirts,Adidas,27.19
+1022,Adidas Performance Tee,T-Shirts,Adidas,38.46
+1023,Adidas Pullover Hoodie,Hoodies,Adidas,64.83
+1024,Adidas Zip Hoodie,Hoodies,Adidas,75.88
+1025,Adidas Athletic Shorts,Shorts,Adidas,45.19
+1026,Adidas Cargo Shorts,Shorts,Adidas,41.23
+1027,Adidas Track Pants,Pants,Adidas,58.49
+1028,Adidas Joggers,Pants,Adidas,62.41
+1029,Adidas Running Shoes,Sneakers,Adidas,168.53
+1030,Adidas Court Shoes,Sneakers,Adidas,127.44
+1031,Adidas Gym Bag,Accessories,Adidas,29.71
+1032,Adidas Wallet,Accessories,Adidas,28.28
+1033,Adidas Windbreaker,Jackets,Adidas,128.79
+1034,Adidas Bomber Jacket,Jackets,Adidas,169.84
+1035,Adidas Crew Socks,Socks,Adidas,21.39
+1036,Adidas Ankle Socks,Socks,Adidas,16.27
+1037,Adidas Baseball Cap,Caps,Adidas,21.22
+1038,Adidas Snapback,Caps,Adidas,29.7
+1039,Adidas Sport Backpack,Backpacks,Adidas,50.6
+1040,Adidas School Backpack,Backpacks,Adidas,74.64
+1041,Puma Classic Tee,T-Shirts,Puma,23.9
+1042,Puma Performance Tee,T-Shirts,Puma,33.6
+1043,Puma Pullover Hoodie,Hoodies,Puma,63.16
+1044,Puma Zip Hoodie,Hoodies,Puma,49.31
+1045,Puma Athletic Shorts,Shorts,Puma,41.12
+1046,Puma Cargo Shorts,Shorts,Puma,43.88
+1047,Puma Track Pants,Pants,Puma,85.09
+1048,Puma Joggers,Pants,Puma,50.04
+1049,Puma Running Shoes,Sneakers,Puma,69.67
+1050,Puma Court Shoes,Sneakers,Puma,60.42
+1051,Puma Gym Bag,Accessories,Puma,14.3
+1052,Puma Wallet,Accessories,Puma,19.89
+1053,Puma Windbreaker,Jackets,Puma,115.26
+1054,Puma Bomber Jacket,Jackets,Puma,106.6
+1055,Puma Crew Socks,Socks,Puma,17.87
+1056,Puma Ankle Socks,Socks,Puma,15.61
+1057,Puma Baseball Cap,Caps,Puma,17.67
+1058,Puma Snapback,Caps,Puma,26.55
+1059,Puma Sport Backpack,Backpacks,Puma,57.32
+1060,Puma School Backpack,Backpacks,Puma,66.85
+1061,Zara Classic Tee,T-Shirts,Zara,15.48
+1062,Zara Performance Tee,T-Shirts,Zara,21.87
+1063,Zara Pullover Hoodie,Hoodies,Zara,55.05
+1064,Zara Zip Hoodie,Hoodies,Zara,45.53
+1065,Zara Athletic Shorts,Shorts,Zara,39.95
+1066,Zara Cargo Shorts,Shorts,Zara,30.08
+1067,Zara Track Pants,Pants,Zara,42.52
+1068,Zara Joggers,Pants,Zara,76.79
+1069,Zara Midi Dress,Dresses,Zara,57.19
+1070,Zara Mini Dress,Dresses,Zara,83.29
+1071,Zara Gym Bag,Accessories,Zara,20.69
+1072,Zara Wallet,Accessories,Zara,19.04
+1073,Zara Windbreaker,Jackets,Zara,74.77
+1074,Zara Bomber Jacket,Jackets,Zara,103.2
+1075,Zara Mini Skirt,Skirts,Zara,36.03
+1076,Zara Midi Skirt,Skirts,Zara,56.33
+1077,Zara Casual Blouse,Blouses,Zara,33.8
+1078,Zara Silk Blouse,Blouses,Zara,32.8
+1079,Zara Skinny Jeans,Jeans,Zara,67.79
+1080,Zara Slim Fit Jeans,Jeans,Zara,71.68
+1081,H&M Classic Tee,T-Shirts,H&M,17.33
+1082,H&M Performance Tee,T-Shirts,H&M,25.0
+1083,H&M Pullover Hoodie,Hoodies,H&M,45.39
+1084,H&M Zip Hoodie,Hoodies,H&M,48.17
+1085,H&M Athletic Shorts,Shorts,H&M,21.2
+1086,H&M Cargo Shorts,Shorts,H&M,23.34
+1087,H&M Track Pants,Pants,H&M,60.82
+1088,H&M Joggers,Pants,H&M,41.6
+1089,H&M Midi Dress,Dresses,H&M,56.83
+1090,H&M Mini Dress,Dresses,H&M,35.61
+1091,H&M Gym Bag,Accessories,H&M,13.7
+1092,H&M Wallet,Accessories,H&M,15.98
+1093,H&M Windbreaker,Jackets,H&M,94.13
+1094,H&M Bomber Jacket,Jackets,H&M,82.86
+1095,H&M Mini Skirt,Skirts,H&M,27.32
+1096,H&M Midi Skirt,Skirts,H&M,38.43
+1097,H&M Casual Blouse,Blouses,H&M,20.64
+1098,H&M Silk Blouse,Blouses,H&M,36.96
+1099,H&M Skinny Jeans,Jeans,H&M,53.24
+1100,H&M Slim Fit Jeans,Jeans,H&M,61.59
+1101,Under Armour Classic Tee,T-Shirts,Under Armour,26.78
+1102,Under Armour Performance Tee,T-Shirts,Under Armour,37.84
+1103,Under Armour Pullover Hoodie,Hoodies,Under Armour,62.97
+1104,Under Armour Zip Hoodie,Hoodies,Under Armour,82.64
+1105,Under Armour Athletic Shorts,Shorts,Under Armour,49.34
+1106,Under Armour Cargo Shorts,Shorts,Under Armour,33.08
+1107,Under Armour Track Pants,Pants,Under Armour,85.76
+1108,Under Armour Joggers,Pants,Under Armour,93.16
+1109,Under Armour Running Shoes,Sneakers,Under Armour,146.51
+1110,Under Armour Court Shoes,Sneakers,Under Armour,107.71
+1111,Under Armour Gym Bag,Accessories,Under Armour,29.36
+1112,Under Armour Wallet,Accessories,Under Armour,18.2
+1113,Under Armour Windbreaker,Jackets,Under Armour,127.55
+1114,Under Armour Bomber Jacket,Jackets,Under Armour,153.6
+1115,Under Armour Crew Socks,Socks,Under Armour,12.17
+1116,Under Armour Ankle Socks,Socks,Under Armour,21.56
+1117,Under Armour Baseball Cap,Caps,Under Armour,29.95
+1118,Under Armour Snapback,Caps,Under Armour,28.05
+1119,Under Armour Sport Backpack,Backpacks,Under Armour,59.38
+1120,Under Armour School Backpack,Backpacks,Under Armour,68.64
+1121,Levi's Classic Tee,T-Shirts,Levi's,33.29
+1122,Levi's Performance Tee,T-Shirts,Levi's,39.09
+1123,Levi's Pullover Hoodie,Hoodies,Levi's,45.75
+1124,Levi's Zip Hoodie,Hoodies,Levi's,73.92
+1125,Levi's Athletic Shorts,Shorts,Levi's,45.79
+1126,Levi's Cargo Shorts,Shorts,Levi's,38.41
+1127,Levi's Skinny Jeans,Jeans,Levi's,72.16
+1128,Levi's Slim Fit Jeans,Jeans,Levi's,71.6
+1129,Levi's Windbreaker,Jackets,Levi's,163.15
+1130,Levi's Bomber Jacket,Jackets,Levi's,136.16
+1131,Levi's Gym Bag,Accessories,Levi's,15.95
+1132,Levi's Wallet,Accessories,Levi's,25.07
+1133,Levi's Flannel Shirt,Shirts,Levi's,57.65
+1134,Levi's Oxford Shirt,Shirts,Levi's,45.49
+1135,Levi's Track Pants,Pants,Levi's,77.64
+1136,Levi's Joggers,Pants,Levi's,64.71
+1137,Levi's Leather Belt,Belts,Levi's,22.59
+1138,Levi's Canvas Belt,Belts,Levi's,37.56
+1139,Levi's Baseball Cap,Caps,Levi's,26.17
+1140,Levi's Snapback,Caps,Levi's,27.87
+1141,Gap Classic Tee,T-Shirts,Gap,19.71
+1142,Gap Performance Tee,T-Shirts,Gap,17.94
+1143,Gap Pullover Hoodie,Hoodies,Gap,35.17
+1144,Gap Zip Hoodie,Hoodies,Gap,40.9
+1145,Gap Athletic Shorts,Shorts,Gap,37.89
+1146,Gap Cargo Shorts,Shorts,Gap,42.74
+1147,Gap Skinny Jeans,Jeans,Gap,71.1
+1148,Gap Slim Fit Jeans,Jeans,Gap,50.7
+1149,Gap Track Pants,Pants,Gap,42.21
+1150,Gap Joggers,Pants,Gap,41.08
+1151,Gap Midi Dress,Dresses,Gap,42.49
+1152,Gap Mini Dress,Dresses,Gap,67.86
+1153,Gap Windbreaker,Jackets,Gap,68.01
+1154,Gap Bomber Jacket,Jackets,Gap,107.24
+1155,Gap Flannel Shirt,Shirts,Gap,49.53
+1156,Gap Oxford Shirt,Shirts,Gap,46.47
+1157,Gap Mini Skirt,Skirts,Gap,25.45
+1158,Gap Midi Skirt,Skirts,Gap,49.53
+1159,Gap Gym Bag,Accessories,Gap,17.95
+1160,Gap Wallet,Accessories,Gap,17.36
+1161,Uniqlo Classic Tee,T-Shirts,Uniqlo,15.55
+1162,Uniqlo Performance Tee,T-Shirts,Uniqlo,18.92
+1163,Uniqlo Pullover Hoodie,Hoodies,Uniqlo,48.71
+1164,Uniqlo Zip Hoodie,Hoodies,Uniqlo,53.41
+1165,Uniqlo Athletic Shorts,Shorts,Uniqlo,25.88
+1166,Uniqlo Cargo Shorts,Shorts,Uniqlo,20.73
+1167,Uniqlo Track Pants,Pants,Uniqlo,37.5
+1168,Uniqlo Joggers,Pants,Uniqlo,35.05
+1169,Uniqlo Skinny Jeans,Jeans,Uniqlo,68.88
+1170,Uniqlo Slim Fit Jeans,Jeans,Uniqlo,54.59
+1171,Uniqlo Windbreaker,Jackets,Uniqlo,72.93
+1172,Uniqlo Bomber Jacket,Jackets,Uniqlo,90.32
+1173,Uniqlo Gym Bag,Accessories,Uniqlo,17.38
+1174,Uniqlo Wallet,Accessories,Uniqlo,9.1
+1175,Uniqlo Crew Socks,Socks,Uniqlo,9.67
+1176,Uniqlo Ankle Socks,Socks,Uniqlo,10.25
+1177,Uniqlo Flannel Shirt,Shirts,Uniqlo,30.44
+1178,Uniqlo Oxford Shirt,Shirts,Uniqlo,34.24
+1179,Uniqlo Crewneck Sweater,Sweaters,Uniqlo,46.8
+1180,Uniqlo V-Neck Sweater,Sweaters,Uniqlo,44.7
+1181,Vans Classic Tee,T-Shirts,Vans,26.04
+1182,Vans Performance Tee,T-Shirts,Vans,28.56
+1183,Vans Pullover Hoodie,Hoodies,Vans,73.45
+1184,Vans Zip Hoodie,Hoodies,Vans,70.78
+1185,Vans Athletic Shorts,Shorts,Vans,47.08
+1186,Vans Cargo Shorts,Shorts,Vans,30.61
+1187,Vans Track Pants,Pants,Vans,72.49
+1188,Vans Joggers,Pants,Vans,76.43
+1189,Vans Running Shoes,Sneakers,Vans,55.16
+1190,Vans Court Shoes,Sneakers,Vans,78.0
+1191,Vans Gym Bag,Accessories,Vans,18.37
+1192,Vans Wallet,Accessories,Vans,27.84
+1193,Vans Windbreaker,Jackets,Vans,90.28
+1194,Vans Bomber Jacket,Jackets,Vans,65.01
+1195,Vans Crew Socks,Socks,Vans,10.26
+1196,Vans Ankle Socks,Socks,Vans,11.01
+1197,Vans Baseball Cap,Caps,Vans,28.39
+1198,Vans Snapback,Caps,Vans,18.4
+1199,Vans Sport Backpack,Backpacks,Vans,48.85
+1200,Vans School Backpack,Backpacks,Vans,64.44

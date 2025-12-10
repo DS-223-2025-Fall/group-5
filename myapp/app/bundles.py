@@ -64,7 +64,7 @@ def bundles_screen():
         unsafe_allow_html=True,
     )
 
-    # Load transaction data
+    # Load transaction data with customer info
     df, error = load_transaction_data()
     
     if error:
@@ -77,6 +77,19 @@ def bundles_screen():
     if df is None or df.empty:
         st.warning("📊 No transaction data available. Please check your database.")
         return
+    
+    # Try to join with customer and transaction data for segmentation
+    all_data = st.session_state.get("all_tables_data", {})
+    transactions_df = all_data.get("transactions")
+    customers_df = all_data.get("customers")
+    
+    # Merge customer demographics if available
+    if transactions_df is not None and customers_df is not None:
+        df = df.merge(transactions_df[['transaction_id', 'customer_id']], on='transaction_id', how='left')
+        df = df.merge(customers_df, on='customer_id', how='left')
+        has_customer_data = True
+    else:
+        has_customer_data = False
 
     # Show data info
     st.info(f"✅ Loaded {len(df)} transaction items from {df['transaction_id'].nunique()} transactions")
@@ -84,6 +97,61 @@ def bundles_screen():
     # ---- Settings Section ----
     st.markdown('<div class="card">', unsafe_allow_html=True)
     st.markdown("### ⚙️ Recommendation Settings")
+    
+    # Customer Segmentation Filters
+    if has_customer_data:
+        st.markdown("#### 👥 Customer Segmentation")
+        
+        col1, col2, col3, col4 = st.columns(4)
+        
+        with col1:
+            gender_filter = st.multiselect(
+                "Gender",
+                options=['All'] + sorted(df['gender'].dropna().unique().tolist()),
+                default=['All'],
+                help="Filter bundles by customer gender"
+            )
+        
+        with col2:
+            age_range = st.slider(
+                "Age Range",
+                min_value=int(df['age'].min()) if 'age' in df.columns else 18,
+                max_value=int(df['age'].max()) if 'age' in df.columns else 70,
+                value=(18, 70),
+                help="Filter bundles by customer age"
+            )
+        
+        with col3:
+            if 'income_level' in df.columns:
+                income_filter = st.multiselect(
+                    "Income Level",
+                    options=['All'] + sorted(df['income_level'].dropna().unique().tolist()),
+                    default=['All'],
+                    help="Filter by customer income level"
+                )
+            else:
+                income_filter = ['All']
+        
+        with col4:
+            if 'customer_segment' in df.columns:
+                segment_filter = st.multiselect(
+                    "Customer Segment",
+                    options=['All'] + sorted(df['customer_segment'].dropna().unique().tolist()),
+                    default=['All'],
+                    help="Filter by customer segment"
+                )
+            else:
+                segment_filter = ['All']
+        
+        st.markdown("---")
+    else:
+        gender_filter = ['All']
+        age_range = (18, 70)
+        income_filter = ['All']
+        segment_filter = ['All']
+    
+    # Bundle Generation Settings
+    st.markdown("#### 🎯 Bundle Parameters")
     
     col1, col2, col3 = st.columns(3)
     
@@ -141,10 +209,40 @@ def bundles_screen():
         
         with st.spinner("🤖 Analyzing purchasing patterns..."):
             try:
+                # Apply customer segmentation filters
+                filtered_df = df.copy()
+                
+                if has_customer_data:
+                    # Gender filter
+                    if 'All' not in gender_filter and len(gender_filter) > 0:
+                        filtered_df = filtered_df[filtered_df['gender'].isin(gender_filter)]
+                    
+                    # Age filter
+                    if 'age' in filtered_df.columns:
+                        filtered_df = filtered_df[
+                            (filtered_df['age'] >= age_range[0]) & 
+                            (filtered_df['age'] <= age_range[1])
+                        ]
+                    
+                    # Income filter
+                    if 'All' not in income_filter and len(income_filter) > 0 and 'income_level' in filtered_df.columns:
+                        filtered_df = filtered_df[filtered_df['income_level'].isin(income_filter)]
+                    
+                    # Segment filter
+                    if 'All' not in segment_filter and len(segment_filter) > 0 and 'customer_segment' in filtered_df.columns:
+                        filtered_df = filtered_df[filtered_df['customer_segment'].isin(segment_filter)]
+                
+                if len(filtered_df) == 0:
+                    st.warning("⚠️ No transactions match the selected customer filters. Please adjust your criteria.")
+                    return
+                
+                # Show filtered stats
+                st.info(f"🔍 Analyzing {filtered_df['transaction_id'].nunique()} transactions from filtered customer segment")
+                
                 engine = BundleRecommendationEngine()
                 
                 bundles = engine.get_top_bundles(
-                    df=df,
+                    df=filtered_df,
                     tx_col='transaction_id',
                     item_col='product_name',
                     top_n=top_n,
@@ -154,11 +252,27 @@ def bundles_screen():
                     category_col='category'
                 )
                 
+                # Add segment info to bundles
+                if has_customer_data:
+                    for bundle in bundles:
+                        bundle['target_segment'] = {
+                            'gender': gender_filter if 'All' not in gender_filter else 'All Genders',
+                            'age_range': f"{age_range[0]}-{age_range[1]}",
+                            'income': income_filter if 'All' not in income_filter else 'All Income Levels',
+                            'segment': segment_filter if 'All' not in segment_filter else 'All Segments'
+                        }
+                
                 st.session_state.bundles = bundles
                 st.session_state.bundle_settings = {
                     'support': min_support,
                     'confidence': min_confidence,
-                    'top_n': top_n
+                    'top_n': top_n,
+                    'filters': {
+                        'gender': gender_filter,
+                        'age_range': age_range,
+                        'income': income_filter,
+                        'segment': segment_filter
+                    } if has_customer_data else None
                 }
                 
             except Exception as e:
@@ -262,6 +376,19 @@ def bundles_screen():
                         st.markdown(f"**Success Probability:** {success_pct:.1f}%")
                         st.markdown(f"**AI Score:** {bundle['recommendation_score']:.0f}/100")
                         st.progress(bundle['success_probability'])
+                        
+                        # Show target segment if available
+                        if 'target_segment' in bundle:
+                            st.markdown("---")
+                            st.markdown("**👥 Target Customer Segment:**")
+                            seg = bundle['target_segment']
+                            if seg['gender'] != 'All Genders':
+                                st.markdown(f"- Gender: {', '.join(seg['gender'])}")
+                            st.markdown(f"- Age: {seg['age_range']}")
+                            if seg['income'] != 'All Income Levels':
+                                st.markdown(f"- Income: {', '.join(seg['income'])}")
+                            if seg['segment'] != 'All Segments':
+                                st.markdown(f"- Segment: {', '.join(seg['segment'])}")
                     
                     with col2:
                         st.markdown("**📊 Metrics:**")

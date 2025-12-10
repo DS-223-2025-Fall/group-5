@@ -37,16 +37,22 @@ class Customer(Base):
     """
     Customer master data used in ETL.
 
-    Mirrors the `customers` table structure.
+    Mirrors the `customers` table structure with segmentation fields.
     """
     __tablename__ = "customers"
 
     customer_id = Column(Integer, primary_key=True)
     first_name = Column(String)
     last_name = Column(String)
+    gender = Column(String)  # NEW: Male/Female
+    age = Column(Integer)  # NEW: Customer age
     dob = Column(Date)
     phone = Column(String)
     email = Column(String)
+    city = Column(String)  # NEW: Customer location
+    income_level = Column(String)  # NEW: Low/Medium/High/Premium
+    shopping_preference = Column(String)  # NEW: Casual/Fashion/Sportswear/etc
+    customer_segment = Column(String)  # NEW: Segment classification
 
 
 class Timeframe(Base):

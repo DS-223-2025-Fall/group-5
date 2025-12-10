@@ -1,201 +1,501 @@
-customer_id,first_name,last_name,dob,phone,email
-1,Sara,Melikyan,1973-11-29,987-517-5367,sara.melikyan1@mail.com
-2,Anna,Petrosyan,1987-01-03,749-675-6442,anna.petrosyan2@mail.com
-3,Tatev,Petrosyan,1977-02-28,338-445-6468,tatev.petrosyan3@mail.com
-4,Maria,Sahakyan,1970-01-28,646-892-2435,maria.sahakyan4@mail.com
-5,Nare,Mkrtchyan,1973-02-18,206-423-8345,nare.mkrtchyan5@mail.com
-6,Anna,Petrosyan,1974-02-28,883-245-3068,anna.petrosyan6@mail.com
-7,Sara,Melikyan,1989-04-26,787-588-5347,sara.melikyan7@mail.com
-8,Sofi,Petrosyan,2004-06-26,512-451-9547,sofi.petrosyan8@mail.com
-9,Sofi,Harutyunyan,1997-04-25,854-639-6165,sofi.harutyunyan9@mail.com
-10,Sara,Mkrtchyan,2004-07-04,861-625-8116,sara.mkrtchyan10@mail.com
-11,Arpine,Davtyan,1991-10-22,733-784-7873,arpine.davtyan11@mail.com
-12,Tatev,Danielyan,1971-06-06,972-760-3973,tatev.danielyan12@mail.com
-13,Anna,Hakobyan,1999-07-09,468-274-6487,anna.hakobyan13@mail.com
-14,Tatev,Danielyan,1987-07-20,275-840-8483,tatev.danielyan14@mail.com
-15,Elisa,Davtyan,2004-12-06,544-116-4097,elisa.davtyan15@mail.com
-16,Nare,Karapetyan,1998-03-09,572-113-6765,nare.karapetyan16@mail.com
-17,Maria,Mkrtchyan,1993-11-12,713-841-1978,maria.mkrtchyan17@mail.com
-18,Nune,Hakobyan,2004-04-12,845-837-4823,nune.hakobyan18@mail.com
-19,Arpine,Hakobyan,1977-12-19,357-649-8282,arpine.hakobyan19@mail.com
-20,Elisa,Hakobyan,1971-12-25,210-237-8476,elisa.hakobyan20@mail.com
-21,Maria,Petrosyan,1981-07-02,560-801-5455,maria.petrosyan21@mail.com
-22,Elisa,Mkrtchyan,1970-01-06,311-732-2025,elisa.mkrtchyan22@mail.com
-23,Arpine,Ghazaryan,2001-09-19,290-184-8097,arpine.ghazaryan23@mail.com
-24,Sara,Danielyan,1986-12-07,275-659-7622,sara.danielyan24@mail.com
-25,Sara,Ghazaryan,1981-10-11,683-133-6485,sara.ghazaryan25@mail.com
-26,Elisa,Ghazaryan,1971-01-25,854-751-3684,elisa.ghazaryan26@mail.com
-27,Elisa,Karapetyan,2002-03-13,895-247-7096,elisa.karapetyan27@mail.com
-28,Maria,Karapetyan,1998-02-24,258-876-9498,maria.karapetyan28@mail.com
-29,Elisa,Danielyan,1983-09-26,349-771-5770,elisa.danielyan29@mail.com
-30,Elisa,Ghazaryan,1975-09-04,747-445-9472,elisa.ghazaryan30@mail.com
-31,Anna,Sahakyan,2005-12-27,803-495-8080,anna.sahakyan31@mail.com
-32,Sara,Sahakyan,1990-05-26,884-121-6726,sara.sahakyan32@mail.com
-33,Sofi,Hakobyan,1983-08-18,639-910-1462,sofi.hakobyan33@mail.com
-34,Lilit,Danielyan,1984-07-28,729-627-3250,lilit.danielyan34@mail.com
-35,Tatev,Danielyan,1974-09-13,758-843-7045,tatev.danielyan35@mail.com
-36,Maria,Davtyan,1985-04-03,295-378-9295,maria.davtyan36@mail.com
-37,Maria,Harutyunyan,1984-06-12,470-507-1704,maria.harutyunyan37@mail.com
-38,Arpine,Karapetyan,1978-11-04,717-304-1281,arpine.karapetyan38@mail.com
-39,Maria,Melikyan,1995-04-30,436-187-6194,maria.melikyan39@mail.com
-40,Anna,Ghazaryan,1994-11-16,750-236-9752,anna.ghazaryan40@mail.com
-41,Lilit,Hakobyan,1992-01-31,948-507-1462,lilit.hakobyan41@mail.com
-42,Nune,Davtyan,1991-10-22,548-505-4672,nune.davtyan42@mail.com
-43,Arpine,Sahakyan,1997-05-09,850-106-9101,arpine.sahakyan43@mail.com
-44,Tatev,Davtyan,1975-06-28,907-153-6908,tatev.davtyan44@mail.com
-45,Sofi,Ghazaryan,2000-01-04,630-423-6876,sofi.ghazaryan45@mail.com
-46,Maria,Hakobyan,1985-05-22,971-297-3960,maria.hakobyan46@mail.com
-47,Elisa,Petrosyan,1988-08-08,584-612-5349,elisa.petrosyan47@mail.com
-48,Lilit,Danielyan,1986-11-20,577-170-5848,lilit.danielyan48@mail.com
-49,Anna,Melikyan,1992-07-22,819-429-1899,anna.melikyan49@mail.com
-50,Elisa,Petrosyan,1996-04-14,597-405-2760,elisa.petrosyan50@mail.com
-51,Sofi,Davtyan,2004-05-05,923-432-4975,sofi.davtyan51@mail.com
-52,Sofi,Melikyan,1989-09-14,776-685-6636,sofi.melikyan52@mail.com
-53,Maria,Hakobyan,1992-06-22,788-381-6524,maria.hakobyan53@mail.com
-54,Sara,Sahakyan,1975-07-14,220-538-9133,sara.sahakyan54@mail.com
-55,Lilit,Hakobyan,1994-01-02,243-581-9878,lilit.hakobyan55@mail.com
-56,Lilit,Ghazaryan,1986-08-03,426-712-1526,lilit.ghazaryan56@mail.com
-57,Sofi,Danielyan,1996-12-23,992-395-1228,sofi.danielyan57@mail.com
-58,Tatev,Mkrtchyan,1980-03-17,904-164-5151,tatev.mkrtchyan58@mail.com
-59,Nune,Sahakyan,1988-08-30,566-535-1711,nune.sahakyan59@mail.com
-60,Nare,Petrosyan,1992-04-14,889-268-4247,nare.petrosyan60@mail.com
-61,Sara,Melikyan,1993-07-16,369-882-9703,sara.melikyan61@mail.com
-62,Maria,Melikyan,1992-06-03,678-329-5627,maria.melikyan62@mail.com
-63,Arpine,Karapetyan,1974-08-19,653-727-9928,arpine.karapetyan63@mail.com
-64,Arpine,Melikyan,1978-10-05,733-169-7428,arpine.melikyan64@mail.com
-65,Elisa,Hakobyan,1974-12-23,261-683-8088,elisa.hakobyan65@mail.com
-66,Elisa,Danielyan,1985-12-28,357-605-3204,elisa.danielyan66@mail.com
-67,Maria,Harutyunyan,1980-10-28,238-350-4410,maria.harutyunyan67@mail.com
-68,Anna,Mkrtchyan,1971-02-28,211-522-6274,anna.mkrtchyan68@mail.com
-69,Arpine,Petrosyan,1971-11-17,452-848-8137,arpine.petrosyan69@mail.com
-70,Nune,Sahakyan,1983-08-24,315-389-6321,nune.sahakyan70@mail.com
-71,Maria,Danielyan,1971-03-02,966-470-3504,maria.danielyan71@mail.com
-72,Sofi,Harutyunyan,1988-08-01,427-622-8120,sofi.harutyunyan72@mail.com
-73,Elisa,Danielyan,1978-06-23,599-178-9141,elisa.danielyan73@mail.com
-74,Sara,Melikyan,1976-03-31,687-848-2750,sara.melikyan74@mail.com
-75,Lilit,Karapetyan,1990-08-22,561-665-1285,lilit.karapetyan75@mail.com
-76,Sofi,Danielyan,1985-11-01,495-471-4495,sofi.danielyan76@mail.com
-77,Elisa,Petrosyan,1974-09-29,720-949-2554,elisa.petrosyan77@mail.com
-78,Nare,Ghazaryan,2003-01-08,284-899-4374,nare.ghazaryan78@mail.com
-79,Elisa,Sahakyan,1988-10-14,329-997-8785,elisa.sahakyan79@mail.com
-80,Lilit,Petrosyan,1977-04-17,288-438-1529,lilit.petrosyan80@mail.com
-81,Anna,Sahakyan,1979-10-30,668-540-4290,anna.sahakyan81@mail.com
-82,Elisa,Petrosyan,1972-07-12,355-217-8558,elisa.petrosyan82@mail.com
-83,Anna,Sahakyan,1999-12-25,242-467-8200,anna.sahakyan83@mail.com
-84,Maria,Harutyunyan,1980-07-19,641-449-3343,maria.harutyunyan84@mail.com
-85,Anna,Petrosyan,1983-01-31,535-785-7565,anna.petrosyan85@mail.com
-86,Tatev,Harutyunyan,1972-09-24,259-663-2058,tatev.harutyunyan86@mail.com
-87,Anna,Harutyunyan,1982-12-03,440-228-1013,anna.harutyunyan87@mail.com
-88,Nare,Danielyan,1981-10-23,630-668-7025,nare.danielyan88@mail.com
-89,Tatev,Sahakyan,1988-09-12,234-717-5740,tatev.sahakyan89@mail.com
-90,Tatev,Ghazaryan,2000-12-17,203-919-6743,tatev.ghazaryan90@mail.com
-91,Arpine,Petrosyan,1999-01-02,501-181-7201,arpine.petrosyan91@mail.com
-92,Lilit,Davtyan,1984-08-10,655-980-2714,lilit.davtyan92@mail.com
-93,Nare,Danielyan,1978-11-30,608-750-2156,nare.danielyan93@mail.com
-94,Maria,Harutyunyan,2002-05-27,566-537-8878,maria.harutyunyan94@mail.com
-95,Nune,Danielyan,1994-06-07,367-496-1437,nune.danielyan95@mail.com
-96,Nune,Petrosyan,2004-04-15,840-788-3643,nune.petrosyan96@mail.com
-97,Maria,Ghazaryan,1978-04-03,303-239-2661,maria.ghazaryan97@mail.com
-98,Nune,Karapetyan,1973-04-20,569-158-5175,nune.karapetyan98@mail.com
-99,Tatev,Sahakyan,1981-04-22,620-194-5259,tatev.sahakyan99@mail.com
-100,Arpine,Danielyan,1975-05-10,882-647-2981,arpine.danielyan100@mail.com
-101,Tatev,Melikyan,2005-11-07,853-987-6053,tatev.melikyan101@mail.com
-102,Sofi,Harutyunyan,1970-03-29,295-958-2855,sofi.harutyunyan102@mail.com
-103,Nare,Karapetyan,2004-06-03,651-957-7361,nare.karapetyan103@mail.com
-104,Tatev,Sahakyan,1975-12-08,596-100-7805,tatev.sahakyan104@mail.com
-105,Maria,Harutyunyan,1970-03-12,627-232-2373,maria.harutyunyan105@mail.com
-106,Lilit,Danielyan,1981-12-18,631-272-7391,lilit.danielyan106@mail.com
-107,Nune,Karapetyan,1971-01-26,324-910-7450,nune.karapetyan107@mail.com
-108,Nune,Davtyan,1972-05-27,853-790-9906,nune.davtyan108@mail.com
-109,Maria,Melikyan,1983-12-21,811-660-6541,maria.melikyan109@mail.com
-110,Sara,Sahakyan,1983-10-28,491-304-7995,sara.sahakyan110@mail.com
-111,Maria,Hakobyan,1972-01-07,632-167-3522,maria.hakobyan111@mail.com
-112,Lilit,Petrosyan,1994-09-01,427-949-2027,lilit.petrosyan112@mail.com
-113,Sofi,Davtyan,1978-07-08,610-683-8111,sofi.davtyan113@mail.com
-114,Arpine,Ghazaryan,1973-05-07,421-191-8197,arpine.ghazaryan114@mail.com
-115,Sara,Danielyan,1983-12-21,918-131-4411,sara.danielyan115@mail.com
-116,Sara,Sahakyan,1998-11-18,737-200-1831,sara.sahakyan116@mail.com
-117,Elisa,Hakobyan,1997-08-07,593-441-3989,elisa.hakobyan117@mail.com
-118,Elisa,Mkrtchyan,1999-07-09,896-206-2430,elisa.mkrtchyan118@mail.com
-119,Sara,Harutyunyan,1976-10-30,872-922-3227,sara.harutyunyan119@mail.com
-120,Nare,Melikyan,1986-05-13,722-530-5312,nare.melikyan120@mail.com
-121,Nune,Mkrtchyan,1978-04-04,746-641-2501,nune.mkrtchyan121@mail.com
-122,Sara,Davtyan,1997-02-02,926-247-9515,sara.davtyan122@mail.com
-123,Nare,Davtyan,1974-07-15,664-770-5035,nare.davtyan123@mail.com
-124,Arpine,Hakobyan,1971-04-28,580-403-8625,arpine.hakobyan124@mail.com
-125,Tatev,Melikyan,1994-02-26,981-676-6548,tatev.melikyan125@mail.com
-126,Maria,Sahakyan,1971-10-13,583-153-2586,maria.sahakyan126@mail.com
-127,Sofi,Ghazaryan,2003-11-03,631-779-3903,sofi.ghazaryan127@mail.com
-128,Anna,Davtyan,1973-04-08,437-687-7286,anna.davtyan128@mail.com
-129,Lilit,Danielyan,2000-06-27,929-201-8997,lilit.danielyan129@mail.com
-130,Arpine,Harutyunyan,1998-02-17,737-609-6492,arpine.harutyunyan130@mail.com
-131,Tatev,Davtyan,1998-05-02,626-904-5381,tatev.davtyan131@mail.com
-132,Tatev,Hakobyan,1977-12-01,440-204-1864,tatev.hakobyan132@mail.com
-133,Arpine,Sahakyan,1986-07-21,241-243-3411,arpine.sahakyan133@mail.com
-134,Lilit,Mkrtchyan,2003-05-23,383-889-5080,lilit.mkrtchyan134@mail.com
-135,Arpine,Sahakyan,2004-08-17,697-612-1085,arpine.sahakyan135@mail.com
-136,Sofi,Sahakyan,1982-05-31,558-792-9272,sofi.sahakyan136@mail.com
-137,Sofi,Harutyunyan,1972-12-31,637-864-8739,sofi.harutyunyan137@mail.com
-138,Elisa,Ghazaryan,1972-02-14,853-539-7822,elisa.ghazaryan138@mail.com
-139,Anna,Ghazaryan,1989-11-21,674-114-2829,anna.ghazaryan139@mail.com
-140,Sara,Ghazaryan,1986-05-19,528-896-4904,sara.ghazaryan140@mail.com
-141,Arpine,Danielyan,1991-05-11,946-887-6589,arpine.danielyan141@mail.com
-142,Maria,Petrosyan,1978-04-14,329-769-8352,maria.petrosyan142@mail.com
-143,Maria,Hakobyan,1989-03-23,854-958-1233,maria.hakobyan143@mail.com
-144,Tatev,Sahakyan,1982-01-28,565-657-6091,tatev.sahakyan144@mail.com
-145,Anna,Ghazaryan,1979-03-27,248-220-3105,anna.ghazaryan145@mail.com
-146,Arpine,Petrosyan,1996-11-29,697-627-7888,arpine.petrosyan146@mail.com
-147,Elisa,Hakobyan,1972-11-16,392-287-6719,elisa.hakobyan147@mail.com
-148,Maria,Ghazaryan,2001-04-23,624-854-9000,maria.ghazaryan148@mail.com
-149,Anna,Mkrtchyan,1973-04-15,567-621-7153,anna.mkrtchyan149@mail.com
-150,Anna,Harutyunyan,1981-07-15,291-809-2983,anna.harutyunyan150@mail.com
-151,Tatev,Sahakyan,1978-07-11,284-986-2071,tatev.sahakyan151@mail.com
-152,Elisa,Hakobyan,2002-10-06,647-558-1661,elisa.hakobyan152@mail.com
-153,Elisa,Petrosyan,1974-03-19,506-619-7432,elisa.petrosyan153@mail.com
-154,Elisa,Ghazaryan,1986-07-01,557-164-6457,elisa.ghazaryan154@mail.com
-155,Nare,Sahakyan,1975-06-07,227-555-7419,nare.sahakyan155@mail.com
-156,Arpine,Ghazaryan,1971-06-25,409-923-5702,arpine.ghazaryan156@mail.com
-157,Tatev,Melikyan,1976-10-21,527-719-8728,tatev.melikyan157@mail.com
-158,Tatev,Harutyunyan,1993-12-21,972-986-1564,tatev.harutyunyan158@mail.com
-159,Nare,Hakobyan,1976-12-26,412-438-4944,nare.hakobyan159@mail.com
-160,Sofi,Danielyan,1979-12-11,519-895-3665,sofi.danielyan160@mail.com
-161,Maria,Hakobyan,1991-08-21,538-587-8322,maria.hakobyan161@mail.com
-162,Sofi,Melikyan,1989-07-29,936-400-2299,sofi.melikyan162@mail.com
-163,Elisa,Hakobyan,1974-06-03,825-964-6277,elisa.hakobyan163@mail.com
-164,Elisa,Davtyan,1995-04-17,827-643-3118,elisa.davtyan164@mail.com
-165,Maria,Petrosyan,1977-03-23,912-526-9343,maria.petrosyan165@mail.com
-166,Sofi,Davtyan,1982-03-27,821-340-5760,sofi.davtyan166@mail.com
-167,Lilit,Danielyan,1980-08-26,914-527-2358,lilit.danielyan167@mail.com
-168,Nare,Mkrtchyan,1994-07-27,264-477-8631,nare.mkrtchyan168@mail.com
-169,Lilit,Sahakyan,1985-06-11,916-702-3102,lilit.sahakyan169@mail.com
-170,Lilit,Melikyan,1988-08-28,358-264-8441,lilit.melikyan170@mail.com
-171,Nune,Davtyan,1980-05-29,827-936-4214,nune.davtyan171@mail.com
-172,Nune,Harutyunyan,1996-05-19,808-150-6064,nune.harutyunyan172@mail.com
-173,Maria,Davtyan,1990-01-25,226-285-3596,maria.davtyan173@mail.com
-174,Tatev,Davtyan,1999-11-13,365-433-1647,tatev.davtyan174@mail.com
-175,Anna,Harutyunyan,1971-11-08,555-320-2369,anna.harutyunyan175@mail.com
-176,Lilit,Hakobyan,1989-07-09,376-196-9588,lilit.hakobyan176@mail.com
-177,Sara,Davtyan,1999-06-23,442-770-2671,sara.davtyan177@mail.com
-178,Elisa,Sahakyan,1980-08-27,888-414-3798,elisa.sahakyan178@mail.com
-179,Sofi,Sahakyan,1996-02-07,577-855-7550,sofi.sahakyan179@mail.com
-180,Sara,Davtyan,1991-11-14,518-543-8075,sara.davtyan180@mail.com
-181,Nare,Sahakyan,1995-07-19,347-297-4749,nare.sahakyan181@mail.com
-182,Nune,Hakobyan,1992-09-08,349-795-4233,nune.hakobyan182@mail.com
-183,Lilit,Danielyan,1977-07-26,437-610-2944,lilit.danielyan183@mail.com
-184,Anna,Melikyan,1998-03-06,381-817-1267,anna.melikyan184@mail.com
-185,Sofi,Mkrtchyan,1980-05-17,765-753-4796,sofi.mkrtchyan185@mail.com
-186,Nare,Mkrtchyan,2002-03-18,279-909-5395,nare.mkrtchyan186@mail.com
-187,Nune,Danielyan,1983-04-30,472-341-3481,nune.danielyan187@mail.com
-188,Nare,Harutyunyan,1978-07-13,209-776-2483,nare.harutyunyan188@mail.com
-189,Elisa,Danielyan,1983-07-28,699-172-4039,elisa.danielyan189@mail.com
-190,Sofi,Ghazaryan,1992-08-22,273-546-9921,sofi.ghazaryan190@mail.com
-191,Nune,Karapetyan,2004-02-14,661-752-1399,nune.karapetyan191@mail.com
-192,Lilit,Melikyan,1984-12-27,330-551-8663,lilit.melikyan192@mail.com
-193,Nune,Karapetyan,2001-03-31,706-591-6747,nune.karapetyan193@mail.com
-194,Tatev,Karapetyan,1980-05-09,567-819-5169,tatev.karapetyan194@mail.com
-195,Nune,Davtyan,1993-08-23,294-205-1150,nune.davtyan195@mail.com
-196,Tatev,Ghazaryan,1990-03-13,658-496-3467,tatev.ghazaryan196@mail.com
-197,Lilit,Harutyunyan,1978-01-18,864-791-6445,lilit.harutyunyan197@mail.com
-198,Maria,Hakobyan,2003-11-27,347-935-9985,maria.hakobyan198@mail.com
-199,Maria,Mkrtchyan,1986-09-07,586-264-5233,maria.mkrtchyan199@mail.com
-200,Nare,Ghazaryan,2004-06-12,604-647-8091,nare.ghazaryan200@mail.com
+customer_id,first_name,last_name,gender,age,dob,phone,email,city,income_level,shopping_preference,customer_segment
+1,Rebecca,Brown,Female,30,1995-01-24,+1-764-537-1708,rebecca.brown333@email.com,Miami,High,Sportswear,Medium Value
+2,Brandon,Smith,Male,27,1998-01-05,+1-520-832-3838,brandon.smith526@email.com,Austin,Medium,Sportswear,Regular
+3,Richard,Smith,Male,30,1995-08-03,+1-642-936-1216,richard.smith867@email.com,Chicago,Low,Casual,Regular
+4,Amy,Smith,Female,24,2001-08-16,+1-657-308-5432,amy.smith54@email.com,Chicago,Low,Fashion,New Customers
+5,Emily,Williams,Female,59,1966-02-23,+1-854-915-1152,emily.williams372@email.com,San Antonio,Premium,Classic,High Value
+6,Nancy,Brown,Female,50,1975-11-24,+1-241-946-7817,nancy.brown809@email.com,San Diego,High,Classic,High Value
+7,Anthony,Thomas,Male,44,1981-11-19,+1-338-664-9600,anthony.thomas252@email.com,Phoenix,High,Professional,High Value
+8,Kevin,Davis,Male,42,1983-02-21,+1-893-933-9552,kevin.davis733@email.com,San Jose,High,Casual,High Value
+9,Jason,Garcia,Male,41,1984-01-03,+1-718-807-4996,jason.garcia663@email.com,Seattle,High,Sportswear,High Value
+10,Matthew,Davis,Male,37,1988-07-04,+1-464-415-7565,matthew.davis987@email.com,Philadelphia,High,Sportswear,High Value
+11,Ryan,Thomas,Male,40,1985-10-21,+1-269-367-3954,ryan.thomas448@email.com,Chicago,High,Professional,High Value
+12,Kimberly,Clark,Female,35,1990-10-15,+1-630-740-5455,kimberly.clark680@email.com,Boston,High,Sportswear,Medium Value
+13,Kimberly,Taylor,Female,38,1987-09-06,+1-493-649-2347,kimberly.taylor473@email.com,Boston,Premium,Sportswear,High Value
+14,Joseph,Smith,Male,25,2000-08-14,+1-881-564-9695,joseph.smith270@email.com,Chicago,Medium,Sportswear,Regular
+15,Ryan,White,Male,42,1983-02-01,+1-463-211-1670,ryan.white845@email.com,Denver,High,Professional,High Value
+16,Kevin,Lewis,Male,43,1982-01-16,+1-614-917-7158,kevin.lewis961@email.com,Los Angeles,High,Professional,High Value
+17,Amy,Jones,Female,36,1989-02-23,+1-954-638-1111,amy.jones263@email.com,San Diego,Premium,Sportswear,High Value
+18,Lisa,Anderson,Female,30,1995-12-06,+1-878-471-2957,lisa.anderson860@email.com,Philadelphia,High,Professional,Medium Value
+19,James,Miller,Male,46,1979-11-24,+1-832-741-4341,james.miller913@email.com,New York,Premium,Casual,High Value
+20,Elizabeth,White,Female,59,1966-03-08,+1-997-379-3748,elizabeth.white525@email.com,Denver,Premium,Casual,High Value
+21,Laura,Johnson,Female,27,1998-05-01,+1-818-525-8966,laura.johnson739@email.com,Seattle,Medium,Fashion,Regular
+22,Richard,Clark,Male,40,1985-01-12,+1-667-306-7953,richard.clark175@email.com,Houston,High,Professional,High Value
+23,Sophia,White,Female,44,1981-01-23,+1-879-601-4741,sophia.white758@email.com,San Antonio,High,Sportswear,High Value
+24,Barbara,Jackson,Female,44,1981-06-28,+1-958-360-7906,barbara.jackson386@email.com,Dallas,High,Casual,High Value
+25,Matthew,Robinson,Male,51,1974-01-04,+1-921-838-8855,matthew.robinson818@email.com,Miami,High,Casual,High Value
+26,Robert,Wilson,Male,23,2002-10-17,+1-513-606-7783,robert.wilson109@email.com,Phoenix,Low,Streetwear,New Customers
+27,Lisa,Thomas,Female,35,1990-02-20,+1-750-733-4801,lisa.thomas713@email.com,Philadelphia,Premium,Sportswear,Regular
+28,Sophia,Hernandez,Female,43,1982-12-23,+1-432-414-6220,sophia.hernandez932@email.com,Dallas,High,Casual,High Value
+29,Emma,Williams,Female,20,2005-10-19,+1-747-341-6838,emma.williams905@email.com,Seattle,Medium,Sportswear,New Customers
+30,William,Davis,Male,65,1960-12-06,+1-415-993-6833,william.davis962@email.com,Chicago,Premium,Casual,High Value
+31,Christopher,Lopez,Male,18,2007-12-14,+1-695-518-9646,christopher.lopez855@email.com,New York,Low,Streetwear,New Customers
+32,Christopher,Lewis,Male,31,1994-11-13,+1-840-635-1517,christopher.lewis427@email.com,Chicago,High,Sportswear,Medium Value
+33,Christopher,Brown,Male,36,1989-03-06,+1-474-906-3866,christopher.brown514@email.com,Miami,High,Professional,High Value
+34,Emily,Lee,Female,21,2004-01-05,+1-806-505-1841,emily.lee562@email.com,Austin,Low,Fashion,New Customers
+35,Jason,Anderson,Male,43,1982-07-27,+1-366-529-3108,jason.anderson621@email.com,Chicago,High,Professional,High Value
+36,Donald,White,Male,40,1985-02-24,+1-781-458-2297,donald.white261@email.com,Chicago,Medium,Casual,Regular
+37,Brandon,Harris,Male,40,1985-08-09,+1-890-439-1374,brandon.harris458@email.com,Miami,Premium,Professional,High Value
+38,Richard,Clark,Male,61,1964-10-17,+1-961-908-9485,richard.clark872@email.com,Philadelphia,Medium,Professional,Regular
+39,Michael,Lopez,Male,30,1995-04-17,+1-492-366-5706,michael.lopez689@email.com,Boston,High,Casual,Medium Value
+40,Barbara,Jackson,Female,20,2005-10-28,+1-211-724-4922,barbara.jackson480@email.com,Houston,Low,Fashion,New Customers
+41,Emily,Thomas,Female,19,2006-04-26,+1-750-594-1905,emily.thomas762@email.com,Houston,Medium,Sportswear,New Customers
+42,Barbara,Brown,Female,54,1971-12-20,+1-315-436-3126,barbara.brown878@email.com,Los Angeles,Medium,Casual,Regular
+43,Sarah,Williams,Female,30,1995-01-03,+1-499-597-9880,sarah.williams947@email.com,San Antonio,High,Casual,Medium Value
+44,Michelle,Robinson,Female,27,1998-02-27,+1-764-859-3184,michelle.robinson638@email.com,San Diego,High,Fashion,Medium Value
+45,Melissa,Walker,Female,21,2004-11-17,+1-222-484-4159,melissa.walker343@email.com,San Antonio,High,Fashion,Medium Value
+46,Jennifer,Robinson,Female,33,1992-11-12,+1-544-507-7183,jennifer.robinson483@email.com,New York,Medium,Sportswear,Regular
+47,Christopher,Garcia,Male,43,1982-10-01,+1-885-878-2792,christopher.garcia119@email.com,Austin,High,Casual,High Value
+48,Rebecca,Clark,Female,65,1960-10-18,+1-425-208-3248,rebecca.clark353@email.com,San Diego,Premium,Professional,High Value
+49,Steven,Davis,Male,27,1998-02-01,+1-440-500-7952,steven.davis895@email.com,Boston,Low,Casual,Regular
+50,Jennifer,Miller,Female,37,1988-04-27,+1-857-662-5364,jennifer.miller467@email.com,Philadelphia,Premium,Professional,High Value
+51,James,Taylor,Male,36,1989-07-20,+1-728-279-8854,james.taylor882@email.com,New York,High,Professional,High Value
+52,Jessica,Jackson,Female,21,2004-03-24,+1-712-731-2776,jessica.jackson605@email.com,Los Angeles,Medium,Fashion,New Customers
+53,Brandon,Moore,Male,60,1965-11-27,+1-932-677-2101,brandon.moore410@email.com,Dallas,Premium,Casual,High Value
+54,Sophia,Smith,Female,22,2003-09-17,+1-384-261-8470,sophia.smith796@email.com,Miami,Medium,Fashion,New Customers
+55,Amanda,Robinson,Female,33,1992-04-16,+1-223-414-8175,amanda.robinson678@email.com,Houston,Medium,Casual,Regular
+56,John,Hernandez,Male,29,1996-09-13,+1-255-800-5695,john.hernandez527@email.com,San Antonio,Low,Streetwear,Regular
+57,Joseph,Jackson,Male,27,1998-12-03,+1-407-397-2597,joseph.jackson280@email.com,Dallas,Medium,Sportswear,Regular
+58,Ryan,Martinez,Male,31,1994-08-06,+1-740-419-5178,ryan.martinez408@email.com,San Jose,Medium,Professional,Regular
+59,Brian,Lopez,Male,52,1973-05-02,+1-540-537-8120,brian.lopez139@email.com,Denver,Premium,Professional,High Value
+60,Ashley,Anderson,Female,59,1966-12-28,+1-807-364-8496,ashley.anderson560@email.com,San Diego,High,Casual,High Value
+61,Sophia,Jones,Female,18,2007-04-28,+1-837-914-8343,sophia.jones956@email.com,Boston,Low,Sportswear,New Customers
+62,Brian,Martinez,Male,21,2004-05-01,+1-852-782-3845,brian.martinez495@email.com,Houston,Low,Sportswear,New Customers
+63,Steven,Harris,Male,29,1996-09-12,+1-980-734-8162,steven.harris134@email.com,Miami,High,Sportswear,Medium Value
+64,Karen,Lopez,Female,28,1997-04-19,+1-489-503-2832,karen.lopez108@email.com,Dallas,Low,Fashion,Regular
+65,Mark,Davis,Male,46,1979-01-23,+1-557-504-4808,mark.davis279@email.com,Austin,High,Casual,High Value
+66,Ryan,Lewis,Male,33,1992-04-02,+1-647-649-1773,ryan.lewis196@email.com,Philadelphia,High,Casual,Medium Value
+67,Nancy,Garcia,Female,18,2007-02-24,+1-593-963-4562,nancy.garcia382@email.com,New York,Low,Fashion,New Customers
+68,Robert,White,Male,42,1983-12-26,+1-835-769-5011,robert.white171@email.com,Seattle,High,Casual,High Value
+69,Susan,Anderson,Female,27,1998-10-22,+1-706-409-4951,susan.anderson659@email.com,San Jose,High,Sportswear,Medium Value
+70,Matthew,Robinson,Male,40,1985-10-24,+1-395-367-9454,matthew.robinson6@email.com,Miami,High,Professional,High Value
+71,Mary,Smith,Female,24,2001-02-05,+1-230-665-2615,mary.smith453@email.com,Phoenix,Medium,Fashion,New Customers
+72,Mark,Hernandez,Male,31,1994-03-16,+1-575-929-9002,mark.hernandez995@email.com,Phoenix,Medium,Casual,Regular
+73,Joseph,Lee,Male,32,1993-06-02,+1-936-373-5172,joseph.lee454@email.com,Austin,Medium,Professional,Regular
+74,Joseph,Taylor,Male,27,1998-11-08,+1-925-757-2189,joseph.taylor912@email.com,Dallas,Low,Streetwear,Regular
+75,Melissa,Davis,Female,62,1963-02-08,+1-446-392-9503,melissa.davis400@email.com,Austin,High,Classic,High Value
+76,Nancy,Lee,Female,20,2005-03-14,+1-892-500-6714,nancy.lee514@email.com,New York,Low,Fashion,New Customers
+77,Rebecca,Thomas,Female,38,1987-11-19,+1-728-228-6300,rebecca.thomas301@email.com,Seattle,High,Sportswear,High Value
+78,Rebecca,Martin,Female,31,1994-07-13,+1-897-651-3727,rebecca.martin850@email.com,New York,Low,Casual,Regular
+79,Andrew,White,Male,33,1992-10-15,+1-996-846-7139,andrew.white420@email.com,New York,Medium,Professional,Regular
+80,James,Anderson,Male,29,1996-05-05,+1-892-359-6720,james.anderson970@email.com,Denver,Medium,Sportswear,Regular
+81,Jason,Miller,Male,29,1996-06-19,+1-614-322-2741,jason.miller908@email.com,Los Angeles,High,Streetwear,Medium Value
+82,Amy,Lewis,Female,20,2005-04-19,+1-590-489-3414,amy.lewis316@email.com,San Jose,Medium,Fashion,New Customers
+83,Ryan,Johnson,Male,20,2005-04-20,+1-628-545-2877,ryan.johnson428@email.com,Phoenix,Low,Casual,New Customers
+84,Emma,Brown,Female,26,1999-06-05,+1-611-723-9880,emma.brown31@email.com,San Diego,Medium,Casual,Regular
+85,Michelle,Hernandez,Female,42,1983-10-22,+1-893-318-4782,michelle.hernandez642@email.com,Miami,High,Professional,High Value
+86,Nancy,Davis,Female,22,2003-03-27,+1-810-601-9218,nancy.davis776@email.com,Los Angeles,High,Casual,Medium Value
+87,Linda,Smith,Female,36,1989-02-10,+1-206-879-1991,linda.smith838@email.com,Phoenix,High,Casual,High Value
+88,Amanda,Harris,Female,42,1983-05-14,+1-911-620-8572,amanda.harris452@email.com,Los Angeles,High,Sportswear,High Value
+89,Barbara,Hernandez,Female,31,1994-01-17,+1-385-839-2070,barbara.hernandez530@email.com,Miami,High,Casual,Medium Value
+90,Rebecca,Smith,Female,22,2003-04-04,+1-373-390-4027,rebecca.smith248@email.com,Miami,Medium,Casual,New Customers
+91,Nancy,Harris,Female,37,1988-11-08,+1-722-261-2961,nancy.harris498@email.com,Denver,Premium,Sportswear,High Value
+92,Robert,Smith,Male,36,1989-03-13,+1-889-592-9317,robert.smith187@email.com,New York,High,Sportswear,High Value
+93,Robert,Moore,Male,29,1996-09-09,+1-353-899-5541,robert.moore387@email.com,San Antonio,High,Sportswear,Medium Value
+94,Anthony,White,Male,48,1977-09-25,+1-351-900-4522,anthony.white557@email.com,San Antonio,Medium,Casual,Regular
+95,Steven,Robinson,Male,70,1955-05-11,+1-768-222-5933,steven.robinson550@email.com,Dallas,Medium,Professional,Regular
+96,Justin,Williams,Male,42,1983-12-26,+1-712-908-5193,justin.williams409@email.com,San Antonio,High,Casual,High Value
+97,Barbara,Taylor,Female,31,1994-06-02,+1-663-521-2799,barbara.taylor999@email.com,San Antonio,High,Sportswear,Medium Value
+98,Jennifer,Taylor,Female,33,1992-03-25,+1-393-225-3817,jennifer.taylor410@email.com,Los Angeles,Medium,Casual,Regular
+99,Kimberly,Johnson,Female,70,1955-03-19,+1-720-409-4949,kimberly.johnson647@email.com,Houston,High,Professional,High Value
+100,James,Thomas,Male,52,1973-12-07,+1-302-845-2050,james.thomas665@email.com,Philadelphia,Premium,Casual,High Value
+101,David,Martin,Male,54,1971-01-26,+1-654-357-7743,david.martin724@email.com,San Antonio,Premium,Casual,High Value
+102,Jessica,Jones,Female,30,1995-04-27,+1-378-947-9849,jessica.jones795@email.com,Seattle,Medium,Casual,Regular
+103,Brandon,Thomas,Male,29,1996-10-12,+1-557-731-4490,brandon.thomas693@email.com,San Antonio,Low,Streetwear,Regular
+104,Donald,Lewis,Male,47,1978-07-17,+1-253-251-9927,donald.lewis397@email.com,Phoenix,High,Professional,High Value
+105,Linda,Jones,Female,26,1999-12-28,+1-425-743-5924,linda.jones7@email.com,San Antonio,High,Fashion,Medium Value
+106,Donald,Walker,Male,53,1972-07-08,+1-393-896-5234,donald.walker228@email.com,San Jose,Premium,Classic,High Value
+107,Donald,Lewis,Male,40,1985-07-21,+1-690-649-2394,donald.lewis762@email.com,Philadelphia,Medium,Professional,Regular
+108,Michelle,Johnson,Female,34,1991-05-09,+1-687-337-9131,michelle.johnson137@email.com,New York,Low,Casual,Regular
+109,Stephanie,Miller,Female,31,1994-03-13,+1-660-617-3473,stephanie.miller137@email.com,Philadelphia,Medium,Casual,Regular
+110,Joseph,Lee,Male,22,2003-12-13,+1-427-706-8875,joseph.lee998@email.com,Boston,High,Casual,Medium Value
+111,Elizabeth,Jones,Female,36,1989-02-12,+1-537-753-2466,elizabeth.jones260@email.com,Houston,High,Sportswear,High Value
+112,Daniel,Martinez,Male,28,1997-09-20,+1-749-225-5960,daniel.martinez322@email.com,Dallas,Low,Sportswear,Regular
+113,Jennifer,Brown,Female,24,2001-04-05,+1-983-877-5450,jennifer.brown369@email.com,Philadelphia,High,Sportswear,Medium Value
+114,Karen,Jones,Female,41,1984-02-05,+1-212-742-8861,karen.jones623@email.com,San Jose,High,Sportswear,High Value
+115,Steven,Miller,Male,54,1971-07-14,+1-615-284-2000,steven.miller497@email.com,Los Angeles,Medium,Classic,Regular
+116,Robert,Robinson,Male,39,1986-02-10,+1-794-975-8232,robert.robinson73@email.com,Austin,High,Sportswear,High Value
+117,Sarah,Lewis,Female,33,1992-11-22,+1-795-241-1326,sarah.lewis987@email.com,New York,Low,Casual,Regular
+118,Jennifer,Williams,Female,47,1978-08-06,+1-655-546-1423,jennifer.williams839@email.com,Phoenix,High,Casual,High Value
+119,Emily,Anderson,Female,24,2001-07-11,+1-869-342-9707,emily.anderson84@email.com,Chicago,High,Fashion,Medium Value
+120,Laura,Smith,Female,40,1985-05-25,+1-734-403-9357,laura.smith472@email.com,Houston,High,Casual,High Value
+121,Christopher,Davis,Male,18,2007-09-21,+1-213-878-7177,christopher.davis549@email.com,Seattle,Low,Streetwear,New Customers
+122,William,Martin,Male,18,2007-05-25,+1-500-851-2054,william.martin947@email.com,Los Angeles,Low,Sportswear,New Customers
+123,Jason,Lopez,Male,36,1989-10-21,+1-468-670-4628,jason.lopez830@email.com,Phoenix,Medium,Professional,Regular
+124,Laura,Smith,Female,43,1982-07-19,+1-427-742-3157,laura.smith813@email.com,Denver,High,Sportswear,High Value
+125,Joshua,Clark,Male,24,2001-07-23,+1-628-628-1311,joshua.clark354@email.com,Chicago,Low,Sportswear,New Customers
+126,Rebecca,Wilson,Female,69,1956-03-18,+1-975-402-2375,rebecca.wilson240@email.com,San Jose,Premium,Casual,High Value
+127,Michael,Moore,Male,22,2003-08-21,+1-849-520-6862,michael.moore333@email.com,Chicago,High,Sportswear,Medium Value
+128,Nancy,Lee,Female,53,1972-10-27,+1-423-971-2471,nancy.lee147@email.com,San Jose,Medium,Professional,Regular
+129,Nancy,Clark,Female,52,1973-11-26,+1-673-790-2246,nancy.clark480@email.com,Denver,High,Casual,High Value
+130,Jason,Wilson,Male,59,1966-10-02,+1-740-848-3973,jason.wilson165@email.com,New York,High,Casual,High Value
+131,John,Williams,Male,31,1994-03-13,+1-492-970-1620,john.williams387@email.com,San Diego,High,Professional,Medium Value
+132,Michelle,Davis,Female,32,1993-07-25,+1-875-728-1432,michelle.davis195@email.com,Boston,High,Professional,Medium Value
+133,Emma,Jackson,Female,31,1994-07-03,+1-764-365-7025,emma.jackson170@email.com,New York,High,Sportswear,Medium Value
+134,Sarah,Martinez,Female,46,1979-05-06,+1-839-463-4064,sarah.martinez623@email.com,Boston,Medium,Casual,Regular
+135,Emma,Clark,Female,61,1964-05-16,+1-852-338-6186,emma.clark862@email.com,San Jose,High,Casual,High Value
+136,Richard,Lee,Male,30,1995-12-17,+1-266-458-1735,richard.lee576@email.com,Seattle,High,Professional,Medium Value
+137,Emily,Taylor,Female,59,1966-12-07,+1-206-416-4994,emily.taylor758@email.com,Boston,Medium,Classic,Regular
+138,Susan,Taylor,Female,37,1988-11-22,+1-564-931-1729,susan.taylor520@email.com,San Diego,Medium,Casual,Regular
+139,Laura,Garcia,Female,27,1998-05-24,+1-432-300-1751,laura.garcia6@email.com,Denver,High,Sportswear,Medium Value
+140,Lisa,Anderson,Female,37,1988-11-23,+1-967-517-6049,lisa.anderson356@email.com,Boston,High,Casual,High Value
+141,Jason,Lee,Male,43,1982-04-13,+1-559-281-4874,jason.lee720@email.com,San Diego,Medium,Sportswear,Regular
+142,James,Thomas,Male,36,1989-05-11,+1-780-891-1824,james.thomas842@email.com,Chicago,High,Sportswear,High Value
+143,John,Thomas,Male,27,1998-05-27,+1-466-865-1814,john.thomas615@email.com,Philadelphia,High,Sportswear,Medium Value
+144,Matthew,Harris,Male,26,1999-07-21,+1-476-683-7771,matthew.harris882@email.com,Miami,Low,Sportswear,Regular
+145,Mark,Miller,Male,22,2003-03-18,+1-236-718-3726,mark.miller817@email.com,Denver,Low,Casual,New Customers
+146,Lisa,Miller,Female,31,1994-11-19,+1-313-388-2667,lisa.miller208@email.com,New York,High,Casual,Medium Value
+147,Stephanie,White,Female,22,2003-01-06,+1-579-318-4797,stephanie.white176@email.com,Houston,Low,Sportswear,New Customers
+148,Emily,Walker,Female,31,1994-11-28,+1-408-208-5208,emily.walker528@email.com,Chicago,Medium,Casual,Regular
+149,Jessica,Taylor,Female,50,1975-05-12,+1-736-341-9258,jessica.taylor624@email.com,San Diego,High,Casual,High Value
+150,Justin,Thomas,Male,27,1998-06-19,+1-402-850-8245,justin.thomas922@email.com,Miami,High,Sportswear,Medium Value
+151,Brandon,Taylor,Male,27,1998-02-05,+1-372-819-4891,brandon.taylor835@email.com,New York,Medium,Sportswear,Regular
+152,Jason,White,Male,34,1991-04-28,+1-814-699-2941,jason.white992@email.com,Dallas,Low,Sportswear,Regular
+153,Karen,Taylor,Female,28,1997-06-24,+1-405-724-2139,karen.taylor17@email.com,San Antonio,Low,Sportswear,Regular
+154,Joseph,Jones,Male,43,1982-04-26,+1-858-365-9875,joseph.jones276@email.com,San Antonio,High,Casual,High Value
+155,Nancy,Jones,Female,35,1990-02-18,+1-868-439-8419,nancy.jones841@email.com,Dallas,High,Casual,Medium Value
+156,Elizabeth,Martin,Female,43,1982-08-25,+1-942-903-9098,elizabeth.martin637@email.com,Philadelphia,Medium,Casual,Regular
+157,John,Lee,Male,43,1982-05-08,+1-472-689-2617,john.lee9@email.com,Houston,High,Casual,High Value
+158,Barbara,Miller,Female,39,1986-10-26,+1-774-841-1977,barbara.miller584@email.com,San Diego,Medium,Casual,Regular
+159,Daniel,Miller,Male,40,1985-01-13,+1-850-476-2204,daniel.miller113@email.com,Austin,Premium,Casual,High Value
+160,Stephanie,Anderson,Female,29,1996-03-21,+1-975-367-5332,stephanie.anderson304@email.com,San Antonio,High,Fashion,Medium Value
+161,Donald,Jackson,Male,23,2002-11-06,+1-949-382-8271,donald.jackson375@email.com,New York,High,Streetwear,Medium Value
+162,Sophia,Martin,Female,56,1969-08-23,+1-562-576-6106,sophia.martin62@email.com,Chicago,High,Casual,High Value
+163,Richard,Miller,Male,39,1986-09-15,+1-242-652-6318,richard.miller68@email.com,Houston,Premium,Sportswear,High Value
+164,Jason,Garcia,Male,28,1997-10-07,+1-976-325-2309,jason.garcia52@email.com,Dallas,Medium,Sportswear,Regular
+165,Lisa,Harris,Female,25,2000-05-15,+1-370-513-1599,lisa.harris240@email.com,Denver,Low,Sportswear,Regular
+166,Jennifer,Harris,Female,28,1997-03-06,+1-387-367-2630,jennifer.harris325@email.com,Phoenix,Medium,Sportswear,Regular
+167,James,Brown,Male,47,1978-10-17,+1-328-358-4206,james.brown763@email.com,Boston,Medium,Professional,Regular
+168,Jason,Martin,Male,37,1988-11-27,+1-913-925-8892,jason.martin243@email.com,Phoenix,Premium,Sportswear,High Value
+169,Ashley,Hernandez,Female,54,1971-05-12,+1-819-421-4106,ashley.hernandez738@email.com,Boston,Premium,Casual,High Value
+170,Donald,Martinez,Male,23,2002-10-09,+1-878-663-7167,donald.martinez507@email.com,San Diego,Medium,Sportswear,New Customers
+171,Justin,Lewis,Male,42,1983-07-13,+1-313-666-2330,justin.lewis130@email.com,Miami,Premium,Sportswear,High Value
+172,Stephanie,Anderson,Female,48,1977-09-08,+1-613-373-9959,stephanie.anderson572@email.com,Houston,Medium,Classic,Regular
+173,Brandon,Taylor,Male,51,1974-09-13,+1-890-520-8460,brandon.taylor3@email.com,Chicago,Premium,Classic,High Value
+174,Mary,Wilson,Female,38,1987-04-02,+1-466-283-4144,mary.wilson267@email.com,Los Angeles,High,Casual,High Value
+175,Melissa,Clark,Female,56,1969-09-22,+1-852-354-9840,melissa.clark886@email.com,Boston,Medium,Casual,Regular
+176,David,Lewis,Male,44,1981-02-15,+1-309-721-7450,david.lewis142@email.com,San Diego,High,Casual,High Value
+177,William,Hernandez,Male,41,1984-03-02,+1-268-553-2233,william.hernandez40@email.com,San Jose,Medium,Sportswear,Regular
+178,Richard,Hernandez,Male,29,1996-08-24,+1-587-848-4861,richard.hernandez306@email.com,Boston,Low,Casual,Regular
+179,Sophia,Walker,Female,29,1996-01-19,+1-924-223-1904,sophia.walker391@email.com,Houston,High,Sportswear,Medium Value
+180,Matthew,Miller,Male,25,2000-04-13,+1-362-800-7001,matthew.miller431@email.com,Phoenix,Medium,Streetwear,Regular
+181,Karen,Wilson,Female,64,1961-02-05,+1-627-660-9704,karen.wilson638@email.com,Austin,Premium,Classic,High Value
+182,Kevin,Lewis,Male,24,2001-10-13,+1-279-375-9707,kevin.lewis739@email.com,Denver,High,Streetwear,Medium Value
+183,Joshua,Hernandez,Male,38,1987-04-20,+1-881-308-6661,joshua.hernandez673@email.com,Seattle,High,Casual,High Value
+184,Anthony,Davis,Male,21,2004-09-17,+1-527-743-6223,anthony.davis267@email.com,Seattle,Low,Casual,New Customers
+185,Kevin,Brown,Male,31,1994-08-28,+1-674-239-9314,kevin.brown418@email.com,Chicago,Medium,Casual,Regular
+186,Linda,Johnson,Female,53,1972-08-06,+1-879-203-7772,linda.johnson230@email.com,San Antonio,Medium,Casual,Regular
+187,Barbara,Thomas,Female,58,1967-03-06,+1-731-623-1575,barbara.thomas909@email.com,San Antonio,High,Casual,High Value
+188,William,Anderson,Male,35,1990-10-15,+1-676-818-1592,william.anderson970@email.com,Phoenix,High,Professional,Medium Value
+189,Anthony,Martin,Male,54,1971-05-20,+1-255-655-9973,anthony.martin147@email.com,Austin,Medium,Classic,Regular
+190,Justin,Anderson,Male,58,1967-02-12,+1-228-481-9515,justin.anderson816@email.com,Boston,Premium,Classic,High Value
+191,James,Martin,Male,26,1999-10-13,+1-541-751-3875,james.martin97@email.com,Miami,High,Sportswear,Medium Value
+192,Joseph,Garcia,Male,18,2007-02-18,+1-947-603-7202,joseph.garcia138@email.com,San Jose,High,Sportswear,Medium Value
+193,Amanda,Robinson,Female,46,1979-08-23,+1-674-269-8993,amanda.robinson583@email.com,Miami,High,Casual,High Value
+194,Kevin,Clark,Male,22,2003-01-16,+1-985-549-3401,kevin.clark549@email.com,Denver,Medium,Sportswear,New Customers
+195,Michelle,Clark,Female,66,1959-05-02,+1-666-822-2674,michelle.clark243@email.com,San Jose,Medium,Casual,Regular
+196,Michael,Williams,Male,30,1995-01-22,+1-531-271-3667,michael.williams594@email.com,Boston,High,Casual,Medium Value
+197,Elizabeth,Thomas,Female,37,1988-05-14,+1-281-928-8703,elizabeth.thomas479@email.com,Austin,Medium,Professional,Regular
+198,Emily,Johnson,Female,21,2004-03-22,+1-680-714-3115,emily.johnson822@email.com,New York,Low,Fashion,New Customers
+199,Mark,Garcia,Male,38,1987-01-01,+1-352-935-5883,mark.garcia323@email.com,Austin,Medium,Sportswear,Regular
+200,Melissa,Smith,Female,43,1982-01-27,+1-857-779-3363,melissa.smith210@email.com,Austin,High,Casual,High Value
+201,Steven,Brown,Male,53,1972-11-10,+1-504-391-9205,steven.brown905@email.com,Philadelphia,High,Casual,High Value
+202,Jessica,Brown,Female,31,1994-04-05,+1-674-950-5162,jessica.brown774@email.com,Boston,High,Sportswear,Medium Value
+203,Karen,Walker,Female,41,1984-08-04,+1-219-229-5781,karen.walker288@email.com,Houston,High,Professional,High Value
+204,Sophia,Wilson,Female,37,1988-09-13,+1-341-688-3981,sophia.wilson349@email.com,San Jose,High,Casual,High Value
+205,Amy,Martinez,Female,64,1961-03-06,+1-610-587-6391,amy.martinez574@email.com,Seattle,Medium,Casual,Regular
+206,Andrew,Hernandez,Male,49,1976-12-08,+1-985-587-6776,andrew.hernandez757@email.com,New York,Premium,Casual,High Value
+207,James,Robinson,Male,65,1960-02-06,+1-659-455-9186,james.robinson655@email.com,Dallas,Premium,Classic,High Value
+208,Melissa,Davis,Female,40,1985-12-25,+1-387-979-2726,melissa.davis963@email.com,Boston,Medium,Casual,Regular
+209,Stephanie,Wilson,Female,26,1999-12-06,+1-954-935-4324,stephanie.wilson669@email.com,San Diego,Medium,Fashion,Regular
+210,Nancy,Jones,Female,67,1958-03-14,+1-661-201-9991,nancy.jones683@email.com,San Jose,Premium,Classic,High Value
+211,Linda,Martin,Female,23,2002-03-09,+1-850-441-2374,linda.martin868@email.com,Seattle,High,Sportswear,Medium Value
+212,Matthew,Johnson,Male,66,1959-09-11,+1-893-980-8467,matthew.johnson557@email.com,Phoenix,Medium,Casual,Regular
+213,Andrew,Anderson,Male,48,1977-07-04,+1-423-820-5551,andrew.anderson447@email.com,Boston,High,Casual,High Value
+214,Matthew,Wilson,Male,36,1989-10-24,+1-934-836-7674,matthew.wilson676@email.com,Philadelphia,High,Casual,High Value
+215,Michael,Martinez,Male,35,1990-09-28,+1-671-351-9340,michael.martinez990@email.com,San Diego,High,Casual,Medium Value
+216,Justin,Johnson,Male,62,1963-04-13,+1-284-532-4040,justin.johnson938@email.com,Seattle,Premium,Casual,High Value
+217,Jessica,Martin,Female,19,2006-01-17,+1-371-443-2857,jessica.martin496@email.com,Seattle,Low,Fashion,New Customers
+218,Jason,Martin,Male,34,1991-07-25,+1-408-544-2548,jason.martin42@email.com,Denver,High,Casual,Medium Value
+219,Joseph,Brown,Male,31,1994-12-07,+1-617-326-2824,joseph.brown593@email.com,Los Angeles,Medium,Sportswear,Regular
+220,Andrew,Jackson,Male,32,1993-10-22,+1-666-582-4139,andrew.jackson741@email.com,Los Angeles,High,Casual,Medium Value
+221,Amanda,Johnson,Female,46,1979-07-06,+1-554-723-3244,amanda.johnson947@email.com,New York,High,Casual,High Value
+222,Richard,Thomas,Male,33,1992-02-01,+1-259-911-8685,richard.thomas643@email.com,Phoenix,Low,Professional,Regular
+223,John,Walker,Male,54,1971-08-10,+1-627-334-3763,john.walker799@email.com,Austin,Medium,Classic,Regular
+224,Emma,Thomas,Female,41,1984-12-22,+1-687-588-3336,emma.thomas543@email.com,San Jose,Premium,Sportswear,High Value
+225,Jennifer,Taylor,Female,32,1993-10-25,+1-580-799-7340,jennifer.taylor191@email.com,Houston,Medium,Sportswear,Regular
+226,Nancy,Garcia,Female,57,1968-11-13,+1-918-231-5883,nancy.garcia411@email.com,Austin,Premium,Professional,High Value
+227,Sophia,Anderson,Female,30,1995-03-21,+1-615-568-4901,sophia.anderson186@email.com,Philadelphia,Medium,Sportswear,Regular
+228,Jason,Robinson,Male,22,2003-02-06,+1-254-578-7209,jason.robinson858@email.com,Boston,Medium,Streetwear,New Customers
+229,Laura,Davis,Female,32,1993-07-04,+1-250-806-3331,laura.davis729@email.com,Miami,Medium,Casual,Regular
+230,Nancy,Anderson,Female,54,1971-08-11,+1-858-787-5619,nancy.anderson199@email.com,Boston,Medium,Casual,Regular
+231,Amanda,Martinez,Female,38,1987-08-17,+1-539-446-9887,amanda.martinez922@email.com,Philadelphia,High,Sportswear,High Value
+232,Richard,Lewis,Male,23,2002-05-28,+1-980-814-2698,richard.lewis941@email.com,San Jose,Medium,Sportswear,New Customers
+233,Karen,Harris,Female,50,1975-07-23,+1-851-281-8457,karen.harris140@email.com,San Jose,High,Casual,High Value
+234,Donald,Martin,Male,30,1995-12-19,+1-506-699-8007,donald.martin976@email.com,Dallas,High,Casual,Medium Value
+235,Rebecca,Moore,Female,31,1994-10-17,+1-367-672-9699,rebecca.moore861@email.com,Dallas,Medium,Casual,Regular
+236,Kimberly,Moore,Female,46,1979-11-13,+1-527-935-2674,kimberly.moore115@email.com,San Antonio,High,Casual,High Value
+237,Donald,Walker,Male,43,1982-02-05,+1-902-288-1035,donald.walker794@email.com,Seattle,Medium,Sportswear,Regular
+238,Amy,Williams,Female,21,2004-12-14,+1-492-476-2571,amy.williams865@email.com,Denver,Medium,Sportswear,New Customers
+239,Susan,Jones,Female,29,1996-10-27,+1-703-504-3884,susan.jones450@email.com,Chicago,High,Fashion,Medium Value
+240,David,Taylor,Male,45,1980-03-16,+1-953-412-2508,david.taylor728@email.com,San Jose,High,Professional,High Value
+241,Stephanie,Taylor,Female,46,1979-01-03,+1-411-418-2748,stephanie.taylor108@email.com,San Jose,High,Casual,High Value
+242,Karen,Brown,Female,48,1977-05-26,+1-837-378-7068,karen.brown373@email.com,New York,High,Classic,High Value
+243,William,Lee,Male,58,1967-12-19,+1-324-874-6411,william.lee795@email.com,Seattle,Premium,Professional,High Value
+244,Jason,Johnson,Male,43,1982-11-12,+1-265-369-1600,jason.johnson609@email.com,San Antonio,Premium,Casual,High Value
+245,Emma,Hernandez,Female,27,1998-09-04,+1-645-328-4644,emma.hernandez322@email.com,Dallas,High,Fashion,Medium Value
+246,Ashley,Lee,Female,18,2007-02-13,+1-687-470-4468,ashley.lee793@email.com,Philadelphia,High,Sportswear,Medium Value
+247,Elizabeth,Lee,Female,55,1970-06-06,+1-899-255-6831,elizabeth.lee182@email.com,San Jose,Premium,Professional,High Value
+248,Laura,Anderson,Female,36,1989-08-23,+1-533-534-2145,laura.anderson357@email.com,Chicago,High,Casual,High Value
+249,Linda,Johnson,Female,32,1993-06-27,+1-999-534-2109,linda.johnson394@email.com,Dallas,High,Casual,Medium Value
+250,Donald,Martin,Male,44,1981-01-16,+1-652-907-5215,donald.martin952@email.com,San Diego,High,Casual,High Value
+251,Brandon,Smith,Male,53,1972-01-28,+1-952-920-7996,brandon.smith671@email.com,Houston,Premium,Classic,High Value
+252,Daniel,Lee,Male,38,1987-05-25,+1-511-476-8880,daniel.lee723@email.com,Austin,High,Professional,High Value
+253,Nancy,Davis,Female,19,2006-10-05,+1-994-831-5695,nancy.davis132@email.com,Austin,Medium,Sportswear,New Customers
+254,Jennifer,Hernandez,Female,49,1976-06-20,+1-776-813-2564,jennifer.hernandez410@email.com,Austin,High,Casual,High Value
+255,Sarah,Lee,Female,47,1978-10-19,+1-348-482-1977,sarah.lee131@email.com,Philadelphia,High,Classic,High Value
+256,Kevin,Walker,Male,52,1973-03-23,+1-358-570-4660,kevin.walker959@email.com,Miami,Premium,Casual,High Value
+257,Andrew,Lewis,Male,56,1969-04-13,+1-815-898-3008,andrew.lewis671@email.com,New York,Medium,Classic,Regular
+258,Joshua,Taylor,Male,56,1969-02-23,+1-861-946-9226,joshua.taylor407@email.com,Chicago,Premium,Casual,High Value
+259,Barbara,Walker,Female,34,1991-11-12,+1-969-443-1998,barbara.walker110@email.com,Miami,Medium,Casual,Regular
+260,Sarah,Harris,Female,55,1970-01-19,+1-794-983-8092,sarah.harris259@email.com,Miami,Medium,Classic,Regular
+261,Ashley,Lopez,Female,19,2006-07-10,+1-467-699-4973,ashley.lopez832@email.com,Boston,Low,Fashion,New Customers
+262,William,Brown,Male,35,1990-07-27,+1-259-569-7836,william.brown238@email.com,San Diego,Premium,Casual,Regular
+263,Kevin,Smith,Male,25,2000-03-23,+1-894-209-4254,kevin.smith423@email.com,Austin,High,Casual,Medium Value
+264,Joseph,Garcia,Male,19,2006-05-17,+1-610-653-3018,joseph.garcia301@email.com,Los Angeles,Medium,Casual,New Customers
+265,Jason,Harris,Male,20,2005-06-18,+1-952-936-2639,jason.harris43@email.com,Denver,Low,Streetwear,New Customers
+266,Jason,Martin,Male,41,1984-06-11,+1-955-554-6076,jason.martin135@email.com,Los Angeles,Medium,Casual,Regular
+267,Christopher,Martinez,Male,32,1993-03-22,+1-943-503-8715,christopher.martinez399@email.com,Seattle,High,Professional,Medium Value
+268,Brian,Wilson,Male,68,1957-05-18,+1-265-202-6331,brian.wilson114@email.com,San Diego,Premium,Professional,High Value
+269,James,White,Male,58,1967-01-27,+1-954-607-9222,james.white583@email.com,Dallas,Premium,Professional,High Value
+270,Susan,Miller,Female,31,1994-10-01,+1-828-228-8237,susan.miller864@email.com,Seattle,Medium,Professional,Regular
+271,Brian,Brown,Male,70,1955-10-20,+1-725-308-3849,brian.brown384@email.com,Miami,High,Classic,High Value
+272,Richard,Miller,Male,67,1958-02-14,+1-844-787-7591,richard.miller692@email.com,Boston,Premium,Casual,High Value
+273,Amanda,Hernandez,Female,43,1982-12-15,+1-633-344-5266,amanda.hernandez400@email.com,San Jose,Medium,Casual,Regular
+274,Jessica,Jones,Female,32,1993-12-01,+1-588-657-6944,jessica.jones157@email.com,Houston,Medium,Casual,Regular
+275,Susan,Miller,Female,34,1991-10-15,+1-483-249-3535,susan.miller668@email.com,Seattle,Medium,Professional,Regular
+276,Ashley,Jackson,Female,25,2000-04-18,+1-729-586-5771,ashley.jackson563@email.com,New York,Low,Fashion,Regular
+277,Stephanie,Garcia,Female,33,1992-06-24,+1-470-603-3442,stephanie.garcia3@email.com,Denver,Medium,Casual,Regular
+278,Matthew,Thomas,Male,28,1997-12-05,+1-566-409-8918,matthew.thomas264@email.com,Boston,Low,Sportswear,Regular
+279,Donald,Brown,Male,27,1998-02-05,+1-904-976-9044,donald.brown59@email.com,Chicago,Medium,Sportswear,Regular
+280,Nancy,Martinez,Female,20,2005-07-12,+1-855-731-5372,nancy.martinez418@email.com,Philadelphia,Medium,Casual,New Customers
+281,Michael,Walker,Male,50,1975-11-05,+1-644-857-5862,michael.walker395@email.com,Dallas,Premium,Classic,High Value
+282,Jason,Davis,Male,62,1963-08-12,+1-438-937-4453,jason.davis31@email.com,Denver,Premium,Casual,High Value
+283,Amy,Johnson,Female,33,1992-04-07,+1-669-339-8565,amy.johnson781@email.com,Phoenix,High,Sportswear,Medium Value
+284,David,Martin,Male,25,2000-07-02,+1-258-474-2753,david.martin374@email.com,Seattle,Medium,Sportswear,Regular
+285,Elizabeth,Anderson,Female,33,1992-12-15,+1-583-751-8532,elizabeth.anderson171@email.com,San Diego,Medium,Casual,Regular
+286,John,Williams,Male,39,1986-09-17,+1-538-594-8878,john.williams739@email.com,Boston,High,Sportswear,High Value
+287,Melissa,Hernandez,Female,66,1959-09-04,+1-871-883-1555,melissa.hernandez168@email.com,Boston,Medium,Casual,Regular
+288,Brian,Clark,Male,44,1981-03-18,+1-264-355-2562,brian.clark516@email.com,San Antonio,Medium,Casual,Regular
+289,Lisa,Anderson,Female,43,1982-04-19,+1-991-736-8103,lisa.anderson161@email.com,Los Angeles,High,Casual,High Value
+290,Sarah,Johnson,Female,19,2006-06-19,+1-910-260-3250,sarah.johnson844@email.com,Miami,Medium,Sportswear,New Customers
+291,Joseph,White,Male,27,1998-08-26,+1-890-929-3748,joseph.white791@email.com,Phoenix,High,Streetwear,Medium Value
+292,Emma,Martinez,Female,36,1989-01-17,+1-582-701-6561,emma.martinez964@email.com,Houston,Medium,Sportswear,Regular
+293,Amanda,Williams,Female,25,2000-04-12,+1-635-474-2946,amanda.williams871@email.com,Denver,Medium,Casual,Regular
+294,David,Hernandez,Male,37,1988-10-16,+1-857-973-7472,david.hernandez468@email.com,Los Angeles,Premium,Sportswear,High Value
+295,Sophia,Johnson,Female,40,1985-05-17,+1-812-936-3163,sophia.johnson137@email.com,Phoenix,High,Casual,High Value
+296,Lisa,Thomas,Female,33,1992-11-07,+1-900-358-9557,lisa.thomas831@email.com,Dallas,High,Professional,Medium Value
+297,Richard,Lopez,Male,25,2000-03-08,+1-562-776-2820,richard.lopez518@email.com,Phoenix,Medium,Sportswear,Regular
+298,Rebecca,Anderson,Female,36,1989-05-15,+1-909-864-9648,rebecca.anderson35@email.com,San Antonio,High,Sportswear,High Value
+299,Kimberly,Harris,Female,50,1975-06-05,+1-738-879-7656,kimberly.harris121@email.com,Houston,High,Casual,High Value
+300,Robert,Williams,Male,27,1998-04-16,+1-695-551-5139,robert.williams999@email.com,Boston,Medium,Streetwear,Regular
+301,John,Williams,Male,36,1989-03-18,+1-690-604-1990,john.williams878@email.com,Houston,High,Professional,High Value
+302,Jessica,Robinson,Female,38,1987-10-16,+1-923-921-2296,jessica.robinson59@email.com,Philadelphia,High,Casual,High Value
+303,Laura,Garcia,Female,24,2001-10-04,+1-879-803-2095,laura.garcia840@email.com,Chicago,Medium,Sportswear,New Customers
+304,Lisa,Anderson,Female,24,2001-12-28,+1-900-989-6339,lisa.anderson361@email.com,New York,Low,Casual,New Customers
+305,Jennifer,Jackson,Female,19,2006-10-06,+1-910-527-7474,jennifer.jackson118@email.com,San Diego,High,Fashion,Medium Value
+306,Brandon,Johnson,Male,35,1990-08-27,+1-703-855-9602,brandon.johnson592@email.com,San Antonio,High,Casual,Medium Value
+307,Joshua,Davis,Male,23,2002-07-25,+1-698-699-4621,joshua.davis326@email.com,San Jose,Low,Casual,New Customers
+308,Amy,Smith,Female,37,1988-10-16,+1-236-222-2377,amy.smith124@email.com,Denver,High,Sportswear,High Value
+309,Andrew,Garcia,Male,21,2004-08-21,+1-560-290-7353,andrew.garcia53@email.com,Seattle,Low,Sportswear,New Customers
+310,Elizabeth,Garcia,Female,32,1993-11-07,+1-441-977-9023,elizabeth.garcia827@email.com,New York,High,Sportswear,Medium Value
+311,Laura,Lopez,Female,41,1984-05-10,+1-400-599-3591,laura.lopez950@email.com,San Antonio,High,Sportswear,High Value
+312,William,Walker,Male,42,1983-09-09,+1-691-439-9814,william.walker679@email.com,Boston,Medium,Professional,Regular
+313,Kimberly,Davis,Female,43,1982-06-01,+1-396-856-6394,kimberly.davis153@email.com,Boston,High,Sportswear,High Value
+314,Melissa,Jones,Female,35,1990-11-03,+1-856-247-3564,melissa.jones559@email.com,Austin,High,Professional,Medium Value
+315,Anthony,Smith,Male,44,1981-01-18,+1-221-449-4818,anthony.smith161@email.com,Denver,Medium,Professional,Regular
+316,Steven,Smith,Male,26,1999-08-22,+1-456-439-8858,steven.smith669@email.com,Boston,High,Streetwear,Medium Value
+317,Nancy,Robinson,Female,31,1994-11-23,+1-539-410-9722,nancy.robinson824@email.com,Denver,High,Casual,Medium Value
+318,Ryan,Walker,Male,49,1976-08-17,+1-217-241-8274,ryan.walker418@email.com,Austin,High,Professional,High Value
+319,Joshua,Hernandez,Male,22,2003-04-20,+1-297-623-7085,joshua.hernandez99@email.com,New York,Low,Casual,New Customers
+320,Jessica,Walker,Female,48,1977-03-27,+1-548-937-3171,jessica.walker326@email.com,Boston,High,Casual,High Value
+321,Michael,Johnson,Male,42,1983-07-20,+1-321-922-8354,michael.johnson614@email.com,New York,High,Sportswear,High Value
+322,Kimberly,Brown,Female,57,1968-08-02,+1-997-449-9581,kimberly.brown890@email.com,Houston,Medium,Casual,Regular
+323,Michelle,Wilson,Female,48,1977-10-21,+1-757-633-8165,michelle.wilson119@email.com,Boston,High,Professional,High Value
+324,William,Johnson,Male,62,1963-06-03,+1-484-638-1949,william.johnson665@email.com,Miami,High,Professional,High Value
+325,Sophia,Davis,Female,69,1956-09-11,+1-380-552-3799,sophia.davis671@email.com,Austin,Premium,Professional,High Value
+326,Richard,Taylor,Male,37,1988-06-17,+1-476-650-6309,richard.taylor51@email.com,Philadelphia,High,Professional,High Value
+327,Kimberly,Taylor,Female,24,2001-09-11,+1-991-817-5977,kimberly.taylor189@email.com,Austin,Medium,Fashion,New Customers
+328,Emma,Thomas,Female,51,1974-05-27,+1-226-535-3797,emma.thomas120@email.com,Los Angeles,High,Professional,High Value
+329,Robert,Lee,Male,62,1963-06-10,+1-497-850-2317,robert.lee514@email.com,Houston,High,Casual,High Value
+330,Jennifer,Lewis,Female,24,2001-07-22,+1-849-586-5740,jennifer.lewis926@email.com,Austin,Medium,Fashion,New Customers
+331,Steven,Miller,Male,43,1982-04-19,+1-206-436-3679,steven.miller65@email.com,Philadelphia,High,Casual,High Value
+332,Sophia,Harris,Female,43,1982-03-12,+1-296-885-3686,sophia.harris368@email.com,Los Angeles,High,Professional,High Value
+333,Amanda,Martinez,Female,25,2000-01-21,+1-229-415-2537,amanda.martinez228@email.com,San Jose,Medium,Fashion,Regular
+334,Rebecca,Martin,Female,25,2000-06-07,+1-249-432-2898,rebecca.martin464@email.com,New York,Medium,Casual,Regular
+335,Emma,Jackson,Female,43,1982-12-04,+1-866-999-7501,emma.jackson384@email.com,Miami,Premium,Casual,High Value
+336,Mary,Lopez,Female,69,1956-10-05,+1-423-381-1428,mary.lopez948@email.com,New York,High,Classic,High Value
+337,Nancy,Williams,Female,53,1972-01-22,+1-480-609-3501,nancy.williams816@email.com,Dallas,Medium,Casual,Regular
+338,Joseph,Walker,Male,65,1960-02-13,+1-916-514-7245,joseph.walker364@email.com,Seattle,High,Professional,High Value
+339,Stephanie,Brown,Female,66,1959-03-16,+1-731-731-7365,stephanie.brown121@email.com,San Antonio,Medium,Professional,Regular
+340,Sarah,Miller,Female,46,1979-05-22,+1-930-498-9362,sarah.miller173@email.com,Boston,High,Classic,High Value
+341,Ryan,Anderson,Male,21,2004-11-23,+1-363-594-5949,ryan.anderson114@email.com,Dallas,Low,Streetwear,New Customers
+342,Steven,Davis,Male,25,2000-10-24,+1-724-575-8731,steven.davis815@email.com,San Jose,High,Streetwear,Medium Value
+343,Laura,Jones,Female,55,1970-07-17,+1-855-422-2862,laura.jones709@email.com,San Jose,High,Casual,High Value
+344,Michelle,Wilson,Female,28,1997-08-05,+1-394-718-5176,michelle.wilson248@email.com,San Diego,High,Sportswear,Medium Value
+345,Brandon,Thomas,Male,60,1965-05-03,+1-534-609-7147,brandon.thomas370@email.com,Chicago,Premium,Casual,High Value
+346,Elizabeth,Williams,Female,30,1995-09-07,+1-815-475-3270,elizabeth.williams326@email.com,Boston,Low,Sportswear,Regular
+347,Elizabeth,Martinez,Female,26,1999-07-18,+1-271-263-6593,elizabeth.martinez141@email.com,San Jose,Low,Fashion,Regular
+348,Joshua,Lee,Male,66,1959-07-23,+1-221-900-2594,joshua.lee938@email.com,Austin,Premium,Casual,High Value
+349,Mary,Hernandez,Female,39,1986-09-02,+1-753-640-9630,mary.hernandez85@email.com,San Antonio,High,Casual,High Value
+350,Steven,Brown,Male,39,1986-01-10,+1-382-402-8932,steven.brown405@email.com,Phoenix,Medium,Casual,Regular
+351,Mary,Walker,Female,47,1978-03-26,+1-372-395-1161,mary.walker572@email.com,Dallas,Premium,Casual,High Value
+352,Elizabeth,Martinez,Female,63,1962-01-10,+1-765-829-3241,elizabeth.martinez263@email.com,Boston,High,Professional,High Value
+353,James,Smith,Male,45,1980-06-20,+1-277-789-7089,james.smith271@email.com,Los Angeles,High,Professional,High Value
+354,Nancy,Martinez,Female,48,1977-06-16,+1-355-277-8115,nancy.martinez158@email.com,Denver,High,Professional,High Value
+355,Barbara,Lee,Female,35,1990-07-08,+1-521-356-8012,barbara.lee81@email.com,Chicago,High,Casual,Medium Value
+356,James,Clark,Male,22,2003-07-24,+1-374-658-9062,james.clark410@email.com,Boston,High,Sportswear,Medium Value
+357,Ashley,Jones,Female,20,2005-12-17,+1-814-948-6990,ashley.jones182@email.com,Dallas,Low,Fashion,New Customers
+358,Joshua,Lewis,Male,43,1982-01-12,+1-581-954-1383,joshua.lewis147@email.com,Seattle,High,Professional,High Value
+359,Donald,Walker,Male,42,1983-08-07,+1-422-211-7302,donald.walker768@email.com,New York,Medium,Casual,Regular
+360,Brandon,Lopez,Male,37,1988-03-04,+1-335-427-7682,brandon.lopez398@email.com,Seattle,Medium,Casual,Regular
+361,Barbara,Clark,Female,25,2000-07-02,+1-543-375-9217,barbara.clark457@email.com,San Antonio,High,Fashion,Medium Value
+362,Steven,White,Male,57,1968-04-23,+1-906-586-8021,steven.white294@email.com,Seattle,High,Casual,High Value
+363,John,Harris,Male,26,1999-01-12,+1-919-265-2895,john.harris601@email.com,Austin,Low,Sportswear,Regular
+364,Nancy,Davis,Female,47,1978-06-26,+1-435-932-6644,nancy.davis100@email.com,Denver,High,Casual,High Value
+365,Kimberly,Walker,Female,25,2000-11-18,+1-427-288-8899,kimberly.walker514@email.com,Houston,Medium,Casual,Regular
+366,Susan,Walker,Female,64,1961-08-06,+1-843-416-5077,susan.walker347@email.com,Dallas,Medium,Casual,Regular
+367,Joseph,Garcia,Male,60,1965-12-11,+1-319-621-9645,joseph.garcia411@email.com,Seattle,Medium,Casual,Regular
+368,Brandon,Robinson,Male,30,1995-08-27,+1-203-670-2643,brandon.robinson270@email.com,Austin,Medium,Sportswear,Regular
+369,Amy,Harris,Female,44,1981-10-27,+1-341-220-3575,amy.harris174@email.com,Houston,Premium,Professional,High Value
+370,Richard,Johnson,Male,44,1981-11-21,+1-369-987-9395,richard.johnson350@email.com,Houston,High,Casual,High Value
+371,Ashley,Davis,Female,57,1968-08-13,+1-445-496-2947,ashley.davis385@email.com,San Antonio,Premium,Professional,High Value
+372,John,Smith,Male,50,1975-10-20,+1-936-275-2339,john.smith635@email.com,San Diego,Medium,Professional,Regular
+373,Justin,Taylor,Male,39,1986-12-13,+1-771-928-8311,justin.taylor583@email.com,Austin,High,Casual,High Value
+374,Karen,Hernandez,Female,59,1966-06-14,+1-507-656-7135,karen.hernandez531@email.com,Chicago,Premium,Classic,High Value
+375,Lisa,Miller,Female,38,1987-12-18,+1-305-810-8784,lisa.miller566@email.com,Dallas,Premium,Casual,High Value
+376,Mary,Williams,Female,35,1990-09-23,+1-936-791-1936,mary.williams205@email.com,Chicago,High,Sportswear,Medium Value
+377,Anthony,Martin,Male,69,1956-09-01,+1-984-957-5765,anthony.martin968@email.com,Miami,Premium,Casual,High Value
+378,Jennifer,Taylor,Female,25,2000-09-14,+1-456-970-9183,jennifer.taylor942@email.com,San Antonio,High,Fashion,Medium Value
+379,Daniel,Lee,Male,57,1968-10-15,+1-737-709-2849,daniel.lee468@email.com,Denver,Premium,Casual,High Value
+380,Emma,Robinson,Female,32,1993-06-13,+1-575-612-3805,emma.robinson960@email.com,San Jose,Low,Sportswear,Regular
+381,Justin,Jackson,Male,44,1981-01-21,+1-313-931-9800,justin.jackson729@email.com,Dallas,High,Sportswear,High Value
+382,Anthony,Miller,Male,65,1960-07-24,+1-239-638-7422,anthony.miller404@email.com,Chicago,Premium,Professional,High Value
+383,William,Moore,Male,38,1987-11-14,+1-775-364-3696,william.moore66@email.com,San Antonio,High,Casual,High Value
+384,John,Jackson,Male,33,1992-01-05,+1-654-346-8953,john.jackson436@email.com,San Jose,Medium,Sportswear,Regular
+385,Susan,White,Female,21,2004-08-27,+1-607-214-9005,susan.white554@email.com,San Jose,High,Fashion,Medium Value
+386,James,Martin,Male,47,1978-02-07,+1-678-907-3192,james.martin262@email.com,Los Angeles,High,Professional,High Value
+387,Ryan,Lopez,Male,41,1984-09-11,+1-349-563-6490,ryan.lopez88@email.com,San Jose,High,Sportswear,High Value
+388,Amy,Jackson,Female,60,1965-06-17,+1-961-839-1778,amy.jackson442@email.com,Los Angeles,High,Casual,High Value
+389,Donald,Davis,Male,44,1981-11-03,+1-678-328-4575,donald.davis680@email.com,Phoenix,Premium,Casual,High Value
+390,Daniel,Moore,Male,26,1999-05-18,+1-681-217-9224,daniel.moore116@email.com,Miami,Low,Sportswear,Regular
+391,Anthony,Lopez,Male,67,1958-08-25,+1-560-818-8516,anthony.lopez735@email.com,Dallas,High,Casual,High Value
+392,Barbara,White,Female,41,1984-09-27,+1-888-852-9043,barbara.white236@email.com,San Diego,High,Casual,High Value
+393,Brandon,Hernandez,Male,33,1992-09-24,+1-718-443-3692,brandon.hernandez74@email.com,Denver,High,Sportswear,Medium Value
+394,Daniel,Lewis,Male,60,1965-12-07,+1-361-464-1592,daniel.lewis141@email.com,Miami,High,Casual,High Value
+395,William,Lewis,Male,19,2006-10-27,+1-555-983-2391,william.lewis906@email.com,Seattle,Low,Casual,New Customers
+396,Jennifer,Lopez,Female,40,1985-09-12,+1-944-509-2037,jennifer.lopez549@email.com,San Antonio,High,Casual,High Value
+397,Susan,Taylor,Female,20,2005-11-12,+1-845-335-9373,susan.taylor601@email.com,Boston,Low,Sportswear,New Customers
+398,Emily,Hernandez,Female,44,1981-05-01,+1-280-965-5130,emily.hernandez761@email.com,Houston,High,Casual,High Value
+399,Christopher,Miller,Male,22,2003-02-19,+1-572-700-6786,christopher.miller774@email.com,Boston,Medium,Sportswear,New Customers
+400,Daniel,Robinson,Male,32,1993-07-23,+1-735-786-1881,daniel.robinson564@email.com,San Antonio,High,Professional,Medium Value
+401,Nancy,Walker,Female,56,1969-05-26,+1-589-312-7740,nancy.walker957@email.com,Los Angeles,Premium,Professional,High Value
+402,Joseph,Smith,Male,19,2006-09-24,+1-490-856-1848,joseph.smith260@email.com,New York,Low,Sportswear,New Customers
+403,Rebecca,Hernandez,Female,26,1999-10-17,+1-775-978-5674,rebecca.hernandez367@email.com,Boston,High,Casual,Medium Value
+404,Mary,Anderson,Female,46,1979-02-06,+1-259-755-8596,mary.anderson842@email.com,Boston,Premium,Professional,High Value
+405,John,Davis,Male,46,1979-12-25,+1-731-448-7036,john.davis966@email.com,Philadelphia,High,Casual,High Value
+406,Michael,Garcia,Male,25,2000-12-12,+1-829-318-6374,michael.garcia183@email.com,Boston,Low,Sportswear,Regular
+407,Amy,Robinson,Female,22,2003-08-24,+1-675-822-6743,amy.robinson916@email.com,Los Angeles,Low,Casual,New Customers
+408,Jessica,Garcia,Female,26,1999-10-07,+1-514-390-7987,jessica.garcia364@email.com,Chicago,High,Casual,Medium Value
+409,Mark,Moore,Male,67,1958-03-20,+1-555-312-6728,mark.moore987@email.com,Seattle,Premium,Professional,High Value
+410,Amanda,Martinez,Female,19,2006-02-13,+1-899-936-8661,amanda.martinez751@email.com,Denver,High,Fashion,Medium Value
+411,Steven,Taylor,Male,36,1989-05-15,+1-726-781-6007,steven.taylor560@email.com,Philadelphia,High,Casual,High Value
+412,Michelle,Clark,Female,45,1980-10-13,+1-761-886-6139,michelle.clark22@email.com,Austin,High,Professional,High Value
+413,Nancy,Walker,Female,58,1967-11-25,+1-260-412-9553,nancy.walker809@email.com,Los Angeles,Premium,Casual,High Value
+414,Steven,Garcia,Male,28,1997-08-21,+1-291-832-4459,steven.garcia665@email.com,San Diego,Medium,Sportswear,Regular
+415,Stephanie,Smith,Female,42,1983-09-08,+1-292-777-3396,stephanie.smith581@email.com,New York,Premium,Casual,High Value
+416,Ashley,Lopez,Female,26,1999-11-05,+1-306-889-7966,ashley.lopez947@email.com,Denver,Low,Fashion,Regular
+417,Michael,Taylor,Male,38,1987-05-19,+1-878-216-8636,michael.taylor870@email.com,Miami,High,Professional,High Value
+418,Kevin,Martin,Male,62,1963-03-25,+1-772-968-8325,kevin.martin729@email.com,Houston,High,Professional,High Value
+419,Richard,Wilson,Male,39,1986-06-19,+1-672-656-3136,richard.wilson960@email.com,Phoenix,High,Casual,High Value
+420,Andrew,Clark,Male,20,2005-05-25,+1-253-800-4223,andrew.clark772@email.com,Phoenix,Medium,Sportswear,New Customers
+421,Kevin,Robinson,Male,20,2005-10-08,+1-341-415-6199,kevin.robinson169@email.com,Chicago,Low,Casual,New Customers
+422,Jessica,Anderson,Female,31,1994-03-06,+1-258-405-5444,jessica.anderson714@email.com,Dallas,Low,Casual,Regular
+423,Justin,Garcia,Male,44,1981-09-19,+1-999-484-1803,justin.garcia908@email.com,San Jose,Medium,Sportswear,Regular
+424,Sophia,Miller,Female,33,1992-05-26,+1-828-215-6595,sophia.miller230@email.com,Chicago,Low,Casual,Regular
+425,Susan,Johnson,Female,27,1998-03-06,+1-950-447-2553,susan.johnson546@email.com,Boston,Medium,Fashion,Regular
+426,Stephanie,Clark,Female,33,1992-01-28,+1-562-351-5102,stephanie.clark297@email.com,Seattle,High,Casual,Medium Value
+427,Laura,Garcia,Female,23,2002-01-15,+1-321-388-6427,laura.garcia847@email.com,Boston,Medium,Sportswear,New Customers
+428,Brian,Lopez,Male,34,1991-01-20,+1-776-775-1025,brian.lopez824@email.com,Seattle,High,Sportswear,Medium Value
+429,Richard,Smith,Male,69,1956-02-13,+1-634-410-1478,richard.smith263@email.com,Philadelphia,High,Professional,High Value
+430,Steven,Thomas,Male,45,1980-10-17,+1-565-336-1347,steven.thomas82@email.com,Dallas,High,Casual,High Value
+431,Richard,Taylor,Male,33,1992-10-12,+1-627-547-4840,richard.taylor432@email.com,Denver,High,Casual,Medium Value
+432,Matthew,Miller,Male,54,1971-10-27,+1-269-279-9980,matthew.miller53@email.com,Miami,Premium,Casual,High Value
+433,Amanda,Brown,Female,31,1994-12-07,+1-812-503-6032,amanda.brown652@email.com,Los Angeles,High,Casual,Medium Value
+434,Nancy,Smith,Female,25,2000-11-22,+1-483-957-5270,nancy.smith315@email.com,Chicago,Medium,Casual,Regular
+435,Melissa,Hernandez,Female,42,1983-10-07,+1-484-929-7622,melissa.hernandez304@email.com,Austin,High,Casual,High Value
+436,Karen,Miller,Female,60,1965-06-26,+1-605-934-8728,karen.miller887@email.com,San Diego,High,Professional,High Value
+437,Laura,Brown,Female,34,1991-05-07,+1-285-996-3729,laura.brown439@email.com,Los Angeles,High,Professional,Medium Value
+438,Sarah,Jackson,Female,54,1971-01-15,+1-819-444-2525,sarah.jackson944@email.com,New York,High,Casual,High Value
+439,Richard,Garcia,Male,69,1956-01-18,+1-521-490-6354,richard.garcia745@email.com,Houston,High,Casual,High Value
+440,Amanda,Walker,Female,52,1973-04-18,+1-999-212-4172,amanda.walker545@email.com,Denver,Medium,Casual,Regular
+441,Linda,Moore,Female,61,1964-04-10,+1-267-700-7464,linda.moore371@email.com,San Antonio,Premium,Professional,High Value
+442,Michael,Brown,Male,25,2000-12-10,+1-843-811-5671,michael.brown169@email.com,Chicago,High,Sportswear,Medium Value
+443,Jennifer,Hernandez,Female,41,1984-07-27,+1-988-825-9316,jennifer.hernandez642@email.com,Los Angeles,High,Sportswear,High Value
+444,Emma,Smith,Female,28,1997-02-04,+1-573-939-5424,emma.smith214@email.com,Dallas,Low,Fashion,Regular
+445,Joshua,Moore,Male,43,1982-12-03,+1-232-821-1691,joshua.moore191@email.com,Denver,Premium,Casual,High Value
+446,Robert,Williams,Male,22,2003-10-06,+1-744-671-2152,robert.williams469@email.com,Miami,Medium,Casual,New Customers
+447,Stephanie,Clark,Female,38,1987-12-18,+1-875-942-9382,stephanie.clark625@email.com,Boston,High,Sportswear,High Value
+448,William,Davis,Male,49,1976-12-22,+1-586-407-6717,william.davis255@email.com,Los Angeles,High,Casual,High Value
+449,Karen,Johnson,Female,33,1992-03-19,+1-792-871-9898,karen.johnson417@email.com,Seattle,High,Casual,Medium Value
+450,Susan,Garcia,Female,22,2003-02-07,+1-834-445-6074,susan.garcia826@email.com,San Diego,Low,Fashion,New Customers
+451,Susan,Garcia,Female,55,1970-08-06,+1-475-422-5449,susan.garcia922@email.com,Denver,Premium,Professional,High Value
+452,Joshua,Smith,Male,35,1990-09-11,+1-280-836-1877,joshua.smith120@email.com,Houston,Premium,Casual,Regular
+453,Sarah,Davis,Female,35,1990-02-01,+1-692-650-2887,sarah.davis514@email.com,Chicago,Premium,Sportswear,Regular
+454,Rebecca,Clark,Female,35,1990-10-26,+1-320-585-8422,rebecca.clark878@email.com,Philadelphia,Premium,Professional,Regular
+455,Stephanie,Miller,Female,57,1968-04-11,+1-950-485-1774,stephanie.miller518@email.com,New York,High,Classic,High Value
+456,Kevin,Williams,Male,59,1966-01-22,+1-693-536-3363,kevin.williams385@email.com,Houston,High,Professional,High Value
+457,Matthew,Walker,Male,39,1986-08-21,+1-673-325-5290,matthew.walker52@email.com,Dallas,High,Professional,High Value
+458,David,Hernandez,Male,68,1957-10-25,+1-947-258-5833,david.hernandez322@email.com,Dallas,Premium,Professional,High Value
+459,James,Wilson,Male,39,1986-04-05,+1-539-626-9631,james.wilson168@email.com,San Antonio,High,Casual,High Value
+460,Jason,Brown,Male,52,1973-06-14,+1-712-819-3878,jason.brown493@email.com,San Antonio,High,Casual,High Value
+461,Donald,Clark,Male,22,2003-05-22,+1-274-336-9894,donald.clark734@email.com,Denver,Medium,Casual,New Customers
+462,Matthew,Robinson,Male,29,1996-07-10,+1-401-316-6011,matthew.robinson45@email.com,Philadelphia,High,Streetwear,Medium Value
+463,Elizabeth,Moore,Female,22,2003-01-26,+1-562-918-2157,elizabeth.moore138@email.com,Denver,Low,Casual,New Customers
+464,Kevin,Hernandez,Male,65,1960-03-02,+1-523-261-4758,kevin.hernandez723@email.com,San Diego,Premium,Casual,High Value
+465,Emily,Williams,Female,37,1988-07-01,+1-401-864-8974,emily.williams750@email.com,Chicago,Premium,Casual,High Value
+466,Anthony,Johnson,Male,24,2001-01-07,+1-597-296-6605,anthony.johnson143@email.com,Chicago,Medium,Casual,New Customers
+467,James,Williams,Male,49,1976-06-15,+1-673-534-1582,james.williams153@email.com,Denver,Medium,Casual,Regular
+468,David,Hernandez,Male,69,1956-12-17,+1-264-787-9783,david.hernandez214@email.com,Miami,Premium,Casual,High Value
+469,Christopher,Taylor,Male,70,1955-01-16,+1-653-546-5893,christopher.taylor89@email.com,New York,High,Casual,High Value
+470,Andrew,Miller,Male,58,1967-04-22,+1-975-911-3414,andrew.miller898@email.com,Boston,Medium,Casual,Regular
+471,Linda,Williams,Female,25,2000-07-15,+1-316-538-8684,linda.williams939@email.com,Miami,Low,Casual,Regular
+472,Jason,Johnson,Male,53,1972-02-15,+1-920-864-2665,jason.johnson342@email.com,Chicago,High,Casual,High Value
+473,Jennifer,Robinson,Female,46,1979-01-09,+1-628-812-2586,jennifer.robinson943@email.com,San Diego,Medium,Casual,Regular
+474,Amy,Clark,Female,67,1958-05-27,+1-379-686-8615,amy.clark28@email.com,Chicago,High,Classic,High Value
+475,Barbara,Davis,Female,31,1994-07-19,+1-900-585-9757,barbara.davis102@email.com,Los Angeles,High,Casual,Medium Value
+476,Robert,Brown,Male,26,1999-03-12,+1-783-395-3082,robert.brown119@email.com,New York,Low,Streetwear,Regular
+477,John,Brown,Male,61,1964-09-24,+1-441-394-1957,john.brown755@email.com,Philadelphia,Premium,Professional,High Value
+478,Sarah,Taylor,Female,56,1969-06-04,+1-395-688-2324,sarah.taylor96@email.com,Miami,High,Classic,High Value
+479,Ryan,Wilson,Male,33,1992-04-23,+1-491-833-2207,ryan.wilson500@email.com,Los Angeles,Medium,Sportswear,Regular
+480,Amanda,Wilson,Female,45,1980-05-04,+1-811-594-3679,amanda.wilson354@email.com,San Diego,High,Casual,High Value
+481,Sarah,Robinson,Female,31,1994-06-20,+1-309-821-2879,sarah.robinson795@email.com,San Jose,Low,Professional,Regular
+482,Joshua,Wilson,Male,41,1984-09-11,+1-391-317-4283,joshua.wilson303@email.com,Phoenix,High,Professional,High Value
+483,John,Martin,Male,34,1991-07-27,+1-816-486-8818,john.martin255@email.com,New York,High,Professional,Medium Value
+484,Donald,Anderson,Male,41,1984-10-03,+1-510-252-7719,donald.anderson379@email.com,San Antonio,Premium,Casual,High Value
+485,John,Davis,Male,63,1962-12-08,+1-208-802-5587,john.davis218@email.com,Boston,Premium,Casual,High Value
+486,Mark,Miller,Male,21,2004-02-15,+1-451-412-4742,mark.miller643@email.com,Philadelphia,Medium,Streetwear,New Customers
+487,Ashley,Robinson,Female,26,1999-11-17,+1-541-470-1837,ashley.robinson633@email.com,San Diego,High,Fashion,Medium Value
+488,Nancy,Hernandez,Female,45,1980-07-27,+1-392-837-2253,nancy.hernandez149@email.com,San Jose,High,Professional,High Value
+489,Stephanie,Jackson,Female,42,1983-02-09,+1-304-960-2217,stephanie.jackson346@email.com,Miami,High,Sportswear,High Value
+490,Ashley,Jackson,Female,55,1970-10-04,+1-598-745-9470,ashley.jackson478@email.com,Chicago,Medium,Classic,Regular
+491,Andrew,Garcia,Male,30,1995-11-08,+1-668-711-2282,andrew.garcia573@email.com,San Jose,Medium,Professional,Regular
+492,Amanda,Robinson,Female,20,2005-11-07,+1-769-464-9338,amanda.robinson7@email.com,San Diego,Medium,Casual,New Customers
+493,Melissa,Miller,Female,23,2002-06-14,+1-737-229-6167,melissa.miller5@email.com,Chicago,High,Casual,Medium Value
+494,Emily,Wilson,Female,43,1982-05-15,+1-419-747-9402,emily.wilson693@email.com,San Jose,High,Casual,High Value
+495,Lisa,Taylor,Female,43,1982-06-19,+1-449-898-9738,lisa.taylor818@email.com,Seattle,Premium,Casual,High Value
+496,William,Lewis,Male,21,2004-04-09,+1-617-897-4201,william.lewis483@email.com,Miami,Low,Sportswear,New Customers
+497,Nancy,Smith,Female,42,1983-06-03,+1-337-800-1264,nancy.smith224@email.com,Phoenix,High,Casual,High Value
+498,Elizabeth,Garcia,Female,33,1992-11-21,+1-896-278-1484,elizabeth.garcia948@email.com,Los Angeles,Low,Professional,Regular
+499,Karen,Lopez,Female,42,1983-09-22,+1-954-508-7087,karen.lopez322@email.com,Philadelphia,High,Sportswear,High Value
+500,David,Martin,Male,35,1990-07-01,+1-639-574-8477,david.martin493@email.com,Los Angeles,Medium,Sportswear,Regular
